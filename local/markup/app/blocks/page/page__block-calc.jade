@@ -1,0 +1,179 @@
+.page__block.page__block--calc.calc__container
+	.container-fluid
+			.calc-group.calc-group--transparent
+				.navbar.navbar--calc
+					.navbar__primary-content
+						i.icon.icon--box-white.navbar__icon
+						input.form-control.navbar__form-control(type="text", placeholder="Назвіть вантаж для його легкого розпізнавання вами серед ваших відправлень")
+
+			.calc-group
+				.calc-group__toggle
+				.uk-grid.uk-grid-width-small-1-1.uk-grid-width-medium-1-1.uk-grid-width-large-1-2.uk-grid-width-xlarge-1-2.calc-group__row
+					.col.first
+						.calc-group
+							.navbar.navbar--calc.navbar--accent
+								.navbar__primary-content
+									span.navbar__icon
+										span.icon.icon--letter-A
+									input.form-control.navbar__form-control(type="text", placeholder="Вкажіть пункт відправлення або поставте крапку на карті")
+
+						.calc-group
+							.navbar.navbar--calc.navbar--accent.p-r-0
+								.navbar__primary-content
+									ul.navbar__nav
+										li
+											a(href='')
+												|<i class="icon icon--stock-grey"></i> Склад
+										li.active
+											a(href='')
+												|<i class="icon icon--door-grey"></i> Двері
+
+						.calc-group
+							.navbar.navbar--calc.navbar--white
+								.navbar__primary-content
+									i.icon.icon--date-light-grey.navbar__icon.navbar__icon--clickable
+									.navbar__form-control-static
+										| 15 березня 2016 з 12 : 45 до 12 : 45
+
+						.calc-group.hidden-lg-up
+							.navbar.navbar--calc.navbar--white
+								.navbar__primary-content
+									.navbar__icon
+										i.icon.icon--ava(style="background-image:url('http://placehold.it/60px60px')")
+									input.form-control.navbar__form-control(type="text", placeholder="Сергій Іванович Семеренко")
+
+						.calc-group.hidden-lg-up
+							.navbar.navbar--calc.navbar--white
+								.navbar__primary-content
+									i.icon.icon--phone-light-grey.navbar__icon
+									input.form-control.navbar__form-control(type="text", placeholder="+380 00 000 00 00")
+
+						.calc-group.hidden-lg-up
+							.navbar.navbar--calc.navbar--white
+								.navbar__primary-content
+									i.icon.icon--email-light-grey.navbar__icon
+									input.form-control.navbar__form-control(type="text", placeholder="mail@ya.ru")
+
+						.calc-group.hidden-lg-up
+							.navbar.navbar--calc.navbar--white
+								.navbar__primary-content
+									i.icon.icon--map-light-grey.navbar__icon
+									input.form-control.navbar__form-control(type="text", placeholder="ул. Ивана Иванович, 26")
+
+					.col.second
+						.calc-group
+							.navbar.navbar--calc.navbar--accent
+								.navbar__primary-content
+									span.navbar__icon
+										span.icon.icon--letter-B
+									input.form-control.navbar__form-control(type="text", placeholder="Вкажіть пункт відправлення або поставте крапку на карті")
+
+						.calc-group
+							.navbar.navbar--calc.navbar--accent.p-l-0
+								.navbar__primary-content
+									ul.navbar__nav
+										li.active
+											a(href='')
+												|<i class="icon icon--stock-grey"></i> Склад
+										li
+											a(href='')
+												|<i class="icon icon--door-grey"></i> Двері
+
+
+						.calc-group
+							.navbar.navbar--calc.navbar--white
+								.navbar__primary-content
+									i.icon.icon--date-light-grey.navbar__icon.navbar__icon--clickable
+									.navbar__form-control-static
+										| 15 березня 2016 з 12 : 45 до 12 : 45
+
+						.calc-group.hidden-lg-up
+							.navbar.navbar--calc.navbar--white
+								.navbar__primary-content
+									.navbar__icon
+										i.icon.icon--ava(style="background-image:url('http://placehold.it/60px60px')")
+									input.form-control.navbar__form-control(type="text", placeholder="Юри Іванович Семеренко")
+
+						.calc-group.hidden-lg-up
+							.navbar.navbar--calc.navbar--white
+								.navbar__primary-content
+									i.icon.icon--phone-light-grey.navbar__icon
+									input.form-control.navbar__form-control(type="text", placeholder="+380 00 000 00 00")
+
+						.calc-group.hidden-lg-up
+							.navbar.navbar--calc.navbar--white
+								.navbar__primary-content
+									i.icon.icon--email-light-grey.navbar__icon
+									input.form-control.navbar__form-control(type="text", placeholder="mail3@ya.ru")
+
+
+
+			.calc-group
+				h3.calc-group__title Вкажіть тип та габарити вантажу
+				.calc-group__content
+					include ../calc/calc-group-content-cargo
+
+			.calc-group
+				h3.calc-group__title Оберіть додаткові послуги
+				.calc-group__content.p-y-0
+					include ../calc/calc-group-content-advanced
+
+			.calc-group.hidden-md-down
+				.uk-grid.uk-grid-width-small-1-1.uk-grid-width-medium-1-1.uk-grid-width-large-1-2.uk-grid-width-xlarge-1-2.calc-group__row
+					.col.first
+						.calc-group
+							.navbar.navbar--calc.navbar--white
+								.navbar__primary-content
+									.navbar__icon
+										i.icon.icon--ava(style="background-image:url('http://placehold.it/60px60px')")
+									input.form-control.navbar__form-control(type="text", placeholder="Сергій Іванович Семеренко")
+
+						.calc-group
+							.navbar.navbar--calc.navbar--white
+								.navbar__primary-content
+									i.icon.icon--phone-light-grey.navbar__icon
+									input.form-control.navbar__form-control(type="text", placeholder="+380 00 000 00 00")
+
+						.calc-group
+							.navbar.navbar--calc.navbar--white
+								.navbar__primary-content
+									i.icon.icon--email-light-grey.navbar__icon
+									input.form-control.navbar__form-control(type="text", placeholder="mail@ya.ru")
+
+						.calc-group
+							.navbar.navbar--calc.navbar--white
+								.navbar__primary-content
+									i.icon.icon--map-light-grey.navbar__icon
+									input.form-control.navbar__form-control(type="text", placeholder="ул. Ивана Иванович, 26")
+					.col.second
+						.calc-group
+							.navbar.navbar--calc.navbar--white
+								.navbar__primary-content
+									.navbar__icon
+										i.icon.icon--ava(style="background-image:url('http://placehold.it/60px60px')")
+									input.form-control.navbar__form-control(type="text", placeholder="Юри Іванович Семеренко")
+
+						.calc-group
+							.navbar.navbar--calc.navbar--white
+								.navbar__primary-content
+									i.icon.icon--phone-light-grey.navbar__icon
+									input.form-control.navbar__form-control(type="text", placeholder="+380 00 000 00 00")
+
+						.calc-group
+							.navbar.navbar--calc.navbar--white
+								.navbar__primary-content
+									i.icon.icon--email-light-grey.navbar__icon
+									input.form-control.navbar__form-control(type="text", placeholder="mail3@ya.ru")
+
+			.calc-group
+				h3.calc-group__title
+					| Додати примітку
+
+				.calc-group__content
+					.hint-block.text-uppercase.m-t-0 Вкажіть додаткові побажання та інформацію стосовно відправки та отримання вашого надсилання
+					textarea.form-control.form-control--alt(name="", cols="30", rows="10")
+
+		.calc__footer.text-xs-center
+			a.btn.btn--more.btn--higher.btn--blue(href='')
+				| Додати вантаж
+				i.icon.icon--plus-accent

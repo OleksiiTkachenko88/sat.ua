@@ -1,0 +1,18 @@
+extends /blocks/layout-default/layout-default
+
+block head
+	- var pageTitle = '';
+	- var pageDescription = '';
+	- var pageKeywords = '';
+
+block page
+	- var pageClasses = 'page--layout-main'
+
+block content
+	.page__body
+		.container-fluid
+			.search-result-container
+				.search-result-hint Якщо, ви не знайшли потрібну вам інформацію, скористайтесь пошуком ще раз
+				include ../blocks/panel/panel-search-result
+			include ../blocks/panel/panel-container-main-news
+	include ../blocks/panel/panel-container-main-recommend

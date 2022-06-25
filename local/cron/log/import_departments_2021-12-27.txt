@@ -1,0 +1,8 @@
+Host: 
+Date: 2021-12-27 06:00:11
+Module: 
+[e] Не смог получить корректный результат при запросе к https://catalog.sat.ua/getTowns?apiKey=8c236ec1-6e15-424b-8daf-33913831&language=ru&limit=100000
+ [u] Скрипт завершил свою работу.
+    getTowns
+	/var/www/sat81j/sat.ua/local/cron/import_departments.php:217
+----------

@@ -1,0 +1,32 @@
+<?
+$aMenuLinks = Array(
+	Array(
+		"ДОКУМЕНТИ", 
+		"/about/recommend/documents/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"ТАРИФИ", 
+		"/about/recommend/tariff/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"ПРАВИЛА", 
+		"/about/recommend/pravila/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Франшиза", 
+		"/partners/", 
+		Array(), 
+		Array(), 
+		"" 
+	)
+);
+?>

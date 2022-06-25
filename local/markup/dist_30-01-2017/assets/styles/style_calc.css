@@ -1,0 +1,13 @@
+@media screen and (min-width: 1400px) and (max-width: 1600px){
+.page__block--calc .container-fluid{
+	max-width: 1140px;
+	 padding-left: 110px;
+    padding-right: 110px;
+}
+
+.navbar--calc {
+  height: 74px;
+}
+
+
+}

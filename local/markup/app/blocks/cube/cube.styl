@@ -1,0 +1,145 @@
+.cube__container
+	width 302px
+	height 302px
+	position relative
+	perspective 300px
+
+	&:before
+		content ''
+		position absolute
+		left -26px
+		bottom -23px
+		width 328px
+		height 329px
+		background-size cover
+		background-repeat no-repeat
+		background-image url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUgAAAFJCAMAAADOlkSkAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OEY4MEI0Mjc5QTM1MTFFNkIyRDBGREJGQTY3RTY4RUEiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OEY4MEI0Mjg5QTM1MTFFNkIyRDBGREJGQTY3RTY4RUEiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4RjgwQjQyNTlBMzUxMUU2QjJEMEZEQkZBNjdFNjhFQSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4RjgwQjQyNjlBMzUxMUU2QjJEMEZEQkZBNjdFNjhFQSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pm2Aji4AAABsUExURf///9DS09HT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')
+		overflow hidden
+		z-index -1
+
+.cube
+.cube figure
+	transition transform .3s
+
+.cube
+	width 100%
+	height 100%
+	position absolute
+	transform-style preserve-3d
+	left 30px
+	bottom -30px
+
+	figure
+		margin 0
+		width 200px
+		height 200px
+		display block
+		position absolute
+		left 20px
+		top 20px
+		border 1px solid #e9e9e9
+
+		&.front
+			transform rotateY(   0deg ) translateZ( 100px )
+			background alpha(#ffd64a, 0.63)
+			display none
+
+		&.back
+			transform rotateX( 180deg ) translateZ( 100px )
+			background alpha(#ffd64a, 0.63)
+
+		&.right
+			transform rotateY(  90deg ) translateZ( 100px )
+			background alpha(#ffd64a, 0.51)
+
+		&.left
+			transform rotateY( -90deg ) translateZ( 100px )
+			background alpha(#ffd64a, 0.51)
+
+		&.top
+			transform rotateX(  90deg ) translateZ( 100px )
+			background alpha(#ffd64a, 0.63)
+
+		&.bottom
+			transform rotateX( -90deg ) translateZ( 100px )
+			background alpha(#ffd64a, 0.63)
+
+	&.show-front
+		transform translateZ( -100px )
+
+	&.show-back
+		transform translateZ( -100px ) rotateX( -180deg )
+	&.show-right
+
+		transform translateZ( -100px ) rotateY(  -90deg )
+	&.show-left
+
+		transform translateZ( -100px ) rotateY(   90deg )
+
+	&.show-top
+		transform translateZ( -100px ) rotateX(  -90deg )
+
+	&.show-bottom
+		transform translateZ( -100px ) rotateX(   90deg )
+
+.cube__container.step2
+	.cube
+		.front
+			transform rotateY(   0deg )
+
+		.back
+			transform rotateX( 180deg )
+
+		.right
+			transform rotateY(  90deg )
+
+		.left
+			transform rotateY( -90deg )
+
+		.top
+			transform rotateX(  90deg )
+
+		.bottom
+			transform rotateX( -90deg )
+
+.cube__container.step3 .front
+.cube__container.step4 .front
+	transform rotateY(   0deg ) translateZ( 100px )
+
+.cube__container.step3 .front
+.cube__container.step4 .front
+	transform rotateX( 180deg ) translateZ( 100px )
+
+.cube__container.step3 .front
+.cube__container.step4 .front
+	transform rotateY(  90deg ) translateZ( 100px )
+
+.cube__container.step3 .front
+.cube__container.step4 .front
+	transform rotateY( -90deg ) translateZ( 100px )
+
+.cube__container.step3 .front
+.cube__container.step4 .front
+	transform rotateX(  90deg ) translateZ( 100px )
+
+.cube__container.step3 .front
+.cube__container.step4 .front
+	transform rotateX( -90deg ) translateZ( 100px )
+
+.cube__container.step4 .front
+	transform translateZ( -100px )
+
+// ie 11
+@media all and (-ms-high-contrast none)
+	*::-ms-backdrop, .cube
+		left 0
+		bottom 0
+		background #ffd64a
+
+	*::-ms-backdrop, .cube figure.back
+	*::-ms-backdrop, .cube figure.right
+	*::-ms-backdrop, .cube figure.left
+	*::-ms-backdrop, .cube figure.top
+	*::-ms-backdrop, .cube figure.bottom
+	*::-ms-backdrop, .cube figure.font
+		display none

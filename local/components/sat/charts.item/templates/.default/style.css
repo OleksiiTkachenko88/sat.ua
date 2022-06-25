@@ -1,0 +1,101 @@
+.item {
+    margin: 16px;
+}
+
+.item.header h1 {
+    font: 24px/29px "SFUIDisplay", sans-sarif;
+    color: #1E3E6C;
+    font-weight: 600;
+}
+
+.b-radius {
+    border-radius: 10px;
+}
+
+.b-shadow {
+    box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.12);
+}
+
+.chart {
+    display: flex;
+    flex-direction: column;
+    height: 450px;
+    padding: 32px 24px 28px 24px;
+}
+
+.chart .header {
+    display: flex;
+    padding-bottom: 16px;
+}
+
+.chart .header .image-wrap {
+    display: flex;
+    flex-shrink: 0;
+    width: 72px;
+    height: 72px;
+    margin-right: 16px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: rgba(0, 133, 255, 0.1);
+}
+
+.chart .header .text-wrap {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.chart .header .text-wrap h2 {
+    font: 18px/21px "SFUIDisplayBold", sans-sarif;
+    color: #1E3E6C;
+    padding-bottom: 6px;
+}
+
+.chart .header .text-wrap h3 {
+    font: 14px/16px "SFUIDisplayBold", sans-sarif;
+    color: #1E3E6C;
+    opacity: 0.5;
+    padding-bottom: 0;
+}
+
+.chart .description {
+padding-bottom: 16px;
+}
+
+.chart .description span {
+    display: block;
+    max-width: 510px;
+    font: 12px/18px "SFUIDisplay", sans-sarif;
+    color: #1E3E6C;
+    opacity: 0.5;
+}
+
+.chart .chart-wrap {
+    position: relative;
+    flex: 1;
+}
+
+.chart .chart-wrap .chart-div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+}
+
+.chart .chart-wrap .chart-text-value {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font: 34px SFUIDisplay, sans-serif;
+    color: #0085FF;
+    z-index: -1;
+}

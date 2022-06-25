@@ -1,0 +1,15 @@
+extends /blocks/layout-default/layout-default
+
+block head
+	- var pageTitle = 'Стратегия';
+	- var pageDescription = '';
+	- var pageKeywords = '';
+
+block page
+	- var pageClasses = 'page--layout-main'
+
+block content
+	include ../blocks/swiper/swiper-container-main-strategy
+	include ../blocks/sidenav/sidenav
+	.container-fluid
+		include ../blocks/panel/panel-container-main-strategy

@@ -1,0 +1,73 @@
+.uk-form.uk-form-horizontal
+	.uk-grid.uk-grid-width-small-1-1.uk-grid-width-medium-1-1.uk-grid-width-large-1-2.uk-grid-width-xlarge-1-2
+		div.uk-form.uk-form-horizontal
+			.uk-form-row
+				label.uk-form-label(for='') Тип вантажу
+				.uk-form-controls
+					.uk-button.uk-form-select(data-uk-form-select='')
+						span
+						select
+							option(value='') ...
+							option(value='', selected='') Легкови
+			.uk-form-row
+				label.uk-form-label(for='') Кількість шин
+				.uk-form-controls
+					input.uk-form-width-small.text-xs-center(type='text', value='4')
+			.uk-form-row
+				label.uk-form-label(for='') Розмір
+				.uk-form-controls
+					.uk-button.uk-form-select(data-uk-form-select='')
+						span
+						select
+							option(value='') ...
+							option(value='', selected='') R10-R14
+			.uk-form-row
+				label.uk-form-label(for='') Вага
+				.uk-form-controls
+					input.uk-form-width-small.text-xs-center(type='text', value='380')
+					span.uk-form-suffix кг
+			.uk-form-row
+				label.uk-form-label(for='') Об’єм
+				.uk-form-controls
+					input.uk-form-width-small.text-xs-center(type='text', value='2,91')
+					span.uk-form-suffix
+						| м
+						sup 3
+			.uk-form-row
+				label.uk-form-label(for='') Декларована вартість
+				.uk-form-controls
+					input.uk-form-width-small.text-xs-center(type='text', value='1590')
+					span.uk-form-suffix грн
+		div.uk-form.uk-form-horizontal.uk-form-horizontal--half
+			.uk-form-calc-dimensions__container
+				.uk-form-calc-dimensions__image-container
+					.hint-block.text-xs-center Візуалізація метричних параметрів вашого вантажу
+					.uk-form-calc-dimensions__image-wrapper
+						include ../cube/cube.jade
+				.uk-form-row
+					label.uk-form-label(for='') Довжина
+					.uk-form-controls
+						input#cube_input_length.uk-form-width-small.text-xs-center(type='text', name="length", value='1')
+						span.uk-form-suffix м
+				.bootstrap-slider-container.bootstrap-slider-container--right
+					span.uk-form-prefix 0 м
+					div#cube_slider_length.slider(data-provide="slider", data-slider-min="0", data-slider-max="2", data-slider-step="0.001", data-slider-value="1", data-slider-tooltip="hide")
+					span.uk-form-suffix 2 м
+				.uk-form-row
+					label.uk-form-label(for='') Ширина
+					.uk-form-controls
+						input#cube_input_width.uk-form-width-small.text-xs-center(type='text', name="width", value='1')
+						span.uk-form-suffix м
+				.bootstrap-slider-container.bootstrap-slider-container--right
+					span.uk-form-prefix 0 м
+					div#cube_slider_width.slider(data-provide="slider", data-slider-min="0", data-slider-max="2", data-slider-step="0.001", data-slider-value="1", data-slider-tooltip="hide")
+					span.uk-form-suffix 2 м
+				.uk-form-row
+					label.uk-form-label(for='') Висота
+					.uk-form-controls
+						input#cube_input_height.uk-form-width-small.text-xs-center(type='text', name="width", value='1')
+						span.uk-form-suffix м
+				.bootstrap-slider-container.bootstrap-slider-container--right
+					span.uk-form-prefix 0 м
+					div#cube_slider_height.slider(data-provide="slider", data-slider-min="0", data-slider-max="2", data-slider-step="0.001", data-slider-value="1", data-slider-tooltip="hide")
+					span.uk-form-suffix 2 м

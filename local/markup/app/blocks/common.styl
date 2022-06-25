@@ -1,0 +1,116 @@
+a
+	transition $transition-default
+
+.uniform-bg-3
+.uniform-bg-2
+.uniform-bg-1
+	padding .15em 0
+	position relative
+	background #2766a0
+	color #fff
+
+	.main-slide__extra-title &
+		background-color #2766a0
+		color #ffffff
+		padding-top .075em
+		padding-bottom .075em
+
+	.main-slide__title &
+		background-color #ffffff
+		color #2766a0
+
+.uniform-bg-1
+	left -.6em
+
+	.main-slide__extra-title &
+	.main-slide__title &
+		left -.3em
+
+	.main-slide__extra-title &
+		left -.15em
+
+
+.uniform-bg-2
+	left .6em
+
+	.main-slide__extra-title &
+		left .3em
+
+.uniform-bg-3
+	left -.3em
+
+	.main-slide__extra-title &
+		left -.15em
+
+
+.help-block
+	display block
+	typo-hint()
+
+.tooltip-map
+	background-color #ffd64a
+	color #404041
+	display inline-block
+	width 260px
+	padding 12px 15px 15px 30px
+	border-radius 5px
+
+	&__title
+		font-size 24px
+		line-height 30px
+		color inherit
+
+	&__text
+	&__text-alt
+		font-size 18px
+		line-height 23px
+
+	&__text
+		color inherit
+		overflow hidden
+		zoom 1
+
+	&__text-alt
+		color #8b7528
+
+	&__hr
+		display block
+		border-top 1px solid #8b7528
+		margin-top 7px
+		margin-bottom 7px
+
+	&__arrow
+		right 100%
+		top 15px
+		border solid transparent
+		content ''
+		height 0
+		width 0
+		position absolute
+		pointer-events none
+		border-color rgba(255, 214, 74, 0)
+		border-right-color #ffd64a
+		border-width 12px
+
+.cabinet-link
+	background-color #d0d2d3
+	color #2766a0
+	font-family $base-font-family
+	font-size 24px
+	line-height 52px
+	font-weight normal
+	text-transform uppercase
+	letter-spacing .1ex
+	padding 30px
+	text-decoration none
+
+	&:hover
+		color inherit
+		text-decoration none
+
+	& strong
+		text-decoration underline
+		font-family $base-font-family-heavy
+
+	&:hover strong
+		text-decoration none

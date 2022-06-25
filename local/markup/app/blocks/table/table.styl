@@ -1,0 +1,270 @@
+.table
+	width 100%
+	max-width 100%
+	margin-bottom 1rem
+	border-spacing 0
+	border-collapse collapse
+	border none
+	font-size 16px
+	thead
+		th
+			vertical-align bottom
+			border-bottom 1px solid #acacac
+	tbody
+		& + tbody
+			border-top 1px solid #acacac
+	.table
+		background-color #fff
+
+.table th,
+.table td
+	padding 0.75em
+	vertical-align top
+	border-top 1px solid #acacac
+
+.table-sm th,
+.table-sm td
+	padding 0.3em
+
+.table-bordered
+	border 1px solid #acacac
+
+.table-bordered th,
+.table-bordered td
+	border 1px solid #acacac
+
+.table-bordered thead th,
+.table-bordered thead td
+	border-bottom-width 1px
+
+.table-striped
+	tbody
+		tr
+			&:nth-of-type(odd)
+				background-color rgba(0, 0, 0, 0.05)
+
+.table-hover
+	tbody
+		tr
+			&:hover
+				background-color rgba(0, 0, 0, 0.075)
+	.table-active
+		&:hover
+			background-color rgba(0, 0, 0, 0.075)
+
+.table-active,
+.table-active > th,
+.table-active > td,
+.tr-active > th,
+.tr-active > td
+	background-color rgba(0, 0, 0, 0.075)
+
+.table-hover .table-active:hover > td,
+.table-hover .table-active:hover > th
+	background-color rgba(0, 0, 0, 0.075)
+
+.table-responsive
+	display block
+	width 100%
+	min-height .01%
+	overflow-x auto
+
+.table-reflow
+	thead
+		float left
+	tbody
+		display block
+		white-space nowrap
+	tr
+		float left
+
+.table-reflow th,
+.table-reflow td
+	border-top 1px solid #acacac
+	border-left 1px solid #acacac
+
+.table-reflow th:last-child,
+.table-reflow td:last-child
+	border-right 1px solid #acacac
+
+.table-reflow thead:last-child tr:last-child th,
+.table-reflow thead:last-child tr:last-child td,
+.table-reflow tbody:last-child tr:last-child th,
+.table-reflow tbody:last-child tr:last-child td,
+.table-reflow tfoot:last-child tr:last-child th,
+.table-reflow tfoot:last-child tr:last-child td
+	border-bottom 1px solid #acacac
+
+.table-reflow tr th,
+.table-reflow tr td
+	display block !important
+	border 1px solid #acacac
+
+.table__footer
+	padding 20px
+	display flex
+	flex-direction row
+	flex-wrap nowrap
+	justify-content space-between
+	width 100%
+
+	&-left
+		text-align left
+
+	&-center
+		text-align center
+
+	&-right
+		text-align right
+
+.table--department
+	width 100%
+	border 1px solid #acacac
+	table-layout fixed
+	font-size 16px
+
+	+below($breakpoint-lg - 1px)
+		font-size 14px
+		table-layout auto
+
+	&.table--accent
+		border-color #ffd64a
+
+	.table__btn
+		margin-left -20px
+
+	.table__sort
+		float right
+		cursor pointer
+		width 21px
+		height 24px
+		line-height 1.5em
+		display inline-block
+		text-align center
+		vertical-align middle
+		margin-left -21px
+
+		&:before
+			content ''
+			display inline-block
+			vertical-align middle
+			background-position 50% 50%
+			background-repeat no-repeat
+
+		&-up:before
+			sprite($icon_chevron_up_grey)
+
+		&-down:before
+			sprite($icon_chevron_down_grey)
+
+	th
+	td
+		padding 20px
+		line-height 1.875em
+		text-align left
+		vertical-align baseline
+		transition $transition-default
+
+	thead th
+		font-family $base-font-family-alt
+		font-size 1.5em
+		font-weight normal
+		text-transform uppercase
+		letter-spacing .1ex
+		background #d0d2d3
+		color #8b8b8b
+
+		+below($breakpoint-lg - 1px)
+			font-size 1.3em
+			letter-spacing normal
+
+		& a
+			color #333
+
+			&:hover
+			&:focus
+				color #8b8b8b
+
+	&.table--accent thead th
+		background #ffd64a
+		color #8b7528
+		border-color #ffd64a
+
+		& a
+			color #8b7528
+
+	tbody th
+	tbody td
+	.text-default
+		color #757575
+		font-family $base-font-family-alt
+		font-size 1.125em
+		font-weight normal
+
+	tbody .td-location
+	tbody .td-number
+	.text-location
+	.text-number
+		font-size 1.5em
+
+	tbody .td-map
+		padding 0
+
+	tbody .td-map__inner
+		display block
+		max-height 695px
+		overflow hidden
+
+		img
+			display block
+			max-width 100%
+			height auto
+
+		+below($breakpoint-lg - 1px)
+			max-height 666px
+
+	.tr-active > th
+	.tr-active > td
+		background #d0d2d3
+		border-color #d0d2d3
+		color #404041
+
+	.tr-collapse-toggle.tr-active + .tr-collapse > td
+	.tr-collapse-toggle.tr-active + .tr-collapse + .tr-collapse > td
+	.tr-collapse-toggle.tr-active + .tr-collapse + .tr-collapse + .tr-collapse > td
+		padding-top 0
+		background #d0d2d3
+		border-color #d0d2d3
+		color #404041
+
+	.tr-collapse-toggle:not(.tr-active) + .tr-collapse
+	.tr-collapse-toggle:not(.tr-active) + .tr-collapse + .tr-collapse
+	.tr-collapse-toggle:not(.tr-active) + .tr-collapse + .tr-collapse + .tr-collapse
+		display none
+
+	.table__col-1
+	.table__col-2
+	.table__col-3
+		padding 20px
+		float left
+		width 25%
+		box-sizing border-box
+		text-truncate()
+		white-space nowrap
+
+	.table__col-1
+		width 50%
+
+
+.table__container--department
+	+below($breakpoint-lg - 1px)
+		margin-left -15px
+		margin-right -15px
+
+.table .uk-overlay-fade
+	transition-duration .35s
+	opacity 1
+
+.table .uk-overlay-active .uk-overlay-fade
+	transition-duration .35s
+	opacity 0

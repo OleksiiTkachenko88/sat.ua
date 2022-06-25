@@ -1,0 +1,21 @@
+formControlFeedback(sizeName, height)
+	mod = ''
+
+	if sizeName
+		mod = '-' + sizeName
+
+	.input{mod} + .form-control-feedback
+	.input-group{mod} .form-control-feedback
+	.form-group{mod} .form-control + .form-control-feedback
+		width height
+		height height
+		line-height height
+
+	.input-group{mod} .form-control-feedback.mdi
+		line-height height
+
+	.has-feedback-first .input-group{mod} .form-control
+		padding-left height
+
+	.has-feedback-last .input-group{mod} .form-control
+		padding-right height

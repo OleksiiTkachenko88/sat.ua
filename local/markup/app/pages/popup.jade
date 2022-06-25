@@ -1,0 +1,19 @@
+extends /blocks/layout-default/layout-default
+
+block head
+	- var pageTitle = '';
+	- var pageDescription = '';
+	- var pageKeywords = '';
+
+block page
+	- var pageClasses = ''
+
+block content
+	include ../blocks/sidenav/sidenav
+	.container-fluid
+		a(href='#modal_phone', data-uk-modal='') Попап телефон
+		a(href='#modal_alert', data-uk-modal='') Попап алерт
+
+block end
+	include ../blocks/uk-modal/uk-modal-phone
+	include ../blocks/uk-modal/uk-modal-alert

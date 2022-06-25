@@ -1,0 +1,140 @@
+.banner
+	display inline-block
+	position relative
+	max-width 100%
+	vertical-align middle
+	overflow hidden
+	-webkit-transform translateZ(0)
+	margin 0
+	background-size cover
+	background-position 50% 50%
+
+	.panel &
+		display block
+
+	& > a
+		position relative
+		display block
+		height 100%
+		text-decoration none
+
+	&--h--465
+		+below($breakpoint-lg - 1px)
+			max-height 365px
+
+		img
+			+below($breakpoint-lg - 1px)
+				max-height 365px
+
+	&--h--245
+		+below($breakpoint-lg - 1px)
+			max-height 215px
+
+		img
+			+below($breakpoint-lg - 1px)
+				max-height 215px
+
+	&--h--210
+		+below($breakpoint-lg - 1px)
+			max-height 190px
+
+		img
+			+below($breakpoint-lg - 1px)
+				max-height 190px
+
+.banner__overlay-panel
+	position absolute
+	top 0
+	bottom 0
+	left 0
+	right 0
+	color #fff
+	display flex
+	flex-direction column
+	flex-wrap nowrap
+	align-items center
+	justify-content center
+	text-align center
+	padding 20px
+	background-color transparent
+
+	&--inverse
+		color #414142
+
+	&--background
+		background-color #1f3d6c
+
+	&--right
+		left auto
+		text-align right
+
+		.banner__overlay-panel-banner__overlay-panel&
+			widt 50%
+
+	&--top
+		bottom auto
+
+.banner__title
+	color inherit
+	margin-top 0
+	margin-bottom 0
+
+	&--size-1
+		font-family $base-font-family-heavy
+		font-size 86px
+		font-weight normal
+
+	&--size-2
+		font-family $base-font-family-bold
+		font-size 43px
+		font-weight normal
+
+		+below($breakpoint-lg - 1px)
+			font-size 39px
+
+		.small
+			font-family $base-font-family
+			font-size 28px
+			font-weight normal
+			display block
+
+			+below($breakpoint-lg - 1px)
+				font-size 26px
+
+	&--size-3
+		font-family $base-font-family-bold
+		font-size 36px
+		font-weight normal
+
+		+below($breakpoint-lg - 1px)
+			font-size 35px
+
+		.small
+			font-family $base-font-family
+			font-size 18px
+			font-weight normal
+			display block
+
+			+below($breakpoint-lg - 1px)
+				font-size 16px
+
+	&--size-4
+		font-family $base-font-family-heavy
+		font-size 26px
+		font-weight normal
+
+		+below($breakpoint-lg - 1px)
+			font-size 24px
+
+		.small
+			font-family $base-font-family
+			font-size 18px
+			font-weight normal
+			display block
+
+			+below($breakpoint-lg - 1px)
+				font-size 18px
+
+	&--alt
+		text-transform uppercase
+		letter-spacing normal

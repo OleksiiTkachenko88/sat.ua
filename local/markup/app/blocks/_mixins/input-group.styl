@@ -1,0 +1,63 @@
+inputGroupSize(sizeName, paddingTopBottom, paddingLeftRight, paddingLeftRightInput, fontSize, lineHeight, height, borderRadius)
+	mod = ''
+
+	if sizeName
+		mod = '-' + sizeName
+
+	.input-group{mod}
+		& > .form-control
+		& > .twitter-typeahead > .form-control
+		& > .input-group-addon
+		& > .input-group-btn > .btn
+			font-size fontSize
+			line-height lineHeight
+			padding paddingTopBottom paddingLeftRightInput
+			/*border-radius borderRadius*/
+			height height
+
+		& > .input-group-btn > .btn
+			padding-left paddingLeftRight
+			padding-right paddingLeftRight
+
+	.input-group-addon.input{mod}
+		font-size fontSize
+		line-height lineHeight
+		padding paddingTopBottom paddingLeftRightInput
+		/*border-radius borderRadius*/
+		height height
+
+	select.input-group{mod}
+		& > .form-control
+		& > .input-group-addon
+		& > .input-group-btn > .btn
+			height height
+			line-height height
+
+	textarea.input-group{mod}
+	select[multiple].input-group{mod}
+		& > .form-control
+		& > .input-group-addon
+		& > .input-group-btn > .btn
+			height auto
+
+inputGroupPrefix(sizeName, fontSize, height, borderRadius)
+	mod = ''
+
+	if sizeName
+		mod = '-' + sizeName
+
+	.input-group{mod}
+		.input-group-prefix
+		.input-group-postfix
+			width height
+			height height
+			line-height height
+			font-size fontSize
+
+			& + .form-control
+			& + .twitter-typeahead > .form-control
+				padding-left height
+
+				&:last-child
+					border-top-left-radius borderRadius
+					border-bottom-left-radius borderRadius

@@ -1,0 +1,308 @@
+$btn-transition = all 0.2s ease-in-out 0s
+
+.btn
+	display inline-block
+	padding $btn-padding-y $btn-padding-x
+	margin-bottom 0
+	text-align center
+	white-space nowrap
+	vertical-align middle
+	touch-action manipulation
+	cursor pointer
+	-webkit-user-select none
+	-moz-user-select none
+	-ms-user-select none
+	user-select none
+	background-image transparent
+	background-repeat none
+	border 1px solid transparent
+	border-radius $btn-border-radius
+	box-sizing border-box
+	transition $btn-transition
+	box-shadow $btn-box-shadow
+
+	a&
+		text-decoration none
+
+	&:focus
+	&:active:focus
+	&.active:focus
+	&.focus
+	&:active.focus
+	&.active.focus
+		outline thin dotted
+		outline 5px auto -webkit-focus-ring-color
+		outline-offset -2px
+
+	&:hover
+	&:focus
+	&.focus
+		color #333
+		text-decoration none
+
+	&:active
+	&.active
+		background-image none
+		outline 0
+		box-shadow $btn-active-box-shadow
+
+
+	&.table__btn
+		font-family $base-font-family-alt
+		text-transform uppercase
+		letter-spacing normal
+		border-radius 5px
+		height 38px
+		line-height 38px
+		padding-top 0
+		padding-bottom 0
+		color #333
+
+		.table--accent &
+			color #404041
+
+	&.table__btn:hover
+	&.table__btn:focus
+		background-color #2766a0
+		color #fff
+
+		.table--accent &
+			background-color #f7b637
+			color #404041
+
+	&.table__btn:active
+	&.table__btn.active
+		background-color #2766a0
+		color #fff
+
+		.table--accent &
+			background-color #f7b637
+			color #404041
+
+	&.disabled
+	&[disabled]
+	fieldset[disabled] &
+		cursor not-allowed
+		box-shadow none
+		opacity .65
+
+	a&.disabled
+	fieldset[disabled] a&
+		pointer-events none
+
+.btn-block
+	display block
+	width 100%
+
+	& + .btn-block
+		margin-top 5px
+
+	input[type="submit"]&
+	input[type="reset"]&
+	input[type="button"]&
+		width 100%
+
+
+.btn .icon
+	margin-right 5px
+	display inline-block
+	vertical-align middle
+
+
+.btn--link
+	font-weight normal
+	color $btn-link-color
+	border-radius 0
+	background transparent
+	text-decoration none
+
+.btn--link
+.btn--link:active
+.btn--link.active
+.btn--link[disabled]
+fieldset[disabled] .btn--link
+	background transparent
+	box-shadow none
+
+.btn--link
+.btn--link:hover
+.btn--link:focus
+.btn--link:active
+	border-color transparent
+
+.btn--link:hover
+.btn--link:focus
+	background-color transparent
+
+.btn--link[disabled]:hover
+fieldset[disabled] .btn--link:hover
+.btn--link[disabled]:focus
+fieldset[disabled] .btn--link:focus
+	color $btn-link-disabled-color
+	text-decoration none
+
+
+.btn--icon
+	position relative
+	width 40px
+	height 40px
+	padding 0
+
+	.icon
+		position absolute
+		left 50%
+		top 50%
+		transform translate(-50%, -50%)
+
+
+.btn--colored
+	&.btn--raised
+		background #404041
+		color #ffd64a
+
+		&:focus
+		&:hover
+			background #ffd64a
+			color #404041
+
+
+.btn--accent
+	&.btn--outline
+		border 2px solid #ffd74c
+		background-color transparent
+		color #757575
+
+		&:focus
+		&:hover
+			background-color #ffd74c
+			color #757575
+
+	&.btn--raised
+		background #ffd64a
+		color #404041
+
+		&:focus
+		&:hover
+			background darken(#ffd64a, 10%)
+			color #404041
+
+
+.btn--more
+.btn--prev
+.btn--next
+	font-family $base-font-family
+	font-weight normal
+	font-size 18px
+	height 40px
+	line-height 40px
+	white-space nowrap
+	text-transform uppercase
+	letter-spacing .1ex
+	background-color #ffffff
+	color #404041
+	padding 0 60px 0 20px
+	border none
+	position relative
+
+	&.btn--higher
+		font-size 28px
+		line-height 60px
+		height 60px
+		padding-left 30px
+		padding-right 30px
+
+	&.btn--blue
+		background-color #2766a0
+		color #fff
+
+	.panel__item &
+		+below($breakpoint-lg - 1px)
+			font-size 22px
+
+	&:hover
+	&:focus
+	.panel__item--hoverable:hover &
+	.panel__item--hoverable:focus &
+		background-color darken(#fff, 10%)
+
+	&.btn--blue:hover
+	&.btn--blue:focus
+		background-color darken(#2766a0, 10%)
+
+	.icon
+		position absolute
+		width 40px
+		height 40px
+		background-color #ffd64a
+		color #404041
+		transition $btn-transition
+		top 0
+		right 0
+		margin 0
+
+		&:before
+			position absolute
+			left 50%
+			top 50%
+			transform translate(-50%, -50%)
+
+	&.btn--higher
+		padding-right 90px
+
+	&.btn--higher .icon
+		width 60px
+		height 60px
+
+	&.btn--blue .icon
+		background-color #1e3e6c
+		color #ffd64a
+
+	&--alt
+		background-color #f9f9fb
+
+		&:hover
+		&:focus
+			background-color darken(#f9f9fb, 10%)
+
+	.btn--muted&
+		color #999
+
+		&:hover
+		&:focus
+		.panel__item--hoverable:hover &
+		.panel__item--hoverable:focus &
+			background-color transparent
+			color #000
+
+.icon.btn__icon--outline
+	background-color #fff
+	border 2px solid #ffd64a
+
+	.btn:hover &
+	.btn:focus &
+	.panel__item--hoverable:hover &
+	.panel__item--hoverable:focus &
+		border-color #ffd74c
+		background-color #ffd74c
+
+	.btn:hover &.icon--arrow-right-light-grey:before
+	.btn:focus &.icon--arrow-right-light-grey:before
+	.panel__item--hoverable:hover &.icon--arrow-right-light-grey:before
+	.panel__item--hoverable:focus &icon--arrow-right-light-grey:before
+		sprite($icon_arrow_right_light_grey)
+
+.btn--prev
+	padding-right 20px
+	padding-left 60px
+
+	.icon
+		right auto
+		left 0
+
+.btn--alt
+	text-transform uppercase
+	letter-spacing .1ex
+
+// btnSize('sm', $input-padding-y-sm, $input-padding-x-sm, $font-size-sm, $line-height-sm, $input-border-radius-sm)
+// btnSize('md', $input-padding-y-md, $input-padding-x-md, $font-size-md, $line-height-md, $input-border-radius-md)
+btnSize('lg', $input-padding-y-lg, $input-padding-x-lg, $font-size-lg, $line-height-lg, $input-border-radius-lg)

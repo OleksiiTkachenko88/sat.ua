@@ -1,0 +1,704 @@
+$panel-transition = all 0.2s ease-in-out 0s
+
+.panel
+	border 1px solid #acacac
+	background-color #fff
+
+	& + &
+		margin-top -1px
+
+.panel__item
+	margin 0
+
+.panel__heading
+.panel__body
+.panel__footer
+.panel__item
+	padding 15px 20px
+
+	&:first-child
+		padding-top 20px
+
+		+below($breakpoint-lg - 1px)
+			padding-top 15px
+
+	&:last-child
+		padding-bottom 20px
+
+		+below($breakpoint-lg - 1px)
+			padding-bottom 15px
+
+.panel--p-alt
+	.panel__heading
+	.panel__body
+	.panel__footer
+	.panel__item
+		padding 15px 40px
+
+		+below($breakpoint-lg - 1px)
+			padding 15px 20px
+
+		&:first-child
+			padding-top 20px
+
+			+below($breakpoint-lg - 1px)
+				padding-top 15px
+
+		&:last-child
+			padding-bottom 20px
+
+			+below($breakpoint-lg - 1px)
+				padding-bottom 15px
+
+.panel__heading
+	min-height 80px
+
+	+below($breakpoint-lg - 1px)
+		min-height 70px
+
+.panel__spacer
+	flex-grow 1
+	flex-shrink 1
+	flex-basis auto
+
+.panel__heading
+.panel__footer
+	display flex
+	flex-direction row
+	flex-wrap nowrap
+	align-items center
+
+	&-primary-content
+		order 0
+		flex-grow 2
+		flex-shrink 1
+		flex-basis auto
+		display flex
+		align-items center
+
+	&-secondary-content
+		display flex
+		flex-direction row
+		flex-wrap nowrap
+		margin-left 15px
+
+		.btn
+			margin-left 3px
+
+.panel__heading-primary-content
+	color #757575
+
+.panel__footer-primary-content
+	font-size 18px
+	color #808080
+
+	.num
+		color #404041
+
+.panel__title
+	font-family $base-font-family-alt
+	font-size 24px
+	line-height 1
+	font-weight normal
+	text-transform uppercase
+	letter-spacing .1ex
+	color #757575
+	margin-top 0
+	margin-bottom 0
+
+	a
+	a:hover
+	a:focus
+		color inherit
+
+.panel__image
+	display block
+	overflow hidden
+	background-position 50% 50%
+	background-size cover
+	background-repeat no-repeat
+
+	.panel--partner &
+		+below($breakpoint-lg - 1px)
+			height 365px
+
+	& > a:not(.uk-position-cover)
+		height 100%
+		display block
+
+.panel__map
+	display block
+	overflow hidden
+
+.panel__icon
+	float left
+	margin-right 13px
+
+.panel__item
+	display block
+	position relative
+	box-sizing border-box
+
+	.panel__item-list--col-2 &
+		float left
+		width 50%
+
+		+below($breakpoint-lg - 1px)
+			width 100%
+			float none
+
+	&-cover-link
+		position absolute
+		left 0
+		top 0
+		right 0
+		bottom 0
+
+	.panel__item-list &
+		margin-top 30px
+		padding-top 30px
+
+		+below($breakpoint-lg - 1px)
+			margin-top 23px
+			padding-top 23px
+
+
+	.panel__item-list--less-air &
+		margin-top 0
+		padding-top 15px
+
+		+below($breakpoint-lg - 1px)
+			margin-top 23px
+			padding-top 23px
+
+	.panel__item-list &:before
+		content ''
+		position absolute
+		left 20px
+		right 20px
+		top 0
+		border-top 1px solid #d0d2d3
+
+	.panel__heading + .panel__item-list > &
+	.panel__heading + &
+		margin-top 0
+
+	.panel__item-list--col-2 &
+		margin-top 15px
+		padding-top 15px
+
+	.panel__item-list--col-2 .panel__heading + .panel__item-list > &
+	.panel__item-list--col-2 .panel__heading + &
+		margin-top 0
+
+	.panel__item-list--col-2 &
+		margin-top 15px
+		padding-top 15px
+
+	.panel__heading + .panel__item-list--col-2 > &
+		margin-top 0
+
+	&-image
+		float left
+		margin-right 15px
+
+		+below($breakpoint-lg - 1px)
+			display none
+
+		.panel__item-list--col-2 &
+			margin-right 50px
+
+	&-list
+		list-style-type none
+		padding 0
+		margin 0
+
+		&--col-2
+			clearfix()
+			width 100%
+
+	&-sup-title
+		font-family $base-font-family-medium
+		font-size 12px
+		font-weight normal
+		line-height 18px
+		text-transform uppercase
+		letter-spacing .1ex
+		color #828282
+		display block
+		margin 0 0 13px 0
+
+		+below($breakpoint-lg - 1px)
+			font-size 14px
+			margin-bottom 10px
+
+	&-title
+		font-family $base-font-family-light
+		font-size 18px
+		font-weight normal
+		line-height 18px
+		text-transform uppercase
+		letter-spacing .1ex
+		color #404041
+		display block
+		margin 0 0 20px 0
+
+		+below($breakpoint-lg - 1px)
+			font-size 22px
+			line-height normal
+			margin-bottom 17px
+
+		&:last-child
+			margin-bottom 0
+
+		.panel__item--hoverable:hover &
+			color #000
+
+		.panel__item-list--col-2 &
+			text-truncate()
+
+	&-text
+		font-family $base-font-family-light
+		font-size 14px
+		line-height 18px
+
+		+below($breakpoint-lg - 1px)
+			font-size 18px
+
+		&--line-2
+			display -webkit-box
+			-webkit-box-orient vertical
+			overflow hidden
+			text-overflow ellipsis
+			word-wrap break-word
+			max-height 36px
+			-webkit-line-clamp 2
+
+	&-more-icon
+		&:before
+			sprite($icon_arrow_right_light_grey)
+
+			.panel__item--hoverable:hover &
+				sprite($icon_arrow_right_accent)
+
+	&-footer
+		text-align right
+		margin-top 10px
+		
+		.link
+			font-family $base-font-family-light
+			font-weight normal
+			font-size 12px
+			line-height 40px
+			white-space nowrap
+			text-transform uppercase
+			color #828282
+			text-decoration none
+			float left
+			
+			.count
+				font-family $base-font-family-bold
+				font-weight normal
+				color #404040
+
+		+below($breakpoint-lg - 1px)
+			margin-top 7px
+
+.panel__column-2
+	column-count 2
+	column-gap 25px
+
+	+below($breakpoint-lg - 1px)
+		column-count 1
+		column-gap 0
+
+	.panel__body-text&
+		column-gap 40px
+
+		+below($breakpoint-lg - 1px)
+			column-gap 0
+
+	.panel--p-alt panel__body-text&
+		column-gap 80px
+
+		+below($breakpoint-lg - 1px)
+			column-gap 0
+
+.panel__block
+	text-align center
+	padding 20px
+	display flex
+	flex-direction column
+	flex-wrap nowrap
+	align-items center
+	justify-content center
+	text-decoration none
+	position relative
+	transition $panel-transition
+
+	&-list
+		list-style-type none
+		padding 0
+		margin 0
+		width 100%
+		display flex
+		flex-direction row
+		flex-wrap nowrap
+		justify-content space-between
+
+		.panel--promo &
+			+below($breakpoint-lg - 1px)
+				background-color #1e3e6c
+				flex-wrap wrap
+				margin-top -2px
+
+		.panel--recommend &
+			+below($breakpoint-lg - 1px)
+				flex-wrap wrap
+				margin-top -10px
+
+	.panel__block-list &
+		width calc(25% - 12px)
+
+	.panel--promo .panel__block-list &
+		width 20%
+		border-right 2px solid #1e3e6c
+
+		&:last-child
+			border-right none
+
+		&:nth-child(3)
+			+below($breakpoint-lg - 1px)
+				display none
+
+		+below($breakpoint-lg - 1px)
+			width calc(50% - 1px)
+			margin-top 2px
+			border-right none
+
+	.panel--recommend .panel__block-list &
+		+below($breakpoint-lg - 1px)
+			width calc(50% - 5px)
+			margin-top 10px
+
+	&-icon
+		width 200px
+		display block
+		margin-left auto
+		margin-right auto
+		position relative
+
+		&:before
+			position absolute
+			left 50%
+			top 50%
+			transform translate(-50%, -50%)
+
+		.panel--recommend &
+			height 97px
+
+		.panel--promo &
+			height 118px
+
+			+below($breakpoint-lg - 1px)
+				// height 100px
+				// margin-top -10px
+				// transform scale(0.87)
+				// margin-bottom 10px
+
+	&-title
+	&-descr
+		display block
+		max-width 200px
+		margin-left auto
+		margin-right auto
+
+	&-title
+		font-family $base-font-family-light
+		font-size 24px
+		font-weight normal
+		line-height 31px
+		display block
+		color #404041
+		margin-top 0
+		margin-bottom 15px
+
+		&--alt
+			font-family $base-font-family
+			font-size 18px
+			line-height 1.222
+			text-transform uppercase
+			letter-spacing .1ex
+
+			.panel--promo &
+				+below($breakpoint-lg - 1px)
+					font-size 20px
+
+			.panel__block-overlay-panel &
+				font-size 37px
+				lie-height 1.222
+
+				.num
+					font-family $base-font-family-heavy
+					font-size 78px
+					line-height 1
+					display block
+
+		&:first-child
+			margin-top 0
+
+	&-descr
+		font-family $base-font-family
+		font-size 10px
+		font-weight normal
+		line-height 15px
+		text-transform uppercase
+		letter-spacing .1ex
+		display block
+		color #58595b
+		margin-top 10px
+		margin-bottom 0
+
+		+below($breakpoint-lg - 1px)
+			font-size 12px
+			line-height 14px
+			max-width 250px
+
+	&-overlay-panel
+		padding 20px
+		display flex
+		flex-direction column
+		flex-wrap nowrap
+		align-items center
+		justify-content center
+		position absolute
+		left 0
+		right 0
+		top 0
+		bottom 0
+		z-index 10
+		color #404041
+
+		.panel__block--hoverable &
+			transition $panel-transition
+			opacity 0
+			display none
+
+		.panel__block--hoverable:hover &
+			opacity 1
+			display flex
+
+	.panel__container--main--recommend &
+		border 1px solid #f1f1f1
+		height 250px
+
+	.panel__container--main--promo &
+		height 275px
+
+		+below($breakpoint-lg - 1px)
+			height 245px
+
+.panel--recommend
+	border-color #d0d2d3
+	background-color #d0d2d3
+
+.panel--subscribe
+	border-color #d0d2d3
+	background-color #d0d2d3
+	padding-top 60px
+	padding-bottom 60px
+
+	+below($breakpoint-lg - 1px)
+		padding-top 0
+		padding-bottom 0
+
+	.form__title-4
+		color #1e3e6c
+		margin-bottom 40px
+
+		+below($breakpoint-lg - 1px)
+			margin-bottom 23px
+
+	.form-hint
+		margin-top 25px
+
+	.panel__col-image
+		text-align center
+
+		+below($breakpoint-lg - 1px)
+			display none
+
+		img
+			display inline-block
+
+.panel--promo
+	border-color transparent
+	background-color transparent
+
+	+below($breakpoint-lg - 1px)
+		overflow hidden
+
+	.panel__block
+		border-color #f9f9fb
+		background-color #f9f9fb
+		background-image radial-gradient(circle, #e7e7e9, #f9f9fb)
+		background-repeat no-repeat
+		
+		&.active
+			border-color $brand-primary
+			background-color #ffd64a
+			background-image none
+
+	.panel__block-overlay-panel
+		background-color #ffd64a
+		background-image radial-gradient(circle, #ffed72, #ffd64a)
+
+.panel--space
+	border-color transparent
+	background-color transparent
+
+.panel__container-footer
+	text-align center
+	background-color #fff
+	padding-top 20px
+	padding-bottom 20px
+
+	+below($breakpoint-lg - 1px)
+		padding-top 10px
+		padding-bottom 10px
+
+.panel__container--main
+	margin-top 10px
+
+	+below($breakpoint-lg - 1px)
+		margin-top 0
+
+	&--recommend
+		margin-top 0
+
+	.panel__container-row
+		margin-top 10px
+		margin-left -5px
+		margin-right -5px
+
+		&:first-child
+			margin-top 0
+
+		& > [class*='col-']
+			padding-left 5px
+			padding-right 5px
+
+	.panel__item
+		min-height 200px
+		height 200px
+
+		+below($breakpoint-lg - 1px)
+			min-height 0
+			height auto
+
+	.panel--map .panel__map
+		height 525px
+
+	.panel--partner .panel__img
+	.panel--case .panel__img
+		height 400px
+
+		+below($breakpoint-lg - 1px)
+			height 365px
+
+	&--promo
+		position relative
+		margin-top -100px
+		z-index 2
+
+		+below($breakpoint-lg - 1px)
+			margin-top 0
+			margin-left -15px
+			margin-right -15px
+
+	&--recommend
+		background-color #d0d2d3
+		padding-bottom 15px
+
+	&--subscribe
+		background-color #d0d2d3
+		padding-bottom 15px
+		margin-top 0
+
+		+below($breakpoint-lg - 1px)
+			padding-top 10px
+
+	&--banner
+		background-color #d0d2d3
+
+		+below($breakpoint-lg - 1px)
+			margin-left -15px
+			margin-right -15px
+
+		.panel
+			+below($breakpoint-lg - 1px)
+				margin-top 10px
+
+	&--strategy
+		position relative
+		margin-top -100px
+		margin-bottom 20px
+		z-index 2
+
+		+below($breakpoint-lg - 1px)
+			margin-top 0
+			margin-left -15px
+			margin-right -15px
+
+		.panel
+			+below($breakpoint-lg - 1px)
+				margin-top 10px
+
+	&--news
+		background-color transparent
+		margin-top 20px
+		margin-bottom 20px
+
+		+below($breakpoint-lg - 1px)
+			margin-left -15px
+			margin-right -15px
+
+		.panel
+			+below($breakpoint-lg - 1px)
+				margin-top 10px
+
+	&--misc
+		+below($breakpoint-lg - 1px)
+			margin-left -15px
+			margin-right -15px
+
+		.panel
+			+below($breakpoint-lg - 1px)
+				margin-top 10px
+
+.panel__body-title
+	font-family $base-font-family-medium
+	font-size 24px
+	font-weight normal
+	line-height 1.2
+	color #424242
+	display block
+	margin-top 0
+	margin-bottom 15px
+
+	&--alt
+		text-transform uppercase
+		letter-spacing .1ex
+
+.panel__body-text
+	font-family $base-font-family-light
+	font-size 14px
+	font-weight normal
+	line-height 22px
+	color #58595b
+	display block
+	margin-top 0
+	margin-bottom 0
+
+	+below($breakpoint-lg - 1px)
+		text-align justify

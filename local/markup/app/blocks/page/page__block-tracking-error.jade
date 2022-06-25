@@ -1,0 +1,14 @@
+.page__block.page__block--tracking
+	.container-fluid
+		.page__block-group
+			input.form-control.form-control--accent.page__block-input.has-close(type='text', value='002301207', placeholder='Введіть номер вашого відправлення')
+			span.page__block-input-close
+				| <i class="icon"></i>
+			.card.card--order-error
+				.card__inner
+					i.icon
+					h3.card__title Ви ввели недійсний номер відправлення.
+					p Номер відправлення складається з дев'яти цифр та трьох латинських букв, наприклад: 123456789MZK. Перевірте свій номер і спробуйте ще раз.
+					p Ми завжди готові допомогти. Якщо у вас виникли будь-які питання про поточне місцезнаходження вашого відправлення, ви можете зв'язатися з нами.
+			include ../common/cabinet-link-alt_02.jade
+		include ../form/form_recall.jade

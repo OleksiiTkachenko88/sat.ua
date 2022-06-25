@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="ua">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=640">
+		<title>Новости</title>
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<!--<link href="assets/styles/style_header_footer.css" rel="stylesheet">
+		<link href="assets/styles/style.css" rel="stylesheet">-->
+		<link href="assets/styles/app.min.css" rel="stylesheet">
+		
+		<script src="assets/scripts/app.min.js"></script>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+		<script>
+			$(document).on("click",function(event){
+			
+				if(check_touch(event)==1){
+					return false;
+				}else{
+					if(event["target"]["id"]=="js_show_calculator"  ){				
+						$("#mini_calc_new").toggleClass('is-active');
+					}
+					
+					if(event["target"]["id"]!="mini_calc_new" && event["target"]["id"]!="js_show_calculator"){
+						$("#mini_calc_new").removeClass('is-active');
+					}
+					
+					
+					if(event["target"]["id"]=="js_tracking" ){				
+						$("#mini_tracking").toggleClass('is-active');
+					}
+					
+					if(event["target"]["id"]!="mini_tracking" && event["target"]["id"]!="js_tracking"){
+						$("#mini_tracking").removeClass('is-active');
+					}	
+					
+					if(event["target"]["id"]!="search"){
+						$(".page__navbar-header").next('.page__navbar-header--search').removeClass('is-expand');				
+					}
+				}
+			
+				
+			});	
+			
+			
+			
+			function check_touch(element){
+			
+				if(element["target"].toString().indexOf("Rect")>=0){
+					return 1;
+				}else if(element["target"].toString().indexOf("Input")>=0){
+					return 1;
+				}else if(element["target"].toString().indexOf("Paragraph")>=0){
+					return 1;
+				}else if(element["target"]["className"].toString().indexOf("js_no_touch")>=0){
+					return 1;
+				}else{
+					return 0;
+				}
+			}
+		</script>
+		
+		
+		<style>
+            .minicalculator{
+        		margin-top: -0px;
+    		}
+			.is-active{
+				display:block !important;
+			}
+		</style>
+
+
+	</head>
+
+	<body class="page scroll page--layout-side">
+		<div class="page scroll page--layout-side">
+			<div id="page_news" class="page__content page_news">
+				<header data-uk-sticky="{top:-40}" class="page__header">
+					<div id="page-cont" class="container-fluid page__header-container">
+						<div class="page__header-container-inner">
+							<nav class="navbar nav_logo navbar--header page__navbar-header">
+								<div class="nav_new navbar__primary-content">
+									<a href="#mobile_menu" data-uk-offcanvas="{mode:'slide'}" class="navbar__button-icon navbar__button-icon--menu">
+										<i class="icon"></i>
+									</a>
+									<a href="" class="navbar__brand">
+										<span class="navbar__brand-space"></span>
+										<img src="assets/images/sat-logo-mobile.png" alt="" width="161" height="62" class="navbar__brand-logo-mobile">
+										<img src="assets/images/sat-logo-desktop.png" alt="" width="242" height="91" class="navbar__brand-logo-desktop">
+									</a>
+									<ul class="navbar__nav ul_menu">
+										<li>
+											<a href="javascript:void(0)" id="js_show_calculator">Замовити</a>
+										</li>
+										<li>
+											<a href="javascript:void(0)" id="js_tracking">Трекінг</a>
+										</li>
+										<li>
+											<a href="">Компанія&nbsp;SAT</a>
+										</li>
+										<li>
+											<a href="">Контакти</a>
+										</li>
+									</ul>
+								</div>
+								<div class="navbar__secondary-content">
+									<div class="navbar__phone-wrapper">
+										<strong class="navbar__phone">0 800 502 25 25</strong>
+										<span class="navbar__phone-hint">Безкоштовна гаряча лінія</span>
+									</div>
+									<a href="" class="navbar__button-icon navbar__button-icon--entry">
+										<i class="icon"></i>
+									</a>
+									<a href="" class="navbar__button-icon navbar__button-icon--lang">
+										<span>ua</span>
+									</a>
+									<a href="" class="navbar__button-icon navbar__button-icon--search js-toggle-search">
+										<i class="icon"></i>
+									</a>
+								</div>
+							</nav>						
+							<div class="navbar navbar--header page__navbar-header page__navbar-header--search">
+								<form id="search_class" class="navbar__primary-content">
+									<i class="icon icon--search-accent navbar__icon"></i>
+									<div class="navbar__search uk-width-1-1">
+										<input id="search" type="text" placeholder="Пошук надпоштових можливостей" class="form-control uk-width-1-1 navbar__search-form-control">
+									</div>
+									<span id="ic-close" class="navbar__button-icon navbar__button-icon--close js-close">
+										<i class="icon"></i>
+									</span>
+								</form>
+							</div>
+							
+							
+							
+							<div id="mini_calc_new"  class="mini_calc" style="position: absolute; top: 45%;">
+								<!--<div class="transparency"></div>
+								<svg> 
+
+								<rect x="0" y="0" height="300" width="1900" fill="rgb(177,182,182)" fill-opacity="0.8" />
+								</svg>-->
+								<div class="row_top js_no_touch">
+									<div class="start_calc js_no_touch" style="background-image:url(assets/images/white_fon.png);">
+										<input type="text" placeholder="Введіть місто відправлення" class="calc_form_start">
+										<div class="img_start js_no_touch"><img class='js_no_touch' src="assets/images/svg/start.svg"></div>
+										<img class="krest js_no_touch" src="assets/images/krest.png">
+									</div>
+									<div class="finish_calc js_no_touch" style="background-image:url(assets/images/white_fon.png);">
+										<input type="text" placeholder="Кам'янець-Подiльский" class="calc_form_finish">
+										<div class="img_finish js_no_touch"><img class='js_no_touch' src="assets/images/svg/finish.svg"></div>
+										<img class="krest js_no_touch" src="assets/images/krest.png">
+									</div>
+									<div class="weight_calc js_no_touch" style="background-image:url(assets/images/white_fon.png);">
+										<input type="text" placeholder="500 кг" class="calc_form_weight">
+										<div class="img_weight js_no_touch"><img class='js_no_touch' src="assets/images/svg/weight.svg"></div>
+									</div>
+									<div class="butt_enter"><a class="a_enter" href="#"><p>розрахувати</p></a></div>
+								</div>
+								<div class="clear"></div>
+								<div class="row_bottom js_no_touch">
+									<div class="img_car js_no_touch"><img class='js_no_touch' src="assets/images/svg/car.svg"></div>
+									<p class="otpr js_no_touch">Отправка</p>
+									<p class="itog"> Чоп - Кам'янець-Подiльский</p>  <p class="ves"> 500 кг  </p> <p class="summ"> от  47 325 грн </p>
+									<div class="enter_zamov"><a class="a_zamov" href="#"><p>оформити замовлення</p></a></div>
+								</div>
+							</div>
+							
+							
+							
+							<div class="mini_track tracking" id="mini_tracking" style="position: absolute; top: 45%;">
+								<!--<div class="transparency"></div>
+								<svg> 
+
+								<rect x="0" y="0" height="470" width="1900" fill="rgb(177,182,182)" fill-opacity="0.8" />
+								</svg>-->
+								<div class="numm_decl js_no_touch">
+									<img class="trek js_no_touch" src="assets/images/trek.png">
+									<input type="text" placeholder="Вкажіть номер декларації" class="trek_form">									
+								</div>
+								<div class="but_sled"><a class="a_sled" href="#"><p>Отследить</p></a></div>
+								<div class="div_recive js_no_touch"><img class="recive js_no_touch" src="assets/images/svg/man_recive.svg"></div>
+								<p class="city_sled">Кам'янець-Подiльский</p>
+								<div class="vydacha js_no_touch">									
+									<p class="trek_vydacha">Вантаж видано отримувачу</p>									
+								</div>
+								<div class="but_podrobn"><a class="a_podrobn" href="#"><p>Подробнее</p></a></div>
+							</div>
+							
+							
+							
+							
+							<div class="mini_track tracking" id="mini_tracking1" style="position: absolute; top: 45%;">
+								<!--<div class="transparency"></div>
+								<svg> 
+
+								<rect x="0" y="0" height="470" width="1900" fill="rgb(177,182,182)" fill-opacity="0.8" />
+								</svg>-->
+								<div class="numm_decl js_no_touch">
+									<img class="trek js_no_touch" src="assets/images/trek.png">
+									<input type="text" placeholder="Вкажіть номер декларації" class="trek_form">									
+								</div>
+								<div class="but_sled"><a class="a_sled" href="#"><p>Отследить</p></a></div>
+								<div class="div_recive1 js_no_touch">
+									<div class="fon_track1 js_no_touch"><img class="car_track1 js_no_touch" src="assets/images/car_track.png"></div>
+									<p class="city1">Чоп</p>
+									<p class="city2">Кам'янець-Подiльский</p>
+								</div>
+								
+								<div class="vydacha js_no_touch">									
+									<p class="trek_vydacha">Вантаж знаходиться у місці призначення</p>									
+								</div>
+								<div class="but_podrobn"><a class="a_podrobn" href="#"><p>Подробнее</p></a></div>
+							</div>
+							
+							
+							
+							<div class="mini_track tracking" id="mini_tracking2" style="position: absolute; top: 45%;" >
+								<!--<div class="transparency"></div>
+
+								<rect x="0" y="0" height="470" width="1900" fill="rgb(177,182,182)" fill-opacity="0.8" />
+								</svg>-->
+								<div class="numm_decl js_no_touch">
+									<img class="trek js_no_touch" src="assets/images/trek.png">
+									<input type="text" placeholder="Вкажіть номер декларації" class="trek_form">									
+								</div>
+								<div class="but_sled"><a class="a_sled" href="#"><p>Отследить</p></a></div>
+								<div class="div_recive2 js_no_touch">
+									<div class="fon_track2 js_no_touch"><img class="car_track2 js_no_touch" src="assets/images/car_track.png"></div>
+									<p class="city1">Чоп</p>
+									<p class="city2" style="color:#FFD64A; background:#1E3E6C">Кам'янець-Подiльский</p>
+								</div>
+								
+								<div class="vydacha js_no_touch">									
+									<p class="trek_vydacha">Вантаж перебуває у дорозі</p>									
+								</div>
+								<div class="but_podrobn"><a class="a_podrobn" href="#"><p>Подробнее</p></a></div>
+							</div>
+							
+							
+							
+							
+							<div class="mini_track tracking" id="mini_tracking3" style="position: absolute; top: 45%;">
+								<!--<div class="transparency"></div>
+								<svg> 
+
+								<rect x="0" y="0" height="470" width="1900" fill="rgb(177,182,182)" fill-opacity="0.8" />
+								</svg>-->
+								<div class="numm_decl js_no_touch">
+									<img class="trek js_no_touch" src="assets/images/trek.png">
+									<input type="text" placeholder="Вкажіть номер декларації" class="trek_form">									
+								</div>
+								<div class="but_sled "><a class="a_sled" href="#"><p>Отследить</p></a></div>
+								<div class="div_recive3 js_no_touch">
+									<div class="fon_track3 js_no_touch"><img class="car_track3 js_no_touch" src="assets/images/car_track.png"></div>
+									<p class="city1">Чоп</p>
+									<p class="city2" style="color:#FFD64A;background:#1E3E6C">Кам'янець-Подiльский</p>
+								</div>
+								
+								<div class="vydacha js_no_touch">									
+									<p class="trek_vydacha">Вантаж знаходиться у місці відправлення</p>									
+								</div>
+								<div class="but_podrobn"><a class="a_podrobn" href="#"><p>Подробнее</p></a></div>
+							</div>
+							
+							<div class="mini_track tracking" id="mini_tracking4" style="position: absolute; top: 45%;">
+								<!--<div class="transparency"></div>
+								<svg> 
+
+								<rect x="0" y="0" height="470" width="1900" fill="rgb(177,182,182)" fill-opacity="0.8" />
+								</svg>-->
+								<div class="numm_decl js_no_touch">
+									<img class="trek js_no_touch" src="assets/images/trek.png">
+									<input type="text" placeholder="Вкажіть номер декларації" class="trek_form">									
+								</div>
+								<div class="but_sled"><a class="a_sled" href="#"><p>Отследить</p></a></div>
+								
+							</div>
+							
+							
+							
+							
+						</div>
+					</div>
+					<div id="mobile_menu" class="uk-offcanvas">
+						<div class="uk-offcanvas-bar uk-offcanvas-bar--menu">
+							<ul class="uk-nav uk-nav-offcanvas uk-nav-offcanvas--menu">
+								<li>
+									<a href="#">Компания SAT</a>
+								</li>
+								<li class="uk-active">
+									<a href="#">Трекинг</a>
+								</li>
+								<li>
+									<a href="#">Замовити</a>
+								</li>
+								<li>
+									<a href="#">Контакти</a>
+								</li>
+								<li class="uk-nav-header">Помощь онлайн</li>
+								<li class="phone">
+									<a href="#">
+										<i class="icon"></i>
+									</a>
+								</li>
+								<li class="email">
+									<a href="#">
+										<i class="icon"></i>
+									</a>
+								</li>
+								<li class="chat">
+									<a href="#">
+										<i class="icon"></i>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</header>
+				<nav id="sidenav" class="sidenav hidden-md-down">
+					<a href="" class="sidenav__link sidenav__link--calc is-fade">
+						<span class="sidenav__pointer">Текст</span>
+						<i class="icon sidenav__icon"></i>
+					</a>
+					<a href="" class="sidenav__link sidenav__link--truck is-fade">
+						<span class="sidenav__pointer">Текст</span>
+						<i class="icon sidenav__icon"></i>
+					</a>
+					<a href="" class="sidenav__link sidenav__link--cargo is-fade">
+						<span class="sidenav__pointer">Текст</span>
+						<i class="icon sidenav__icon"></i>
+					</a>
+					<a href="" class="sidenav__link sidenav__link--map is-fade">
+						<span class="sidenav__pointer">Текст</span>
+						<i class="icon sidenav__icon"></i>
+					</a>
+					<a href="" class="sidenav__link sidenav__link--phone">
+						<span class="sidenav__pointer">Текст</span>
+						<i class="icon sidenav__icon"></i>
+					</a>
+					<a href="" class="sidenav__link sidenav__link--mail">
+						<span class="sidenav__pointer">Текст</span>
+						<i class="icon sidenav__icon"></i>
+					</a>
+					<a href="" class="sidenav__link sidenav__link--chat">
+						<span class="sidenav__pointer">Помощь онлайн</span>
+						<i class="icon sidenav__icon"></i>
+					</a>
+					<a href="" class="sidenav__link sidenav__link--entry active">
+						<span class="sidenav__pointer">Текст</span>
+						<i class="icon sidenav__icon"></i>
+					</a>
+				</nav>
+				<div id="cont_news" class="container-fluid">
+					<div class="page__row">
+						<div class="page__col-section-wrapper">
+							<div class="page__col-section">
+								<article class="article">
+									<header class="article__header">
+										<figure class="article__img-container">
+											<img src="assets/images/2.jpg" alt="" width="980" height="555" class="article__img">
+										</figure>
+										<time class="article__header-date">17 лютого 2016</time>
+										<h3 class="article__header-title">SAT поздравляет милых женщин с 8 марта и желает им счастья</h3>
+									</header>
+									<div class="article__body">
+										<p>Действительно, торговля и найти для нас настоящими героями в этой. Этим правилам я встречал многих. Коем случае
+											нельзя ходить с другой – даёт повод. Вы ни чему не безукоризненными резюме справиться с опущенной головой.</p>
+										<p>Учиться искусству создания собственного бизнеса руководствуйтесь. Лестнице, чтобы ваша жизнь ничему бы он умер
+											там, неужели. Живут хорошо и захватывающей дух, попробуйте стать бизнесменом людей с одной. Совершите ни в коем
+											случае нельзя ходить с другой.</p>Люди и учреждения, которым мы систематически помогаем:
+										<ol>
+											<li>Ещё долгое время для них уроки зато в первую очередь</li>
+											<li>Все ваши ошибки в тюрьме шанс подняться чтобы</li>
+										</ol>
+										<p>Ведь если вы ни одной ошибки. Противоречат друг мадиба провёл двадцать семь лет. Бизнесменов, на риск, дать людям
+											шанс подняться. Карьерной лестнице, чтобы увидеть, как хорошие, так.</p>АТО и волонтеры:
+										<ul>
+											<li>Ещё долгое время для них уроки зато в первую очередь</li>
+											<li>Все ваши ошибки в тюрьме шанс подняться чтобы</li>
+										</ul>
+										<p>Связи с проблемами, и вознаградить тяжёлый труд своих сотрудников, и может надолго. Домыслами и актёры, умершие
+											в бизнесе. Многие бизнесмены ошибочно полагают. Закрепиться за вами в наших силах уменьшить.</p>
+										<p>Честно, благородно вести себя по карьерной лестнице, чтобы инвестировать её. Неужели его жизнь ничему бы. Миллиардами
+											долларов на риск, дать людям шанс подняться. Долгое время после того, чтобы ваша жизнь других людей живут.</p>
+										<p>Способ решить эту проблему, зато в первую очередь, вы хотите быть предпринимателем. Её в наших силах уменьшить
+											её. Опущенной головой вашу репутацию подняться по карьерной. Вовсе не совершите ни чему хорошему, а не всегда
+											готовы.</p>
+										<p>Благородными побуждениями знает, как хорошие, так и заслуживающих доверия.</p>
+										<p>Печать их карьера жизни в тюрьме конкурентам, но многие бизнесмены ошибочно.</p>
+									</div>
+								</article>
+								<div class="comment-container active">
+									<div class="comment-container-button-top text-xs-center">
+										<span class="btn btn--more btn--more--alt">
+											<span class="btn__text">Розгорнути коментарі</span>
+											<span class="btn__text">Згорнути коментарі</span>
+											<i class="icon icon--arrow-down-grey"></i>
+										</span>
+									</div>
+									<div class="comment-container-item collapse in">
+										<div class="comment-item">
+											<img src="http://placehold.it/65x65" alt="" width="65" height="65" class="comment-item__ava">
+											<div class="comment-item__header">
+												<div class="comment-item__header-title">Сергій Іванович Семеренко</div>
+												<div class="comment-item__header-date">28.09.2016</div>
+											</div>
+											<div class="comment-item__body">Наша сила в единстве! Мы обязаны выполнять свой долг, который заключается в оказании всевозможной поддержки, как
+												материальной, так и моральной. Мы всегда должны помнить, что находясь там, на востоке, бойцы защищают в первую
+												очередь нас с вами, отстаивая интересы Украины и борясь за независимость.</div>
+										</div>
+										<div class="comment-item">
+											<img src="http://placehold.it/65x65" alt="" width="65" height="65" class="comment-item__ava">
+											<div class="comment-item__header">
+												<div class="comment-item__header-title">Сергій Іванович Семеренко</div>
+												<div class="comment-item__header-date">28.09.2016</div>
+											</div>
+											<div class="comment-item__body">Наша сила в единстве! Мы обязаны выполнять свой долг, который заключается в оказании всевозможной поддержки, как
+												материальной, так и моральной. Мы всегда должны помнить, что находясь там, на востоке, бойцы защищают в первую
+												очередь нас с вами, отстаивая интересы Украины и борясь за независимость.</div>
+										</div>
+										<div class="comment-item">
+											<img src="http://placehold.it/65x65" alt="" width="65" height="65" class="comment-item__ava">
+											<div class="comment-item__header">
+												<div class="comment-item__header-title">Сергій Іванович Семеренко</div>
+												<div class="comment-item__header-date">28.09.2016</div>
+											</div>
+											<div class="comment-item__body">Наша сила в единстве! Мы обязаны выполнять свой долг, который заключается в оказании всевозможной поддержки, как
+												материальной, так и моральной. Мы всегда должны помнить, что находясь там, на востоке, бойцы защищают в первую
+												очередь нас с вами, отстаивая интересы Украины и борясь за независимость. </div>
+										</div>
+										<div class="comment-item">
+											<img src="http://placehold.it/65x65" alt="" width="65" height="65" class="comment-item__ava">
+											<div class="comment-item__header">
+												<div class="comment-item__header-title">Сергій Іванович Семеренко</div>
+												<div class="comment-item__header-date">28.09.2016</div>
+											</div>
+											<div class="comment-item__body">Наша сила в единстве! Мы обязаны выполнять свой долг, который заключается в оказании всевозможной поддержки, как
+												материальной, так и моральной. Мы всегда должны помнить, что находясь там, на востоке, бойцы защищают в первую
+												очередь нас с вами, отстаивая интересы Украины и борясь за независимость. </div>
+										</div>
+										<div class="comment-item">
+											<img src="http://placehold.it/65x65" alt="" width="65" height="65" class="comment-item__ava">
+											<div class="comment-item__header">
+												<div class="comment-item__header-title">Сергій Іванович Семеренко</div>
+												<div class="comment-item__header-date">28.09.2016</div>
+											</div>
+											<div class="comment-item__body">Наша сила в единстве! Мы обязаны выполнять свой долг, который заключается в оказании всевозможной поддержки, как
+												материальной, так и моральной. Мы всегда должны помнить, что находясь там, на востоке, бойцы защищают в первую
+												очередь нас с вами, отстаивая интересы Украины и борясь за независимость. </div>
+										</div>
+									</div>
+									
+									<div id="collapseComment" class="collapse in">
+										<h3 class="form__title-2 form__title-alt m-y-0">Додайте ваш коммент</h3>
+										<div class="comment-item">
+											<img src="http://placehold.it/65x65" alt="" width="65" height="65" class="comment-item__ava">
+											<div class="input_name">
+												<form id="name" method="post">
+													<input type="text" name="first_name" id="first" value='' placeholder="Введiть им'я">	
+												</form>
+										</div>
+										</div>
+										
+										<div class="form-group">
+											<textarea id="foo" name="foo" cols="94" rows="4" class="form-control form-control--alt"></textarea>
+										</div>
+										<script>
+								$(document).ready(function(){
+									var textArea = $('#foo');
+									var maxRows = textArea.attr('rows');
+									var maxChars = textArea.attr('cols');
+									textArea.keypress(function(e){
+										var text = textArea.val();
+										var lines = text.split('\n');
+										if (e.keyCode == 13){
+											return lines.length < maxRows;
+										}
+										else{ //Should check for backspace/del/etc.
+											var caret = textArea.get(0).selectionStart;
+											console.log(caret);
+											
+											var line = 0;
+											var charCount = 0;
+											$.each(lines, function(i,e){
+												charCount += e.length;
+												if (caret <= charCount){
+													line = i;
+													return false;
+												}
+												//\n count for 1 char;
+												charCount += 1;
+											});
+												   
+											var theLine = lines[line];
+											return theLine.length < maxChars;
+										}
+									});
+									
+								});
+							</script>
+										<div class="captcha"><img src="assets/images/kapt.png" alt=""></div>
+									</div>
+									<div class="comment-container-button-bottom text-xs-right">
+										<a href="#collapseComment" data-toggle="collapse" class="btn btn--outline btn--accent btn--alt">Коментувати</a>
+									</div>
+									<!--<div id="comment" class="comment-container-button-bottom text-xs-right">
+										<a href="#collapseComment" data-toggle="collapse" class="btn btn--outline btn--accent btn--alt">Коментувати</a>
+									</div>-->
+								</div>
+							</div>
+						</div>
+						<aside class="page__col-side">
+							<div class="page__col-side-toggle">
+								<div class="page__col-side-toggle-icon"></div>
+							</div>
+							<div class="hed"><header class="panel__heading" style="background-color:white; width="340px">
+									<div class="panel__heading-primary-content">
+										<i class="icon panel__icon"></i>
+										<h3 class="panel__title">Новини</h3>
+									</div>
+							</header></div>
+							
+							<div id="swiper" class="page__col-side-container swiper-container js-swiper-container-scrollable">
+								
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<nav class="panel panel--news panel--space">
+											
+											<ul class="panel__item-list">
+												<li class="panel__item panel__item--hoverable">
+													<small class="panel__item-sup-title">17 лютого 2016</small>
+													<strong class="panel__item-title">Кращий перевізник 2015</strong>
+													<div class="panel__item-text panel__item-text--line-2">Вже давно відомо, що читабельний зміст буде заважати зосередитись людині буде заважати зосередитись людині</div>
+													<div
+														class="panel__item-footer">
+														<div class="link">
+															<span class="num">32</span>
+															<span class="text">коментарі</span>
+														</div>
+														<span class="btn btn--icon">
+															<i class="icon panel__item-more-icon"></i>
+														</span>
+									</div>
+									<a href="" class="panel__item-cover-link"></a>
+									</li>
+									<li class="panel__item panel__item--hoverable">
+										<small class="panel__item-sup-title">17 лютого 2016</small>
+										<strong class="panel__item-title">Кращий перевізник 2015</strong>
+										<div class="panel__item-text panel__item-text--line-2">Вже давно відомо, що читабельний зміст буде заважати зосередитись людині</div>
+										<div class="panel__item-footer">
+											<div class="link">
+												<span class="num">32</span>
+												<span class="text">коментарі</span>
+											</div>
+											<span class="btn btn--icon">
+												<i class="icon panel__item-more-icon"></i>
+											</span>
+										</div>
+										<a href="" class="panel__item-cover-link"></a>
+									</li>
+									<li class="panel__item panel__item--hoverable">
+										<small class="panel__item-sup-title">17 лютого 2016</small>
+										<strong class="panel__item-title">Кращий перевізник 2015</strong>
+										<div class="panel__item-text panel__item-text--line-2">Вже давно відомо, що читабельний зміст буде заважати зосередитись людині</div>
+										<div class="panel__item-footer">
+											<div class="link">
+												<span class="num">32</span>
+												<span class="text">коментарі</span>
+											</div>
+											<span class="btn btn--icon">
+												<i class="icon panel__item-more-icon"></i>
+											</span>
+										</div>
+										<a href="" class="panel__item-cover-link"></a>
+									</li>
+									<li class="panel__item panel__item--hoverable">
+										<small class="panel__item-sup-title">17 лютого 2016</small>
+										<strong class="panel__item-title">Кращий перевізник 2015</strong>
+										<div class="panel__item-text panel__item-text--line-2">Вже давно відомо, що читабельний зміст буде заважати зосередитись людині</div>
+										<div class="panel__item-footer">
+											<div class="link">
+												<span class="num">32</span>
+												<span class="text">коментарі</span>
+											</div>
+											<span class="btn btn--icon">
+												<i class="icon panel__item-more-icon"></i>
+											</span>
+										</div>
+										<a href="" class="panel__item-cover-link"></a>
+									</li>
+									<li class="panel__item panel__item--hoverable">
+										<small class="panel__item-sup-title">17 лютого 2016</small>
+										<strong class="panel__item-title">Кращий перевізник 2015</strong>
+										<div class="panel__item-text panel__item-text--line-2">Вже давно відомо, що читабельний зміст буде заважати зосередитись людині</div>
+										<div class="panel__item-footer">
+											<div class="link">
+												<span class="num">32</span>
+												<span class="text">коментарі</span>
+											</div>
+											<span class="btn btn--icon">
+												<i class="icon panel__item-more-icon"></i>
+											</span>
+										</div>
+										<a href="" class="panel__item-cover-link"></a>
+									</li>
+									<li class="panel__item panel__item--hoverable">
+										<small class="panel__item-sup-title">17 лютого 2016</small>
+										<strong class="panel__item-title">Кращий перевізник 2015</strong>
+										<div class="panel__item-text panel__item-text--line-2">Вже давно відомо, що читабельний зміст буде заважати зосередитись людині</div>
+										<div class="panel__item-footer">
+											<div class="link">
+												<span class="num">32</span>
+												<span class="text">коментарі</span>
+											</div>
+											<span class="btn btn--icon">
+												<i class="icon panel__item-more-icon"></i>
+											</span>
+										</div>
+										<a href="" class="panel__item-cover-link"></a>
+									</li>
+									<li class="panel__item panel__item--hoverable">
+										<small class="panel__item-sup-title">17 лютого 2016</small>
+										<strong class="panel__item-title">Кращий перевізник 2015</strong>
+										<div class="panel__item-text panel__item-text--line-2">Вже давно відомо, що читабельний зміст буде заважати зосередитись людині</div>
+										<div class="panel__item-footer">
+											<div class="link">
+												<span class="num">32</span>
+												<span class="text">коментарі</span>
+											</div>
+											<span class="btn btn--icon">
+												<i class="icon panel__item-more-icon"></i>
+											</span>
+										</div>
+										<a href="" class="panel__item-cover-link"></a>
+									</li>
+									<li class="panel__item panel__item--hoverable">
+										<small class="panel__item-sup-title">17 лютого 2016</small>
+										<strong class="panel__item-title">Кращий перевізник 2015</strong>
+										<div class="panel__item-text panel__item-text--line-2">Вже давно відомо, що читабельний зміст буде заважати зосередитись людині</div>
+										<div class="panel__item-footer">
+											<div class="link">
+												<span class="num">32</span>
+												<span class="text">коментарі</span>
+											</div>
+											<span class="btn btn--icon">
+												<i class="icon panel__item-more-icon"></i>
+											</span>
+										</div>
+										<a href="" class="panel__item-cover-link"></a>
+									</li>
+									</ul>
+									</nav>
+								</div>
+							</div>
+							<div class="swiper-scrollbar"></div>
+					</div>
+					</aside>
+					<div class="page__col-side-tint"></div>
+				</div>
+				<div class="panel__container panel__container--main panel__container--main--news">
+					<div class="row panel__container-row">
+						<div class="col-xs-12 col-lg-6">
+							<section id="panel" class="panel panel--case">
+								<header class="panel__heading">
+									<div class="panel__heading-primary-content">
+										<i class="icon panel__icon"></i>
+										<h3 class="panel__title">Кейси</h3>
+									</div>
+								</header>
+								<div style="background-image: url(http://placehold.it/695x400);" class="panel__image uk-position-relative">
+									<img src="http://placehold.it/695x400" alt="" width="695" height="400" class="invisible">
+									<a href="" class="uk-position-cover uk-flex uk-flex-center uk-flex-middle">
+										<i class="icon icon--play-white"></i>
+									</a>
+								</div>
+								<div class="panel__item panel__item--hoverable">
+									<small class="panel__item-sup-title">17 лютого 2016</small>
+									<strong class="panel__item-title">Отримайте необхідну інформацію для партнерів компанії</strong>
+									<div class="panel__item-text panel__item-text--line-2">Вже давно відомо, що читабельний зміст буде заважати зосередити, що читабельний зміст буде заважати зосередити</div>
+									<div
+										class="panel__item-footer">
+										<span class="btn btn--more btn--muted">Кейси SAT
+											<i class="icon icon--arrow-right-light-grey btn__icon--outline"></i>
+										</span>
+								</div>
+								<a href="" class="panel__item-cover-link"></a>
+						</div>
+						</section>
+					</div>
+					<div class="col-xs-12 col-lg-6">
+						<section id="panel2"class="panel panel--partner">
+							<header class="panel__heading">
+								<div class="panel__heading-primary-content">
+									<i class="icon panel__icon"></i>
+									<h3 class="panel__title">Партнерам</h3>
+								</div>
+							</header>
+							<div style="background-image: url(http://placehold.it/695x400);" class="panel__image">
+								<a href="">
+									<img src="http://placehold.it/695x400" alt="" width="695" height="400" class="invisible">
+								</a>
+							</div>
+							<div class="panel__item panel__item--hoverable">
+								<small class="panel__item-sup-title">17 лютого 2016</small>
+								<strong class="panel__item-title">Отримайте необхідну інформацію для партнерів компанії</strong>
+								<div class="panel__item-text panel__item-text--line-2">Вже давно відомо, що читабельний зміст буде заважати зосередити, що читабельний зміст буде заважати зосередити</div>
+								<div
+									class="panel__item-footer">
+									<span class="btn btn--more btn--muted">Партнерам SAT
+										<i class="icon icon--arrow-right-light-grey btn__icon--outline"></i>
+									</span>
+							</div>
+							<a href="" class="panel__item-cover-link"></a>
+					</div>
+					</section>
+				</div>
+			</div>
+		</div>
+		</div>
+		</div>
+		<footer class="page__footer">
+			<div class="mega-footer">
+				<div id="foot" class="container-fluid mega-footer__container">
+					<div class="mega-footer__logo"></div>
+					<h3 class="mega-footer__extra-heading hidden-md-down">Мапа сайту</h3>
+					<nav class="mega-footer__middle-section hidden-md-down">
+						<div class="mega-footer__section">
+							<h5 class="mega-footer__heading">Замовити</h5>
+							<ul class="mega-footer__link-list">
+								<li>
+									<a href="">Калькулятор</a>
+								</li>
+							</ul>
+						</div>
+						<div class="mega-footer__section">
+							<h5 class="mega-footer__heading">ТРЕКІНГ</h5>
+							<ul class="mega-footer__link-list">
+								<li>
+									<a href="">Відстежити вантаж</a>
+								</li>
+								<li>
+									<a href="">Замовлення</a>
+								</li>
+							</ul>
+						</div>
+						<div class="mega-footer__section">
+							<h5 class="mega-footer__heading">Надпоштові можливості</h5>
+							<ul class="mega-footer__link-list">
+								<li>
+									<a href="">Послуги</a>
+								</li>
+								<li>
+									<a href="">Академія</a>
+									<ul>
+										<li>
+											<a href="">Кейси</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+						<div class="mega-footer__section">
+							<h5 class="mega-footer__heading">Акції</h5>
+							<ul class="mega-footer__link-list">
+								<li>
+									<a href="">Найкращі пропозиції</a>
+								</li>
+								<li>
+									<a href="">Акції для вас</a>
+								</li>
+								<li>
+									<a href="">Ваші бонуси</a>
+								</li>
+							</ul>
+						</div>
+						<div class="mega-footer__section">
+							<h5 class="mega-footer__heading">Компанія SAT</h5>
+							<ul class="mega-footer__link-list">
+								<li>
+									<a href="">Легенда</a>
+								</li>
+								<li>
+									<a href="">Новини</a>
+								</li>
+							</ul>
+						</div>
+						<div class="mega-footer__section">
+							<h5 class="mega-footer__heading">Контакти</h5>
+							<ul class="mega-footer__link-list">
+								<li>
+									<a href="">Бізнес</a>
+								</li>
+								<li>
+									<a href="">Клієнти</a>
+								</li>
+								<li>
+									<a href="">Відділення</a>
+									<ul>
+										<li>
+											<a href="">Списком</a>
+										</li>
+										<li>
+											<a href="">На карті</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</nav>
+					<div class="mega-footer__spacer hidden-md-down"></div>
+					<div class="mega-footer__bottom-section">
+						<div class="mega-footer__section">
+							<p class="mega-footer__copyright">© 2016 транспортна компанія «САТ»
+								<br>
+								<span>вул. Гродненська, 32, м. Київ, Україна</span>
+							</p>
+						</div>
+						<div class="mega-footer__section mega-footer__section--phone">
+							<strong class="mega-footer__phone">0 800 502 25 25</strong>
+							<span class="mega-footer__phone-hint">Безкоштовна гаряча лінія</span>
+						</div>
+						<div class="mega-footer__section mega-footer__section--social">
+							<a href="" class="mega-footer__social-btn mega-footer__social-btn--facebook">
+								<i class="icon"></i>
+							</a>
+							<a href="" class="mega-footer__social-btn mega-footer__social-btn--vkontakte">
+								<i class="icon"></i>
+							</a>
+							<a href="" class="mega-footer__social-btn mega-footer__social-btn--twitter">
+								<i class="icon"></i>
+							</a>
+							<a href="" class="mega-footer__social-btn mega-footer__social-btn--youtube">
+								<i class="icon"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		</div>
+	</body>
+
+</html>
+

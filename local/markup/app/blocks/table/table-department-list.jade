@@ -1,0 +1,140 @@
+.table__container.table__container--department
+
+	//- Десктоп таблица
+	.table-responsive.hidden-md-down
+		table.table.table-hover.table--department.m-b-0(cellpadding="0" cellspacing="0")
+			thead
+				tr
+					th.p-a-0(colspan="4")
+						.table__col-1
+							| <i class="icon table__icon table__icon--map"></i> Наші видділення
+						.table__col-2
+							| <span class="btn table__btn active">Списком</span>
+						.table__col-3
+							<a href="#" class="btn table__btn">На карті</a>
+				tr
+					th Місто <i class="table__sort table__sort-down"></i>
+					th Адреса
+					th Номер <i class="table__sort table__sort-down"></i>
+					th Контакти
+			tbody
+				tr.tr-collapse-toggle
+					td.td-location Апостолове
+					td.td-address
+						| вул. Каманiна, 1B
+						| <div class="collapse">
+						| Буднi днi: 09:00-18:00
+						| <br>Суббота: 09:00-18:00
+						| </div>
+					td.td-number 52
+					td
+						| <div class="text-nowrap">6 067 217 07 31</div>
+						| <div class="collapse">
+						| <div class="text-nowrap">brofary@sat.ua</div>
+						| <div class="text-nowrap">0 800 30 99 09</div>
+						| <div class="text-nowrap">info@sat.ua</div>
+						| </div>
+				tr.tr-collapse
+					td.td-map(colspan="4")
+						.collapse
+							div.td-map__inner
+								img(src="http://placehold.it/1600x695)", alt="", width="1600", height="695")
+				tr.tr-collapse-toggle
+					td.td-location Апостолове
+					td.td-address
+						| вул. Каманiна, 1B
+						| <div class="collapse">
+						| Буднi днi: 09:00-18:00
+						| <br>Суббота: 09:00-18:00
+						| </div>
+					td.td-number 52
+					td
+						| <div class="text-nowrap">6 067 217 07 31</div>
+						| <div class="collapse">
+						| <div class="text-nowrap">brofary@sat.ua</div>
+						| <div class="text-nowrap">0 800 30 99 09</div>
+						| <div class="text-nowrap">info@sat.ua</div>
+						| </div>
+				tr.tr-collapse
+					td.td-map(colspan="4")
+						.collapse
+							div.td-map__inner
+								img(src="http://placehold.it/1600x695)", alt="", width="1600", height="695")
+
+	//- Моб. таблица
+	.table-responsive.hidden-lg-up
+		table.table.table-hover.table--department.m-b-0(cellpadding="0" cellspacing="0")
+			thead
+				tr
+					th.p-a-0(colspan="3")
+						.table__col-1
+							| <i class="icon table__icon table__icon--map"></i> Наші видділення
+						.table__col-2
+							| <span class="btn table__btn active">Списком</span>
+						.table__col-3
+							<a href="#" class="btn table__btn">На карті</a>
+				tr
+					th Місто <i class="table__sort table__sort-down"></i>
+					th Адреса
+					th Номер <i class="table__sort table__sort-down"></i>
+			tbody
+				tr.tr-collapse-toggle
+					td.td-location Апостолове
+					td.td-address
+						| <span class="uk-overlay-fade">вул. Каманiна, 1B</span>
+					td.td-number 52
+				tr.tr-collapse
+					td
+						.collapse
+							| вул. Каманiна, 1B
+							| <br>Буднi днi: 09:00-18:00
+							| <br>Суббота: 09:00-18:00
+					td
+						.collapse
+							| <div class="text-nowrap">6 067 217 07 31</div>
+							| <div class="text-nowrap">brofary@sat.ua</div>
+							| <div class="text-nowrap">0 800 30 99 09</div>
+							| <div class="text-nowrap">info@sat.ua</div>
+					td
+
+				tr.tr-collapse
+					td.td-map(colspan="3")
+						.collapse
+							div.td-map__inner
+								img(src="http://placehold.it/1600x695)", alt="", width="1600", height="695")
+				tr.tr-collapse-toggle
+					td.td-location Апостолове
+					td.td-address
+						| <span class="uk-overlay-fade">вул. Каманiна, 1B</span>
+					td.td-number 52
+				tr.tr-collapse
+					td
+						.collapse
+							| вул. Каманiна, 1B
+							| <br>Буднi днi: 09:00-18:00
+							| <br>Суббота: 09:00-18:00
+					td
+						.collapse
+							| <div class="text-nowrap">6 067 217 07 31</div>
+							| <div class="text-nowrap">brofary@sat.ua</div>
+							| <div class="text-nowrap">0 800 30 99 09</div>
+							| <div class="text-nowrap">info@sat.ua</div>
+					td
+				tr.tr-collapse
+					td.td-map(colspan="3")
+						.collapse
+							div.td-map__inner
+								img(src="http://placehold.it/1600x695)", alt="", width="1600", height="695")
+
+	.table__footer
+		.table__footer-left
+			a.btn.btn--prev.btn--muted(href="")
+				| <span class="hidden-md-down">Попередні 15</span><i class="icon icon--arrow-left-light-grey btn__icon--outline"></i>
+
+		.table__footer-center
+			button.btn.btn--more.btn--more--alt(type="button")
+				| Усі відділення<i class="icon icon--arrow-down-grey"></i>
+
+		.table__footer-right
+			a.btn.btn--next.btn--muted(href="")
+				| <span class="hidden-md-down">Наступні 15</span><i class="icon icon--arrow-right-light-grey btn__icon--outline"></i>

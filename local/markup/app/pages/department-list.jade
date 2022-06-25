@@ -1,0 +1,14 @@
+extends /blocks/layout-default/layout-default
+
+block head
+	- var pageTitle = '';
+	- var pageDescription = '';
+	- var pageKeywords = '';
+
+block page
+	- var pageClasses = ''
+
+block content
+	.container-fluid
+		include ../blocks/table/table-department-list
+	include ../blocks/panel/panel-container-subscribe

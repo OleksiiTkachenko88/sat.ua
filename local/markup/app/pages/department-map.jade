@@ -1,0 +1,32 @@
+extends /blocks/layout-default/layout-default
+
+block head
+	- var pageTitle = '';
+	- var pageDescription = '';
+	- var pageKeywords = '';
+
+block page
+	- var pageClasses = 'page--layout-main page--layout-main--map'
+
+block content
+	.page__map-container
+		.page__map-overlay(style="background-color:#91ff91;")
+
+		.tooltip-map.page__map-tooltip
+			.tooltip-map__title 98 Біла Церква
+			.tooltip-map__text
+				| вул. Сквирське шосе, 178<br>067 224 28 75
+			.tooltip-map__hr
+			.tooltip-map__text
+				| <div class="pull-left">GPS</div>
+				| <div class="pull-right">49°47'38.8"N<br>30°07'02.2"E</div>
+			.tooltip-map__hr
+			.tooltip-map__text-alt
+				| <span class="title-width-1">Будні дні:</span> 09:00-18:00
+				| <span class="title-width-1">Суббота:</span> 09:00-14:00
+			.tooltip-map__arrow
+
+		.page__map-overlay.page__map-overlay--top
+			.container-fluid
+				include ../blocks/table/table-department-map
+	include ../blocks/panel/panel-container-subscribe

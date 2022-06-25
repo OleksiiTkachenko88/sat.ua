@@ -1,0 +1,65 @@
+.uk-offcanvas
+	display none
+	position fixed
+	top 0
+	right 0
+	bottom 0
+	left 0
+	z-index 1000
+	touch-action none
+	background rgba(0, 0, 0, 0.1)
+
+	&.uk-active
+		display block
+
+.uk-offcanvas-page
+	position fixed
+	-webkit-transition margin-left 0.2s ease-in-out
+	transition margin-left 0.2s ease-in-out
+
+.uk-offcanvas-bar
+	position fixed
+	top 60px
+	bottom 0
+	left 0
+	-webkit-transform translateX(-100%)
+	transform translateX(-100%)
+	z-index 1001
+	width 320px
+	max-width 100%
+	background #333333
+	overflow-y auto
+	-webkit-overflow-scrolling touch
+	-webkit-transition -webkit-transform 0.2s ease-in-out
+	transition transform 0.2s ease-in-out
+	-ms-scroll-chaining none
+
+	&--menu
+		background #1e3e6c
+
+.uk-offcanvas.uk-active .uk-offcanvas-bar.uk-offcanvas-bar-show
+	transform translateX(0%)
+
+.uk-offcanvas-bar-flip
+	left auto
+	right 0
+	-webkit-transform translateX(100%)
+	transform translateX(100%)
+
+.uk-offcanvas
+	.uk-panel
+		margin 20px 15px
+		color #777777
+
+		a
+			&:not([class])
+				color #cccccc
+
+			&:not([class]):hover
+				color #ffffff
+
+	.uk-panel-title
+		color #cccccc
+
+.uk-offcanvas-page
+	margin-left 0 !important

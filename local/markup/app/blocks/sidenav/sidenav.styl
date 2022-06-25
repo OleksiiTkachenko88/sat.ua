@@ -1,0 +1,159 @@
+.sidenav
+	width 60px
+	background-color #ffd64a
+	z-index 1000
+	overflow hidden
+	position fixed
+	top 50%
+	right 0
+	transform translate(0, -50%)
+	transition $transition-default
+
+	&:hover
+		overflow visible
+
+	.sidenav__container &
+		right auto
+		left 100%
+		margin-left -60px
+		top 100vh
+		transform translate(0, 0)
+		position absolute
+
+	.sidenav__container.uk-active &
+		position fixed
+		top auto
+		bottom 50%
+		transform translate(0, 50%)
+
+.sidenav__link
+	display block
+	width 60px
+	height 60px
+	text-align center
+	line-height 60px
+	position relative
+	background-color #ffd64a
+	transition $transition-default
+
+	&:hover
+	&:focus
+		background-color #ffe17f
+
+	&.active
+		background-color #2766a0
+
+		&:hover
+		&:focus
+			background-color #2766a0
+
+.sidenav__icon
+	&:before
+		position absolute
+		left 50%
+		top 50%
+		transform translate(-50%, -50%)
+
+	.sidenav__link--calc &:before
+	.sidenav__link--calc:hover &:before
+		sprite($icon_calc_grey)
+
+	.sidenav__link--calc.active &:before
+	.sidenav__link--calc.active:hover &:before
+		sprite($icon_calc_accent)
+
+	.sidenav__link--truck &:before
+	.sidenav__link--truck:hover &:before
+		sprite($icon_truck_grey)
+
+	.sidenav__link--truck.active &:before
+	.sidenav__link--truck.active:hover &:before
+		sprite($icon_truck_accent)
+
+	.sidenav__link--cargo &:before
+	.sidenav__link--cargo:hover &:before
+		sprite($icon_cargo_grey)
+
+	.sidenav__link--cargo.active &:before
+	.sidenav__link--cargo.active:hover &:before
+		sprite($icon_cargo_accent)
+
+	.sidenav__link--map &:before
+	.sidenav__link--map:hover &:before
+		sprite($icon_map_grey)
+
+	.sidenav__link--map.active &:before
+	.sidenav__link--map.active:hover &:before
+		sprite($icon_map_accent)
+
+	.sidenav__link--phone &:before
+	.sidenav__link--phone:hover &:before
+		sprite($icon_phone_grey)
+
+	.sidenav__link--phone.active &:before
+	.sidenav__link--phone.active:hover &:before
+		sprite($icon_phone_accent)
+
+	.sidenav__link--mail &:before
+	.sidenav__link--mail:hover &:before
+		sprite($icon_mail_grey)
+
+	.sidenav__link--mail.active &:before
+	.sidenav__link--mail.active:hover &:before
+		sprite($icon_mail_accent)
+
+	.sidenav__link--chat &:before
+	.sidenav__link--chat:hover &:before
+		sprite($icon_chat_grey)
+
+	.sidenav__link--chat.active &:before
+	.sidenav__link--chat.active:hover &:before
+		sprite($icon_chat_accent)
+
+	.sidenav__link--entry &:before
+	.sidenav__link--entry:hover &:before
+		sprite($icon_entry_blue)
+
+	.sidenav__link--entry.active &:before
+	.sidenav__link--entry.active:hover &:before
+		sprite($icon_entry_accent)
+
+.sidenav__pointer
+	padding 0 10px
+	background-color #1e3e6c
+	color #fff
+	font-family $base-font-family-light
+	font-weight normal
+	font-size 14px
+	line-height 24px
+	height 24px
+	white-space nowrap
+	position relative
+	position absolute
+	right 100%
+	margin-right 24px
+	top 50%
+	margin-top -12px
+	transition opacity 0.2s linear 0s
+	opacity 0
+
+	.sidenav__link:hover &
+		opacity 1
+
+	&:after
+		left 100%
+		top 50%
+		border solid transparent
+		content " "
+		height 0
+		width 0
+		position absolute
+		pointer-events none
+		border-color rgba(136, 183, 213, 0)
+		border-left-color #1e3e6c
+		border-width 12px
+		margin-top -12px
+
+.sidenav__container
+	&.uk-active
+		position static !important

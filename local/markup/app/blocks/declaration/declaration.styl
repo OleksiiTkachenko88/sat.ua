@@ -1,0 +1,350 @@
+.declaration__container
+	background-color #d0d2d3
+	padding 35px 35px
+
+	+below($breakpoint-lg - 1px)
+		padding 25px
+
+	.uk-accordion-content > &
+		margin -50px -35px !important
+
+		+below($breakpoint-lg - 1px)
+			margin -40px -25px !important
+
+.declaration__img
+	display block
+	max-width 100%
+	height auto
+	box-shadow 0 5px 15px rgba(0,0,0,0.14)
+
+.declaration__footer
+	overflow hidden
+	margin-top 15px
+
+.declaration__footer-title
+	font-size 25px
+	line-height 30px
+	letter-spacing .1ex
+	text-transform uppercase
+	color #808285
+	float left
+	padding-top 35px
+	padding-bottom 35px
+	padding-left 50px
+
+	+below($breakpoint-lg - 1px)
+		font-size 16px
+		letter-spacing normal
+		padding-top 10px
+		padding-bottom 10px
+		padding-left 0
+
+	.text-accent
+		color #2766a0
+
+	a
+		text-decoration none
+
+.declaration__footer-actions
+	float right
+
+	& > a
+		display inline-block
+		width 100px
+		height 100px
+		margin 0
+		text-decoration none
+		position relative
+
+		+below($breakpoint-lg - 1px)
+			width 50px
+			height 50px
+
+		&.print
+			+below($breakpoint-lg - 1px)
+				display none
+
+		&.icon:before
+			position absolute
+			left 50%
+			top 50%
+			transform translate(-50%, -50%)
+
+.declaration__blank
+	background #fff
+	color #404041
+	box-shadow 0 5px 15px rgba(0,0,0,0.14)
+	padding 40px 250px 40px 120px
+	width 100%
+	min-height 485px
+	font-size 22px
+	position relative
+
+	+below($breakpoint-lg - 1px)
+		height auto
+		padding 25px 20px 115px 20px
+
+.declaration__arr-id
+	width 38px
+	height 126px
+	overflow hidden
+	background-size cover
+	background-image url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACYAAAB+CAIAAADHgvRjAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6RTAwNkE3M0Q5Nzg0MTFFNjk4NDFBRUYzMjY4MzJBMTciIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6RTAwNkE3M0U5Nzg0MTFFNjk4NDFBRUYzMjY4MzJBMTciPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpFMDA2QTczQjk3ODQxMUU2OTg0MUFFRjMyNjgzMkExNyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpFMDA2QTczQzk3ODQxMUU2OTg0MUFFRjMyNjgzMkExNyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqhWTbwAAAOLSURBVHja7Jo7TypREMcXMCpExQQfoaIh0RhjYmMpDSHWRtSGb8E34TsovgujRmIspIKCGDE+ChOvDWJMeAoYX/cf5wa5wO4elt3Nzc1MdfZ1fnvOzJmZM7uWr68vSUwikcjr66vc1YWFhenpaZF+rJLpwkhGMpKRjGQkIxnJSEYykpGMZKQe0iN+a19fn8JVm80m2I9FfOPOumQkIxnJSEb+s/EymUyenZ2hEQ6H255vFY/HMz4+7vkWPUO0gvz6FrwTkPPz88DrjAwGg42HhUIhn8/f3t6iAfDW1hZuUKBqQbadPQyOZr5Wq4EaCoWcTqfh5jM3NxcIBNAANRaLmWSxMzMzExMTpF3Ms0mLBGOlBrRrEhKGQ1rEQM1zBWRfMGPzkMPDw7R42K3rK6RFOQdkCJJstb+/3yRkNpslw5GLKvoj4WmpQW7IcOTFxQU5HQxRzq336Ds+iuHQIvl33ZBNngxxA/qjeEk8xEu5IWpEIhwqOFiMT/+soMvch2sFjGQkIxlp6pZWThKJxMfHh9xVr9c7NjamMxIRWOHfraGhIUEkmw8jGclIRjLyf0CWSqX7+/vuu0Ynb29v6kjwNjY2dnd3b25uuuFdX1/v7Oxsbm62RnVrKy+fz39+fh4cHKTTac28w8NDbCMzmcz29nYT9QdZqVTwUvVaHx44Pj5OpVKd8s7Pz/G69W1rK9XayMvlck3Pn56eIsvqiHdyctJ0EtT19XUgfpDEe35+bttLPB6X+1YhwiNB50AQ1fLy8qLAq8vs7OzV1ZVChjc5OalqcSMjI8vLy7apqamnpyfVETw+PpKC5W5QfWmazoeHB6vP5+vt7RWZN4W8WVAA8vv9FjJlLMRqtWqo0wEvGAy63e4/RZhG9RohdrsdWhwdHZUa6z5YkdFotFwuG8FbWVmB7dDhX6WmYrHY6A2M4Emt1S34PPhGEfMTkYGBAejP5XI1nmxTUINGQc1ms93zVldX6QOGChKCJQ/HCEvWnScplA0R6vb29rByNfCcTifmsy1PUq5Uvr+/7+/v393ddcQDCfYyODgod4NKcRQe5+joSDxcq/IkkXosBc7Ly0tdeJJ4CRhRCbFJNUo4HA7VrjqoOiNq1r+BaOZJnRa6kSEgYnfDkzTU1pENITupHyIyLC4uwquJ96ClnI/MLxaL4UHwlpaWlP9CbG+QGgRJydraWq1W0/DsbwEGAGP5bLTZbfWRAAAAAElFTkSuQmCC')
+	display block
+	position absolute
+	left 51px
+	top 50%
+	margin-top -63px
+
+	+below($breakpoint-lg - 1px)
+		top 245px
+		left 36px
+
+.declaration__section-footer
+	position absolute
+	right -110px
+	top 50%
+	margin-top -66px
+	bottom auto
+	width auto
+	padding 40px
+	display flex
+	flex-direction column
+	flex-wrap nowrap
+	align-items center
+	justify-content center
+	transform rotate(-90deg)
+
+	+below($breakpoint-lg - 1px)
+		position static
+		transform rotate(0deg)
+		padding-bottom 0
+		padding-top 0
+		margin-top 0
+
+	.phone
+		font-family $base-font-family-medium
+		font-weight normal
+		font-size 36px
+		white-space nowrap
+
+		+below($breakpoint-lg - 1px)
+			display none
+
+	.phone-hint
+		font-family $base-font-family
+		font-weight normal
+		font-size 13px
+		text-transform uppercase
+		letter-spacing .55ex
+		text-align center
+
+		+below($breakpoint-lg - 1px)
+			display none
+
+	.barcode
+		width 88px
+		height 393px
+		overflow hidden
+		background-size cover
+		background-image url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFgAAAGJCAYAAAAOgPQKAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6Nzg0QkEzMUE5Nzg0MTFFNjkxODREQUI4ODBCOUVEQjkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6Nzg0QkEzMTk5Nzg0MTFFNjkxODREQUI4ODBCOUVEQjkiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmRpZDo1RUIzRUE3MTg0OTdFNjExOUNGMkVGMUJCNzVFODRGMiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo1RUIzRUE3MTg0OTdFNjExOUNGMkVGMUJCNzVFODRGMiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PschL6EAAAOuSURBVHja7N2hclpBGIbhns5xXACXwQVgQgwm1GBShUl94lOf+tSnPmjgAtAMHjSgAU1lVTOdKV9P2TzvJTyT+ZfdZUN1ddU7fVCsjwgAAxZgwIAFGDBgnbu60+lQCFadTnbKRgRgAQYMWIABAxZgwAIMuJTqp6dvTnuSwLPZjIIRAViAG5rBroyyuTIyIgALMGDAAgwYsABf3Fb55mZgK5cEPh6PFIwIwALc0AwejUYUgjkPNiIAC3CDi9x0OjWEk4ucfyljRAAWYMDFLnL7/d4iZ6tsRAgwYMACDBiwAAMWYMCA9SfVj49fnfYkgefzOQUjArAAAwYswIABCzBgAQZcSHWr1aIQzHfTjAjAAgy43E8R3smFP0V4J2dEABZgwMUuct7JhYGdRRgRgAUYMGABBgxYgAELMGDAAgwYsP4+vwyeBvbL4EYEYP2+arPZmMFJYLfKRgRgAW7uc7AvYIcXOV/ANiIACzBgOzn5CwYMWIABCzBgwAIM+F1UPz9/t1dOAo/HYwpGBGABBgxYgAEDFuBLqlosFrbKSWDX9kYEYAEGDFiAAQMWYMAC/A+rV6uVw4hgHiIaEYAFGHC5i5wrozCwKyMjArAAAwYswIAB69zVr69jO43kTs55sBEBWIABF7vIOa70FwxYgAEXu1W+vf1slUsC73Y7CkYEYAFuaAYPh0MKtspGhAADBizAgAELMGABBgxYgAEDFmDAgJWrvrv74s4oCbxerykYEYAFuKEZ3O/3KQTzxRMjArAAAwYswIAB6/w7Oe/kwsDeyRkRgAW4uRnsnVw2x5VGBGABBgxYgAEDFmDAAgwYsAADBqwzVG+3WyfuwfwSjBEBWG/NYI9gwjPYrbIRAViAARf7KaLXu7bK+QsGLMCAy1zkut0uBVtlI0KAAZe5yLmTCy9y7uSMCMB6Ywa7k7PRMCIEGDBgAQYMWIABCzBgwAIMGLAA//fVh8PBiXsSeDD4RMGIACzAgIusmkwmPkUkgX0vwogALMCAAQsw4HeYRzDpjYZHMEYEYAEGDFiAAQMW4EvbKvunSOGtsjs5IwKwAAMGLMCAAQswYAEGXE7eyaWBvZMzIgALMOBS804uDexOzogALMDN7eReXn4YwslFzhsNIwKwADe3yLXbbQp2ckaEAAMGLMCAAQswYP3aKt/fP9jKJYGXyyUFIwKwADc0g/0yeDbnwUYEYAEGDFiAAQMWYMACDLigXBmlgV0ZGRGABRgwYAEGDFiAL6yfAgwAosnRSSw+6jUAAAAASUVORK5CYII=')
+		position absolute
+		transform rotate(90deg)
+		top -230px
+		display block
+
+		+below($breakpoint-lg - 1px)
+			position absolute
+			top auto
+			transform rotate(90deg)
+			display block
+			bottom -268px
+			left 0
+			right 0
+			margin-left auto
+			margin-right auto
+
+.declaration__block
+	display flex
+	flex-direction column
+	flex-wrap nowrap
+
+.declaration__block--from
+	+below($breakpoint-lg - 1px)
+		margin-left 80px
+
+.declaration__block--to
+	flex-direction column-reverse
+
+	+below($breakpoint-lg - 1px)
+		margin-left 80px
+
+.declaration__block-header .icon
+.declaration__block-header-pointer
+	position absolute
+	right 100%
+	margin-right 15px
+	top 0
+
+	.declaration__block--to &
+		top auto
+		bottom 0
+
+.declaration__block-header
+	min-height 60px
+	line-height 60px
+	margin-bottom 5px
+	margin-top 0
+	position relative
+	font-family $base-font-family-light
+	font-size 42px
+	text-transform uppercase
+
+.declaration__block-header-pointer
+	top 65px
+	font-family $base-font-family-light
+	font-weight normal
+	font-size 21px
+	line-height 1
+	width 60px
+	text-align center
+	color #acacac
+
+	.declaration__block--to &
+		bottom 65px
+
+.declaration__item
+	display flex
+	min-height 22px
+	flex-direction row
+	flex-wrap nowrap
+	align-items center
+	margin-top 5px
+	margin-bottom 5px
+	font-family $base-font-family-light
+
+	&.address
+	&.name
+	&.date
+		color #acacac
+
+	&--footer
+		font-size 42px
+
+		+below($breakpoint-lg - 1px)
+			margin-top 10px
+
+.declaration__item-title
+	font-family $base-font-family-light
+	font-weight normal
+	font-size inherit
+	line-height inherit
+	color #acacac
+	margin-right 15px
+
+	&--width-1
+		width 150px
+		flex-grow 0
+		flex-shrink 1
+		flex-basis auto
+
+.declaration__item-content
+	font-family $font-family-base
+	font-weight normal
+	font-size inherit
+	line-height inherit
+	order 0
+	text-decoration none
+	box-sizing border-box
+	display flex
+	align-items center
+	justify-content flex-end
+	text-truncate()
+	flex-grow 1
+	flex-shrik 1
+
+	.declaration__item.address &
+	.declaration__item.name &
+	.declaration__item.date &
+		color #acacac
+
+	&--left
+		justify-content flex-start
+
+.declaration__item-content .icon
+	margin-right 7px
+
+.declaration__number
+	font-family $base-font-family-heavy
+	font-weight normal
+	font-size 29px
+	line-height normal
+	background-color #404041
+	color #fff
+	text-transform uppercase
+	letter-spacing normal
+	padding 11px 15px
+	word-wrap break-word
+
+	+below($breakpoint-lg - 1px)
+		margin-left 80px
+
+.declaration__table
+	font-size inherit
+	line-height inherit
+	width 100%
+	margin-top 10px
+
+	td
+		text-align left
+		vertical-align top
+		padding 0
+		line-height inherit
+
+		&:first-child
+			padding-left 0
+
+		&:last-child
+			padding-right 0
+
+	.td-icon
+		width 16px
+		color #404041
+		padding-right 0
+		font-size 16px
+		font-weight normal
+
+		.fa
+			margin-top 3px
+
+	.td-title
+		width auto
+		text-transform uppercase
+
+	.td-price
+		width 110px
+		text-align right
+		vertical-align bottom
+
+.declaration__hr
+	display block
+	margin-top 3px
+	margin-bottom 3px
+	border-top 1px solid #d0d2d3
+
+.declaration__grid
+	display flex
+	align-items stretch
+	flex-wrap nowrap
+
+	+below($breakpoint-lg - 1px)
+		display block
+
+.declaration__section-left
+	display flex
+	flex-direction column
+	justify-content space-between
+
+.declaration__section-right
+	+below($breakpoint-lg - 1px)
+		margin-top 20px

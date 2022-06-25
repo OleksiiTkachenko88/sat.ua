@@ -1,0 +1,14 @@
+<?
+$PERM["treking"]["*"]="R";
+$PERM["search"]["*"]="R";
+$PERM["partners"]["*"]="R";
+$PERM["order"]["*"]="R";
+$PERM["offers"]["*"]="R";
+$PERM["news"]["*"]="R";
+$PERM["contacts"]["*"]="R";
+$PERM["cases"]["*"]="R";
+$PERM["calculator"]["*"]="R";
+$PERM["about"]["*"]="R";
+$PERM["index.php"]["7"]="W";
+$PERM["index.php"]["*"]="R";
+?>

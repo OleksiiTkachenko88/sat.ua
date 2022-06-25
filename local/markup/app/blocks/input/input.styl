@@ -1,0 +1,19 @@
+// Theme
+
+//inputSize('sm', $input-padding-y-sm, $input-padding-x-sm, $font-size-sm, $line-height-sm, $input-height-sm, $input-border-radius-sm)
+//inputSize('md', $input-padding-y-md, $input-padding-x-md, $font-size-md, $line-height-md, $input-height-md, $input-border-radius-md)
+inputSize('lg', $input-padding-y-lg, $input-padding-x-lg, $font-size-lg, $line-height-lg, $input-height-lg, $input-border-radius-lg)
+
+@media screen and (-webkit-min-device-pixel-ratio 0)
+	input[type="date"]&
+	input[type="time"]&
+	input[type="datetime-local"]&
+	input[type="month"]&
+		&.input-sm
+			line-height $line-height-sm
+
+		&.input-md
+			line-height $line-height-md
+
+		&.input-lg
+			line-height $line-height-lg

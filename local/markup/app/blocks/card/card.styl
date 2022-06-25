@@ -1,0 +1,253 @@
+.card
+	background-color #fff
+	color #808285
+	border 1px solid #acacac
+	padding 20px 0
+
+.card__turn
+	display block
+	width 18px
+	height 18px
+	text-align center
+	line-height 18px
+	float right
+	cursor pointer
+	margin-right 40px
+	margin-bottom 10px
+
+	&:before
+		content ''
+		display inline-block
+		width 18px
+		height 3px
+		background-color #8b8b8b
+
+.card__primary-content
+	order 0
+	flex-grow 2
+	flex-shrink 1
+	flex-basis auto
+	text-decoration none
+	box-sizing border-box
+	display flex
+	align-items center
+	display block
+
+.card__secondary-content
+	display flex
+	flex-direction column
+	flex-wrap nowrap
+	align-items flex-end
+	margin-left 20px
+
+.card__section
+	display flex
+	flex-direction row
+	flex-wrap nowrap
+	padding-left 20px
+	padding-right 20px
+
+	+below($breakpoint-lg - 1px)
+		padding-left 40px
+		padding-right 40px
+
+	&-row
+		display flex
+		flex-direction row
+		flex-wrap nowrap
+		width 100%
+
+		+below($breakpoint-lg - 1px)
+			flex-direction column
+			flex-wrap wrap
+
+	.card__section-row &:first-child
+		padding-left 40px
+
+	.card__section-row &:last-child
+		padding-right 40px
+
+	.card--order &--left
+		width calc(50% - 125px)
+
+		+below($breakpoint-lg - 1px)
+			width 100%
+			margin-top 10px
+			margin-bottom 10px
+
+	.card--order &--center
+		padding-right 40px
+		width 250px
+		text-align center
+
+		+below($breakpoint-lg - 1px)
+			width 100%
+			margin-top 10px
+			margin-bottom 10px
+
+	.card--order &--right
+		width calc(50% - 125px)
+
+		+below($breakpoint-lg - 1px)
+			width 100%
+			margin-top 10px
+			margin-bottom 10px
+
+.card__secondary-info
+	font-family $base-font-family-light
+	font-weight normal
+	font-size 16px
+	line-height 1.2
+	color #acacac
+	padding-top 7px
+	margin-bottom 7px
+
+.card__secondary-text
+	font-family $base-font-family-light
+	font-weight normal
+	font-size 21px
+	line-height 1.2
+	color inherit
+	display block
+
+	a&
+		color inherit
+		text-decoration none
+
+.card__item
+	display block
+	margin-bottom 10px
+
+	&:last-child
+		margin-bottom 0
+
+.card__item-title
+	font-family $base-font-family-light
+	font-weight normal
+	font-size 24px
+	line-height 1.2
+	text-transform uppercase
+	letter-spacing .1ex
+	color #404041
+	display block
+	margin-bottom 5px
+
+	a&
+		color #404041
+		text-decoration none
+
+.card__item-text
+	font-family $base-font-family-light
+	font-weight normal
+	font-size 21px
+	line-height 1.2
+	color inherit
+
+	a&
+		color inherit
+		text-decoration none
+
+.card__status
+	font-family $base-font-family-light
+	font-weight normal
+	font-size 18px
+	line-height 1.611
+	text-transform uppercase
+	letter-spacing .1ex
+	color #404041
+	display block
+	white-space nowrap
+	margin-bottom 5px
+	max-width 202px
+	margin-left auto
+	margin-right auto
+
+	.card--order &
+		background-position 100% 50%
+		background-repeat no-repeat
+		background-image url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMoAAAAUCAYAAADMUaL3AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QkMyQzQ5Rjg4NTZCMTFFNjk5RENFQjNBRTZFRDYwMzkiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QkMyQzQ5Rjk4NTZCMTFFNjk5RENFQjNBRTZFRDYwMzkiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpCQzJDNDlGNjg1NkIxMUU2OTlEQ0VCM0FFNkVENjAzOSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpCQzJDNDlGNzg1NkIxMUU2OTlEQ0VCM0FFNkVENjAzOSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pno7M84AAAF6SURBVHja7JqxK0VRHMfvk2SUvAkLSsofYBKKvGcxUQajjBZMdoOMNsUsi6JIUgZl0CtiIYtFkgykV7q+xzvqvds79735/T6f+tQ993fucurbub9zbyaO4wig4bifqmdWl9yTC/KmojJwWDFsYkXBKFl5KofkmexLm0xQwCJtPhz9ftwhz2UPQQEo0SKP5WDifqc88a9jBAXMU5RHgVqvfx3LJgsZmnkw2syvy9VA7VYOq6F/JyhgPSgZuSUXA/UrOaGwfJSCcpcvsKpgmG7ZHqhdyEmF5csFhS0FIIw7HcsRFIDaHHDqBVCbS3YUgHQ21KMsN+til7UAo7iTr1Hf0FdjW678TeR4GBqS+o6Hd+R8oL4vZ7Wb/LgBPQpYZTMlJO7r/Nx/SAgKWGVNLgVq7kPjtEJSLL9JUMAarXImUHO/ruTlZ7JAUMAa33LMh6KcJ5mTb9UeIihgkVcfikc/foncf11R9Bx6gKCAVVwoRuS1HJcPaZN/BRgA3NhSvcKRYKsAAAAASUVORK5CYII=')
+
+		span
+			display inline-block
+			vertical-align middle
+			background-color #fff
+			padding-left 20px
+			padding-right 20px
+
+.card__number
+	font-family $base-font-family-medium
+	font-weight normal
+	font-size 24px
+	color #404041
+	display block
+	white-space nowrap
+	margin 3px 0
+
+.card__price
+	font-family $base-font-family-light
+	font-weight normal
+	font-size 32px
+	color #404041
+	display block
+	white-space nowrap
+	margin 3px 0
+
+.card__icon--marker
+	&:before
+		border solid transparent
+		content ''
+		height 0
+		width 0
+		border-color transparent
+		border-left-color #ffd64a
+		border-width 10px
+
+	.card__item &
+		width 20px
+		margin-left -20px
+
+.card--order-error
+	position relative
+	padding-top 30px
+	padding-bottom 30px
+	padding-left 18%
+	padding-right 18%
+	
+	+below($breakpoint-lg - 1px)
+		padding-left 95px
+		padding-right 20px
+	
+	.card__inner
+		position relative
+
+	.icon
+		position absolute
+		right 100%
+		top 0
+		margin-right 25px
+
+	.icon:before
+		sprite($icon_attention_accent_50_45)
+
+	h3
+		font-family $base-font-family
+		font-weight normal
+		font-size 21px
+		line-height normal
+		color #404040
+	
+	p
+		font-family $base-font-family-light
+		font-weight normal
+		font-size 18px
+		line-height 20px
+		color #8b8b8b
+	
+
+	h3
+	p
+		margin-top 0
+		margin-bottom 20px
+		
+		&:last-child
+			margin-bottom 0

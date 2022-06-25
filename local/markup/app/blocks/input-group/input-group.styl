@@ -1,0 +1,158 @@
+.input-group
+	position relative
+	display table
+	border-collapse separate
+
+	&[class*="col-"]
+		float none
+		padding-right 0
+		padding-left 0
+
+	.form-control
+		position relative
+		z-index 2
+		float left
+		width 100%
+		margin-bottom 0
+
+		&:focus
+			z-index 3
+
+.input-group-addon
+.input-group-btn
+.input-group .form-control
+	box-sizing border-box
+	display table-cell
+
+	&:not(:first-child):not(:last-child)
+		border-radius 0
+
+.input-group-addon
+.input-group-btn
+	width 1%
+	white-space nowrap
+	vertical-align middle
+
+.input-group-addon
+	font-weight normal
+	text-align center
+	border 1px solid transparent
+
+	input[type="radio"]
+	input[type="checkbox"]
+		margin-top 0
+
+.input-group .form-control:first-child
+.input-group-addon:first-child
+.input-group-btn:first-child > .btn
+.input-group-btn:first-child > .btn-group > .btn
+.input-group-btn:first-child > .dropdown-toggle
+.input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle)
+.input-group-btn:last-child > .btn-group:not(:last-child) > .btn
+	border-top-right-radius 0
+	border-bottom-right-radius 0
+
+.input-group-addon:first-child
+	border-right 0
+
+.input-group .form-control:last-child
+.input-group-addon:last-child
+.input-group-btn:last-child > .btn
+.input-group-btn:last-child > .btn-group > .btn
+.input-group-btn:last-child > .dropdown-toggle
+.input-group-btn:first-child > .btn:not(:first-child)
+.input-group-btn:first-child > .btn-group:not(:first-child) > .btn
+	border-top-left-radius 0
+	border-bottom-left-radius 0
+
+.input-group-addon:last-child
+	border-left 0
+
+.input-group-btn
+	position relative
+	font-size 0
+	white-space nowrap
+
+	& > .btn
+		position relative
+
+		& + .btn
+			margin-left -1px
+
+		&:hover
+		&:focus
+		&:active
+			z-index 2
+
+	&:first-child > .btn
+	&:first-child > .btn-group
+		margin-right -1px
+
+	&:last-child > .btn
+	&:last-child > .btn-group
+		z-index 2
+		margin-left -1px
+
+.input-group-prefix
+.input-group-postfix
+	position absolute
+	top 1px
+	display block
+	z-index 4
+	text-align center
+
+	.icon:before
+		position absolute
+		left 50%
+		top 50%
+		transform translate(-50%,-50%)
+
+.input-group-postfix
+	right 0
+	white-space nowrap
+
+// Theme
+
+.input-group-addon
+	font-size $font-size-md
+	line-height $line-height-md
+	padding $input-padding-y-md $input-padding-x-md
+	border-radius $input-border-radius-md
+	color #414a5a
+	background-color $input-bg
+	border-color $input-border-color
+
+.input-group-prefix
+.input-group-postfix
+	color #a0a4ac
+
+inputGroupSize('sm', $input-padding-y-sm, $input-padding-x-sm, $input-padding-x-sm, $font-size-sm, $line-height-sm, $input-height-sm, $input-border-radius-sm)
+inputGroupSize('md', $input-padding-y-md, $input-padding-x-md, $input-padding-x-md, $font-size-md, $line-height-md, $input-height-md, $input-border-radius-md)
+inputGroupSize('lg', $input-padding-y-lg, $input-padding-x-lg, $input-padding-x-lg, $font-size-lg, $line-height-lg, $input-height-lg, $input-border-radius-lg)
+
+inputGroupPrefix('', $font-size-md, $input-height-md, $input-border-radius-md)
+inputGroupPrefix('sm', $font-size-sm, $input-height-sm, $input-border-radius-sm)
+inputGroupPrefix('md', $font-size-md, $input-height-md, $input-border-radius-md)
+inputGroupPrefix('lg', $font-size-lg, $input-height-lg, $input-border-radius-lg)
+
+@media screen and (-webkit-min-device-pixel-ratio 0)
+	.input-group-sm
+		input[type="date"]
+		input[type="time"]
+		input[type="datetime-local"]
+		input[type="month"]
+			line-height $line-height-sm
+
+	.input-group-md
+		input[type="date"]
+		input[type="time"]
+		input[type="datetime-local"]
+		input[type="month"]
+			line-height $line-height-md
+
+	.input-group-lg
+		input[type="date"]
+		input[type="time"]
+		input[type="datetime-local"]
+		input[type="month"]
+			line-height $line-height-lg

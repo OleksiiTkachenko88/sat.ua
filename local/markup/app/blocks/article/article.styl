@@ -1,0 +1,86 @@
+.article
+	max-width 980px
+
+.article__img
+	max-width 100%
+	height auto
+	display block
+
+	&-container
+		margin 15px 0
+
+		.article__header &
+			margin-top 0
+
+.article__header
+	margin-bottom 25px
+
+	&-date
+	&-sub-title
+		typo-title()
+		text-transform uppercase
+		letter-spacing .1ex
+		margin 0 0 25px
+		display block
+		color #828282
+
+	&-title
+		typo-display-2()
+		text-transform uppercase
+		letter-spacing .1ex
+		margin 0 0 25px
+		display block
+
+.article__body
+	typo-body()
+
+	h1, h2, h3, h4, h5, h6
+		font-family $base-font-family-bold
+		text-transform uppercase
+		letter-spacing .1ex
+		margin-top 25px
+		margin-bottom 10px
+
+		&:first-child
+			margin-top 0
+
+	h1
+		typo-display-4()
+
+	h2
+		typo-display-3()
+
+	h3
+		typo-display-2()
+
+	h4
+		typo-display-1()
+
+	h5
+		typo-headline()
+
+	h6
+		typo-title()
+
+	p, ul, ol, blockquote, dl
+		typo-body()
+		margin-top 0
+		margin-bottom 25px
+
+	li
+		margin-top 3px
+		margin-bottom 3px
+
+	a
+		text-decoration none
+
+	ul
+		list-style none
+
+		& > li
+			margin-left 1.3em
+
+			&:before
+				content '\2014\a0'
+				float left
+				margin-left -1.25em

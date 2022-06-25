@@ -1,0 +1,20 @@
+.collapse
+	display none
+
+	&.in
+		display block
+
+	tr&.in
+		display table-row !important
+
+.collapsing
+	position relative
+	height 0
+	overflow hidden
+	transition-timing-function ease
+	transition-duration .35s
+	transition-property height
+
+	tr&
+		display table-row !important
+

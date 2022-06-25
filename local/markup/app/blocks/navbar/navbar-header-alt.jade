@@ -1,0 +1,26 @@
+nav.navbar.navbar--header.page__navbar-header
+	.navbar__primary-content
+		a.navbar__button-icon.navbar__button-icon--menu(href="#mobile_menu", data-uk-offcanvas="{mode:'slide'}")
+			| <i class="icon"></i>
+		a.navbar__brand(href='')
+			span.navbar__brand-space
+			img.navbar__brand-logo-mobile(src='assets/images/sat-logo-mobile.png', alt='', width='161', height='62')
+			img.navbar__brand-logo-desktop(src='assets/images/sat-logo-desktop.png', alt='', width='242', height='91')
+		.navbar__spacer
+		.icon.navbar__icon.navbar__icon--login
+		.navbar__form-control.navbar__form-control--login
+			input.form-control.uk-width-1-1.navbar__form-control(type="text", placeholder="Логін")
+		.icon.navbar__icon.navbar__icon--password
+		.navbar__form-control.navbar__form-control--password
+			input.form-control.uk-width-1-1.navbar__form-control(type="password", placeholder="Пароль")
+		.navbar__spacer
+		ul.navbar__nav.navbar__nav--alt
+			li.link
+				a(href='') Увійти
+			li.link
+				a(href='') Реєстрація
+	.navbar__secondary-content
+		a.navbar__button-icon.navbar__button-icon--lang(href='')
+			| <span>ua</span>
+		a.navbar__button-icon.navbar__button-icon--search.js-toggle-search(href='')
+			| <i class="icon"></i>

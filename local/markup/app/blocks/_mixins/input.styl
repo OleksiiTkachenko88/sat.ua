@@ -1,0 +1,20 @@
+inputSize(sizeName, paddingTopBottom, paddingLeftRight, fontSize, lineHeight, height, borderRadius)
+	mod = ''
+
+	if sizeName
+		mod = '-' + sizeName
+
+	.input{mod}
+		height height
+		padding paddingTopBottom paddingLeftRight
+		font-size fontSize
+		line-height lineHeight
+		border-radius borderRadius
+
+	select.input{mod}
+		height height
+		line-height lineHeight
+
+	textarea.input{mod}
+	select[multiple].input{mod}
+		height auto

@@ -1,0 +1,91 @@
+.uk-accordion-title {
+	margin-top: 0;
+	margin-bottom: 0;
+	padding: 10px 35px;
+	background: transparent;
+	font-size: 22px;
+	line-height: 35px;
+	cursor: pointer;
+	border-top: 1px solid #a0a0a0;
+	border-bottom: 1px solid #a0a0a0;
+	text-transform: uppercase;
+	letter-spacing: .1ex;
+	text-truncate();
+}
+
+.uk-accordion-content {
+	padding: 50px 35px;
+}
+
+.uk-accordion-content:before,
+.uk-accordion-content:after {
+	content: "";
+	display: table;
+}
+
+.uk-accordion-content:after {
+	clear: both;
+}
+
+.uk-accordion-content > :last-child {
+	margin-bottom: 0;
+}
+
+
+.uk-accordion-title
+	position relative
+	margin-top -1px
+	padding-right 50px
+
+	&:before
+		content ''
+		display inline-block
+		border-left 3px solid #ffd64a
+		border-radius 100px
+		vertical-align middle
+		height 35px
+		margin-right 15px
+
+	&:after
+		content ''
+		display block
+		position absolute
+		top 50%
+		margin-top -6px
+		right 12px
+		sprite($icon_chevron_down_grey)
+
+	&.uk-active:after
+		sprite($icon_chevron_up_grey)
+
+	&:first-child
+		margin-top 0
+
+
+.uk-accordion-content
+	padding-left 35px
+	padding-right 35px
+
+	+below(1540px)
+		padding-left 25px
+		padding-right 25px
+
+	+below($breakpoint-lg - 1px)
+		padding-left 25px
+		padding-right 25px
+
+.calc-group__content > .uk-accordion
+	margin-top -1px
+	margin-left -35px
+	margin-right -35px
+
+	+below(1540px)
+		margin-left -25px
+		margin-right -25px
+
+	+below($breakpoint-lg - 1px)
+		margin-left -25px
+		margin-right -25px
+
+.uk-accordion-content--dark
+	backgorund-color #d0d2d3

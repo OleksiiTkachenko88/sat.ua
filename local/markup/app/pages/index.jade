@@ -1,0 +1,21 @@
+extends /blocks/layout-default/layout-default
+
+block head
+	- var pageTitle = 'Главная';
+	- var pageDescription = '';
+	- var pageKeywords = '';
+
+block page
+	- var pageClasses = 'page--layout-main page--index'
+
+block content
+	include ../blocks/swiper/swiper-container-main
+	include ../blocks/sidenav/sidenav
+	.container-fluid
+		include ../blocks/panel/panel-container-main-promo
+		include ../blocks/common/cabinet-link-alt
+		include ../blocks/panel/panel-container-main-misc
+	include ../blocks/panel/panel-container-main-banner
+	include ../blocks/panel/panel-container-main-banner-cols-4
+	include ../blocks/panel/panel-container-main-banner-cols-2
+	include ../blocks/panel/panel-container-main-recommend

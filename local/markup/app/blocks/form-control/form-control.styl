@@ -1,0 +1,123 @@
+.form-control
+	display block
+	width 100%
+	background-image none
+	border 1px solid grey
+	transition border-color ease-in-out .15s, box-shadow ease-in-out .15s
+	box-sizing border-box
+
+	&:focus
+		outline 0
+
+	&::-moz-placeholder
+		opacity 1
+
+	&::-ms-expand
+		background-color transparent
+		border 0
+
+	&[disabled]
+	&[readonly]
+	fieldset[disabled] &
+		opacity 1
+
+	&[disabled]
+	fieldset[disabled] &
+		cursor not-allowed
+
+
+// Theme
+
+.form-control
+	font-family $base-font-family-light
+	height $input-height-md
+	padding $input-padding-y-md $input-padding-x-md
+	font-size $font-size-md
+	line-height $line-height-md
+	color $input-color
+	background-color $input-bg
+	border-width $input-btn-border-width
+	border-color alpha($input-border-color, .6)
+	border-radius $input-border-radius
+	box-shadow $input-box-shadow
+
+	&--accent
+		color #404040
+		background-color #ffd64a
+		border-color #ffd64a
+		box-shadow none
+
+	input&--alt
+		background-color transparent !important
+		border-top-color transparent !important
+		border-left-color transparent !important
+		border-right-color transparent !important
+		padding-left 0 !important
+
+	&--second
+		background-color #d4e0ec
+		border-color #d4e0ec
+
+	&:focus
+		border-color $input-border-focus
+		box-shadow $input-box-shadow-focus
+
+		.form-control&
+			box-shadow none
+
+	&::-moz-placeholder
+		color $input-color-placeholder
+
+	&:-ms-input-placeholder
+		color $input-color-placeholder
+
+	&::-webkit-input-placeholder
+		color $input-color-placeholder
+
+	.placeholdersjs
+		color $input-color-placeholder
+
+	&--accent::-moz-placeholder
+		color #404040
+
+	&--accent:-ms-input-placeholder
+		color #404040
+
+	&--accent::-webkit-input-placeholder
+		color #404040
+
+	&--accent.placeholdersjs
+		color #404040
+
+	&[disabled]
+	&[readonly]f
+	fieldset[disabled] &
+		background-color $input-bg-disabled
+
+	textarea&
+		height auto
+
+	.has-error &
+		border-color alpha(#c73c41, .6)
+		background-color #feecec
+		color #c73c41
+
+textarea.form-control--alt
+	font-size 21px
+	line-height 51px
+	min-height 102px
+	height 102px
+	resize none
+	overflow-y hidden
+	border 0
+	background-color #fff
+	background-attachment local
+	background-image: -moz-linear-gradient(left, #fff 10px, transparent 10px), -moz-linear-gradient(right, #fff 10px, transparent 10px), repeating-linear-gradient(#fff, #fff 50px, #d0d2d3 50px, #d0d2d3 51px, #fff 51px);
+	background-image: -webkit-gradient(left top, right top, color-stop(10px, #fff), color-stop(10px, transparent)), -webkit-gradient(right top, left top, color-stop(10px, #fff), color-stop(10px, transparent)), repeating-linear-gradient(#fff, #fff 50px, #d0d2d3 50px, #d0d2d3 51px, #fff 51px);
+	background-image: -webkit-linear-gradient(left, #fff 10px, transparent 10px), -webkit-linear-gradient(right, #fff 10px, transparent 10px), repeating-linear-gradient(#fff, #fff 50px, #d0d2d3 50px, #d0d2d3 51px, #fff 51px);
+	background-image: -o-linear-gradient(left, #fff 10px, transparent 10px), -o-linear-gradient(right, #fff 10px, transparent 10px), repeating-linear-gradient(#fff, #fff 50px, #d0d2d3 50px, #d0d2d3 51px, #fff 51px);
+	background-image: -ms-linear-gradient(left, #fff 10px, transparent 10px), -ms-linear-gradient(right, #fff 10px, transparent 10px), repeating-linear-gradient(#fff, #fff 50px, #d0d2d3 50px, #d0d2d3 51px, #fff 51px);
+	background-image: linear-gradient(to right, #fff 10px, transparent 10px), linear-gradient(to left, #fff 10px, transparent 10px), repeating-linear-gradient(#fff, #fff 50px, #d0d2d3 50px, #d0d2d3 51px, #fff 51px);
+	padding-top 0
+	padding-bottom 0
+	

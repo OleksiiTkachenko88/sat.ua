@@ -1,0 +1,18 @@
+include /../node_modules/bemto.jade/bemto
+include /../node_modules/jade-injected/jade-injected
+include ../page/page
+include ../scripts/scripts
+include ../icon/icon
+
+doctype html
+html(lang='ua')
+	include ../head/head
+	block page
+	+page(class=pageClasses || '')
+		.page__content
+			include ../page/page__header.jade
+			block content
+		include ../page/page__footer.jade
+block end
++scripts(['app.min.js'])
+block scripts

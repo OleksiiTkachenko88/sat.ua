@@ -1,0 +1,20 @@
+<?
+$MESS["T_IBLOCK_DESC_LIST_TYPE"] = "Тип информационнного блока (используется только для проверки):";
+$MESS["T_IBLOCK_DESC_LIST_ID"] = "Код информационного блока:";
+$MESS["T_IBLOCK_DESC_LIST_CONT"] = "Количество графиков на странице:";
+$MESS["CHARTS_DATA"] = "График №";
+$MESS["CHARTS_VAT_COUNT"] = "Количество значений графика:";
+$MESS["T_IBLOCK_DESC_ACTIVE_DATE_FORMAT"] = "Формат показа даты:";
+$MESS["IBLOCK_SECTION_FIELD"] = "Поля секции";
+$MESS["IBLOCK_FIELD"] = "Поля:";
+$MESS["T_IBLOCK_PROPERTY"] = "Свойства:";
+$MESS["SORT_EL_BY1"] = "Поле для первой сортировки: ";
+$MESS["SORT_EL_ORDER1"] = "Направление первой сортировки: ";
+$MESS["SORT_EL_BY2"] = "Поледля второй сортировки: ";
+$MESS["SORT_EL_ORDER2"] = "Направление второй сортировки: ";
+$MESS["T_IBLOCK_DESC_ASC"] = "По возрастанию";
+$MESS["T_IBLOCK_DESC_DESC"] = "По убыванию";
+$MESS["T_IBLOCK_DESC_FID"] = "ID";
+$MESS["T_IBLOCK_DESC_FNAME"] = "Название";
+$MESS["T_IBLOCK_DESC_FACT"] = "Дата начала активности";
+$MESS["T_IBLOCK_DESC_FSORT"] = "Сортировка";

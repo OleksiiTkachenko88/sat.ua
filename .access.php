@@ -1,0 +1,10 @@
+<?
+$PERM["contacts"]["7"]="R";
+$PERM["index_inc.php"]["6"]="W";
+$PERM["/"]["7"]="W";
+$PERM["/"]["*"]="R";
+$PERM["bitrix"]["7"]="R";
+$PERM["redirect"]["*"]="R";
+$PERM["desktop_app"]["*"]="R";
+$PERM["api"]["*"]="R";
+?>

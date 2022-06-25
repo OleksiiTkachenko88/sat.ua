@@ -1,0 +1,100 @@
+.comment-container
+	display block
+
+.comment-container-button-top
+	display block
+	margin-top 25px
+	margin-bottom 25px
+
+.comment-container:not(.active) .comment-container-button-top
+	.btn--more
+		.btn__text
+			display inline
+
+		.btn__text + .btn__text
+			display none
+
+		.icon:before
+			transform translate(-50%, -50%) rotate(0deg)
+
+.comment-container.active .comment-container-button-top
+	.btn--more
+		.btn__text
+			display none
+
+		.btn__text + .btn__text
+			display inline
+
+		.icon:before
+			transform translate(-50%, -50%) rotate(180deg)
+
+.comment-container-button-bottom
+	display block
+	margin-top 25px
+	margin-bottom 25px
+
+.comment-container-item
+	display block
+	height auto
+	min-height 368px
+
+	&.collapse
+		height 368px
+		min-height 368px
+		display block 
+		overflow hidden
+
+	&.collapse.in
+		height auto
+		min-height 368px
+		display block
+	
+.comment-item
+	overflow hidden
+	height 83px
+	
+	& + &
+		margin-top 40px
+
+.comment-item__ava
+	float left
+	border-radius 100px
+	width 65px
+	height 65px
+	margin-right -65px
+
+.comment-item__header
+	display block
+	margin 0 0 10px 95px
+
+.comment-item__header-title
+	font-family $base-font-family-light
+	font-weight normal
+	font-size 18px
+	line-height 1
+	color #404040
+	margin 0 2.5em 0 0
+	display inline
+	
+	a
+	a:hover
+	a:focus
+		color #404040
+
+.comment-item__header-date
+	font-family $base-font-family-light
+	font-weight normal
+	font-size 12px
+	line-height 18px
+	white-space nowrap
+	margin 0
+	display inline
+	color #8b8b8b
+
+.comment-item__body
+	font-family $base-font-family-light
+	font-weight normal
+	font-size 14px
+	line-height 18px
+	margin 0 0 0 95px
+	color #8b8b8b

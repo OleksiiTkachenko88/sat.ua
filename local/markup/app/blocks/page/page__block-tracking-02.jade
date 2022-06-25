@@ -1,0 +1,43 @@
+.page__block.page__block--tracking
+	.container-fluid
+		.page__block-group
+			input.form-control.form-control--accent.page__block-input(type='text', value='', placeholder='Введіть номер вашого відправлення')
+			.card.card--order
+				.card__turn
+				.card__section-row
+					.card__section.card__section--left
+						.card__primary-content
+							div.card__item
+								a.card__item-title(href="")
+									i.icon.card__icon.card__icon--marker
+									| Київ
+								.card__item-text вул. Терещенківська, 12Б
+							//- div.card__item
+							//- 	.card__item-text Сергій Іванович Семеренко
+						.card__secondary-content
+							.card__secondary-info 03.03.2016
+							.card__secondary-text Двері
+					.card__section.card__section--center
+						.card__primary-content
+							.card__status
+								span В дорозі
+							.card__number 002 301 207 FZM
+							.card__price 47 325 грн
+					.card__section.card__section--right
+						.card__primary-content
+							div.card__item
+								a.card__item-title(href="")
+									i.icon.card__icon.card__icon--marker
+									| Миколаїв
+								.card__item-text вул. Будівельників, 24/7
+							//- div.card__item
+								//- .card__item-text
+								//- 	i.icon.card__icon.card__icon--marker
+								//- 	| Юрій Петрович Зінченко
+						.card__secondary-content
+							.card__secondary-info 03.03.2016
+							a.card__secondary-text(href="")
+								i.icon.card__icon.card__icon--marker
+								| Склад №23
+			include ../common/cabinet-link-alt_02.jade
+		include ../form/form_recall.jade

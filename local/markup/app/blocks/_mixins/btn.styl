@@ -1,0 +1,106 @@
+btn(typeName, colorText, backgroundColor, backgroundColorHover, backgroundColorActive, borderColor, borderColorHover, borderColorActive)
+	mod = ''
+
+	if typeName
+		mod = '-' + typeName
+
+	&.btn{mod}
+		color colorText
+		background-color backgroundColor
+		border-color borderColor
+
+		&:focus
+		&.focus
+			color colorText
+			background-color backgroundColorHover
+			border-color borderColorHover
+
+		&:hover
+			color colorText
+			background-color backgroundColorHover
+			border-color borderColorHover
+
+		&:active
+		&.active
+		.open > .dropdown-toggle&
+			color colorText
+			background-color backgroundColorActive
+			border-color borderColorActive
+
+		&:active:hover
+		&.active:hover
+		.open > .dropdown-toggle&:hover
+		&:active:focus
+		&.active:focus
+		.open > .dropdown-toggle&:focus
+		&:active.focus
+		&.active.focus
+		.open > .dropdown-toggle&.focus
+			color colorText
+			background-color backgroundColorActive
+			border-color borderColorActive
+
+		&:active
+		&.active
+		.open > .dropdown-toggle&
+			background-image none
+
+		.badge
+			color backgroundColor
+			background-color colorText
+
+btnDisabled(typeName, colorText, backgroundColor, borderColor)
+	mod = ''
+
+	if typeName
+		mod = '-' + typeName
+
+	&.btn{mod}
+		&.disabled
+		&[disabled]
+		fieldset[disabled] &
+		&.disabled:hover
+		&[disabled]:hover
+		fieldset[disabled] &:hover
+		&.disabled.hover
+		&[disabled].hover
+		fieldset[disabled] &.hover
+		&.disabled:focus
+		&[disabled]:focus
+		fieldset[disabled] &:focus
+		&.disabled.focus
+		&[disabled].focus
+		fieldset[disabled] &.focus
+			color colorText
+			background-color backgroundColor
+			background-image none
+			border-color borderColor
+			box-shadow none
+			opacity 1
+
+btnSize(sizeName, paddingTopBottom, paddingLeftRight, fontSize, lineHeight, borderRadius)
+	mod = ''
+
+	if sizeName
+		mod = '-' + sizeName
+
+	&.btn{mod}
+		padding paddingTopBottom paddingLeftRight
+		font-size fontSize
+		line-height lineHeight
+		border-radius borderRadius
+
+		&.btn-rounded
+			border-radius borderRadius !important
+
+		&.btn-shift
+			margin-left -(paddingLeftRight)
+
+		&.btn-shiftright
+			margin-right -(paddingLeftRight)
+
+		&.btn-quad
+			padding-left 0 !important
+			padding-right 0 !important
+			height (fontSize * lineHeight + 2 * paddingTopBottom + 2px)
+			width (fontSize * lineHeight + 2 * paddingTopBottom + 2px)

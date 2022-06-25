@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="ua">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=640">
+		<title></title>
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<link href="assets/styles/app.min.css" rel="stylesheet">
+	</head>
+
+	<body class="page page--layout-main page--layout-main--map">
+		<div class="page page--layout-main page--layout-main--map">
+			<div class="page__content">
+				<header data-uk-sticky="{top:-40}" class="page__header">
+					<div id="page-cont" class="container-fluid page__header-container">
+						<div class="page__header-container-inner">
+							<nav class="navbar nav_logo navbar--header page__navbar-header">
+								<div class="navbar__primary-content">
+									<a href="#mobile_menu" data-uk-offcanvas="{mode:'slide'}" class="navbar__button-icon navbar__button-icon--menu">
+										<i class="icon"></i>
+									</a>
+									<a href="" class="navbar__brand">
+										<span class="navbar__brand-space"></span>
+										<img src="assets/images/sat-logo-mobile.png" alt="" width="161" height="62" class="navbar__brand-logo-mobile">
+										<img src="assets/images/sat-logo-desktop.png" alt="" width="242" height="91" class="navbar__brand-logo-desktop">
+									</a>
+									<ul class="navbar__nav ul_menu">
+										<li>
+											<a href="">Замовити</a>
+										</li>
+										<li>
+											<a href="">Трекінг</a>
+										</li>
+										<li>
+											<a href="">Компанія&nbsp;SAT</a>
+										</li>
+										<li>
+											<a href="">Контакти</a>
+										</li>
+									</ul>
+								</div>
+								<div class="navbar__secondary-content">
+									<div class="navbar__phone-wrapper">
+										<strong class="navbar__phone">0 800 502 25 25</strong>
+										<span class="navbar__phone-hint">Безкоштовна гаряча лінія</span>
+									</div>
+									<a href="" class="navbar__button-icon navbar__button-icon--entry">
+										<i class="icon"></i>
+									</a>
+									<a href="" class="navbar__button-icon navbar__button-icon--lang">
+										<span>ua</span>
+									</a>
+									<a href="" class="navbar__button-icon navbar__button-icon--search js-toggle-search">
+										<i class="icon"></i>
+									</a>
+								</div>
+							</nav>
+							<div class="navbar navbar--header page__navbar-header page__navbar-header--search">
+								<form id="search_class" class="navbar__primary-content">
+									<i class="icon icon--search-accent navbar__icon"></i>
+									<div class="navbar__search uk-width-1-1">
+										<input id="search" type="text" placeholder="Пошук надпоштових можливостей" class="form-control uk-width-1-1 navbar__search-form-control">
+									</div>
+									<span id="ic-close" class="navbar__button-icon navbar__button-icon--close js-close">
+										<i class="icon"></i>
+									</span>
+								</form>
+							</div>
+						</div>
+					</div>
+					<div id="mobile_menu" class="uk-offcanvas">
+						<div class="uk-offcanvas-bar uk-offcanvas-bar--menu">
+							<ul class="uk-nav uk-nav-offcanvas uk-nav-offcanvas--menu">
+								<li>
+									<a href="#">Компания SAT</a>
+								</li>
+								<li class="uk-active">
+									<a href="#">Трекинг</a>
+								</li>
+								<li>
+									<a href="#">Замовити</a>
+								</li>
+								<li>
+									<a href="#">Контакти</a>
+								</li>
+								<li class="uk-nav-header">Помощь онлайн</li>
+								<li class="phone">
+									<a href="#">
+										<i class="icon"></i>
+									</a>
+								</li>
+								<li class="email">
+									<a href="#">
+										<i class="icon"></i>
+									</a>
+								</li>
+								<li class="chat">
+									<a href="#">
+										<i class="icon"></i>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</header>
+				<div class="page__map-container collapse in">
+					<div style="background-color:#91ff91;" class="page__map-overlay"></div>
+					<div class="page__map-overlay page__map-overlay--bottom text-xs-center">
+						<span class="btn btn--more">
+							<span class="btn__text">Разгорнути карту</span>
+							<span class="btn__text">Згорнути карту</span>
+							<i class="icon icon--arrow-down-grey"></i>
+						</span>
+					</div>
+				</div>
+				<nav id="sidenav" class="sidenav hidden-md-down">
+					<a href="" class="sidenav__link sidenav__link--calc is-fade">
+						<span class="sidenav__pointer">Текст</span>
+						<i class="icon sidenav__icon"></i>
+					</a>
+					<a href="" class="sidenav__link sidenav__link--truck is-fade">
+						<span class="sidenav__pointer">Текст</span>
+						<i class="icon sidenav__icon"></i>
+					</a>
+					<a href="" class="sidenav__link sidenav__link--cargo is-fade">
+						<span class="sidenav__pointer">Текст</span>
+						<i class="icon sidenav__icon"></i>
+					</a>
+					<a href="" class="sidenav__link sidenav__link--map is-fade">
+						<span class="sidenav__pointer">Текст</span>
+						<i class="icon sidenav__icon"></i>
+					</a>
+					<a href="" class="sidenav__link sidenav__link--phone">
+						<span class="sidenav__pointer">Текст</span>
+						<i class="icon sidenav__icon"></i>
+					</a>
+					<a href="" class="sidenav__link sidenav__link--mail">
+						<span class="sidenav__pointer">Текст</span>
+						<i class="icon sidenav__icon"></i>
+					</a>
+					<a href="" class="sidenav__link sidenav__link--chat">
+						<span class="sidenav__pointer">Помощь онлайн</span>
+						<i class="icon sidenav__icon"></i>
+					</a>
+					<a href="" class="sidenav__link sidenav__link--entry active">
+						<span class="sidenav__pointer">Текст</span>
+						<i class="icon sidenav__icon"></i>
+					</a>
+				</nav>
+				<div class="page__block page__block--calc calc__container">
+					<div id="cal" class="container-fluid">
+						<div class="calc-group calc-group--transparent">
+							<div class="navbar navbar--calc">
+								<div class="navbar__primary-content">
+									<i class="icon icon--box-white navbar__icon"></i>
+									<input type="text" placeholder="Назвіть вантаж для його легкого розпізнавання вами серед ваших відправлень"
+										class="form-control navbar__form-control">
+								</div>
+							</div>
+						</div>
+						<div class="calc-group">
+							<div class="calc-group__toggle"></div>
+							<div class="uk-grid uk-grid-width-small-1-1 uk-grid-width-medium-1-1 uk-grid-width-large-1-2 uk-grid-width-xlarge-1-2 calc-group__row">
+								<div class="col first">
+									<div class="calc-group">
+										<div class="navbar navbar--calc navbar--accent">
+											<div class="navbar__primary-content">
+												<span class="navbar__icon">
+													<span class="icon icon--letter-A"></span>
+												</span>
+												<input type="text" placeholder="Вкажіть пункт відправлення або поставте крапку на карті" class="form-control navbar__form-control">
+											</div>
+										</div>
+									</div>
+									<div class="calc-group">
+										<div class="navbar navbar--calc navbar--accent p-r-0">
+											<div class="navbar__primary-content">
+												<ul class="navbar__nav">
+													<li>
+														<a href="">
+															<i class="icon icon--stock-grey"></i> Склад</a>
+													</li>
+													<li class="active">
+														<a href="">
+															<i class="icon icon--door-grey"></i> Двері</a>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="calc-group">
+										<div class="navbar navbar--calc navbar--white">
+											<div class="navbar__primary-content">
+												<i class="icon icon--date-light-grey navbar__icon navbar__icon--clickable"></i>
+												<div class="navbar__form-control-static">15 березня 2016 з 12 : 45 до 12 : 45</div>
+											</div>
+										</div>
+									</div>
+									<div class="calc-group hidden-lg-up">
+										<div class="navbar navbar--calc navbar--white">
+											<div class="navbar__primary-content">
+												<div class="navbar__icon">
+													<i style="background-image:url('http://placehold.it/60px60px')" class="icon icon--ava"></i>
+												</div>
+												<input type="text" placeholder="Сергій Іванович Семеренко" class="form-control navbar__form-control">
+											</div>
+										</div>
+									</div>
+									<div class="calc-group hidden-lg-up">
+										<div class="navbar navbar--calc navbar--white">
+											<div class="navbar__primary-content">
+												<i class="icon icon--phone-light-grey navbar__icon"></i>
+												<input type="text" placeholder="+380 00 000 00 00" class="form-control navbar__form-control">
+											</div>
+										</div>
+									</div>
+									<div class="calc-group hidden-lg-up">
+										<div class="navbar navbar--calc navbar--white">
+											<div class="navbar__primary-content">
+												<i class="icon icon--email-light-grey navbar__icon"></i>
+												<input type="text" placeholder="mail@ya.ru" class="form-control navbar__form-control">
+											</div>
+										</div>
+									</div>
+									<div class="calc-group hidden-lg-up">
+										<div class="navbar navbar--calc navbar--white">
+											<div class="navbar__primary-content">
+												<i class="icon icon--map-light-grey navbar__icon"></i>
+												<input type="text" placeholder="ул. Ивана Иванович, 26" class="form-control navbar__form-control">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col second">
+									<div class="calc-group">
+										<div class="navbar navbar--calc navbar--accent">
+											<div class="navbar__primary-content">
+												<span class="navbar__icon">
+													<span class="icon icon--letter-B"></span>
+												</span>
+												<input type="text" placeholder="Вкажіть пункт відправлення або поставте крапку на карті" class="form-control navbar__form-control">
+											</div>
+										</div>
+									</div>
+									<div class="calc-group">
+										<div class="navbar navbar--calc navbar--accent p-l-0">
+											<div class="navbar__primary-content">
+												<ul class="navbar__nav">
+													<li class="active">
+														<a href="">
+															<i class="icon icon--stock-grey"></i> Склад</a>
+													</li>
+													<li>
+														<a href="">
+															<i class="icon icon--door-grey"></i> Двері</a>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="calc-group">
+										<div class="navbar1 navbar--calc navbar--white">
+											<div class="navbar__primary-content">
+												<i class="icon icon--date-light-grey navbar__icon navbar__icon--clickable"></i>
+												<div class="navbar__form-control-static">15 березня 2016 з 12 : 45 до 12 : 45</div>
+											</div>
+										</div>
+									</div>
+									<div class="calc-group hidden-lg-up">
+										<div class="navbar navbar--calc navbar--white">
+											<div class="navbar__primary-content">
+												<div class="navbar__icon">
+													<i style="background-image:url('http://placehold.it/60px60px')" class="icon icon--ava"></i>
+												</div>
+												<input type="text" placeholder="Юри Іванович Семеренко" class="form-control navbar__form-control">
+											</div>
+										</div>
+									</div>
+									<div class="calc-group hidden-lg-up">
+										<div class="navbar navbar--calc navbar--white">
+											<div class="navbar__primary-content">
+												<i class="icon icon--phone-light-grey navbar__icon"></i>
+												<input type="text" placeholder="+380 00 000 00 00" class="form-control navbar__form-control">
+											</div>
+										</div>
+									</div>
+									<div class="calc-group hidden-lg-up">
+										<div class="navbar navbar--calc navbar--white">
+											<div class="navbar__primary-content">
+												<i class="icon icon--email-light-grey navbar__icon"></i>
+												<input type="text" placeholder="mail3@ya.ru" class="form-control navbar__form-control">
+											</div>
+										</div>
+									</div>
+									
+									
+									
+									
+								</div>
+							</div>
+						</div>
+						<div class="calc-group">
+							<h3 class="calc-group__title">Вкажіть тип та габарити вантажу</h3>
+							<div class="calc-group__content">
+								<div class="uk-form uk-form-horizontal">
+									<div class="uk-grid calc_zoom uk-grid-width-small-1-1 uk-grid-width-medium-1-1 uk-grid-width-large-1-2 uk-grid-width-xlarge-1-2">
+										<div class="uk-form vantaz uk-form-horizontal">
+											<div class="uk-form-row">
+												<label for="" class="uk-form-label">Тип вантажу</label>
+												<div class="uk-form-controls">
+													<div data-uk-form-select="" class="uk-button uk-form-select">
+														<span></span>
+														<select>
+															<option value="">...</option>
+															<option value="" selected="">Легкови</option>
+														</select>
+													</div>
+												</div>
+											</div>
+											<div class="uk-form-row">
+												<label for="" class="uk-form-label">Кількість шин</label>
+												<div class="uk-form-controls">
+													<input type="text" value="4" class="uk-form-width-small text-xs-center">
+												</div>
+											</div>
+											<div class="uk-form-row">
+												<label for="" class="uk-form-label">Розмір</label>
+												<div class="uk-form-controls">
+													<div data-uk-form-select="" class="uk-button uk-form-select">
+														<span></span>
+														<select>
+															<option value="">...</option>
+															<option value="" selected="">R10-R14</option>
+														</select>
+													</div>
+												</div>
+											</div>
+											<div class="uk-form-row">
+												<label for="" class="uk-form-label">Вага</label>
+												<div class="uk-form-controls">
+													<input type="text" value="380" class="uk-form-width-small text-xs-center">
+													<span class="uk-form-suffix">кг</span>
+												</div>
+											</div>
+											<div class="uk-form-row">
+												<label for="" class="uk-form-label">Об’єм</label>
+												<div class="uk-form-controls">
+													<input type="text" value="2,91" class="uk-form-width-small text-xs-center">
+													<span class="uk-form-suffix">м
+														<sup>3</sup>
+													</span>
+												</div>
+											</div>
+											<div class="uk-form-row">
+												<label for="" class="uk-form-label">Декларована вартість</label>
+												<div class="uk-form-controls">
+													<input type="text" value="1590" class="uk-form-width-small text-xs-center">
+													<span class="uk-form-suffix">грн</span>
+												</div>
+											</div>
+										</div>
+										<div class="uk-form param uk-form-horizontal uk-form-horizontal--half">
+											<div class="uk-form-calc-dimensions__container">
+												<div class="uk-form-calc-dimensions__image-container">
+													<div class="hint-block text-xs-center">Візуалізація метричних параметрів вашого вантажу</div>
+													<div class="uk-form-calc-dimensions__image-wrapper">
+														<section class="cube__container">
+															<div id="cube" class="cube">
+																<figure class="front"></figure>
+																<figure class="back"></figure>
+																<figure class="right"></figure>
+																<figure class="left"></figure>
+																<figure class="top"></figure>
+																<figure class="bottom"></figure>
+															</div>
+														</section>
+													</div>
+												</div>
+												<div class="uk-form-row">
+													<label for="" class="uk-form-label">Довжина</label>
+													<div class="uk-form-controls">
+														<input id="cube_input_length" type="text" name="length" value="1" class="uk-form-width-small text-xs-center">
+														<span class="uk-form-suffix">м</span>
+													</div>
+												</div>
+												<div class="bootstrap-slider-container bootstrap-slider-container--right">
+													<span class="uk-form-prefix">0 м</span>
+													<div id="cube_slider_length" data-provide="slider" data-slider-min="0" data-slider-max="2" data-slider-step="0.001"
+														data-slider-value="1" data-slider-tooltip="hide" class="slider"></div>
+													<span class="uk-form-suffix">2 м</span>
+												</div>
+												<div class="uk-form-row">
+													<label for="" class="uk-form-label">Ширина</label>
+													<div class="uk-form-controls">
+														<input id="cube_input_width" type="text" name="width" value="1" class="uk-form-width-small text-xs-center">
+														<span class="uk-form-suffix">м</span>
+													</div>
+												</div>
+												<div class="bootstrap-slider-container bootstrap-slider-container--right">
+													<span class="uk-form-prefix">0 м</span>
+													<div id="cube_slider_width" data-provide="slider" data-slider-min="0" data-slider-max="2" data-slider-step="0.001"
+														data-slider-value="1" data-slider-tooltip="hide" class="slider"></div>
+													<span class="uk-form-suffix">2 м</span>
+												</div>
+												<div class="uk-form-row">
+													<label for="" class="uk-form-label">Висота</label>
+													<div class="uk-form-controls">
+														<input id="cube_input_height" type="text" name="width" value="1" class="uk-form-width-small text-xs-center">
+														<span class="uk-form-suffix">м</span>
+													</div>
+												</div>
+												<div class="bootstrap-slider-container bootstrap-slider-container--right">
+													<span class="uk-form-prefix">0 м</span>
+													<div id="cube_slider_height" data-provide="slider" data-slider-min="0" data-slider-max="2" data-slider-step="0.001"
+														data-slider-value="1" data-slider-tooltip="hide" class="slider"></div>
+													<span class="uk-form-suffix">2 м</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="calc-group">
+							<h3 class="calc-group__title">Оберіть додаткові послуги</h3>
+							<div class="calc-group__content p-y-0">
+								<div data-uk-accordion="{collapse: false}" class="uk-accordion uk-accordion--calc">
+									<h3 class="uk-accordion-title">Послуги виїзду</h3>
+									<div class="uk-accordion-content">1</div>
+									<h3 class="uk-accordion-title">Послуги видачі</h3>
+									<div class="uk-accordion-content">2</div>
+									<h3 class="uk-accordion-title">Послуги пакування</h3>
+									<div class="uk-accordion-content">
+										<div class="uk-form">
+											<div class="uk-grid uk-grid-width-small-1-1 uk-grid-width-medium-1-1 uk-grid-width-large-1-3 uk-grid-width-xlarge-1-3">
+												<div class="col">
+													<div class="uk-form-row">
+														<label class="uk-form-checkbox">
+															<input type="checkbox" checked value="">
+															<span class="uk-form-checkbox__text">Упаковка в гофроящик</span>
+														</label>
+													</div>
+													<div class="uk-form-row">
+														<label class="uk-form-checkbox">
+															<input type="checkbox" checked value="">
+															<span class="uk-form-checkbox__text">Стрейчування</span>
+														</label>
+													</div>
+												</div>
+												<div class="col">
+													<div class="uk-form-row">
+														<label class="uk-form-checkbox">
+															<input type="checkbox" checked value="">
+															<span class="uk-form-checkbox__text">Палетування</span>
+														</label>
+													</div>
+													<div class="uk-form-row">
+														<label class="uk-form-checkbox">
+															<input type="checkbox" disabled value="">
+															<span class="uk-form-checkbox__text">Упаковка документів</span>
+														</label>
+													</div>
+												</div>
+												<div class="col">
+													<div class="uk-form-row">
+														<label class="uk-form-checkbox">
+															<input type="checkbox" value="">
+															<span class="uk-form-checkbox__text">Стягування стяжкою</span>
+														</label>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<h3 class="uk-accordion-title">Зворотня доставка</h3>
+									<div class="uk-accordion-content">
+										<div class="uk-form">
+											<div class="uk-grid uk-grid-width-small-1-1 uk-grid-width-medium-1-1 uk-grid-width-large-1-3 uk-grid-width-xlarge-1-3">
+												<div class="col">
+													<div class="uk-form-row">
+														<div class="uk-form-controls">
+															<label class="uk-form-checkbox">
+																<input type="checkbox" checked value="">
+																<span class="uk-form-checkbox__text">Піддон</span>
+															</label>
+															<input type="text" value="3" class="uk-form-width-mini text-xs-center">
+															<span class="uk-form-suffix">шт.</span>
+														</div>
+													</div>
+												</div>
+												<div class="col">
+													<div class="uk-form-row">
+														<label class="uk-form-checkbox">
+															<input type="checkbox" value="">
+															<span class="uk-form-checkbox__text">Документи</span>
+														</label>
+													</div>
+												</div>
+												<div class="col">
+													<div class="uk-form-row">
+														<label class="uk-form-checkbox">
+															<input type="checkbox" checked value="">
+															<span class="uk-form-checkbox__text">Наложенний платіж</span>
+														</label>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div id="decl_cont" class="declaration__container">
+										<div class="declaration__blank">
+											<div class="declaration__arr-id"></div>
+											<div class="uk-grid uk-grid-divider declaration__grid">
+												<div id="decl" class="declaration__section-left uk-width-small-1-1 uk-width-medium-1-1 uk-width-large-4-10 uk-width-xlarge-4-10">
+													<div class="declaration__block declaration__block--from">
+														<div class="declaration__block-header">
+															<div class="icon icon--letter-A"></div>Київ
+															<span class="declaration__block-header-pointer">Двері</span>
+														</div>
+														<div class="declaration__item address">вул. Терещенскивскай, 12Б</div>
+														<div class="declaration__item name">Сергей Иванович Семеренко</div>
+														<div class="declaration__item date">
+															<div class="declaration__item-content declaration__item-content--left">
+																<i class="icon icon--date-light-grey-sm"></i>03.03.2016</div>
+														</div>
+													</div>
+													<div class="declaration__item number">
+														<span class="declaration__number">002 301 207 FZM</span>
+													</div>
+													<div class="declaration__block declaration__block--to">
+														<div class="declaration__block-header">
+															<div class="icon icon--letter-B"></div>Одеса
+															<span class="declaration__block-header-pointer">Склад</span>
+														</div>
+														<div class="declaration__item name">Сергей Иванович Семеренко</div>
+														<div class="declaration__item address">вул. Терещенскивскай, 12Б</div>
+														<div class="declaration__item date">
+															<div class="declaration__item-content declaration__item-content--left">
+																<i class="icon icon--date-light-grey-sm"></i>03.03.2016</div>
+														</div>
+													</div>
+												</div>
+												<div id="qqqq" class="declaration__section-right uk-width-small-1-1 uk-width-medium-1-1 uk-width-large-6-10 uk-width-xlarge-6-10">
+													<div class="declaration__item">
+														<strong class="declaration__item-title declaration__item-title--width-1">Тип вантажу</strong>
+														<span class="declaration__item-content declaration__item-content--left">
+															<span class="text-uppercase">Корреспонденция</span>
+														</span>
+													</div>
+													<div class="declaration__item">
+														<strong class="declaration__item-title declaration__item-title--width-1">Пакування</strong>
+														<span class="declaration__item-content declaration__item-content--left">
+															<span class="text-uppercase">Деревянный ящик</span>
+														</span>
+													</div>
+													<div class="uk-grid uk-grid-width-small-1-2 uk-grid-width-medium-1-2 uk-grid-width-large-1-2 uk-grid-width-xlarge-1-2">
+														<div class="col">
+															<div class="declaration__item">
+																<strong class="declaration__item-title declaration__item-title--width-1">Ширина</strong>
+																<span class="declaration__item-content">5 м</span>
+															</div>
+															<div class="declaration__item">
+																<strong class="declaration__item-title declaration__item-title--width-1">Висота</strong>
+																<span class="declaration__item-content">7 м</span>
+															</div>
+														</div>
+														<div class="col">
+															<div class="declaration__item">
+																<strong class="declaration__item-title declaration__item-title--width-1">Глибина</strong>
+																<span class="declaration__item-content">2 м</span>
+															</div>
+															<div class="declaration__item">
+																<strong class="declaration__item-title declaration__item-title--width-1">Вага</strong>
+																<span class="declaration__item-content">300 кг</span>
+															</div>
+														</div>
+													</div>
+													<div class="declaration__hr"></div>
+													<div class="declaration__item">
+														<strong class="declaration__item-title">Вартість за габарити</strong>
+														<span class="declaration__item-content">
+															<span class="pull-right">1 200 грн</span>
+														</span>
+													</div>
+													<div class="declaration__hr"></div>
+													<strong class="declaration__item-title">Додаткові послуги</strong>
+													<table class="declaration__table">
+														<tr>
+															<td class="td-icon">
+																<i class="fa fa-check"></i>
+															</td>
+															<td class="td-title">Пакування
+																<span class="text-muted">/ ящик</span>
+															</td>
+															<td class="td-price">200 грн</td>
+														</tr>
+														<tr>
+															<td class="td-icon">
+																<i class="fa fa-check"></i>
+															</td>
+															<td class="td-title">Підйом на поверх
+																<span class="text-muted">/ ліфт</span>
+															</td>
+															<td class="td-price">20 грн</td>
+														</tr>
+														<tr>
+															<td class="td-icon">
+																<i class="fa fa-check"></i>
+															</td>
+															<td class="td-title">Зберігання на складі
+																<span class="text-muted">/ 24 дні</span>
+															</td>
+															<td class="td-price">760 грн</td>
+														</tr>
+													</table>
+													<div class="declaration__hr"></div>
+													<div class="declaration__item">
+														<strong class="declaration__item-title">Декларована вартість</strong>
+														<span class="declaration__item-content price">50 000 грн</span>
+													</div>
+													<div class="declaration__item declaration__item--footer">
+														<strong class="declaration__item-title">Вартість</strong>
+														<span class="declaration__item-content total-price">47 435 грн</span>
+													</div>
+												</div>
+											</div>
+											<div class="declaration__section-footer">
+												<div class="barcode"></div>
+												<span class="phone">0 800 502 25 25</span>
+												<span class="phone-hint">Безкоштовна гаряча лінія</span>
+											</div>
+										</div>
+										<div class="declaration__footer">
+											<span class="declaration__footer-title">
+												<span class="text-accent">Ваша заявка</span> італійський різний фурнітур</span>
+											<span class="declaration__footer-actions">
+												<a href="" class="download icon icon--download-blue"></a>
+												<a href="" class="email icon icon--email-blue"></a>
+												<a href="" class="print icon icon--print-blue"></a>
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="calc-group hidden-md-down">
+							<div class="uk-grid uk-grid-width-small-1-1 uk-grid-width-medium-1-1 uk-grid-width-large-1-2 uk-grid-width-xlarge-1-2 calc-group__row">
+								<div class="col first">
+									<div class="calc-group">
+										<div class="navbar navbar--calc navbar--white">
+											<div class="navbar__primary-content inp_block">
+												<div class="navbar__icon">
+													<i style="background-image:url('http://placehold.it/60px60px')" class="icon icon--ava"></i>
+												</div>
+												<input type="text" placeholder="Сергій Іванович Семеренко" class="form-control navbar__form-control">
+											</div>
+										</div>
+									</div>
+									<div class="calc-group">
+										<div class="navbar navbar--calc navbar--white">
+											<div class="navbar__primary-content">
+												<i class="icon icon--phone-light-grey navbar__icon"></i>
+												<input type="text" placeholder="+380 00 000 00 00" class="form-control navbar__form-control">
+											</div>
+										</div>
+									</div>
+									<div class="calc-group">
+										<div class="navbar navbar--calc navbar--white">
+											<div class="navbar__primary-content">
+												<i class="icon icon--email-light-grey navbar__icon"></i>
+												<input type="text" placeholder="mail@ya.ru" class="form-control navbar__form-control">
+											</div>
+										</div>
+									</div>
+									<div class="calc-group">
+										<div class="navbar navbar--calc navbar--white">
+											<div class="navbar__primary-content">
+												<i class="icon icon--map-light-grey navbar__icon"></i>
+												<input type="text" placeholder="ул. Ивана Иванович, 26" class="form-control navbar__form-control">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col second">
+									<div class="calc-group">
+										<div class="navbar navbar--calc navbar--white">
+											<div class="navbar__primary-content">
+												<div class="navbar__icon">
+													<i style="background-image:url('http://placehold.it/60px60px')" class="icon icon--ava"></i>
+												</div>
+												<input type="text" placeholder="Юри Іванович Семеренко" class="form-control navbar__form-control">
+											</div>
+										</div>
+									</div>
+									<div class="calc-group">
+										<div class="navbar navbar--calc navbar--white">
+											<div class="navbar__primary-content">
+												<i class="icon icon--phone-light-grey navbar__icon"></i>
+												<input type="text" placeholder="+380 00 000 00 00" class="form-control navbar__form-control">
+											</div>
+										</div>
+									</div>
+									<div class="calc-group">
+										<div class="navbar navbar--calc navbar--white">
+											<div class="navbar__primary-content">
+												<i class="icon icon--email-light-grey navbar__icon"></i>
+												<input type="text" placeholder="mail3@ya.ru" class="form-control navbar__form-control">
+											</div>
+										</div>
+									</div>
+									<div class="calc-group">
+										<div class="navbar navbar--calc navbar--white">
+											<div class="navbar__primary-content">
+												<i class="icon icon--map-light-grey navbar__icon"></i>
+												<input type="text" placeholder="ул. Ивана Иванович, 26" class="form-control navbar__form-control">
+											</div>
+										</div>
+									</div>
+									
+									
+									
+								</div>
+							</div>
+						</div>
+						<div class="calc-group">
+							<h3 class="calc-group__title">Додати примітку</h3>
+							<div class="calc-group__content">
+								<div class="hint-block text-uppercase m-t-0">Вкажіть додаткові побажання та інформацію стосовно відправки та отримання вашого надсилання</div>
+								<textarea name=""
+									cols="30" rows="2" class="form-control form-control--alt"></textarea>
+							</div>
+						</div>
+					</div>
+					<div class="calc__footer text-xs-center">
+						<a href="" class="btn btn--more btn--higher btn--blue">Додати вантаж
+							<i class="icon icon--plus-accent"></i>
+						</a>
+					</div>
+				</div>
+				<div id="fluid_cont" class="panel__container panel__container--main panel__container--main--recommend">
+					<div class="container-fluid">
+						<section class="panel panel--recommend">
+							<header class="panel__heading">
+								<div class="panel__heading-primary-content">
+									<i class="icon panel__icon"></i>
+									<h3 class="panel__title">SAT рекомендує</h3>
+								</div>
+								<div id="btn_sat" class="panel__footer-secondary-content">
+									<a href="" class="btn btn--accent btn--outline btn--icon">
+										<i class="icon icon--arrow-right-light-grey"></i>
+									</a>
+								</div>
+							</header>
+							<div class="panel__block-list">
+								<a href="" class="panel__block panel__block--doc">
+									<i class="icon panel__block-icon"></i>
+									<h3 class="panel__block-title">Документи</h3>
+									<p class="panel__block-descr">Легкий та зручний розрахунок вартості доставки вантажу</p>
+								</a>
+								<a href="" class="panel__block panel__block--pack">
+									<i class="icon panel__block-icon"></i>
+									<h3 class="panel__block-title">Пакування</h3>
+									<p class="panel__block-descr">Легкий та зручний розрахунок вартості доставки вантажу</p>
+								</a>
+								<a href="" class="panel__block panel__block--trans">
+									<i class="icon panel__block-icon"></i>
+									<h3 class="panel__block-title">Транспортування</h3>
+									<p class="panel__block-descr">Легкий та зручний розрахунок вартості доставки вантажу</p>
+								</a>
+								<a href="" class="panel__block panel__block--storage">
+									<i class="icon panel__block-icon"></i>
+									<h3 class="panel__block-title">Зберігання</h3>
+									<p class="panel__block-descr">Легкий та зручний розрахунок вартості доставки вантажу</p>
+								</a>
+							</div>
+						</section>
+					</div>
+				</div>
+				<div id="fluid_cont" class="panel__container panel__container--main panel__container--main--subscribe">
+					<div class="container-fluid">
+						<form class="panel panel--subscribe form">
+							<div class="row">
+								<div class="col-xs-12 col-lg-8">
+									<h2 class="form__title-4">Дізнавайтесь про
+										<br>кращі пропозиції для Вас!</h2>
+									<div class="input-group-row">
+										<input type="text" value="" placeholder="Введіть Ваш e-mail..." class="form-control form-control--alt input-lg">
+										<button type="submit" class="btn btn--accent btn--raised btn--alt btn-lg">Підписатись</button>
+									</div>
+									<div class="form-hint">Отримайте змогу завчасно дізнаватись про найкращі пропозиції від нашої компанії. Здобудьте перевагу та використовуйте
+										надпоштові можливості SAT на повну силу ми не надсилаемо спам, або сторонні рекламні повідомлення, а лише корисні
+										та актуальні пропозиції</div>
+								</div>
+								<div class="col-xs-12 col-lg-4 panel__col-image hidden-md-down">
+									<img src="assets/images/subscribe-img.png" alt="" width="298" height="319">
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<footer class="page__footer">
+				<div class="mega-footer">
+					<div id="foot" class="container-fluid mega-footer__container">
+						<div class="mega-footer__logo"></div>
+						<h3 class="mega-footer__extra-heading hidden-md-down">Мапа сайту</h3>
+						<nav class="mega-footer__middle-section hidden-md-down">
+							<div class="mega-footer__section">
+								<h5 class="mega-footer__heading">Замовити</h5>
+								<ul class="mega-footer__link-list">
+									<li>
+										<a href="">Калькулятор</a>
+									</li>
+								</ul>
+							</div>
+							<div class="mega-footer__section">
+								<h5 class="mega-footer__heading">ТРЕКІНГ</h5>
+								<ul class="mega-footer__link-list">
+									<li>
+										<a href="">Відстежити вантаж</a>
+									</li>
+									<li>
+										<a href="">Замовлення</a>
+									</li>
+								</ul>
+							</div>
+							<div class="mega-footer__section">
+								<h5 class="mega-footer__heading">Надпоштові можливості</h5>
+								<ul class="mega-footer__link-list">
+									<li>
+										<a href="">Послуги</a>
+									</li>
+									<li>
+										<a href="">Академія</a>
+										<ul>
+											<li>
+												<a href="">Кейси</a>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+							<div class="mega-footer__section">
+								<h5 class="mega-footer__heading">Акції</h5>
+								<ul class="mega-footer__link-list">
+									<li>
+										<a href="">Найкращі пропозиції</a>
+									</li>
+									<li>
+										<a href="">Акції для вас</a>
+									</li>
+									<li>
+										<a href="">Ваші бонуси</a>
+									</li>
+								</ul>
+							</div>
+							<div class="mega-footer__section">
+								<h5 class="mega-footer__heading">Компанія SAT</h5>
+								<ul class="mega-footer__link-list">
+									<li>
+										<a href="">Легенда</a>
+									</li>
+									<li>
+										<a href="">Новини</a>
+									</li>
+								</ul>
+							</div>
+							<div class="mega-footer__section">
+								<h5 class="mega-footer__heading">Контакти</h5>
+								<ul class="mega-footer__link-list">
+									<li>
+										<a href="">Бізнес</a>
+									</li>
+									<li>
+										<a href="">Клієнти</a>
+									</li>
+									<li>
+										<a href="">Відділення</a>
+										<ul>
+											<li>
+												<a href="">Списком</a>
+											</li>
+											<li>
+												<a href="">На карті</a>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+						</nav>
+						<div class="mega-footer__spacer hidden-md-down"></div>
+						<div class="mega-footer__bottom-section">
+							<div class="mega-footer__section">
+								<p class="mega-footer__copyright">© 2016 транспортна компанія «САТ»
+									<br>
+									<span>вул. Гродненська, 32, м. Київ, Україна</span>
+								</p>
+							</div>
+							<div class="mega-footer__section mega-footer__section--phone">
+								<strong class="mega-footer__phone">0 800 502 25 25</strong>
+								<span class="mega-footer__phone-hint">Безкоштовна гаряча лінія</span>
+							</div>
+							<div class="mega-footer__section mega-footer__section--social">
+								<a href="" class="mega-footer__social-btn mega-footer__social-btn--facebook">
+									<i class="icon"></i>
+								</a>
+								<a href="" class="mega-footer__social-btn mega-footer__social-btn--vkontakte">
+									<i class="icon"></i>
+								</a>
+								<a href="" class="mega-footer__social-btn mega-footer__social-btn--twitter">
+									<i class="icon"></i>
+								</a>
+								<a href="" class="mega-footer__social-btn mega-footer__social-btn--youtube">
+									<i class="icon"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+	</body>
+
+</html>
+<script src="assets/scripts/app.min.js"></script>

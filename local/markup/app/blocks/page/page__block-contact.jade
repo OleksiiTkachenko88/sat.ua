@@ -1,0 +1,37 @@
+section.page__block.page__block--contact
+	.navigation__container
+		.container-fluid
+			nav.navigation(data-uk-switcher="{connect: '#contact_tabs'}")
+				a.navigation__link.uk-active(href="") <span class="navigation__link-inner">Приватним клієнтам</span>
+				a.navigation__link(href="") <span class="navigation__link-inner">Корпоративним клієнтам</span>
+				a.navigation__link(href="") <span class="navigation__link-inner">Партнерам (франчайзинг)</span>
+				a.navigation__link(href="") <span class="navigation__link-inner">Компаніям постачальникам</span>
+	#contact_tabs.uk-switcher
+		div.uk-active
+			.container-fluid
+				.row
+					.col-xs-6
+						p Центральний офіс ТОВ «Транспортна компанія «САТ»<br>вулиця Гродненьска, 32, Киев, Украина, 02660
+						p.icon__item <i class="icon icon--phone-accent"></i> 044 490 99 09
+						p.icon__item <i class="icon icon--phone-accent"></i> 067 555 11 33
+						p.icon__item <i class="icon icon--phone-accent"></i> 050 487 2 487
+						p.icon__item <i class="icon icon--phone-accent"></i> 0 800 30 99 09
+						p.icon__item <i class="icon icon--mail-accent"></i> info@sat.ua
+					.col-xs-6
+						p Відділ по зв’язкам із прессою<br>За всіма питаннями звертайтесь, будь-ласка до Ирини Миханік:
+						p.icon__item <i class="icon icon--phone-accent"></i> 067 370 71 05
+						p.icon__item <i class="icon icon--mail-accent"></i> pr@sat.ua
+						p Дополнительный склад на приём и выдачу грузов в г. Киев
+						p Отделение №2: ул. Корабельная, 6<br>Отделение №3: ул. Якутская, 8
+
+		div
+			.container-fluid 2
+
+		div
+			.container-fluid 3
+
+		div
+			.container-fluid 4
+
+	.container-fluid
+		include ../common/cabinet-link

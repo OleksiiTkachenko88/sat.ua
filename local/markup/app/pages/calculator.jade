@@ -1,0 +1,20 @@
+extends /blocks/layout-default/layout-default
+
+block head
+	- var pageTitle = '';
+	- var pageDescription = '';
+	- var pageKeywords = '';
+
+block page
+	- var pageClasses = 'page--layout-main page--layout-main--map'
+
+block content
+	.page__map-container.collapse.in
+		.page__map-overlay(style="background-color:#91ff91;")
+		.page__map-overlay.page__map-overlay--bottom.text-xs-center
+			span.btn.btn--more
+				| <span class="btn__text">Разгорнути карту</span><span class="btn__text">Згорнути карту</span><i class="icon icon--arrow-down-grey"></i>
+	include ../blocks/sidenav/sidenav
+	include ../blocks/page/page__block-calc
+	include ../blocks/panel/panel-container-main-recommend
+	include ../blocks/panel/panel-container-subscribe

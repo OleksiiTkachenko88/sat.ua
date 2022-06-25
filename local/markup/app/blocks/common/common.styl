@@ -1,0 +1,170 @@
+.uniform-bg-3
+.uniform-bg-2
+.uniform-bg-1
+	padding .15em 0
+	position relative
+	background #2766a0
+	color #fff
+
+	.main-slide__extra-title &
+		background-color #2766a0
+		color #ffffff
+		padding-top .075em
+		padding-bottom .075em
+
+	.main-slide__title &
+		background-color #ffffff
+		color #2766a0
+
+.uniform-bg-1
+	left -.6em
+
+	.main-slide__extra-title &
+	.main-slide__title &
+		left -.3em
+
+	.main-slide__extra-title &
+		left -.15em
+
+
+.uniform-bg-2
+	left .6em
+
+	.main-slide__extra-title &
+		left .3em
+
+.uniform-bg-3
+	left -.3em
+
+	.main-slide__extra-title &
+		left -.15em
+
+
+.help-block
+	display block
+	typo-hint()
+
+.tooltip-map
+	background-color #ffd64a
+	color #404041
+	display inline-block
+	width 280px
+	padding 12px 15px 15px 30px
+	border-radius 5px
+
+	&__title
+		font-size 24px
+		line-height 30px
+		color inherit
+
+	&__text
+	&__text-alt
+		font-size 18px
+		line-height 23px
+
+	&__text
+		color inherit
+		overflow hidden
+		zoom 1
+
+	&__text-alt
+		color #8b7528
+
+		.title-width-1
+			display inline-block
+			vertical-align baseline
+			min-width 85px
+
+	&__hr
+		display block
+		border-top 1px solid #8b7528
+		margin-top 7px
+		margin-bottom 7px
+
+	&__arrow
+		right 100%
+		top 15px
+		border solid transparent
+		content ''
+		height 0
+		width 0
+		position absolute
+		pointer-events none
+		border-color rgba(255, 214, 74, 0)
+		border-right-color #ffd64a
+		border-width 12px
+
+.cabinet-link
+	font-family $base-font-family
+	font-weight normal
+	font-size 24px
+	line-height 2.16
+	text-transform uppercase
+	padding 30px
+	text-decoration none
+	display block
+	margin-top 10px
+	margin-bottom 10px
+	text-align center
+	background-color #d0d2d3
+	color #2766a0
+
+	+below($breakpoint-lg - 1px)
+		font-size 16px
+		margin-left -15px
+		margin-right -15px
+		padding 15px 20px
+
+	a&:hover
+		background-color #ffd64a
+		color #2766a0
+		text-decoration none
+
+	.icon
+		margin-left 15px
+		margin-right 25px
+		vertical-align middle
+
+	.icon--entry-accent-59-52:before
+	.icon--entry-blue-59-52:before
+		width 2.458333em
+		height 2.16667em
+		background-position 0 0
+		background-size cover
+
+	.icon--entry-accent-59-52:before
+		background-image url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADsAAAA0CAYAAAA0c0BmAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QTY1QUVEN0E5MTY1MTFFNjgyQ0JGQTJBOUQ0MzcyRjQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QTY1QUVEN0I5MTY1MTFFNjgyQ0JGQTJBOUQ0MzcyRjQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpBNjVBRUQ3ODkxNjUxMUU2ODJDQkZBMkE5RDQzNzJGNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpBNjVBRUQ3OTkxNjUxMUU2ODJDQkZBMkE5RDQzNzJGNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PvZnXUIAAAKySURBVHja7JpNSFRRFMfvDDamSZBYZq3CgVZWixBtCspN2S7TVYLRztrkTlpI6KI0WkToJoLWbfqCtAiqRYrhBxi6E8s0gogUQir8+h/efXC5aO9dePfNuU8P/BjPHZw3v3n33e/U2tR5YRAl4CI4CcoEz/gG3oNn4K/6RoHBh1wB3Ywl1bgK5uXrc78wHfKfb4GHjoj6cRA8BddNZC+BduFmpMBdcCaMbCG4o5V9ADmQkR/GiSJwFnxSvi853gvzzNaDCiX/COrAP6Z38g94DU6BUVApy6vA8aA7W63lnYxF1VgEt7WyE0GyFVo+6dDzOq7le9IiubGiFyRZVmzL5jH2gvvgAThg+2IFeZbtA43y79OS+aTeWbW1z4J3cpiXF9klsKCwGvH1u7R+26pwkOw16p8UZiO+/itZjWMR5tAav4hLmEvXE4swp37WujC3QYVVYY4jKGvCXIeLVoQ5j40jF+Y+EYhUmGRpHfgnWGMKLYVmtO/tC+8zle0BpQ7O2LLKJCK07HeHp6gLplO8ZnAT7GYqREuk9RtUZarej01lZ0ALY9HeTUSbwHJSWmNftHUTUeMl3fRWEeUqa0WUo6w1UW6yVkU5yVoX5SIbi6jfz/4vDoP9Sj4svG1B50TDyNKO+2UlPwQ+R3j9G3GJcqjGF+IS5SDbH5domGpsOzqEd0ZjB3gpNthTTZIsTc4H4rrY9v7sVpVdZlbtTWKX/sgEyep9ap1Dsue0/EuQ7Bstp/3UrAOidH6rTclpX/ltULWk4eEQqJU5LV2OCO8cxJiIfnM6it4lJ0dlO5VyOo47mwpx3viIFC52tF2iNfFjYC5MazwhvPXZ3w6K/gB0N+dMup5++es8sT3KiShoyPkIHBXe4VLjrmQaNIByUCO8c0sZZpJ0TP4rGAS/9DfXBRgAWEXDo2gP0kYAAAAASUVORK5CYII=')
+
+	.icon--entry-blue-59-52:before
+		background-image url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADsAAAA0CAYAAAA0c0BmAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QUVBRTczN0U5MTMyMTFFNjhBNjdGOTkyODI5MUMwMDAiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QUVBRTczN0Y5MTMyMTFFNjhBNjdGOTkyODI5MUMwMDAiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpBRUFFNzM3QzkxMzIxMUU2OEE2N0Y5OTI4MjkxQzAwMCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpBRUFFNzM3RDkxMzIxMUU2OEE2N0Y5OTI4MjkxQzAwMCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PhHiM+UAAALwSURBVHja7JpbiE1RGMfXmY4xISJye5Ip8+LyQhiEJzy5jCdq5GUwpfEiSZJ5cH+QKKTMq9S4lEspPBgZDaWUN8RIJKMkxozjt+y9tVrNzN5be+3zrWO++vedtfY5rfU76/btvb9CqVRSSa2uqW0MbgNagiYqmfYO3UdXX5xt/GFeKCSFBXQr7ohgSNu60Q6Ar0UVVQlBD+EueASqbTq6Qt9bEsPy5U24PcpPK6ATMKzQhWIM6EjcMav6AdqNHqOf5SRhitr9rcEtQ8fRbGNAT6I5Q65ZfrwW125UdaKlNNIbXleSYI1+j8N1oZlG9fy4abzAKh+MQCUbffyCO2xVL46DnWqVn3u0Xp9a5fFVqnKt366oZFg1DFtGm4ROofNomuvGimWGPYMaws/LQ3VX6siau30tuheGeWWB/YZ6DP3KuP1W1JsXcDHmcG7GNTsc2dvhNL6Mqi3gzKe0hN34egjsfISlHD25AEs6Z50DSwsqnAJLjKCcAUsNF50AS46NMweWfiOQKXCxrqlNPwc+hyZ4dAPzB5i+1xP4fEgzskc9AzWBG9JO4/ce36L2pI2NN6MDaKxQIP3sd7URO0emn/RfSgXLnH+Jb/yXXuTwKFWDnh4EdCN976uU3TgC3T4QqLVDew2bOahUWCegEmGdgUqDdQoqCdY5qBTYXECjoGKoc3QWbopR9Yiz7buPoLGwKnjjvsUoz0CvMmx/b16gEqbxurxAJcDezAs0yTR2bftVkKMxAt1QA7xTrSRYndBxK6/Ght/P/q+wfcKmfRobbS+ZOFj7TF3pEewqq/w6DvaOVW4lqqqVTkkfdf7WLqNKv1e+G5uVyg87cIuMKp1QpfMgnqjsX05ncbrUh1FZjVHfTpi7Pska3IYeolFhWafK7fNoOn9COxPtxvwjz1TwfParhxvwR7QGhreJjx6+rMO6eSpI2uz3AFKHnBfRXPre+fcWK03afLiGJ+MWqiBvqVoYpE6Tf4M6gPxsX/wtwADOc919XD/EMQAAAABJRU5ErkJggg==')
+
+	& strong
+	& a
+		color inherit
+		text-decoration underline
+		font-family $base-font-family-heavy
+		transition $transition-default
+
+	& a:hover
+	& a:focus
+		color #ffe17f
+
+	&--alt
+		background-color #1e3e6c
+		color #ffd54b
+
+		a&:hover
+			background-color #ffd64a
+			color #2766a0
+
+	.page--index &
+		margin-bottom 0
+
+.search-result-hint
+	font-family $base-font-family
+	font-weight normal
+	font-size 14px
+	line-height 20px
+	text-align center
+	color #404040
+	margin-bottom 20px

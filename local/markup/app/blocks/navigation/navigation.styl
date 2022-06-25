@@ -1,0 +1,86 @@
+.navigation
+	display table
+	table-layout fixed
+	width 100%
+
+	+below($breakpoint-lg - 1px)
+		display block
+
+.navigation__container
+	background-color #acacac
+
+	& > .container-fluid
+		padding-left 0
+		padding-right 0
+
+.navigation__link
+	font-family $base-font-family
+	font-size 25px
+	font-weight normal
+	line-height 31px
+	text-transform uppercase
+	letter-spacing .1ex
+	background-color #acacac
+	color #404041
+	height 150px
+	display table-cell
+	vertical-align middle
+	padding 10px 20px
+	text-align center
+	text-decoration none
+	position relative
+
+	+below($breakpoint-lg - 1px)
+		height 119px
+		width 100%
+		display block
+		border-top 1px solid #fff
+
+	&:before
+		+below($breakpoint-lg - 1px)
+			content ''
+			display inline-block
+			height 100%
+			vertical-align middle
+
+	&-inner
+		position relative
+		z-index 1
+
+		+below($breakpoint-lg - 1px)
+			display inline-block
+			vertical-align middle
+
+	&:focus
+	&:hover
+		color #000
+
+	&.active
+	&.uk-active
+		&:after
+			content ''
+			display block
+			position absolute
+			top -20px
+			bottom -10px
+			left 0
+			right 0
+			background rgba(215,215,215,1)
+			background -moz-linear-gradient(left, rgba(215,215,215,1) 0%, rgba(172,172,172,1) 33%, rgba(172,172,172,1) 66%, rgba(215,215,215,1) 100%)
+			background -webkit-gradient(left top, right top, color-stop(0%, rgba(215,215,215,1)), color-stop(33%, rgba(172,172,172,1)), color-stop(66%, rgba(172,172,172,1)), color-stop(100%, rgba(215,215,215,1)))
+			background -webkit-linear-gradient(left, rgba(215,215,215,1) 0%, rgba(172,172,172,1) 33%, rgba(172,172,172,1) 66%, rgba(215,215,215,1) 100%)
+			background -o-linear-gradient(left, rgba(215,215,215,1) 0%, rgba(172,172,172,1) 33%, rgba(172,172,172,1) 66%, rgba(215,215,215,1) 100%)
+			background -ms-linear-gradient(left, rgba(215,215,215,1) 0%, rgba(172,172,172,1) 33%, rgba(172,172,172,1) 66%, rgba(215,215,215,1) 100%)
+			background linear-gradient(to right, rgba(215,215,215,1) 0%, rgba(172,172,172,1) 33%, rgba(172,172,172,1) 66%, rgba(215,215,215,1) 100%)
+			-ms-filter s("'progid:DXImageTransform.Microsoft.gradient(startColorstr=%s, endColorstr=%s, GradientType=1)'", #d7d7d7, transparent)
+
+			+below($breakpoint-lg - 1px)
+				top 0
+				bottom 0
+
+// ie 11
+@media all and (-ms-high-contrast none)
+	*::-ms-backdrop, .navigation__link.active:after
+	*::-ms-backdrop, .navigation__link.uk-active:after
+		height 180px
+

@@ -1,0 +1,49 @@
+.navbar__search
+	.easy-autocomplete
+		// position static
+		// width 100% !important
+	
+	.easy-autocomplete-container
+		width auto
+		left 0
+		right 0
+		top 100%
+		z-index -1
+		border none
+		
+		ul
+			border none
+			background-color #fff
+			top 0
+			padding-top 13px
+			padding-bottom 13px
+		
+		li
+			font-family $base-font-family-alt
+			font-size 18px
+			line-height 22px
+			padding 8px 15px
+			margin 0
+			background-color #fff
+			color #acacac
+			border none
+			text-align left
+			margin-top 5px
+			margin-bottom 5px
+			// padding-left 328px
+			transition $transition-default
+
+			+below($breakpoint-lg - 1px)
+				// padding-left 288px
+			
+			&.selected
+				background-color #2766a0
+				color #fff
+
+
+.page__header.uk-active .navbar__search
+	li
+		// padding-left 246px
+		
+		+below($breakpoint-lg - 1px)
+			// padding-left 288px

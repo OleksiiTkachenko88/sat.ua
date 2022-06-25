@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ua">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=640">
+		<title></title>
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<link href="assets/styles/app.min.css" rel="stylesheet">
+	</head>
+
+	<body class="page page--layout-main page--layout-main--map">
+		<div class="page page--layout-main page--layout-main--map">
+			<div class="page__content">
+				<header data-uk-sticky="{top:-40}" class="page__header">
+					<div class="container-fluid page__header-container">
+						<div class="page__header-container-inner">
+							<nav class="navbar navbar--header page__navbar-header">
+								<div class="navbar__primary-content">
+									<a href="#mobile_menu" data-uk-offcanvas="{mode:'slide'}" class="navbar__button-icon navbar__button-icon--menu">
+										<i class="icon"></i>
+									</a>
+									<a href="" class="navbar__brand">
+										<span class="navbar__brand-space"></span>
+										<img src="assets/images/sat-logo-mobile.png" alt="" width="161" height="62" class="navbar__brand-logo-mobile">
+										<img src="assets/images/sat-logo-desktop.png" alt="" width="242" height="91" class="navbar__brand-logo-desktop">
+									</a>
+									<div class="navbar__spacer"></div>
+									<div class="icon navbar__icon navbar__icon--login"></div>
+									<div class="navbar__form-control navbar__form-control--login">
+										<input type="text" placeholder="Логін" class="form-control uk-width-1-1 navbar__form-control">
+									</div>
+									<div class="icon navbar__icon navbar__icon--password"></div>
+									<div class="navbar__form-control navbar__form-control--password">
+										<input type="password" placeholder="Пароль" class="form-control uk-width-1-1 navbar__form-control">
+									</div>
+									<div class="navbar__spacer"></div>
+									<ul class="navbar__nav navbar__nav--alt">
+										<li class="link">
+											<a href="">Увійти</a>
+										</li>
+										<li class="link">
+											<a href="">Реєстрація</a>
+										</li>
+									</ul>
+								</div>
+								<div class="navbar__secondary-content">
+									<a href="" class="navbar__button-icon navbar__button-icon--lang">
+										<span>ua</span>
+									</a>
+									<a href="" class="navbar__button-icon navbar__button-icon--search js-toggle-search">
+										<i class="icon"></i>
+									</a>
+								</div>
+							</nav>
+							<div class="navbar navbar--header page__navbar-header page__navbar-header--search">
+								<form class="navbar__primary-content">
+									<i class="icon icon--search-accent navbar__icon"></i>
+									<div class="navbar__search uk-width-1-1">
+										<input id="search" type="text" placeholder="Пошук надпоштових можливостей" class="form-control uk-width-1-1 navbar__search-form-control">
+									</div>
+									<span class="navbar__button-icon navbar__button-icon--close js-close">
+										<i class="icon"></i>
+									</span>
+								</form>
+							</div>
+						</div>
+					</div>
+					<div id="mobile_menu" class="uk-offcanvas">
+						<div class="uk-offcanvas-bar uk-offcanvas-bar--menu">
+							<ul class="uk-nav uk-nav-offcanvas uk-nav-offcanvas--menu">
+								<li>
+									<a href="#">Компания SAT</a>
+								</li>
+								<li class="uk-active">
+									<a href="#">Трекинг</a>
+								</li>
+								<li>
+									<a href="#">Замовити</a>
+								</li>
+								<li>
+									<a href="#">Контакти</a>
+								</li>
+								<li class="uk-nav-header">Помощь онлайн</li>
+								<li class="phone">
+									<a href="#">
+										<i class="icon"></i>
+									</a>
+								</li>
+								<li class="email">
+									<a href="#">
+										<i class="icon"></i>
+									</a>
+								</li>
+								<li class="chat">
+									<a href="#">
+										<i class="icon"></i>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</header>
+				<div class="page__map-container">
+					<div style="background-color:#91ff91;" class="page__map-overlay"></div>
+				</div>
+				<nav id="sidenav" class="sidenav hidden-md-down">
+					<a href="" class="sidenav__link sidenav__link--calc is-fade">
+						<span class="sidenav__pointer">Текст</span>
+						<i class="icon sidenav__icon"></i>
+					</a>
+					<a href="" class="sidenav__link sidenav__link--truck is-fade">
+						<span class="sidenav__pointer">Текст</span>
+						<i class="icon sidenav__icon"></i>
+					</a>
+					<a href="" class="sidenav__link sidenav__link--cargo is-fade">
+						<span class="sidenav__pointer">Текст</span>
+						<i class="icon sidenav__icon"></i>
+					</a>
+					<a href="" class="sidenav__link sidenav__link--map is-fade">
+						<span class="sidenav__pointer">Текст</span>
+						<i class="icon sidenav__icon"></i>
+					</a>
+					<a href="" class="sidenav__link sidenav__link--phone">
+						<span class="sidenav__pointer">Текст</span>
+						<i class="icon sidenav__icon"></i>
+					</a>
+					<a href="" class="sidenav__link sidenav__link--mail">
+						<span class="sidenav__pointer">Текст</span>
+						<i class="icon sidenav__icon"></i>
+					</a>
+					<a href="" class="sidenav__link sidenav__link--chat">
+						<span class="sidenav__pointer">Помощь онлайн</span>
+						<i class="icon sidenav__icon"></i>
+					</a>
+					<a href="" class="sidenav__link sidenav__link--entry active">
+						<span class="sidenav__pointer">Текст</span>
+						<i class="icon sidenav__icon"></i>
+					</a>
+				</nav>
+				<div class="page__block page__block--tracking">
+					<div class="container-fluid">
+						<div class="page__block-group">
+							<input type="text" value="002301207" placeholder="Введіть номер вашого відправлення" class="form-control form-control--accent page__block-input has-close">
+							<span class="page__block-input-close">
+								<i class="icon"></i>
+							</span>
+							<div class="card card--order-error">
+								<div class="card__inner">
+									<i class="icon"></i>
+									<h3 class="card__title">Ви ввели недійсний номер відправлення.</h3>
+									<p>Номер відправлення складається з дев'яти цифр та трьох латинських букв, наприклад: 123456789MZK. Перевірте свій
+										номер і спробуйте ще раз.</p>
+									<p>Ми завжди готові допомогти. Якщо у вас виникли будь-які питання про поточне місцезнаходження вашого відправлення,
+										ви можете зв'язатися з нами.</p>
+								</div>
+							</div>
+							<div class="cabinet-link cabinet-link--alt">Отримай додаткову інформацію та відслідковуй замовлення в
+								<a href="" target="_blank">особистому кабінеті</a>
+								<i class="icon icon--entry-accent-59-52"></i>
+							</div>
+						</div>
+						<form class="form form--recall">
+							<div class="form__container">
+								<div class="form-group">
+									<h3 class="form__title-2 form__title-alt m-b-0">Додайте ваш відгук, або побажання</h3>
+									<textarea name="" cols="30" rows="10" class="form-control form-control--alt"></textarea>
+								</div>
+								<div class="form-group">
+									<h3 class="form__title-2 form__title-alt">Оцініть відправку</h3>
+									<div id="rating" class="rating-stars rating-stars--hoverable form__rating-stars"></div>
+								</div>
+								<div class="form-group form-group--footer">
+									<button type="submit" class="btn btn--accent btn--raised btn--alt btn-lg">Оцініть</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+				<div class="panel__container panel__container--main panel__container--main--subscribe">
+					<div class="container-fluid">
+						<form class="panel panel--subscribe form">
+							<div class="row">
+								<div class="col-xs-12 col-lg-8">
+									<h2 class="form__title-4">Дізнавайтесь про
+										<br>кращі пропозиції для Вас!</h2>
+									<div class="input-group-row">
+										<input type="text" value="" placeholder="Введіть Ваш e-mail..." class="form-control form-control--alt input-lg">
+										<button type="submit" class="btn btn--accent btn--raised btn--alt btn-lg">Підписатись</button>
+									</div>
+									<div class="form-hint">Отримайте змогу завчасно дізнаватись про найкращі пропозиції від нашої компанії. Здобудьте перевагу та використовуйте
+										надпоштові можливості SAT на повну силу ми не надсилаемо спам, або сторонні рекламні повідомлення, а лише корисні
+										та актуальні пропозиції</div>
+								</div>
+								<div class="col-xs-12 col-lg-4 panel__col-image hidden-md-down">
+									<img src="assets/images/subscribe-img.png" alt="" width="298" height="319">
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<footer class="page__footer">
+				<div class="mega-footer">
+					<div class="container-fluid mega-footer__container">
+						<div class="mega-footer__logo"></div>
+						<h3 class="mega-footer__extra-heading hidden-md-down">Мапа сайту</h3>
+						<nav class="mega-footer__middle-section hidden-md-down">
+							<div class="mega-footer__section">
+								<h5 class="mega-footer__heading">Замовити</h5>
+								<ul class="mega-footer__link-list">
+									<li>
+										<a href="">Калькулятор</a>
+									</li>
+								</ul>
+							</div>
+							<div class="mega-footer__section">
+								<h5 class="mega-footer__heading">ТРЕКІНГ</h5>
+								<ul class="mega-footer__link-list">
+									<li>
+										<a href="">Відстежити вантаж</a>
+									</li>
+									<li>
+										<a href="">Замовлення</a>
+									</li>
+								</ul>
+							</div>
+							<div class="mega-footer__section">
+								<h5 class="mega-footer__heading">Надпоштові можливості</h5>
+								<ul class="mega-footer__link-list">
+									<li>
+										<a href="">Послуги</a>
+									</li>
+									<li>
+										<a href="">Академія</a>
+										<ul>
+											<li>
+												<a href="">Кейси</a>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+							<div class="mega-footer__section">
+								<h5 class="mega-footer__heading">Акції</h5>
+								<ul class="mega-footer__link-list">
+									<li>
+										<a href="">Найкращі пропозиції</a>
+									</li>
+									<li>
+										<a href="">Акції для вас</a>
+									</li>
+									<li>
+										<a href="">Ваші бонуси</a>
+									</li>
+								</ul>
+							</div>
+							<div class="mega-footer__section">
+								<h5 class="mega-footer__heading">Компанія SAT</h5>
+								<ul class="mega-footer__link-list">
+									<li>
+										<a href="">Легенда</a>
+									</li>
+									<li>
+										<a href="">Новини</a>
+									</li>
+								</ul>
+							</div>
+							<div class="mega-footer__section">
+								<h5 class="mega-footer__heading">Контакти</h5>
+								<ul class="mega-footer__link-list">
+									<li>
+										<a href="">Бізнес</a>
+									</li>
+									<li>
+										<a href="">Клієнти</a>
+									</li>
+									<li>
+										<a href="">Відділення</a>
+										<ul>
+											<li>
+												<a href="">Списком</a>
+											</li>
+											<li>
+												<a href="">На карті</a>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+						</nav>
+						<div class="mega-footer__spacer hidden-md-down"></div>
+						<div class="mega-footer__bottom-section">
+							<div class="mega-footer__section">
+								<p class="mega-footer__copyright">© 2016 транспортна компанія «САТ»
+									<br>
+									<span>вул. Гродненська, 32, м. Київ, Україна</span>
+								</p>
+							</div>
+							<div class="mega-footer__section mega-footer__section--phone">
+								<strong class="mega-footer__phone">0 800 502 25 25</strong>
+								<span class="mega-footer__phone-hint">Безкоштовна гаряча лінія</span>
+							</div>
+							<div class="mega-footer__section mega-footer__section--social">
+								<a href="" class="mega-footer__social-btn mega-footer__social-btn--facebook">
+									<i class="icon"></i>
+								</a>
+								<a href="" class="mega-footer__social-btn mega-footer__social-btn--vkontakte">
+									<i class="icon"></i>
+								</a>
+								<a href="" class="mega-footer__social-btn mega-footer__social-btn--twitter">
+									<i class="icon"></i>
+								</a>
+								<a href="" class="mega-footer__social-btn mega-footer__social-btn--youtube">
+									<i class="icon"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+	</body>
+
+</html>
+<script src="assets/scripts/app.min.js"></script>

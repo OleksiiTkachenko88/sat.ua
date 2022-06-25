@@ -1,0 +1,623 @@
+$navbar-background-color = #1e3e6c
+$navbar-background-color-footer = #2766a0
+
+.navbar
+	display flex
+	flex-direction row
+	flex-wrap nowrap
+	align-items center
+	height 60px
+	background-color $navbar-background-color
+	color #fff
+
+	&--footer
+		background-color $navbar-background-color-footer
+		color #fff
+
+	&--transparent
+		background-color transparent
+
+	&--calc
+		height 85px
+		background-color #2766a0
+
+	&--accent
+	&--accent.navbar--calc
+		background-color #ffd64a
+
+	&--white
+	&--white.navbar--calc
+		background-color #fff
+
+.navbar__spacer
+	flex-grow 1
+	flex-shrink 1
+	flex-basis auto
+
+.navbar__container
+	display flex
+	flex-direction row
+	flex-wrap nowrap
+	align-items center
+	height 60px
+
+	.navbar--calc &
+		height 80px
+
+.navbar__row
+	display block
+	display flex
+	align-items center
+	flex-direction row
+	flex-wrap nowrap
+
+.navbar__brand
+.navbar__copyright
+	position relative
+	width 242px
+	height 60px
+	display block
+	margin-right 20px
+	flex-basis 242px
+
+	+below($breakpoint-lg - 1px)
+		width 210px
+		flex-basis 210px
+
+	+tablet()
+		width 160px
+		flex-basis 160px
+
+	+mobile()
+		width 160px
+		flex-basis 160px
+
+	.navbar--footer &
+		width 160px
+		flex-basis 160px
+		margin-right 45px
+
+	.navbar__primary-content &
+		float left
+		margin-left -262px
+
+		+below($breakpoint-lg - 1px)
+			margin-left -20px
+
+		.navbar--footer &
+			margin-left -205px
+
+.page__header .navbar__brand
+.page__header .navbar__primary-content .navbar__brand
+	transition $transition-default
+
+.page__header.uk-active .page__navbar-header:not(.page__navbar-header--search)
+.page__header.animated .page__navbar-header:not(.page__navbar-header--search)
+	overflow hidden
+
++above($breakpoint-lg)
+	.page__header.uk-active .navbar__brand
+		width 160px
+		flex-basis 160px
+
+	.page__header.uk-active .navbar__primary-content .navbar__brand
+		margin-left -180px
+
+.navbar__brand
+	img
+		position absolute
+		left 0
+		top 50%
+		transform translate(0, -50%)
+
+.page__header .navbar__brand img
+	transition $transition-default
+
++above($breakpoint-lg)
+	.page__header.uk-active .navbar__brand img
+		left -82px
+
+.navbar__copyright
+	font-family $base-font-family-light
+	font-size 18px
+	line-height 60px
+	height 60px
+	overflow hidden
+	white-space nowrap
+	text-align center
+
+	.navbar--footer &
+		color #1e3e6c
+
+.navbar__primary-content
+	display flex
+	order 0
+	flex-grow 2
+	flex-shrink 0
+	flex-basis 0%
+	align-items center
+	padding-left 262px
+
+	+below($breakpoint-lg - 1px)
+		padding-left 230px
+
+	.navbar--footer &
+		padding-left 205px
+
+	.navbar--calc &
+		padding-left 0
+
+.page__header .navbar__primary-content
+	transition $transition-default
+
++above($breakpoint-lg)
+	.page__header.uk-active .navbar__primary-content
+		padding-left 180px
+
+.navbar__secondary-content
+	display flex
+	flex-direction row
+	flex-wrap nowrap
+	align-items center
+
+.navbar__nav
+	display table
+	table-layout fixed
+	margin 0
+	padding 0
+	width 100%
+
+	&--alt
+		width auto
+
+	+below($breakpoint-lg - 1px)
+		display none
+
+	.navbar--calc &
+		+below($breakpoint-lg - 1px)
+			display table
+
+	& li
+		display table-cell
+		vertical-align top
+
+	& a
+	& strong
+		font-family $base-font-family-light
+		font-size 18px
+		line-height normal
+		display flex
+		align-items center
+		justify-content center
+		text-align center
+		height 60px
+		letter-spacing .1ex
+		background-color $navbar-background-color
+		color #fff
+		text-transform uppercase
+		text-decoration none
+		padding 10px 20px
+
+		.navbar--footer &
+			background-color $navbar-background-color-footer
+
+		.navbar--calc &
+			font-size 25px
+			height 85px
+			letter-spacing normal
+			text-transform none
+			background-color #2766a0
+			color #404040
+
+			.icon
+				margin-right 20px
+
+		.navbar--accent &
+		.navbar--accent.navbar--calc &
+			background-color #ffd64a
+			color #404040
+
+	& a:focus
+	& a:hover
+		background-color #ffd64a
+		color #1e3e6c
+
+		.navbar--footer &
+			background-color #ffd64a
+			color #1e3e6c
+
+		.navbar--accent &
+		.navbar--accent.navbar--calc &
+			background-color lighten(#ffd64a, 21%)
+			color #404040
+
+	& li.active a
+	& li.active strong
+	& li.active a:focus
+	& li.active strong:focus
+	& li.active a:hover
+	& li.active strong:hover
+		background-color #ffd64a
+		color #1e3e6c
+
+		.navbar--footer &
+			background-color #ffd64a
+			color #1e3e6c
+
+		.navbar--calc &
+			background-color #fff
+
+		.navbar--accent &
+		.navbar--accent.navbar--calc &
+			background-color #fff
+			color #404040
+
+	& .link a
+	& .link strong
+		background-color transparent
+		color #ffd64a
+
+	& .link a:focus
+	& .link a:hover
+		background-color transparent
+		color #f7b637
+
+	& li.link.active a
+	& li.link.active strong
+	& li.link.active a:focus
+	& li.link.active strong:focus
+	& li.link.active a:hover
+	& li.link.active strong:hover
+		background-color transparent
+		color #f7b637
+
+.navbar__phone
+	font-family $base-font-family-medium
+	font-size 22px
+	line-height 1
+	letter-spacing .1ex
+	color #ffd54b
+	white-space nowrap
+
+	&-hint
+		display block
+		font-size 8px
+		text-transform uppercase
+		letter-spacing .65ex
+		margin-top 1px
+		color #fff
+		white-space nowrap
+
+	&-wrapper
+		display inline-block
+		margin-right 20px
+		margin-left 20px
+		transition $transition-default
+		opacity 1
+
+		+below($breakpoint-lg - 1px)
+			position absolute
+			left 50%
+			top 50%
+			transform translate(-50%, -50%)
+
+		.uk-offcanvas-page &
+			opacity 0
+
+.navbar__icon
+.icon.navbar__icon
+	width 60px
+	height 60px
+	flex-basis 60px
+	position relative
+	border none
+	background-color transparent
+
+	.navbar--calc &
+		height 85px
+		width 85px
+		flex-basis 85px
+
+	& > .icon
+	&:before
+		position absolute
+		left 50%
+		top 50%
+		transform translate(-50%, -50%)
+
+	&--login:before
+		sprite($icon_entry_accent)
+
+	&--password:before
+		sprite($icon_lock_accent)
+
+	.page__navbar-header--search &.icon--search-accent
+		background-color $navbar-background-color
+	
+	&--clickable
+		cursor pointer
+
+.navbar__button-icon
+	width 60px
+	height 60px
+	flex-basis 60px
+	position relative
+	margin-left 10px
+	border none
+	background-color $navbar-background-color
+	transition $transition-default
+
+	.navbar--footer &
+		background-color $navbar-background-color-footer
+
+	.navbar--calc &
+		background-color #2766a0
+
+	.navbar--accent &
+	.navbar--accent.navbar--calc &
+		background-color #ffd64a
+
+	.navbar--header &:not(.navbar__button-icon--menu)
+		margin-left 0
+
+	&:focus
+	&:hover
+		background-color #2766a0
+
+	.icon
+		position absolute
+		left 50%
+		top 50%
+		transform translate(-50%, -50%)
+
+	&--lang
+		& > span
+			position absolute
+			left 50%
+			top 50%
+			transform translate(-50%, -50%)
+			width 36px
+			height 36px
+			line-height 36px
+			font-size 16px
+			border-radius 100px
+			text-align center
+			text-transform uppercase
+			background-color #ffd64a
+			color #2766a0
+			font-family 'Open Sans', arial, sans-serif
+			font-weight bold
+
+			.navbar__footer &
+				color #2766a0
+
+	&--search
+		background-color #2766a0
+
+		.navbar--footer &
+			background-color #ffd74c
+
+	&--menu
+		background-color #ffd64a
+		color #2766a0
+		display none
+		float left
+
+		+below($breakpoint-lg - 1px)
+			margin-left -230px
+			display block
+			position relative
+			z-index 2
+
+.navbar__brand-logo
+	&-mobile
+		display none
+
+		+below($breakpoint-lg - 1px)
+			display block
+
+	&-desktop
+		display block
+
+		+below($breakpoint-lg - 1px)
+			display none
+
+.navbar__form-control-static
+.navbar__form-control.form-control
+.navbar__search-form-control.form-control
+	height 60px
+	font-family $base-font-family-light
+	font-weight normal
+	font-size 18px
+	border-color $navbar-background-color
+	background-color $navbar-background-color
+	color #fff
+
+	.navbar--calc &
+		padding 12px
+		height 46px
+		font-family $base-font-family
+		font-size 24px
+		line-height 22px
+		border-color #2766a0
+		background-color #2766a0
+		width 90%
+		width calc( 100% - 100px)
+
+	.navbar--accent &
+	.navbar--accent.navbar--calc &
+		border-color #ffe998
+		background-color #ffe998
+		color #404041
+
+	.navbar--white &
+	.navbar--white.navbar--calc &
+		border-color #fff
+		background-color #fff
+		color #404041
+		
+		&::-moz-placeholder
+			color lighten(#2766a0, 50%)
+		
+		&:-ms-input-placeholder
+			color lighten(#2766a0, 50%)
+		
+		&::-webkit-input-placeholder
+			color lighten(#2766a0, 50%)
+	
+	&::-moz-placeholder
+		font-family $base-font-family-light
+		font-weight normal
+		font-size 18px
+		text-transform uppercase
+		letter-spacing normal
+		color lighten(#2766a0, 50%)
+
+		.navbar--calc &
+			font-family $base-font-family
+			font-size 14px
+			color rgba(255,255,255,.6)
+
+		.navbar--accent &
+		.navbar--accent.navbar--calc &
+			color #404040
+
+	&:-ms-input-placeholder
+		font-family $base-font-family-light
+		font-weight normal
+		font-size 18px
+		text-transform uppercase
+		letter-spacing normal
+		color lighten(#2766a0, 50%)
+
+		.navbar--calc &
+			font-family $base-font-family
+			font-size 14px
+			color rgba(255,255,255,.6)
+
+		.navbar--accent &
+		.navbar--accent.navbar--calc &
+			color #404040
+
+	&::-webkit-input-placeholder
+		font-family $base-font-family-light
+		font-weight normal
+		font-size 18px
+		text-transform uppercase
+		letter-spacing normal
+		color lighten(#2766a0, 50%)
+
+		+tablet()
+			font-size 16px
+
+		+mobile()
+			font-size 16px
+
+		.navbar--calc &
+			font-family $base-font-family
+			font-size 14px
+			color rgba(255,255,255,.6)
+
+		.navbar--accent &
+		.navbar--accent.navbar--calc &
+			color #404040
+
+	&:focus
+		border-color $navbar-background-color
+		background-color $navbar-background-color
+		color #fff
+		box-shadow none
+
+		.navbar--calc &
+			border-color #fff
+			background-color #fff
+			color #404040
+
+		.navbar--accent &
+		.navbar--accent.navbar--calc &
+			border-color #fff
+			background-color #fff
+			color #404040
+
+		.navbar--white &
+		.navbar--white.navbar--calc &
+			border-color #404040
+			background-color #fff
+
+.navbar__form-control--login
+.navbar__form-control--password
+	width 25%
+	flex-basis 25%
+
+	+tablet()
+		width auto
+		flex-basis 100px
+		flex-grow 1
+
+	+mobile()
+		width auto
+		flex-basis 100px
+		flex-grow 1
+
+.page__navbar-header--search
+	background-color transparent
+
+.navbar__brand-space
+	display inline-block
+	height 60px
+	width 0
+	transition $transition-default
+	background-color #ffd64a
+
+.navbar__brand
+	white-space nowrap
+	position relative
+
+	&:before
+		content ''
+		display block
+		width 66px
+		height 91px
+		overflow hidden
+		background url(../images/s.png) 0 0 no-repeat
+		background-size cover
+		position absolute
+		left 16px
+		top 50%
+		margin-top -45px
+		z-index 1
+		transition $transition-default
+		opacity 1
+		transform scale(1)
+
+		.page__header.uk-active &
+			opacity 0
+			left -66px
+			transform scale(0)
+
+		+below($breakpoint-lg - 1px)
+			display none
+
+	img
+		transition $transition-default
+
++below($breakpoint-lg - 1px)
+	.page__header_moved .navbar__button-icon--menu
+		margin-left -370px
+
+	.page__header_moved .navbar__brand
+	.page__header_moved .navbar__primary-content .navbar__brand
+		width 300px
+		flex-basis 300px
+
+	.page__header_moved .navbar__brand img
+		left 139px
+
+	.page__header_moved .navbar__brand-space
+		width 140px
+
+	.page__header_moved .navbar__primary-content
+		padding-left 370px
+
+.navbar__search .easy-autocomplete
+	width 100% !important

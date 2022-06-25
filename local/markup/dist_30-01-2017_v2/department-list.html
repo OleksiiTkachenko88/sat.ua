@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="ua">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=640">
+		<title></title>
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<!--<link href="assets/styles/style_header_footer.css" rel="stylesheet">
+		<link href="assets/styles/style.css" rel="stylesheet">-->
+		<link href="assets/styles/app.min.css" rel="stylesheet">
+		
+		<script src="assets/scripts/app.min.js"></script>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+		<script>
+			$(document).on("click",function(e){
+			
+				if(check_touch(e)==1){
+					return false;
+				}else{
+					if(event["target"]["id"]=="js_show_calculator"  ){				
+						$("#mini_calc_new").toggleClass('is-active');
+					}
+					
+					if(event["target"]["id"]!="mini_calc_new" && event["target"]["id"]!="js_show_calculator"){
+						$("#mini_calc_new").removeClass('is-active');
+					}
+					
+					
+					if(event["target"]["id"]=="js_tracking" ){				
+						$("#mini_tracking").toggleClass('is-active');
+					}
+					
+					if(event["target"]["id"]!="mini_tracking" && event["target"]["id"]!="js_tracking"){
+						$("#mini_tracking").removeClass('is-active');
+					}	
+					
+					if(event["target"]["id"]!="search"){
+						$(".page__navbar-header").next('.page__navbar-header--search').removeClass('is-expand');				
+					}
+				}
+			
+				
+			});	
+			
+			
+			
+			function check_touch(element){
+			
+				if(element["target"].toString().indexOf("Rect")>=0){
+					return 1;
+				}else if(element["target"].toString().indexOf("Input")>=0){
+					return 1;
+				}else if(element["target"].toString().indexOf("Paragraph")>=0){
+					return 1;
+				}else if(element["target"]["className"].toString().indexOf("js_no_touch")>=0){
+					return 1;
+				}else{
+					return 0;
+				}
+			}
+		</script>
+		
+		
+		<style>
+            .minicalculator{
+        		margin-top: -0px;
+    		}
+			.is-active{
+				display:block !important;
+			}
+		</style>
+
+
+	</head>
+
+	<body class="page scroll">
+		<div class="page scroll page--index">
+			<div id="page_list" class="page__content">
+				<header data-uk-sticky="{top:-40}" class="page__header ">
+					<div id="page-cont" class="container-fluid page__header-container">
+						<div class="page__header-container-inner">
+							<nav class="navbar nav_logo navbar--header page__navbar-header">
+								<div class="nav_new navbar__primary-content">
+									<a href="#mobile_menu" data-uk-offcanvas="{mode:'slide'}" class="navbar__button-icon navbar__button-icon--menu">
+										<i class="icon"></i>
+									</a>
+									<a href="" class="navbar__brand">
+										<span class="navbar__brand-space"></span>
+										<img src="assets/images/sat-logo-mobile.png" alt="" width="161" height="62" class="navbar__brand-logo-mobile">
+										<img src="assets/images/sat-logo-desktop.png" alt="" width="242" height="91" class="navbar__brand-logo-desktop">
+									</a>
+									<ul class="navbar__nav ul_menu">
+										<li>
+											<a href="javascript:void(0)" id="js_show_calculator">Замовити</a>
+										</li>
+										<li>
+											<a href="javascript:void(0)" id="js_tracking">Трекінг</a>
+										</li>
+										<li>
+											<a href="">Компанія&nbsp;SAT</a>
+										</li>
+										<li>
+											<a href="">Контакти</a>
+										</li>
+									</ul>
+								</div>
+								<div class="navbar__secondary-content">
+									<div class="navbar__phone-wrapper">
+										<strong class="navbar__phone">0 800 502 25 25</strong>
+										<span class="navbar__phone-hint">Безкоштовна гаряча лінія</span>
+									</div>
+									<a href="" class="navbar__button-icon navbar__button-icon--entry">
+										<i class="icon"></i>
+									</a>
+									<a href="" class="navbar__button-icon navbar__button-icon--lang">
+										<span>ua</span>
+									</a>
+									<a href="" class="navbar__button-icon navbar__button-icon--search js-toggle-search">
+										<i class="icon"></i>
+									</a>
+								</div>
+							</nav>
+							<div class="navbar navbar--header page__navbar-header page__navbar-header--search">
+								<form id="search_class" class="navbar__primary-content">
+									<i class="icon icon--search-accent navbar__icon"></i>
+									<div class="navbar__search uk-width-1-1">
+										<input id="search" type="text" placeholder="Пошук надпоштових можливостей" class="form-control uk-width-1-1 navbar__search-form-control">
+									</div>
+									<span id="ic-close" class="navbar__button-icon navbar__button-icon--close js-close">
+										<i class="icon"></i>
+									</span>
+								</form>
+							</div>
+							<div id="mini_calc_new"  class="mini_calc" style="position: absolute; top: 45%;">
+								<!--<div class="transparency"></div>
+								<svg> 
+
+								<rect x="0" y="0" height="300" width="1900" fill="rgb(177,182,182)" fill-opacity="0.8" />
+								</svg>-->
+								<div class="row_top js_no_touch">
+									<div class="start_calc js_no_touch" style="background-image:url(assets/images/white_fon.png);">
+										<input type="text" placeholder="Введіть місто відправлення" class="calc_form_start">
+										<div class="img_start js_no_touch"><img class='js_no_touch' src="assets/images/svg/start.svg"></div>
+										<img class="krest js_no_touch" src="assets/images/krest.png">
+									</div>
+									<div class="finish_calc js_no_touch" style="background-image:url(assets/images/white_fon.png);">
+										<input type="text" placeholder="Кам'янець-Подiльский" class="calc_form_finish">
+										<div class="img_finish js_no_touch"><img class='js_no_touch' src="assets/images/svg/finish.svg"></div>
+										<img class="krest js_no_touch" src="assets/images/krest.png">
+									</div>
+									<div class="weight_calc js_no_touch" style="background-image:url(assets/images/white_fon.png);">
+										<input type="text" placeholder="500 кг" class="calc_form_weight">
+										<div class="img_weight js_no_touch"><img class='js_no_touch' src="assets/images/svg/weight.svg"></div>
+									</div>
+									<div class="butt_enter"><a class="a_enter" href="#"><p>розрахувати</p></a></div>
+								</div>
+								<div class="clear"></div>
+								<div class="row_bottom js_no_touch">
+									<div class="img_car js_no_touch"><img class='js_no_touch' src="assets/images/svg/car.svg"></div>
+									<p class="otpr js_no_touch">Отправка</p>
+									<p class="itog"> Чоп - Кам'янець-Подiльский</p>  <p class="ves"> 500 кг  </p> <p class="summ"> от  47 325 грн </p>
+									<div class="enter_zamov"><a class="a_zamov" href="#"><p>оформити замовлення</p></a></div>
+								</div>
+							</div>
+							
+							
+							
+							<div class="mini_track tracking" id="mini_tracking" style="position: absolute; top: 45%;">
+								<!--<div class="transparency"></div>
+								<svg> 
+
+								<rect x="0" y="0" height="470" width="1900" fill="rgb(177,182,182)" fill-opacity="0.8" />
+								</svg>-->
+								<div class="numm_decl js_no_touch">
+									<img class="trek js_no_touch" src="assets/images/trek.png">
+									<input type="text" placeholder="Вкажіть номер декларації" class="trek_form">									
+								</div>
+								<div class="but_sled"><a class="a_sled" href="#"><p>Отследить</p></a></div>
+								<div class="div_recive js_no_touch"><img class="recive js_no_touch" src="assets/images/svg/man_recive.svg"></div>
+								<p class="city_sled">Кам'янець-Подiльский</p>
+								<div class="vydacha js_no_touch">									
+									<p class="trek_vydacha">Вантаж видано отримувачу</p>									
+								</div>
+								<div class="but_podrobn"><a class="a_podrobn" href="#"><p>Подробнее</p></a></div>
+							</div>
+							
+							
+							
+							
+							<div class="mini_track tracking" id="mini_tracking1" style="position: absolute; top: 45%;">
+								<!--<div class="transparency"></div>
+								<svg> 
+
+								<rect x="0" y="0" height="470" width="1900" fill="rgb(177,182,182)" fill-opacity="0.8" />
+								</svg>-->
+								<div class="numm_decl js_no_touch">
+									<img class="trek js_no_touch" src="assets/images/trek.png">
+									<input type="text" placeholder="Вкажіть номер декларації" class="trek_form">									
+								</div>
+								<div class="but_sled"><a class="a_sled" href="#"><p>Отследить</p></a></div>
+								<div class="div_recive1 js_no_touch">
+									<div class="fon_track1 js_no_touch"><img class="car_track1 js_no_touch" src="assets/images/car_track.png"></div>
+									<p class="city1">Чоп</p>
+									<p class="city2">Кам'янець-Подiльский</p>
+								</div>
+								
+								<div class="vydacha js_no_touch">									
+									<p class="trek_vydacha">Вантаж знаходиться у місці призначення</p>									
+								</div>
+								<div class="but_podrobn"><a class="a_podrobn" href="#"><p>Подробнее</p></a></div>
+							</div>
+							
+							
+							
+							<div class="mini_track tracking" id="mini_tracking2" style="position: absolute; top: 45%;">
+								<!--<div class="transparency"></div>
+
+								<rect x="0" y="0" height="470" width="1900" fill="rgb(177,182,182)" fill-opacity="0.8" />
+								</svg>-->
+								<div class="numm_decl js_no_touch">
+									<img class="trek js_no_touch" src="assets/images/trek.png">
+									<input type="text" placeholder="Вкажіть номер декларації" class="trek_form">									
+								</div>
+								<div class="but_sled"><a class="a_sled" href="#"><p>Отследить</p></a></div>
+								<div class="div_recive2 js_no_touch">
+									<div class="fon_track2 js_no_touch"><img class="car_track2 js_no_touch" src="assets/images/car_track.png"></div>
+									<p class="city1">Чоп</p>
+									<p class="city2" style="color:#FFD64A; background:#1E3E6C">Кам'янець-Подiльский</p>
+								</div>
+								
+								<div class="vydacha js_no_touch">									
+									<p class="trek_vydacha">Вантаж перебуває у дорозі</p>									
+								</div>
+								<div class="but_podrobn"><a class="a_podrobn" href="#"><p>Подробнее</p></a></div>
+							</div>
+							
+							
+							
+							
+							<div class="mini_track tracking" id="mini_tracking3" style="position: absolute; top: 45%;">
+								<!--<div class="transparency"></div>
+								<svg> 
+
+								<rect x="0" y="0" height="470" width="1900" fill="rgb(177,182,182)" fill-opacity="0.8" />
+								</svg>-->
+								<div class="numm_decl js_no_touch">
+									<img class="trek js_no_touch" src="assets/images/trek.png">
+									<input type="text" placeholder="Вкажіть номер декларації" class="trek_form">									
+								</div>
+								<div class="but_sled "><a class="a_sled" href="#"><p>Отследить</p></a></div>
+								<div class="div_recive3 js_no_touch">
+									<div class="fon_track3 js_no_touch"><img class="car_track3 js_no_touch" src="assets/images/car_track.png"></div>
+									<p class="city1">Чоп</p>
+									<p class="city2" style="color:#FFD64A;background:#1E3E6C">Кам'янець-Подiльский</p>
+								</div>
+								
+								<div class="vydacha js_no_touch">									
+									<p class="trek_vydacha">Вантаж знаходиться у місці відправлення</p>									
+								</div>
+								<div class="but_podrobn"><a class="a_podrobn" href="#"><p>Подробнее</p></a></div>
+							</div>
+							
+							<div class="mini_track tracking" id="mini_tracking4" style="position: absolute; top: 45%;">
+								<!--<div class="transparency"></div>
+								<svg> 
+
+								<rect x="0" y="0" height="470" width="1900" fill="rgb(177,182,182)" fill-opacity="0.8" />
+								</svg>-->
+								<div class="numm_decl js_no_touch">
+									<img class="trek js_no_touch" src="assets/images/trek.png">
+									<input type="text" placeholder="Вкажіть номер декларації" class="trek_form">									
+								</div>
+								<div class="but_sled"><a class="a_sled" href="#"><p>Отследить</p></a></div>
+								
+							</div>
+							
+							
+						</div>
+					</div>
+					<div id="mobile_menu" class="uk-offcanvas">
+						<div class="uk-offcanvas-bar uk-offcanvas-bar--menu">
+							<ul class="uk-nav uk-nav-offcanvas uk-nav-offcanvas--menu">
+								<li>
+									<a href="#">Компания SAT</a>
+								</li>
+								<li class="uk-active">
+									<a href="#">Трекинг</a>
+								</li>
+								<li>
+									<a href="#">Замовити</a>
+								</li>
+								<li>
+									<a href="#">Контакти</a>
+								</li>
+								<li class="uk-nav-header">Помощь онлайн</li>
+								<li class="phone">
+									<a href="#">
+										<i class="icon"></i>
+									</a>
+								</li>
+								<li class="email">
+									<a href="#">
+										<i class="icon"></i>
+									</a>
+								</li>
+								<li class="chat">
+									<a href="#">
+										<i class="icon"></i>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</header>
+				<div  class="container-fluid">
+					<div id="departm" class="table__container table__container--department">
+						<div class="table-responsive hidden-md-down">
+							<table cellpadding="0" cellspacing="0" class="table table-hover table--department m-b-0">
+								<thead>
+									<tr>
+										<th colspan="4" class="p-a-0">
+											<div class="table__col-1">
+												<i class="icon table__icon table__icon--map"></i> Наші видділення</div>
+											<div class="table__col-2">
+												<span class="btn table__btn active">Списком</span>
+											</div>
+											<div class="table__col-3">
+												<a href="#" class="btn table__btn">На карті</a>
+											</div>
+										</th>
+									</tr>
+									<tr>
+										<th>
+										<input type="text" placeholder="Місто" class="city">
+										<!--<select>
+											<option>Місто</option>
+											<option>Місто2</option>
+											<option>Місто3</option>
+										</select>-->
+											
+										</th>
+										<th>Адреса</th>
+										<th>Номер
+										
+											
+										</th>
+										<th>Контакти</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr class="tr-collapse-toggle">
+										<td class="td-location">Апостолове</td>
+										<td class="td-address">вул. Каманiна, 1B
+											<div class="collapse">
+												Буднi днi: 09:00-18:00
+												<br>Суббота: 09:00-18:00
+											</div>
+										</td>
+										<td class="td-number">52</td>
+										<td>
+											<div class="text-nowrap">6 067 217 07 31</div>
+											<div class="collapse">
+												<div class="text-nowrap">brofary@sat.ua</div>
+												<div class="text-nowrap">0 800 30 99 09</div>
+												<div class="text-nowrap">info@sat.ua</div>
+											</div>
+										</td>
+									</tr>
+									<tr class="tr-collapse">
+										<td colspan="4" class="td-map">
+											<div class="collapse">
+												<div class="td-map__inner">
+													<img src="http://placehold.it/1600x695)" alt="" width="1600" height="695">
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr class="tr-collapse-toggle">
+										<td class="td-location">Апостолове</td>
+										<td class="td-address">вул. Каманiна, 1B
+											<div class="collapse">
+												Буднi днi: 09:00-18:00
+												<br>Суббота: 09:00-18:00
+											</div>
+										</td>
+										<td class="td-number">52</td>
+										<td>
+											<div class="text-nowrap">6 067 217 07 31</div>
+											<div class="collapse">
+												<div class="text-nowrap">brofary@sat.ua</div>
+												<div class="text-nowrap">0 800 30 99 09</div>
+												<div class="text-nowrap">info@sat.ua</div>
+											</div>
+										</td>
+									</tr>
+									<tr class="tr-collapse">
+										<td colspan="4" class="td-map">
+											<div class="collapse">
+												<div class="td-map__inner">
+													<img src="http://placehold.it/1600x695)" alt="" width="1600" height="695">
+												</div>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="table-responsive hidden-lg-up">
+							<table cellpadding="0" cellspacing="0" class="table table-hover table--department m-b-0">
+								<thead>
+									<tr>
+										<th colspan="3" class="p-a-0">
+											<div class="table__col-1">
+												<i class="icon table__icon table__icon--map"></i> Наші видділення</div>
+											<div class="table__col-2">
+												<span class="btn table__btn active">Списком</span>
+											</div>
+											<div class="table__col-3">
+												<a href="#" class="btn table__btn">На карті</a>
+											</div>
+										</th>
+									</tr>
+									<tr>
+										<th>Місто
+											<i class="table__sort table__sort-down"></i>
+										</th>
+										<th>Адреса</th>
+										<th>Номер
+											<i class="table__sort table__sort-down"></i>
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr class="tr-collapse-toggle">
+										<td class="td-location">Апостолове</td>
+										<td class="td-address">
+											<span class="uk-overlay-fade">вул. Каманiна, 1B</span>
+										</td>
+										<td class="td-number">52</td>
+									</tr>
+									<tr class="tr-collapse">
+										<td>
+											<div class="collapse">вул. Каманiна, 1B
+												<br>Буднi днi: 09:00-18:00
+												<br>Суббота: 09:00-18:00</div>
+										</td>
+										<td>
+											<div class="collapse">
+												<div class="text-nowrap">6 067 217 07 31</div>
+												<div class="text-nowrap">brofary@sat.ua</div>
+												<div class="text-nowrap">0 800 30 99 09</div>
+												<div class="text-nowrap">info@sat.ua</div>
+											</div>
+										</td>
+										<td></td>
+									</tr>
+									<tr class="tr-collapse">
+										<td colspan="3" class="td-map">
+											<div class="collapse">
+												<div class="td-map__inner">
+													<img src="http://placehold.it/1600x695)" alt="" width="1600" height="695">
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr class="tr-collapse-toggle">
+										<td class="td-location">Апостолове</td>
+										<td class="td-address">
+											<span class="uk-overlay-fade">вул. Каманiна, 1B</span>
+										</td>
+										<td class="td-number">52</td>
+									</tr>
+									<tr class="tr-collapse">
+										<td>
+											<div class="collapse">вул. Каманiна, 1B
+												<br>Буднi днi: 09:00-18:00
+												<br>Суббота: 09:00-18:00</div>
+										</td>
+										<td>
+											<div class="collapse">
+												<div class="text-nowrap">6 067 217 07 31</div>
+												<div class="text-nowrap">brofary@sat.ua</div>
+												<div class="text-nowrap">0 800 30 99 09</div>
+												<div class="text-nowrap">info@sat.ua</div>
+											</div>
+										</td>
+										<td></td>
+									</tr>
+									<tr class="tr-collapse">
+										<td colspan="3" class="td-map">
+											<div class="collapse">
+												<div class="td-map__inner">
+													<img src="http://placehold.it/1600x695)" alt="" width="1600" height="695">
+												</div>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div id="table_foot" class="table__footer">
+							<div class="table__footer-left">
+								<a href="" class="btn btn--prev btn--muted">
+									<span class="hidden-md-down">Попередні 15</span>
+									<i class="icon icon--arrow-left-light-grey btn__icon--outline"></i>
+								</a>
+							</div>
+							<div class="table__footer-center">
+								<button type="button" class="btn btn--more btn--more--alt">Усі відділення
+									<i class="icon icon--arrow-down-grey"></i>
+								</button>
+							</div>
+							<div class="table__footer-right">
+								<a href="" class="btn btn--next btn--muted">
+									<span class="hidden-md-down">Наступні 15</span>
+									<i class="icon icon--arrow-right-light-grey btn__icon--outline"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="flu_cont_fon" class="panel__container panel__container--main panel__container--main--subscribe">
+					<div id="flu_cont" class="container-fluid">
+						<form class="panel panel--subscribe form">
+							<div class="row">
+								<div class="col-xs-12 col-lg-8">
+									<h2 class="form__title-4">Дізнавайтесь про
+										<br>кращі пропозиції для Вас!</h2>
+									<div class="input-group-row">
+										<input type="text" value="" placeholder="Введіть Ваш e-mail..." class="form-control form-control--alt input-lg">
+										<button type="submit" class="btn btn--accent btn--raised btn--alt btn-lg">Підписатись</button>
+									</div>
+									<div class="form-hint">Отримайте змогу завчасно дізнаватись про найкращі пропозиції від нашої компанії. Здобудьте перевагу та використовуйте
+										надпоштові можливості SAT на повну силу ми не надсилаемо спам, або сторонні рекламні повідомлення, а лише корисні
+										та актуальні пропозиції</div>
+								</div>
+								<div class="col-xs-12 col-lg-4 panel__col-image hidden-md-down">
+									<img src="assets/images/subscribe-img.png" alt="" width="298" height="319">
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<footer class="page__footer">
+				<div class="mega-footer">
+					<div id="foot" class="container-fluid mega-footer__container">
+						<div class="mega-footer__logo"></div>
+						<h3 class="mega-footer__extra-heading hidden-md-down">Мапа сайту</h3>
+						<nav class="mega-footer__middle-section hidden-md-down">
+							<div class="mega-footer__section">
+								<h5 class="mega-footer__heading">Замовити</h5>
+								<ul class="mega-footer__link-list">
+									<li>
+										<a href="">Калькулятор</a>
+									</li>
+								</ul>
+							</div>
+							<div class="mega-footer__section">
+								<h5 class="mega-footer__heading">ТРЕКІНГ</h5>
+								<ul class="mega-footer__link-list">
+									<li>
+										<a href="">Відстежити вантаж</a>
+									</li>
+									<li>
+										<a href="">Замовлення</a>
+									</li>
+								</ul>
+							</div>
+							<div class="mega-footer__section">
+								<h5 class="mega-footer__heading">Надпоштові можливості</h5>
+								<ul class="mega-footer__link-list">
+									<li>
+										<a href="">Послуги</a>
+									</li>
+									<li>
+										<a href="">Академія</a>
+										<ul>
+											<li>
+												<a href="">Кейси</a>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+							<div class="mega-footer__section">
+								<h5 class="mega-footer__heading">Акції</h5>
+								<ul class="mega-footer__link-list">
+									<li>
+										<a href="">Найкращі пропозиції</a>
+									</li>
+									<li>
+										<a href="">Акції для вас</a>
+									</li>
+									<li>
+										<a href="">Ваші бонуси</a>
+									</li>
+								</ul>
+							</div>
+							<div class="mega-footer__section">
+								<h5 class="mega-footer__heading">Компанія SAT</h5>
+								<ul class="mega-footer__link-list">
+									<li>
+										<a href="">Легенда</a>
+									</li>
+									<li>
+										<a href="">Новини</a>
+									</li>
+								</ul>
+							</div>
+							<div class="mega-footer__section">
+								<h5 class="mega-footer__heading">Контакти</h5>
+								<ul class="mega-footer__link-list">
+									<li>
+										<a href="">Бізнес</a>
+									</li>
+									<li>
+										<a href="">Клієнти</a>
+									</li>
+									<li>
+										<a href="">Відділення</a>
+										<ul>
+											<li>
+												<a href="">Списком</a>
+											</li>
+											<li>
+												<a href="">На карті</a>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+						</nav>
+						<div class="mega-footer__spacer hidden-md-down"></div>
+						<div class="mega-footer__bottom-section">
+							<div class="mega-footer__section">
+								<p class="mega-footer__copyright">© 2016 транспортна компанія «САТ»
+									<br>
+									<span>вул. Гродненська, 32, м. Київ, Україна</span>
+								</p>
+							</div>
+							<div class="mega-footer__section mega-footer__section--phone">
+								<strong class="mega-footer__phone">0 800 502 25 25</strong>
+								<span class="mega-footer__phone-hint">Безкоштовна гаряча лінія</span>
+							</div>
+							<div class="mega-footer__section mega-footer__section--social">
+								<a href="" class="mega-footer__social-btn mega-footer__social-btn--facebook">
+									<i class="icon"></i>
+								</a>
+								<a href="" class="mega-footer__social-btn mega-footer__social-btn--vkontakte">
+									<i class="icon"></i>
+								</a>
+								<a href="" class="mega-footer__social-btn mega-footer__social-btn--twitter">
+									<i class="icon"></i>
+								</a>
+								<a href="" class="mega-footer__social-btn mega-footer__social-btn--youtube">
+									<i class="icon"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+	</body>
+
+</html>
+

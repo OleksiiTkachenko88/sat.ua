@@ -1,0 +1,244 @@
+.mega-footer
+	padding 15px 0
+	background-color #1e3e6c
+	color #fff
+
+.mega-footer__container
+	display flex
+	flex-direction column
+	flex-wrap nowrap
+	padding-left 205px
+	min-height 305px
+	position relative
+
+	+below(1540px)
+		padding-left 265px
+		padding-right 60px
+
+	+below($breakpoint-lg - 1px)
+		padding-left 185px
+		padding-right 15px
+		min-height 285px
+
+.mega-footer__spacer
+	flex-grow 1
+	flex-shrink 1
+	flex-basis auto
+
+.mega-footer__middle-section
+.mega-footer__bottom-section
+	width 100%
+	display flex
+	justify-content space-between
+	flex-direction row
+	flex-wrap wrap
+
+	+below($breakpoint-lg - 1px)
+		flex-direction column
+		flex-wrap nowrap
+		text-align center
+
+	&:after
+		content ''
+		display block
+		clear both
+
+.mega-footer__middle-section
+	overflow hidden
+
+	+below($breakpoint-lg - 1px)
+		height auto
+		overflow visible
+
+.mega-footer__section
+	padding-right 2.5%
+
+	&--phone
+		text-align center
+
+	&--social
+		text-align right
+
+		+below($breakpoint-lg - 1px)
+			text-align center
+
+	.mega-footer__middle-section &
+		min-height 170px
+
+		+below($breakpoint-lg - 1px)
+			min-height 0
+
+	+above(1340px)
+		padding-right 3%
+
+	+below($breakpoint-lg - 1px)
+		height auto
+		padding-right 0
+		margin-top 20px
+		margin-bottom 20px
+
+	.mega-footer__middle-section &
+		width 16.6667%
+
+	.mega-footer__bottom-section &:first-child
+		+below($breakpoint-lg - 1px)
+			margin-top 30px
+
+	&:last-child
+		padding-right 0
+
+.mega-footer__logo
+	content ''
+	display block
+	width 159px
+	height 297px
+	position absolute
+	left 15px
+	top -15px
+	background url('../images/sat-logo-footer-desktop.png')
+
+	+below(1540px)
+		left 60px
+
+	+below($breakpoint-lg - 1px)
+		left 15px
+
+.mega-footer__extra-heading
+	font-family $base-font-family-light
+	font-size 24px
+	font-weight normal
+	line-height 50px
+	text-transform uppercase
+	letter-spacing .1ex
+	padding 0 20px
+	text-align center
+	background-color #2766a0
+	color #fff
+	margin-top -15px
+	margin-bottom 18px
+
+.mega-footer__heading
+	display block
+	font-family $base-font-family-bold
+	font-size 14px
+	line-height 20px
+	font-weight normal
+	text-transform uppercase
+	letter-spacing .1ex
+	color #ffd64a
+	margin 0 0 7px 0
+
+.mega-footer__link-list
+	list-style-type none
+	margin 0
+	padding 0
+
+	ul
+		list-style-type none
+		margin 0
+		padding 0
+
+	li
+		font-family $base-font-family-light
+		font-size 14px
+		line-height 20px
+		font-weight normal
+		text-transform uppercase
+		letter-spacing .1ex
+		margin 7px 0
+		padding 0 0 0 20px
+		position relative
+
+		&:before
+			content ''
+			display block
+			position absolute
+			left 0
+			width 6px
+			height 6px
+			background-color #88e3ff
+			top 7px
+
+	li li
+		&:before
+			border-radius 100px
+
+	li a
+		color #fff
+		text-decoration none
+
+		&:hover
+			text-decoration underline
+
+	.mega-footer__middle-section &
+		float left
+		margin-right 40px
+
+		&:last-child
+			margin-right 0
+
+.mega-footer__copyright
+	font-family $base-font-family-light
+	font-size 15px
+	line-height 20px
+	text-transform uppercase
+	letter-spacing .15ex
+	margin 12px 0 0 0
+
+	span
+		letter-spacing .1ex
+
+	+below($breakpoint-lg - 1px)
+		margin-top 0
+		letter-spacing .27ex
+
+.mega-footer__phone
+	font-family $base-font-family-medium
+	font-size 36px
+	line-height 1
+	letter-spacing .1ex
+	color #ffd64a
+	white-space nowrap
+	margin 0
+
+	+below($breakpoint-lg - 1px)
+		font-size 46px
+
+.mega-footer__phone-hint
+	font-family $base-font-family
+	display block
+	font-size 13px
+	text-transform uppercase
+	letter-spacing .75ex
+	margin-top 1px
+	color #fff
+	white-space nowrap
+
+	+below($breakpoint-lg - 1px)
+		font-size 16px
+
+.mega-footer__social-btn
+	display inline-block
+	vertical-align middle
+	width 40px
+	height 40px
+	padding 0
+	margin 0
+	background-color transparent
+	border-radius 100px
+	position relative
+	border none
+	border 2px solid #ffd64a
+	margin-left 10px
+	margin-right 10px
+	transition all 0.2s ease-in-out 0s
+
+	&:focus
+	&:hover
+		background-color transparent
+
+	.icon
+		position absolute
+		left 50%
+		top 50%
+		transform translate(-50%, -50%)

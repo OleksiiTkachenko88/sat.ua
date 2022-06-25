@@ -1,0 +1,219 @@
+.uk-nav
+.uk-nav ul
+	margin 0
+	padding 0
+	list-style none
+
+.uk-nav li
+	margin 0
+
+.uk-nav
+	li > a
+			display block
+			text-decoration none
+
+	& > li > a
+			padding 5px 15px
+
+	ul
+		padding-left 15px
+
+		a
+			padding 2px 0
+
+.uk-nav
+	li > a > div
+		font-size 12px
+		line-height 18px
+
+.uk-nav-header
+	padding 5px 15px
+	text-transform uppercase
+	font-weight bold
+	font-size 12px
+
+	&:not(:first-child)
+		margin-top 15px
+
+.uk-nav-divider
+	margin 9px 15px
+
+ul.uk-nav-sub
+		padding 5px 0 5px 15px
+
+.uk-nav-parent-icon
+	& > .uk-parent
+		& > a
+			&:after
+				content "\f104"
+				width 20px
+				margin-right -10px
+				float right
+				font-family FontAwesome
+				text-align center
+
+		&.uk-open
+			& > a
+				&:after
+					content "\f107"
+
+.uk-nav-side
+	& > li
+		& > a
+			color #444444
+
+		&.uk-active
+			& > a
+				background #00a8e6
+				color #ffffff
+
+	.uk-nav-header
+		color #444444
+
+	.uk-nav-divider
+		border-top 1px solid #dddddd
+
+	ul
+		a
+			color #0077dd
+
+			&:hover
+				color #005599
+
+.uk-nav-side > li > a:hover
+.uk-nav-side > li > a:focus
+	background rgba(0, 0, 0, 0.05)
+	color #444444
+	outline none
+
+.uk-nav-dropdown
+	& > li
+		& > a
+			color #444444
+
+	.uk-nav-header
+		color #999999
+
+	.uk-nav-divider
+		border-top 1px solid #dddddd
+	ul
+		a
+			color #0077dd
+
+			&:hover
+				color #005599
+
+.uk-nav-dropdown > li > a:hover
+.uk-nav-dropdown > li > a:focus
+	background #00a8e6
+	color #ffffff
+	outline none
+
+.uk-nav-navbar
+	& > li > a
+		color #444444
+
+	.uk-nav-header
+		color #999999
+
+	.uk-nav-divider
+		border-top 1px solid #dddddd
+
+	ul
+		a
+			color #0077dd
+
+			&:hover
+				color #005599
+
+.uk-nav-navbar > li > a:hover
+.uk-nav-navbar > li > a:focus
+	background #00a8e6
+	color #ffffff
+	outline none
+
+.uk-nav-offcanvas
+	& > li > a
+		color #fff
+		padding 10px 15px
+
+	.uk-nav-header
+		color #fff
+
+	.uk-nav-divider
+		border-top 1px solid #1d61a4
+
+	ul
+		a
+			color #fff
+
+.uk-nav-offcanvas--menu
+	& > li > a
+		font-family $base-font-family-light
+		font-weight normal
+		font-size 24px
+		text-transform uppercase
+		letter-spacing .1ex
+		padding 12px 24px
+
+	.uk-nav-header
+		font-family $base-font-family-light
+		font-weight normal
+		font-size 24px
+		text-transform uppercase
+		letter-spacing .1ex
+		padding 0 24px
+		margin-top 48px
+		margin-bottom 24px
+
+	& > li.phone
+	& > li.email
+	& > li.chat
+		float left
+		width 50%
+
+	& > li.phone .icon
+	& > li.email .icon
+	& > li.chat .icon
+		display block
+		height 53px
+		line-height 53px
+		width 53px
+		text-align center
+		margin-left auto
+		margin-right auto
+		display block
+
+		&:before
+			vertical-align middle
+
+	& > li.phone .icon:before
+		sprite($icon_phone_accent_50_50)
+
+	& > li.email .icon:before
+		sprite($icon_email_white_53_36)
+
+	& > li.chat .icon:before
+		sprite($icon_chat_white_50_40)
+
+.uk-nav-offcanvas > .uk-open > a
+html:not(.uk-touch) .uk-nav-offcanvas > li > a:hover
+html:not(.uk-touch) .uk-nav-offcanvas > li > a:focus
+	background #1d61a4
+	color #fff
+	outline none
+
+html
+	.uk-nav
+		&.uk-nav-offcanvas
+			& > li
+				&.uk-active
+					& > a
+						background #1d61a4
+						color #fff
+	&:not(.uk-touch)
+		.uk-nav-offcanvas
+			ul
+				a
+					&:hover
+						color #fff

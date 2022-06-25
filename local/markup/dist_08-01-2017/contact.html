@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="ua">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=640">
+		<title></title>
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<!--<link href="assets/styles/style_header_footer.css" rel="stylesheet">
+		<link href="assets/styles/style.css" rel="stylesheet">-->
+		<link href="assets/styles/app.min.css" rel="stylesheet">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+	</head>
+
+	<body class="page page--layout-main page--layout-main--map">
+		<div class="page page--layout-main page--layout-main--map">
+			<div class="page__content">
+				<header data-uk-sticky="{top:-40}" class="page__header">
+					<div id="page-cont" class="container-fluid page__header-container">
+						<div class="page__header-container-inner">
+							<nav class="navbar nav_logo navbar--header page__navbar-header">
+								<div class="navbar__primary-content">
+									<a href="#mobile_menu" data-uk-offcanvas="{mode:'slide'}" class="navbar__button-icon navbar__button-icon--menu">
+										<i class="icon"></i>
+									</a>
+									<a href="" class="navbar__brand">
+										<span class="navbar__brand-space"></span>
+										<img src="assets/images/sat-logo-mobile.png" alt="" width="161" height="62" class="navbar__brand-logo-mobile">
+										<img src="assets/images/sat-logo-desktop.png" alt="" width="242" height="91" class="navbar__brand-logo-desktop">
+									</a>
+									<ul class="navbar__nav ul_menu">
+										<li>
+											<a href="">Замовити</a>
+										</li>
+										<li>
+											<a href="">Трекінг</a>
+										</li>
+										<li>
+											<a href="">Компанія&nbsp;SAT</a>
+										</li>
+										<li>
+											<a href="">Контакти</a>
+										</li>
+									</ul>
+								</div>
+								<div class="navbar__secondary-content">
+									<div class="navbar__phone-wrapper">
+										<strong class="navbar__phone">0 800 502 25 25</strong>
+										<span class="navbar__phone-hint">Безкоштовна гаряча лінія</span>
+									</div>
+									<a href="" class="navbar__button-icon navbar__button-icon--entry">
+										<i class="icon"></i>
+									</a>
+									<a href="" class="navbar__button-icon navbar__button-icon--lang">
+										<span>ua</span>
+									</a>
+									<a href="" class="navbar__button-icon navbar__button-icon--search js-toggle-search">
+										<i class="icon"></i>
+									</a>
+								</div>
+							</nav>
+							<div class="navbar navbar--header page__navbar-header page__navbar-header--search">
+								<form id="search_class" class="navbar__primary-content">
+									<i class="icon icon--search-accent navbar__icon"></i>
+									<div class="navbar__search uk-width-1-1">
+										<input id="search" type="text" placeholder="Пошук надпоштових можливостей" class="form-control uk-width-1-1 navbar__search-form-control">
+									</div>
+									<span id="ic-close" class="navbar__button-icon navbar__button-icon--close js-close">
+										<i class="icon"></i>
+									</span>
+								</form>
+							</div>
+						</div>
+					</div>
+					<div id="mobile_menu" class="uk-offcanvas">
+						<div class="uk-offcanvas-bar uk-offcanvas-bar--menu">
+							<ul class="uk-nav uk-nav-offcanvas uk-nav-offcanvas--menu">
+								<li>
+									<a href="#">Компания SAT</a>
+								</li>
+								<li class="uk-active">
+									<a href="#">Трекинг</a>
+								</li>
+								<li>
+									<a href="#">Замовити</a>
+								</li>
+								<li>
+									<a href="#">Контакти</a>
+								</li>
+								<li class="uk-nav-header">Помощь онлайн</li>
+								<li class="phone">
+									<a href="#">
+										<i class="icon"></i>
+									</a>
+								</li>
+								<li class="email">
+									<a href="#">
+										<i class="icon"></i>
+									</a>
+								</li>
+								<li class="chat">
+									<a href="#">
+										<i class="icon"></i>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</header>
+				<div id="map-contact" class="page__map-container">
+					<div style="background-color:#91ff91;" class="page__map-overlay"></div>
+				</div>
+				<nav id="sidenav" class="sidenav hidden-md-down">
+					<a href="" class="sidenav__link sidenav__link--calc is-fade">
+						<span class="sidenav__pointer">Текст</span>
+						<i class="icon sidenav__icon"></i>
+					</a>
+					<a href="" class="sidenav__link sidenav__link--truck is-fade">
+						<span class="sidenav__pointer">Текст</span>
+						<i class="icon sidenav__icon"></i>
+					</a>
+					<a href="" class="sidenav__link sidenav__link--cargo is-fade">
+						<span class="sidenav__pointer">Текст</span>
+						<i class="icon sidenav__icon"></i>
+					</a>
+					<a href="" class="sidenav__link sidenav__link--map is-fade">
+						<span class="sidenav__pointer">Текст</span>
+						<i class="icon sidenav__icon"></i>
+					</a>
+					<a href="" class="sidenav__link sidenav__link--phone">
+						<span class="sidenav__pointer">Текст</span>
+						<i class="icon sidenav__icon"></i>
+					</a>
+					<a href="" class="sidenav__link sidenav__link--mail">
+						<span class="sidenav__pointer">Текст</span>
+						<i class="icon sidenav__icon"></i>
+					</a>
+					<a href="" class="sidenav__link sidenav__link--chat">
+						<span class="sidenav__pointer">Помощь онлайн</span>
+						<i class="icon sidenav__icon"></i>
+					</a>
+					<a href="" class="sidenav__link sidenav__link--entry active">
+						<span class="sidenav__pointer">Текст</span>
+						<i class="icon sidenav__icon"></i>
+					</a>
+				</nav>
+				<section id="cab_fon" class="page__block page__block--contact">
+					<div id="nav-con" class="navigation__container">
+						<div class="container-fluid">
+							<nav data-uk-switcher="{connect: '#contact_tabs'}" class="navigation">
+								<a href="" class="navigation__link uk-active">
+									<span class="navigation__link-inner">Приватним клієнтам</span>
+								</a>
+								
+								<a href="" class="navigation__link">
+									<span class="navigation__link-inner">Корпоративним клієнтам</span>
+								</a>
+								<a href="" class="navigation__link">
+									<span class="navigation__link-inner">Партнерам (франчайзинг)</span>
+								</a>
+								<a href="" class="navigation__link">
+									<span class="navigation__link-inner">Компаніям постачальникам</span>
+								</a>
+							</nav>
+						</div>
+					</div>
+					<div id="contact_tabs" class="uk-switcher">
+						<div class="uk-active">
+							<div id="fluid_contain" class="container-fluid">
+								<div class="row">
+									<div class="col-xs-6">
+										<p>Центральний офіс ТОВ «Транспортна компанія «САТ»
+											<br>вулиця Гродненьска, 32, Киев, Украина, 02660</p>
+										<p class="icon__item">
+											<i class="icon icon--phone-accent"></i> 044 490 99 09</p>
+										<p class="icon__item">
+											<i class="icon icon--phone-accent"></i> 067 555 11 33</p>
+										<p class="icon__item">
+											<i class="icon icon--phone-accent"></i> 050 487 2 487</p>
+										<p class="icon__item">
+											<i class="icon icon--phone-accent"></i> 0 800 30 99 09</p>
+										<p class="icon__item">
+											<i class="icon icon--mail-accent"></i> info@sat.ua</p>
+									</div>
+									<div class="col-xs-6">
+										<p>Відділ по зв’язкам із прессою
+											<br>За всіма питаннями звертайтесь, будь-ласка до Ирини Миханік:</p>
+										<p class="icon__item">
+											<i class="icon icon--phone-accent"></i> 067 370 71 05</p>
+										<p class="icon__item">
+											<i class="icon icon--mail-accent"></i> pr@sat.ua</p>
+										<p>Дополнительный склад на приём и выдачу грузов в г. Киев</p>
+										<p>Отделение №2: ул. Корабельная, 6
+											<br>Отделение №3: ул. Якутская, 8</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div>
+							<div class="container-fluid">2</div>
+						</div>
+						<div>
+							<div class="container-fluid">3</div>
+						</div>
+						<div>
+							<div class="container-fluid">4</div>
+						</div>
+					</div>
+					<div id="cabin_link" class="container-fluid">
+						<div class="cabinet-link">Зручний
+							<a href="" target="_blank">особистий кабінет</a>
+							<i class="icon icon--entry-blue-59-52"></i> надасть вам усі переваги постійного клієнта</div>
+					</div>
+				</section>
+				<div id="flu_cont_fon" class="panel__container panel__container--main panel__container--main--subscribe">
+					<div id="flu_cont" class="container-fluid">
+						<form class="panel panel--subscribe form">
+							<div class="row">
+								<div class="col-xs-12 col-lg-8">
+									<h2 class="form__title-4">Дізнавайтесь про
+										<br>кращі пропозиції для Вас!</h2>
+									<div class="input-group-row">
+										<input type="text" value="" placeholder="Введіть Ваш e-mail..." class="form-control form-control--alt input-lg">
+										<button type="submit" class="btn btn--accent btn--raised btn--alt btn-lg">Підписатись</button>
+									</div>
+									<div class="form-hint">Отримайте змогу завчасно дізнаватись про найкращі пропозиції від нашої компанії. Здобудьте перевагу та використовуйте
+										надпоштові можливості SAT на повну силу ми не надсилаемо спам, або сторонні рекламні повідомлення, а лише корисні
+										та актуальні пропозиції</div>
+								</div>
+								<div class="col-xs-12 col-lg-4 panel__col-image hidden-md-down">
+									<img src="assets/images/subscribe-img.png" alt="" width="298" height="319">
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<footer class="page__footer">
+				<div class="mega-footer">
+					<div id="foot" class="container-fluid mega-footer__container">
+						<div class="mega-footer__logo"></div>
+						<h3 class="mega-footer__extra-heading hidden-md-down">Мапа сайту</h3>
+						<nav class="mega-footer__middle-section hidden-md-down">
+							<div class="mega-footer__section">
+								<h5 class="mega-footer__heading">Замовити</h5>
+								<ul class="mega-footer__link-list">
+									<li>
+										<a href="">Калькулятор</a>
+									</li>
+								</ul>
+							</div>
+							<div class="mega-footer__section">
+								<h5 class="mega-footer__heading">ТРЕКІНГ</h5>
+								<ul class="mega-footer__link-list">
+									<li>
+										<a href="">Відстежити вантаж</a>
+									</li>
+									<li>
+										<a href="">Замовлення</a>
+									</li>
+								</ul>
+							</div>
+							<div class="mega-footer__section">
+								<h5 class="mega-footer__heading">Надпоштові можливості</h5>
+								<ul class="mega-footer__link-list">
+									<li>
+										<a href="">Послуги</a>
+									</li>
+									<li>
+										<a href="">Академія</a>
+										<ul>
+											<li>
+												<a href="">Кейси</a>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+							<div class="mega-footer__section">
+								<h5 class="mega-footer__heading">Акції</h5>
+								<ul class="mega-footer__link-list">
+									<li>
+										<a href="">Найкращі пропозиції</a>
+									</li>
+									<li>
+										<a href="">Акції для вас</a>
+									</li>
+									<li>
+										<a href="">Ваші бонуси</a>
+									</li>
+								</ul>
+							</div>
+							<div class="mega-footer__section">
+								<h5 class="mega-footer__heading">Компанія SAT</h5>
+								<ul class="mega-footer__link-list">
+									<li>
+										<a href="">Легенда</a>
+									</li>
+									<li>
+										<a href="">Новини</a>
+									</li>
+								</ul>
+							</div>
+							<div class="mega-footer__section">
+								<h5 class="mega-footer__heading">Контакти</h5>
+								<ul class="mega-footer__link-list">
+									<li>
+										<a href="">Бізнес</a>
+									</li>
+									<li>
+										<a href="">Клієнти</a>
+									</li>
+									<li>
+										<a href="">Відділення</a>
+										<ul>
+											<li>
+												<a href="">Списком</a>
+											</li>
+											<li>
+												<a href="">На карті</a>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+						</nav>
+						<div class="mega-footer__spacer hidden-md-down"></div>
+						<div class="mega-footer__bottom-section">
+							<div class="mega-footer__section">
+								<p class="mega-footer__copyright">© 2016 транспортна компанія «САТ»
+									<br>
+									<span>вул. Гродненська, 32, м. Київ, Україна</span>
+								</p>
+							</div>
+							<div class="mega-footer__section mega-footer__section--phone">
+								<strong class="mega-footer__phone">0 800 502 25 25</strong>
+								<span class="mega-footer__phone-hint">Безкоштовна гаряча лінія</span>
+							</div>
+							<div class="mega-footer__section mega-footer__section--social">
+								<a href="" class="mega-footer__social-btn mega-footer__social-btn--facebook">
+									<i class="icon"></i>
+								</a>
+								<a href="" class="mega-footer__social-btn mega-footer__social-btn--vkontakte">
+									<i class="icon"></i>
+								</a>
+								<a href="" class="mega-footer__social-btn mega-footer__social-btn--twitter">
+									<i class="icon"></i>
+								</a>
+								<a href="" class="mega-footer__social-btn mega-footer__social-btn--youtube">
+									<i class="icon"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+	</body>
+
+</html>
+<script src="assets/scripts/app.min.js"></script>

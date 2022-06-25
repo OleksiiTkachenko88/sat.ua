@@ -1,0 +1,39 @@
+btnGroupSize(sizeName, paddingTopBottom, paddingLeftRight, fontSize, lineHeight, borderRadius)
+	mod = ''
+
+	if sizeName
+		mod = '-' + sizeName
+
+	.btn-group{mod}
+		& > .btn
+		& > .btn-group-btn > .btn
+		& > .btn-group-addon
+			font-size fontSize
+			line-height lineHeight
+			padding paddingTopBottom paddingLeftRight
+			border-radius borderRadius
+
+		& > .btn-group-addon-quad
+			width (fontSize * lineHeight + 2 * paddingTopBottom)
+
+		& > .btn + .dropdown-toggle
+			padding-left (paddingLeftRight / 2)
+			padding-right (paddingLeftRight / 2)
+
+		& > .btn-link + .dropdown-toggle
+			margin-left -(paddingLeftRight)
+
+		& .btn-rounded
+			border-radius borderRadius !important
+
+		&.btn-group-shift
+			margin-left -(paddingLeftRight)
+
+		&.btn-group-shiftright
+			margin-right -(paddingLeftRight)
+
+	.input{mod} > .btn
+		font-size fontSize
+		line-height lineHeight
+		padding paddingTopBottom paddingLeftRight
+		border-radius borderRadius

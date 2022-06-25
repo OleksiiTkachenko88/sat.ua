@@ -1,0 +1,17 @@
+extends /blocks/layout-default/layout-default
+
+block head
+	- var pageTitle = '';
+	- var pageDescription = '';
+	- var pageKeywords = '';
+
+block page
+	- var pageClasses = 'page--layout-main'
+
+block content
+	.page__error-container
+		.container-fluid.uk-vertical-align
+			.uk-vertical-align-middle
+				img.page__error-img.page__error-img--404(src="assets/images/error_404.png", alt="", width="558", height="328")
+				div.page__error-text Упс! Ми не можемо знайти сторінку, яку ви шукаєте.
+				div.page__error-hint Можливо, запитувана Вами сторінка була переміщена або видалена.<br>Будь ласка, скористайтеся навігацією або формою пошуку, щоб знайти потрібну Вам інформацію

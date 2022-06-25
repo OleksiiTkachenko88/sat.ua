@@ -1,0 +1,100 @@
+.form-group
+	margin-top 20px
+	margin-bottom 20px
+
+.form-hint
+	typo-hint()
+
+	.panel--subscribe &
+		max-width 630px
+
+.input-group-row
+	display flex
+	flex-direction row
+	flex-wrap nowrap
+
+	& > .form-control
+		.panel--subscribe &
+			max-width 630px
+
+	& > .btn
+		margin-left 15px
+
+		.panel--subscribe &
+			margin-left 50px
+
+		&:first-child
+			margin-left 0 !important
+
+.form__title-4
+	typo-display-4()
+	text-transform none
+	font-family $base-font-family-light
+	color #1e3e6c
+
+	+below($breakpoint-lg - 1px)
+		font-size 42px
+		line-height 1.2
+
+.form__title-3
+	text-transform none
+	font-family $base-font-family-light
+	color #1e3e6c
+
+.form__title-2
+	typo-display-2()
+	text-transform none
+	font-family $base-font-family-light
+	color #1e3e6c
+
+	&.form__title-alt
+		font-family $base-font-family
+		font-size 21px
+		text-transform uppercase
+		letter-spacing .1ex
+
+.form__title-1
+	typo-display-1()
+	text-transform none
+	font-family $base-font-family-light
+	color #1e3e6c
+
+.form--recall
+	.form__container
+		max-width 790px
+		margin-left auto
+		margin-right auto
+		padding-left 20px
+		padding-right 20px
+
+	.form__title-2
+		margin-top 45px
+		margin-bottom 15px
+		text-align center
+
+	.form__rating-stars
+		text-align center
+		font-size 44px
+
+		.fa
+			width 62px
+			height 62px
+			line-height 62px
+			text-align center
+
+	.form-group--footer
+		text-align center
+		padding-top 15px
+		padding-bottom 50px
+		margin 0
+
+		.btn
+			min-width 300px
+
+.hint-block
+	font-family $base-font-family
+	font-weight normal
+	font-size 14px
+	display block
+	color #acacac
+	margin-top 5px

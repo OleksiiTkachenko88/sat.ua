@@ -1,0 +1,134 @@
+.main-slide
+	position relative
+	background-position 50% 50%
+	background-size cover
+	background-repeat no-repeat
+	min-height 900px
+	height 900px
+
+	+below($breakpoint-lg - 1px)
+		min-height 56.25vw
+		height 56.25vw
+
+.main-slide__img
+	display block
+
+.main-slide__overlay-panel
+	position absolute
+	top 130px
+	right 0
+	bottom 160px
+	left 0
+	text-align right
+
+	+below($breakpoint-lg - 1px)
+		top 73px
+		left 0
+		right 0
+		bottom 0
+		text-align left
+
+	.main-slide--strategy &
+		text-align left
+
+	.container-fluid
+		position relative
+		height 100%
+		min-width 0
+
+.main-slide__title
+.main-slide__extra-title
+	font-size 54px
+	line-height 64px
+	font-family 'Roboto Condensed', arial, sans-serif
+	font-weight normal
+	color #404041
+	text-transform uppercase
+	letter-spacing .1ex
+	max-width 60%
+	margin-left auto
+	margin-top 0
+	margin-bottom 45px
+
+	+below($breakpoint-lg - 1px)
+		font-size 22px
+		line-height 1.1785
+		margin-right auto
+		margin-left 0
+		margin-bottom 20px
+
+	.main-slide--strategy &
+		margin-right auto
+		margin-left 0
+		letter-spacing normal
+		max-width calc(100% - 100px)
+		position relative
+
+.main-slide__title
+	.main-slide--strategy &
+		left .3em
+		margin-bottom .15em
+
+.main-slide__extra-title
+	font-size 113px
+	line-height 1
+	margin-bottom .15em
+
+	+below($breakpoint-lg - 1px)
+		font-size 28px
+		line-height 1.1785
+
+	.main-slide--strategy &
+		left .15em
+
+.main-slide__header
+	.main-slide--strategy &
+		position absolute
+		left 15px
+		bottom 80px
+
+		+below(1540px)
+			left 60px
+
+		+below($breakpoint-lg - 1px)
+			top 3px
+			bottom auto
+		
+.main-slide__descr
+	position absolute
+	left 15px
+	bottom 0
+	max-width 50%
+	margin 0
+	font-size 24.777px
+	text-transform uppercase
+	letter-spacing .1ex
+	color #1e3e6c
+	background-color #ffd64a
+	padding 0 40px
+	line-height 60px
+	white-space nowrap
+	overflow hidden
+	box-sizing border-box
+	font-family $base-font-family-medium
+
+	+below(1540px)
+		left 60px
+
+	+below($breakpoint-lg - 1px)
+		left 0
+		right 0
+		bottom 0
+		max-width 100%
+		width auto
+		text-align center
+		height 60px
+		line-height 60px
+		text-truncate()
+
+.main-slide__cover-link
+	position absolute
+	left 0
+	top 0
+	right 0
+	bottom 0

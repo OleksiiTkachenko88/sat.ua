@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="ua">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=640">
+		<title>Главная</title>
+		<meta name="description" content="">
+		<meta name="keywords" content="">		
+		<!--<link href="assets/styles/style_header_footer.css" rel="stylesheet">
+		<link href="assets/styles/style.css" rel="stylesheet">-->
+		<link href="assets/styles/app.min.css" rel="stylesheet">
+		
+		<script src="assets/scripts/app.min.js"></script>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+		<script>
+			$(document).on("click",function(event){
+			
+				if(check_touch(event)==1){
+					return false;
+				}else{
+					if(event["target"]["id"]=="js_show_calculator"  ){				
+						$("#mini_calc_new").toggleClass('is-active');
+					}
+					
+					if(event["target"]["id"]!="mini_calc_new" && event["target"]["id"]!="js_show_calculator"){
+						$("#mini_calc_new").removeClass('is-active');
+					}
+					
+					
+					if(event["target"]["id"]=="js_tracking" ){				
+						$("#mini_tracking").toggleClass('is-active');
+					}
+					
+					if(event["target"]["id"]!="mini_tracking" && event["target"]["id"]!="js_tracking"){
+						$("#mini_tracking").removeClass('is-active');
+					}	
+					
+					if(event["target"]["id"]!="search"){
+						$(".page__navbar-header").next('.page__navbar-header--search').removeClass('is-expand');				
+					}
+				}
+			
+				
+			});	
+			
+			
+			
+			function check_touch(element){
+			
+				if(element["target"].toString().indexOf("Rect")>=0){
+					return 1;
+				}else if(element["target"].toString().indexOf("Input")>=0){
+					return 1;
+				}else if(element["target"].toString().indexOf("Paragraph")>=0){
+					return 1;
+				}else if(element["target"]["className"].toString().indexOf("js_no_touch")>=0){
+					return 1;
+				}else{
+					return 0;
+				}
+			}
+		</script>
+		
+		
+		<style>
+            .minicalculator{
+        		margin-top: -40px;
+    		}
+			.is-active{
+				display:block !important;
+			}
+		</style>
+
+
+	</head>
+
+	<body class="page page--layout-main page--index">
+
+		<div class="page page--layout-main page--index">
+			<div id="page-index" class="page__content page_home">
+				<header data-uk-sticky="{top:-40}" class="page__header">
+					<div id="page-cont" class="container-fluid page__header-container">
+						<div class="page__header-container-inner">
+							<nav class="navbar nav_logo navbar--header page__navbar-header">
+								<div class="nav_new navbar__primary-content">
+									<a href="#mobile_menu" data-uk-offcanvas="{mode:'slide'}" class="navbar__button-icon navbar__button-icon--menu">
+										<i class="icon"></i>
+									</a>
+									<a href="" class="navbar__brand">
+										<span class="navbar__brand-space"></span>
+										<img src="assets/images/sat-logo-mobile.png" alt="" width="161" height="62" class="navbar__brand-logo-mobile">
+										<img src="assets/images/sat-logo-desktop.png" alt="" width="242" height="91" class="navbar__brand-logo-desktop">
+									</a>
+									<ul class="navbar__nav ul_menu">
+										<li>
+											<a href="javascript:void(0)" id="js_show_calculator">Замовити</a>
+										</li>
+										<li>
+											<a href="javascript:void(0)" id="js_tracking">Трекінг</a>
+										</li>
+										<li>
+											<a href="">Компанія&nbsp;SAT</a>
+										</li>
+										<li>
+											<a href="">Контакти</a>
+										</li>
+									</ul>
+								</div>
+								<div class="navbar__secondary-content">
+									<div class="navbar__phone-wrapper">
+										<strong class="navbar__phone">0 800 502 25 25</strong>
+										<span class="navbar__phone-hint">Безкоштовна гаряча лінія</span>
+									</div>
+									<a href="" class="navbar__button-icon navbar__button-icon--entry">
+										<i class="icon"></i>
+									</a>
+									<a href="" class="navbar__button-icon navbar__button-icon--lang">
+										<span>ua</span>
+									</a>
+									<a href="" class="navbar__button-icon navbar__button-icon--search js-toggle-search">
+										<i class="icon"></i>
+									</a>
+								</div>
+							</nav>						
+							<div class="navbar navbar--header page__navbar-header page__navbar-header--search">
+								<form id="search_class" class="navbar__primary-content">
+									<i class="icon icon--search-accent navbar__icon"></i>
+									<div class="navbar__search uk-width-1-1">
+										<input id="search" type="text" placeholder="Пошук надпоштових можливостей" class="form-control uk-width-1-1 navbar__search-form-control">
+									</div>
+									<span id="ic-close" class="navbar__button-icon navbar__button-icon--close js-close">
+										<i class="icon"></i>
+									</span>
+								</form>
+							</div>
+							
+							
+							
+							<div id="mini_calc_new"  class="mini_calc" >
+								<!--<div class="transparency"></div>
+								<svg> 
+
+								<rect x="0" y="0" height="300" width="1900" fill="rgb(177,182,182)" fill-opacity="0.8" />
+								</svg>-->
+								<div class="row_top js_no_touch">
+									<div class="start_calc js_no_touch" style="background-image:url(assets/images/white_fon.png);">
+										<input type="text" placeholder="Введіть місто відправлення" class="calc_form_start">
+										<div class="img_start js_no_touch"><img class='js_no_touch' src="assets/images/svg/start.svg"></div>
+										<img class="krest js_no_touch" src="assets/images/krest.png">
+									</div>
+									<div class="finish_calc js_no_touch" style="background-image:url(assets/images/white_fon.png);">
+										<input type="text" placeholder="Кам'янець-Подiльский" class="calc_form_finish">
+										<div class="img_finish js_no_touch"><img class='js_no_touch' src="assets/images/svg/finish.svg"></div>
+										<img class="krest js_no_touch" src="assets/images/krest.png">
+									</div>
+									<div class="weight_calc js_no_touch" style="background-image:url(assets/images/white_fon.png);">
+										<input type="text" placeholder="500 кг" class="calc_form_weight">
+										<div class="img_weight js_no_touch"><img class='js_no_touch' src="assets/images/svg/weight.svg"></div>
+									</div>
+									<div class="butt_enter"><a class="a_enter" href="#"><p>розрахувати</p></a></div>
+								</div>
+								<div class="clear"></div>
+								<div class="row_bottom js_no_touch">
+									<div class="img_car js_no_touch"><img class='js_no_touch' src="assets/images/svg/car.svg"></div>
+									<p class="otpr js_no_touch">Отправка</p>
+									<p class="itog"> Чоп - Кам'янець-Подiльский</p>  <p class="ves"> 500 кг  </p> <p class="summ"> от  47 325 грн </p>
+									<div class="enter_zamov"><a class="a_zamov" href="#"><p>оформити замовлення</p></a></div>
+								</div>
+							</div>
+							
+							
+							
+							<div class="mini_track tracking" id="mini_tracking" >
+								<!--<div class="transparency"></div>
+								<svg> 
+
+								<rect x="0" y="0" height="470" width="1900" fill="rgb(177,182,182)" fill-opacity="0.8" />
+								</svg>-->
+								<div class="numm_decl js_no_touch">
+									<img class="trek js_no_touch" src="assets/images/trek.png">
+									<input type="text" placeholder="Вкажіть номер декларації" class="trek_form">									
+								</div>
+								<div class="but_sled"><a class="a_sled" href="#"><p>Отследить</p></a></div>
+								<div class="div_recive js_no_touch"><img class="recive js_no_touch" src="assets/images/svg/man_recive.svg"></div>
+								<p class="city_sled">Кам'янець-Подiльский</p>
+								<div class="vydacha js_no_touch">									
+									<p class="trek_vydacha">Вантаж видано отримувачу</p>									
+								</div>
+								<div class="but_podrobn"><a class="a_podrobn" href="#"><p>Подробнее</p></a></div>
+							</div>
+							
+							
+							
+							
+							<div class="mini_track tracking" id="mini_tracking1">
+								<!--<div class="transparency"></div>
+								<svg> 
+
+								<rect x="0" y="0" height="470" width="1900" fill="rgb(177,182,182)" fill-opacity="0.8" />
+								</svg>-->
+								<div class="numm_decl js_no_touch">
+									<img class="trek js_no_touch" src="assets/images/trek.png">
+									<input type="text" placeholder="Вкажіть номер декларації" class="trek_form">									
+								</div>
+								<div class="but_sled"><a class="a_sled" href="#"><p>Отследить</p></a></div>
+								<div class="div_recive1 js_no_touch">
+									<div class="fon_track1 js_no_touch"><img class="car_track1 js_no_touch" src="assets/images/car_track.png"></div>
+									<p class="city1">Чоп</p>
+									<p class="city2">Кам'янець-Подiльский</p>
+								</div>
+								
+								<div class="vydacha js_no_touch">									
+									<p class="trek_vydacha">Вантаж знаходиться у місці призначення</p>									
+								</div>
+								<div class="but_podrobn"><a class="a_podrobn" href="#"><p>Подробнее</p></a></div>
+							</div>
+							
+							
+							
+							<div class="mini_track tracking" id="mini_tracking2" >
+								<!--<div class="transparency"></div>
+
+								<rect x="0" y="0" height="470" width="1900" fill="rgb(177,182,182)" fill-opacity="0.8" />
+								</svg>-->
+								<div class="numm_decl js_no_touch">
+									<img class="trek js_no_touch" src="assets/images/trek.png">
+									<input type="text" placeholder="Вкажіть номер декларації" class="trek_form">									
+								</div>
+								<div class="but_sled"><a class="a_sled" href="#"><p>Отследить</p></a></div>
+								<div class="div_recive2 js_no_touch">
+									<div class="fon_track2 js_no_touch"><img class="car_track2 js_no_touch" src="assets/images/car_track.png"></div>
+									<p class="city1">Чоп</p>
+									<p class="city2" style="color:#FFD64A; background:#1E3E6C">Кам'янець-Подiльский</p>
+								</div>
+								
+								<div class="vydacha js_no_touch">									
+									<p class="trek_vydacha">Вантаж перебуває у дорозі</p>									
+								</div>
+								<div class="but_podrobn"><a class="a_podrobn" href="#"><p>Подробнее</p></a></div>
+							</div>
+							
+							
+							
+							
+							<div class="mini_track tracking" id="mini_tracking3" >
+								<!--<div class="transparency"></div>
+								<svg> 
+
+								<rect x="0" y="0" height="470" width="1900" fill="rgb(177,182,182)" fill-opacity="0.8" />
+								</svg>-->
+								<div class="numm_decl js_no_touch">
+									<img class="trek js_no_touch" src="assets/images/trek.png">
+									<input type="text" placeholder="Вкажіть номер декларації" class="trek_form">									
+								</div>
+								<div class="but_sled "><a class="a_sled" href="#"><p>Отследить</p></a></div>
+								<div class="div_recive3 js_no_touch">
+									<div class="fon_track3 js_no_touch"><img class="car_track3 js_no_touch" src="assets/images/car_track.png"></div>
+									<p class="city1">Чоп</p>
+									<p class="city2" style="color:#FFD64A;background:#1E3E6C">Кам'янець-Подiльский</p>
+								</div>
+								
+								<div class="vydacha js_no_touch">									
+									<p class="trek_vydacha">Вантаж знаходиться у місці відправлення</p>									
+								</div>
+								<div class="but_podrobn"><a class="a_podrobn" href="#"><p>Подробнее</p></a></div>
+							</div>
+							
+							<div class="mini_track tracking" id="mini_tracking4" >
+								<!--<div class="transparency"></div>
+								<svg> 
+
+								<rect x="0" y="0" height="470" width="1900" fill="rgb(177,182,182)" fill-opacity="0.8" />
+								</svg>-->
+								<div class="numm_decl js_no_touch">
+									<img class="trek js_no_touch" src="assets/images/trek.png">
+									<input type="text" placeholder="Вкажіть номер декларації" class="trek_form">									
+								</div>
+								<div class="but_sled"><a class="a_sled" href="#"><p>Отследить</p></a></div>
+								
+							</div>
+							
+							
+							
+							
+						</div>
+					</div>
+					<div id="mobile_menu" class="uk-offcanvas">
+						<div class="uk-offcanvas-bar uk-offcanvas-bar--menu">
+							<ul class="uk-nav uk-nav-offcanvas uk-nav-offcanvas--menu">
+								<li>
+									<a href="#">Компания SAT</a>
+								</li>
+								<li class="uk-active">
+									<a href="#">Трекинг</a>
+								</li>
+								<li>
+									<a href="#">Замовити</a>
+								</li>
+								<li>
+									<a href="#">Контакти</a>
+								</li>
+								<li class="uk-nav-header">Помощь онлайн</li>
+								<li class="phone">
+									<a href="#">
+										<i class="icon"></i>
+									</a>
+								</li>
+								<li class="email">
+									<a href="#">
+										<i class="icon"></i>
+									</a>
+								</li>
+								<li class="chat">
+									<a href="#">
+										<i class="icon"></i>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</header>
+				<div class="swiper-container swiper-container--main">
+					<div class="swiper-wrapper">
+						<div style="background-image: url(assets/images/logo.png);" class="swiper-slide main-slide main-slide--hoverable">
+							<img src="assets/images/logo.png" alt="" width="1600" height="900" class="main-slide__img hidden">
+							<div class="main-slide__overlay-panel">
+								<div class="container-fluid slide_cont">
+									<h2 class="main-slide__title">Доставка надважких складних вантажів</h2>
+									<p id="vozmoz" class="main-slide__descr">Отримай надпоштові можливості</p>
+									<a href="" id="detal" class="btn btn--more main-slide__more">Детальніше
+										<i class="icon icon--arrow-right-grey"></i>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div style="background-image: url(assets/images/2.jpeg);" class="swiper-slide main-slide main-slide--hoverable">
+							<img src="http://placehold.it/1600x900" alt="" width="1600" height="900" class="main-slide__img hidden">
+							<div class="main-slide__overlay-panel">
+								<div class="container-fluid slide_cont">
+									<h2 class="main-slide__title">Доставка надважких складних вантажів</h2>
+									<p class="main-slide__descr">Отримай надпоштові можливості</p>
+									<a href="" id="detal" class="btn btn--more main-slide__more">Детальніше
+										<i class="icon icon--arrow-right-grey"></i>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div style="background-image: url(http://placehold.it/1600x900);" class="swiper-slide main-slide main-slide--hoverable">
+							<img src="http://placehold.it/1600x900" alt="" width="1600" height="900" class="main-slide__img hidden">
+							<div class="main-slide__overlay-panel">
+								<div class="container-fluid slide_cont">
+									<h2 class="main-slide__title">Доставка надважких складних вантажів</h2>
+									<p class="main-slide__descr">Отримай надпоштові можливості</p>
+									<a href="" id="detal" class="btn btn--more main-slide__more">Детальніше
+										<i class="icon icon--arrow-right-grey"></i>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div style="background-image: url(http://placehold.it/1600x900);" class="swiper-slide main-slide main-slide--hoverable">
+							<img src="http://placehold.it/1600x900" alt="" width="1600" height="900" class="main-slide__img hidden">
+							<div class="main-slide__overlay-panel slide_cont">
+								<div class="container-fluid">
+									<h2 class="main-slide__title">Доставка надважких складних вантажів</h2>
+									<p class="main-slide__descr">Отримай надпоштові можливості</p>
+									<a href="" id="detal" class="btn btn--more main-slide__more">Детальніше
+										<i class="icon icon--arrow-right-grey"></i>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div style="background-image: url(http://placehold.it/1600x900);" class="swiper-slide main-slide main-slide--hoverable">
+							<img src="http://placehold.it/1600x900" alt="" width="1600" height="900" class="main-slide__img hidden">
+							<div class="main-slide__overlay-panel slide_cont">
+								<div class="container-fluid">
+									<h2 class="main-slide__title">Доставка надважких складних вантажів</h2>
+									<p class="main-slide__descr">Отримай надпоштові можливості</p>
+									<a href="" id="detal" class="btn btn--more main-slide__more">Детальніше
+										<i class="icon icon--arrow-right-grey"></i>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-button-wrapper">
+						<div id="but_nav" class="container-fluid">
+							<div class="swiper-button-prev"></div>
+							<div class="swiper-button-next"></div>
+						</div>
+					</div>
+				</div>
+				<nav id="sidenav" class="sidenav hidden-md-down">
+					<a href="" class="sidenav__link sidenav__link--calc is-fade">
+						<span class="sidenav__pointer">Текст</span>
+						<i class="icon sidenav__icon"></i>
+					</a>
+					<a href="" class="sidenav__link sidenav__link--truck is-fade">
+						<span class="sidenav__pointer">Текст</span>
+						<i class="icon sidenav__icon"></i>
+					</a>
+					<a href="" class="sidenav__link sidenav__link--cargo is-fade">
+						<span class="sidenav__pointer">Текст</span>
+						<i class="icon sidenav__icon"></i>
+					</a>
+					<a href="" class="sidenav__link sidenav__link--map is-fade">
+						<span class="sidenav__pointer">Текст</span>
+						<i class="icon sidenav__icon"></i>
+					</a>
+					<a href="" class="sidenav__link sidenav__link--phone">
+						<span class="sidenav__pointer">Текст</span>
+						<i class="icon sidenav__icon"></i>
+					</a>
+					<a href="" class="sidenav__link sidenav__link--mail">
+						<span class="sidenav__pointer">Текст</span>
+						<i class="icon sidenav__icon"></i>
+					</a>
+					<a href="" class="sidenav__link sidenav__link--chat">
+						<span class="sidenav__pointer">Помощь онлайн</span>
+						<i class="icon sidenav__icon"></i>
+					</a>
+					<a href="" class="sidenav__link sidenav__link--entry active">
+						<span class="sidenav__pointer">Текст</span>
+						<i class="icon sidenav__icon"></i>
+					</a>
+				</nav>
+				<div class="container-fluid">
+					<div class="panel__container panel__container--main panel__container--main--promo">
+						<div class="panel panel--promo">
+							<div id="prom" class="panel__block-list js-swiper-main-navigation">
+								<a href="" data-slide="0" class="panel__block panel__block--hoverable panel__block--calc uk-overlay-hover">
+									<h3 class="panel__block-title panel__block-title--alt">Розрахувати
+										<br>послугу</h3>
+									<i class="icon panel__block-icon uk-overlay-scale"></i>
+									<p class="panel__block-descr">Легкий та зручний розрахунок вартості доставки вантажу</p>
+								</a>
+								<a href="" data-slide="1" class="panel__block panel__block--hoverable panel__block--order uk-overlay-hover">
+									<h3 class="panel__block-title panel__block-title--alt">Керування
+										<br>замовленнями</h3>
+									<i class="icon panel__block-icon uk-overlay-scale"></i>
+									<p class="panel__block-descr">Оберіть потрібну вам послугу і ми виконаємо її для вас</p>
+								</a>
+								<a href="" data-slide="2" show_block='0' class="panel__block block3 panel__block--hoverable panel__block--offer uk-overlay-hover js_third_block" >
+								<div id="plucha"><img src="assets/images/plucha1.png" style="width:101%;" alt=""><img src="assets/images/exit.png" style="width:29px; height=29px; position: relative;
+    top: -35px;left: -1px;" alt=""></div>
+									<h3 id="hot" class="panel__block-title panel__block-title--alt">Гаряча
+										<br>пропозиція</h3>
+									<i class="icon panel__block-icon uk-overlay-scale"></i>
+									<p class="panel__block-descr">Найкращі пропозиції для всіх постійних клієнтів</p>
+								</a>
+								
+								<script>
+									var new_block = $('#plucha');
+									
+									$(".js_third_block").on('click',function(){
+										if($(this).attr('show_block')==1){
+											new_block.hide();
+											$(this).attr('show_block',0).css("background","white");
+										}else{
+											new_block.show();
+											$(this).attr('show_block',1).css("background","#ffd64a");
+										}
+									});
+									
+								</script>
+								
+								<a href="" data-slide="3" class="panel__block panel__block--hoverable panel__block--map uk-overlay-hover">
+									<h3 class="panel__block-title panel__block-title--alt">Карта
+										<br>відділень</h3>
+									<i class="icon panel__block-icon uk-overlay-scale"></i>
+									<p class="panel__block-descr">Оберіть зручне для вас відділення із нашой великої мережі</p>
+								</a>
+								<a href="" data-slide="4" class="panel__block panel__block--hoverable panel__block--academy uk-overlay-hover">
+									<h3 class="panel__block-title panel__block-title--alt">Академія
+										<br>SAT</h3>
+									<i class="icon panel__block-icon uk-overlay-scale"></i>
+									<p class="panel__block-descr">З нами ви легко розберетесь у всіх процесах</p>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div id="cabin" class="cabinet-link cabinet-link--alt">Зручний
+						<a href="" target="_blank">особистий кабінет</a>
+						<i class="icon icon--entry-accent-59-52"></i> надасть вам усі переваги постійного клієнта</div>
+					<div class="panel__container panel__container--main panel__container--main--misc">
+						<div id="cont_panel" class="row panel__container-row">
+							<div class="col-xs-12 col-lg-3">
+								<section id="panel_map" class="panel panel--map hidden-md-down">
+									<header class="panel__heading">
+										<div class="panel__heading-primary-content">
+											<i class="icon panel__icon"></i>
+											<h3 class="panel__title">Відділення</h3>
+										</div>
+									</header>
+									<div class="panel__map">
+										<img src="http://placehold.it/340x525" alt="" >
+									</div>
+									<footer class="panel__footer">
+										<div class="panel__footer-primary-content">Ваше відділення&nbsp;
+											<span class="num">№ 121</span>
+										</div>
+										<div class="panel__footer-secondary-content">
+											<a href="" class="btn btn--accent btn--outline btn--icon">
+												<i class="icon icon--arrow-right-light-grey"></i>
+											</a>
+										</div>
+									</footer>
+								</section>
+							</div>
+							<div class="col-xs-12 col-lg-3">
+								<section id="panel_news" class="panel panel--news">
+									<header class="panel__heading">
+										<div class="news panel__heading-primary-content">
+											<i class="icon panel__icon"></i>
+											<h3 class="panel__title">Новини</h3>
+										</div>
+									</header>
+									<ul class="panel__item-list">
+										<li class="panel__item panel__item--hoverable">
+											<small class="panel__item-sup-title">17 лютого 2016</small>
+											<strong class="panel__item-title">Кращий перевізник 2015</strong>
+											<div class="panel__item-text panel__item-text--line-2">Вже давно відомо, що читабельний зміст буде заважати зосередитись людині буде заважати зосередитись людині</div>
+											<div
+												class="panel__item-footer">
+												<span class="btn btn--icon">
+													<i class="icon panel__item-more-icon"></i>
+												</span>
+							</div>
+							<a href="" class="panel__item-cover-link"></a>
+							</li>
+							<li class="panel__item panel__item--hoverable">
+								<small class="panel__item-sup-title">17 лютого 2016</small>
+								<strong class="panel__item-title">Кращий перевізник 2015</strong>
+								<div class="panel__item-text panel__item-text--line-2">Вже давно відомо, що читабельний зміст буде заважати зосередитись людині</div>
+								<div class="panel__item-footer">
+									<span class="btn btn--icon">
+										<i class="icon panel__item-more-icon"></i>
+									</span>
+								</div>
+								<a href="" class="panel__item-cover-link"></a>
+							</li>
+							<li class="panel__item panel__item--hoverable">
+								<small class="panel__item-sup-title">17 лютого 2016</small>
+								<strong class="panel__item-title">Кращий перевізник 2015</strong>
+								<div class="panel__item-text panel__item-text--line-2">Вже давно відомо, що читабельний зміст буде заважати зосередитись людині</div>
+								<div class="panel__item-footer">
+									<span class="btn btn--icon">
+										<i class="icon panel__item-more-icon"></i>
+									</span>
+								</div>
+								<a href="" class="panel__item-cover-link"></a>
+							</li>
+							</ul>
+							</section>
+						</div>
+						<div class="col-xs-12 col-lg-6">
+							<section id="panel_partner" class="panel panel--partner">
+								<header class="panel__heading">
+									<div class="panel__heading-primary-content">
+										<i class="icon panel__icon"></i>
+										<h3 class="panel__title">Партнерам</h3>
+									</div>
+									<div id="partn" class="panel__heading-secondary-content">
+										<div class="btn btn--accent btn--raised btn--icon panel__prev">
+											<i class="icon icon--chevron-left"></i>
+										</div>
+										<div class="btn btn--accent btn--raised btn--icon panel__next">
+											<i class="icon icon--chevron-right"></i>
+										</div>
+									</div>
+								</header>
+								<div class="swiper-container panel__swiper-container">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<div style="background-image: url(assets/images/111.jpg);" class="panel__image">
+												<a href="">
+													<img src="assets/images/111.jpg" alt="" width="695" height="400" class="invisible">
+												</a>
+											</div>
+											<div id="item_panel" class="panel__item panel__item--hoverable">
+												<small class="panel__item-sup-title">17 лютого 2016</small>
+												<strong class="panel__item-title">Отримайте необхідну інформацію для партнерів компанії</strong>
+												
+												<div class="panel__item-text panel__item-text--line-2">Вже давно відомо, що читабельний зміст буде заважати зосередити, що читабельний зміст буде заважати зосередити</div>
+												<div id="partner1"
+													class="panel__item-footer">
+													<span class="btn btn--more btn--muted">Партнерам
+														<i class="icon icon--arrow-right-light-grey btn__icon--outline"></i>
+													</span>
+											</div>
+											<a href="" class="panel__item-cover-link"></a>
+										</div>
+									</div>
+								</div>
+						</div>
+						</section>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<div id="propoz_akcii" class="panel__container panel__container--main panel__container--main--banner m-b-0">
+			<div class="container-fluid">
+				<div id="propoz" class="row panel__container-row">
+					<div class="col-xs-12 col-lg-6">
+						<section class="panel panel--action">
+							<header class="panel__heading">
+								<div class="panel__heading-primary-content">
+									<i class="icon panel__icon"></i>
+									<h3 class="panel__title">Найкраща пропозиція</h3>
+								</div>
+							</header>
+							<div style="background-image: url(assets/images/3.jpg);" class="banner banner--h--465">
+								<a href="">
+									<img src="http://placehold.it/695x465" alt="" width="695" height="465" class="invisible">
+									<div class="banner__overlay-panel">
+										<h3 class="banner__title banner__title--size-1">Акція</h3>
+									</div>
+								</a>
+							</div>
+						</section>
+					</div>
+					<div class="col-xs-12 col-lg-6">
+						<section class="panel panel--action">
+							<header class="panel__heading">
+								<div class="panel__heading-primary-content">
+									<i class="icon panel__icon"></i>
+									<h3 class="panel__title">Акції для вас</h3>
+								</div>
+								<div id="partn" class="panel__heading-secondary-content">
+									<div class="btn btn--accent btn--outline btn--icon">
+										<i class="icon icon--arrow-right-light-grey"></i>
+									</div>
+								</div>
+							</header>
+							<div style="background-image: url(http://placehold.it/695x245);" class="banner banner--h--245">
+								<a href="">
+									<img src="http://placehold.it/695x245" alt="" width="695" height="245" class="invisible">
+									<div class="banner__overlay-panel banner__overlay-panel--right banner__overlay-panel--background">
+										<h3 class="banner__title banner__title--size-2 banner__title--alt">
+											<span class="small">Кожному&nbsp;клієнту</span> подарунок</h3>
+									</div>
+								</a>
+							</div>
+							<div class="row panel__container-row">
+								<div class="col-xs-6">
+									<div style="background-image: url(http://placehold.it/340x210);" class="banner banner--h--210">
+										<a href="">
+											<img src="http://placehold.it/340x210" alt="" width="340" height="210" class="invisible">
+											<div class="banner__overlay-panel banner__overlay-panel--top banner__overlay-panel--inverse">
+												<h3 class="banner__title banner__title--size-3 banner__title--alt">
+													<span class="small">Безкоштовне завантаження</span> у&nbsp;подарунок</h3>
+											</div>
+										</a>
+									</div>
+								</div>
+								<div class="col-xs-6">
+									<div style="background-image: url(http://placehold.it/340x210);" class="banner banner--h--210">
+										<a href="">
+											<img src="http://placehold.it/340x210" alt="" width="340" height="210" class="invisible">
+											<div class="banner__overlay-panel banner__overlay-panel--right banner__overlay-panel--inverse">
+												<h3 class="banner__title banner__title--size-4 banner__title--alt">Знижка 10%
+													<span class="small">на перевезення
+														<br>меблів у березні</span>
+												</h3>
+											</div>
+										</a>
+									</div>
+								</div>
+							</div>
+						</section>
+					</div>
+				</div>
+			</div>
+			<div class="panel__container-footer">
+				<div class="container-fluid button_akciya">
+					<button type="button" class="btn btn--more">Більше акцій
+						<i class="icon icon--arrow-down-grey"></i>
+					</button>
+				</div>
+			</div>
+		</div>
+		<div  id="akciya2" class="panel__container panel__container--main panel__container--main--banner m-b-0">
+			<div  id="akciya" class="container-fluid">
+				<div class="row panel__container-row">
+					<div class="col-xs-12 col-lg-3">
+						<section class="panel panel--action">
+							<header class="panel__heading">
+								<div class="panel__heading-primary-content">
+									<i class="icon panel__icon"></i>
+									<h3 class="panel__title">Найкраща пропозиція</h3>
+								</div>
+							</header>
+							<div style="background-image: url(http://placehold.it/695x465);" class="banner banner--h--465">
+								<a href="">
+									<img src="http://placehold.it/695x465" alt="" width="695" height="465" class="invisible">
+									<div class="banner__overlay-panel">
+										<h3 class="banner__title banner__title--size-1">Акція</h3>
+									</div>
+								</a>
+							</div>
+						</section>
+					</div>
+					<div class="col-xs-12 col-lg-3">
+						<section class="panel panel--action">
+							<header class="panel__heading">
+								<div class="panel__heading-primary-content">
+									<i class="icon panel__icon"></i>
+									<h3 class="panel__title">Найкраща пропозиція</h3>
+								</div>
+							</header>
+							<div style="background-image: url(http://placehold.it/695x465);" class="banner banner--h--465">
+								<a href="">
+									<img src="http://placehold.it/695x465" alt="" width="695" height="465" class="invisible">
+									<div class="banner__overlay-panel">
+										<h3 class="banner__title banner__title--size-1">Акція</h3>
+									</div>
+								</a>
+							</div>
+						</section>
+					</div>
+					<div class="col-xs-12 col-lg-3">
+						<section class="panel panel--action">
+							<header class="panel__heading">
+								<div class="panel__heading-primary-content">
+									<i class="icon panel__icon"></i>
+									<h3 class="panel__title">Найкраща пропозиція</h3>
+								</div>
+							</header>
+							<div style="background-image: url(http://placehold.it/695x465);" class="banner banner--h--465">
+								<a href="">
+									<img src="http://placehold.it/695x465" alt="" width="695" height="465" class="invisible">
+									<div class="banner__overlay-panel">
+										<h3 class="banner__title banner__title--size-1">Акція</h3>
+									</div>
+								</a>
+							</div>
+						</section>
+					</div>
+					<div class="col-xs-12 col-lg-3">
+						<section class="panel panel--action">
+							<header class="panel__heading">
+								<div class="panel__heading-primary-content">
+									<i class="icon panel__icon"></i>
+									<h3 class="panel__title">Найкраща пропозиція</h3>
+								</div>
+							</header>
+							<div style="background-image: url(http://placehold.it/695x465);" class="banner banner--h--465">
+								<a href="">
+									<img src="http://placehold.it/695x465" alt="" width="695" height="465" class="invisible">
+									<div class="banner__overlay-panel">
+										<h3 class="banner__title banner__title--size-1">Акція</h3>
+									</div>
+								</a>
+							</div>
+						</section>
+					</div>
+				</div>
+			</div>
+			<div class="panel__container-footer">
+				<div class="container-fluid button_akciya">
+					<button type="button" class="btn btn--more">Більше акцій
+						<i class="icon icon--arrow-down-grey"></i>
+					</button>
+				</div>
+			</div>
+		</div>
+		<div id="propoz_best" class="panel__container panel__container--main panel__container--main--banner m-b-0">
+			<div class="container-fluid">
+				<div id="best_propoz" class="row panel__container-row">
+					<div class="col-xs-12 col-lg-6">
+						<section class="panel panel--action">
+							<header class="panel__heading">
+								<div class="panel__heading-primary-content">
+									<i class="icon panel__icon"></i>
+									<h3 class="panel__title">Найкраща пропозиція</h3>
+								</div>
+							</header>
+							<div style="background-image: url(assets/images/nature.jpg);" class="banner banner--h--465">
+								<a href="">
+									<img src="http://placehold.it/695x465" alt="" width="695" height="465" class="invisible">
+									<div class="banner__overlay-panel">
+										<h3 class="banner__title banner__title--size-1">Акція</h3>
+									</div>
+								</a>
+							</div>
+						</section>
+					</div>
+					<div class="col-xs-12 col-lg-6">
+						<section class="panel panel--action">
+							<header class="panel__heading">
+								<div class="panel__heading-primary-content">
+									<i class="icon panel__icon"></i>
+									<h3 class="panel__title">Найкраща пропозиція</h3>
+								</div>
+							</header>
+							<div style="background-image: url(http://placehold.it/695x465);" class="banner banner--h--465">
+								<a href="">
+									<img src="http://placehold.it/695x465" alt="" width="695" height="465" class="invisible">
+									<div class="banner__overlay-panel">
+										<h3 class="banner__title banner__title--size-1">Акція</h3>
+									</div>
+								</a>
+							</div>
+						</section>
+					</div>
+				</div>
+			</div>
+			<div class="panel__container-footer">
+				<div class="container-fluid button_akciya">
+					<button type="button" class="btn btn--more">Більше акцій
+						<i class="icon icon--arrow-down-grey"></i>
+					</button>
+				</div>
+			</div>
+		</div>
+		<div  id="sat_recom" class="panel__container panel__container--main panel__container--main--recommend" >
+			<div id="recomend" class="container-fluid">
+				<section class="panel panel--recommend">
+					<header class="panel__heading">
+						<div class="panel__heading-primary-content">
+							<i class="icon panel__icon"></i>
+							<h3 class="panel__title">SAT рекомендує</h3>
+						</div>						
+					</header>
+					<div id="block_list" class="panel__block-list">
+						<a href="" class="panel__block block_x panel__block--doc">
+							<i class="icon panel__block-icon"></i>
+							<h3 class="panel__block-title">Документи</h3>
+							
+						</a>
+						<a href="" class="panel__block block_x panel__block--pack">
+							<i class="icon panel__block-icon"></i>
+							<h3 class="panel__block-title">Тарифи</h3>
+							
+						</a>
+						<a href="" class="panel__block block_x panel__block--trans">
+							<i class="icon panel__block-icon"></i>
+							<h3 class="panel__block-title">API</h3>
+							
+						</a>
+						
+					</div>
+					<div class="right_panel">
+						<div class="right_div">
+							<a href="" >
+								<div class="a_right"><img src="assets/images/svg/lock.svg" alt="" width="40" height="40" > <p>блокування <br>видачі</p></div>
+							</a>
+						</div>
+						<div class="right_div">
+							<a href="">
+								<div class="a_right"><img src="assets/images/svg/return_poddon.svg" alt="" width="40" height="50"><p>повернення <br>піддонів</p></div>
+							</a>
+						</div>							
+						<div class="right_div">
+							<a href="">
+								<div class="a_right"><img src="assets/images/svg/return_docs.svg" alt="" width="40" height="40"><p>повернення <br>документів</p></div>
+							</a>
+						</div>
+						<div class="right_div">
+							<a href="">
+								<div class="a_right"><img src="assets/images/svg/envelope.svg" alt="" width="40" height="40"><p>Накладений <br>платіж</p></div>
+							</a>
+						</div>
+					</div>
+					<div class="both"></div>
+					<div class="bottom_block1">
+						<a href="">
+								<div class="a_bottom"><img src="assets/images/svg/truck.svg" alt="" width="60" height="50"><p>замовлення виїзду</p></div>
+						</a>
+					</div>
+					<div class="bottom_block2">
+						<a href="">
+								<div class="a_bottom"><img src="assets/images/svg/delivery.svg" alt="" width="50" height="50"><p>замовлення доставки</p></div>
+						</a>
+					</div>
+				</section>
+			</div>
+		</div>
+		
+		</div>
+		<footer class="page__footer footer_ie">
+			<div class="mega-footer">
+				<div id="foot" class="container-fluid mega-footer__container">
+					<div class="mega-footer__logo"></div>
+					<h3 class="mega-footer__extra-heading hidden-md-down">Мапа сайту</h3>
+					<nav class="mega-footer__middle-section hidden-md-down">
+						<div class="mega-footer__section">
+							<h5 class="mega-footer__heading">Замовити</h5>
+							<ul class="mega-footer__link-list">
+								<li>
+									<a href="">Калькулятор</a>
+								</li>
+							</ul>
+						</div>
+						<div class="mega-footer__section">
+							<h5 class="mega-footer__heading">ТРЕКІНГ</h5>
+							<ul class="mega-footer__link-list">
+								<li>
+									<a href="">Відстежити вантаж</a>
+								</li>
+								<li>
+									<a href="">Замовлення</a>
+								</li>
+							</ul>
+						</div>
+						<div class="mega-footer__section">
+							<h5 class="mega-footer__heading">Надпоштові можливості</h5>
+							<ul class="mega-footer__link-list">
+								<li>
+									<a href="">Послуги</a>
+								</li>
+								<li>
+									<a href="">Академія</a>
+									<ul>
+										<li>
+											<a href="">Кейси</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+						<div class="mega-footer__section">
+							<h5 class="mega-footer__heading">Акції</h5>
+							<ul class="mega-footer__link-list">
+								<li>
+									<a href="">Найкращі пропозиції</a>
+								</li>
+								<li>
+									<a href="">Акції для вас</a>
+								</li>
+								<li>
+									<a href="">Ваші бонуси</a>
+								</li>
+							</ul>
+						</div>
+						<div class="mega-footer__section">
+							<h5 class="mega-footer__heading">Компанія SAT</h5>
+							<ul class="mega-footer__link-list">
+								<li>
+									<a href="">Легенда</a>
+								</li>
+								<li>
+									<a href="">Новини</a>
+								</li>
+							</ul>
+						</div>
+						<div class="mega-footer__section">
+							<h5 class="mega-footer__heading">Контакти</h5>
+							<ul class="mega-footer__link-list">
+								<li>
+									<a href="">Бізнес</a>
+								</li>
+								<li>
+									<a href="">Клієнти</a>
+								</li>
+								<li>
+									<a href="">Відділення</a>
+									<ul>
+										<li>
+											<a href="">Списком</a>
+										</li>
+										<li>
+											<a href="">На карті</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</nav>
+					<div class="mega-footer__spacer hidden-md-down"></div>
+					<div class="mega-footer__bottom-section">
+						<div class="mega-footer__section">
+							<p class="mega-footer__copyright">© 2016 транспортна компанія «САТ»
+								<br>
+								<span>вул. Гродненська, 32, м. Київ, Україна</span>
+							</p>
+						</div>
+						<div class="mega-footer__section mega-footer__section--phone">
+							<strong class="mega-footer__phone">0 800 502 25 25</strong>
+							<span class="mega-footer__phone-hint">Безкоштовна гаряча лінія</span>
+						</div>
+						<div class="mega-footer__section mega-footer__section--social">
+							<a href="" class="mega-footer__social-btn mega-footer__social-btn--facebook">
+								<i class="icon"></i>
+							</a>
+							<a href="" class="mega-footer__social-btn mega-footer__social-btn--vkontakte">
+								<i class="icon"></i>
+							</a>
+							<a href="" class="mega-footer__social-btn mega-footer__social-btn--twitter">
+								<i class="icon"></i>
+							</a>
+							<a href="" class="mega-footer__social-btn mega-footer__social-btn--youtube">
+								<i class="icon"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		</div>
+		
+	</body>
+
+</html>
+

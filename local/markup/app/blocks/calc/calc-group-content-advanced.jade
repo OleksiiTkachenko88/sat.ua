@@ -1,0 +1,54 @@
+.uk-accordion.uk-accordion--calc(data-uk-accordion='{collapse: false}')
+	h3.uk-accordion-title Послуги виїзду
+	.uk-accordion-content
+		| 1
+
+	h3.uk-accordion-title Послуги видачі
+	.uk-accordion-content
+		| 2
+
+	h3.uk-accordion-title Послуги пакування
+	.uk-accordion-content
+		.uk-form
+			.uk-grid.uk-grid-width-small-1-1.uk-grid-width-medium-1-1.uk-grid-width-large-1-3.uk-grid-width-xlarge-1-3
+				div.col
+					.uk-form-row
+						| <label class="uk-form-checkbox"><input type="checkbox" checked value=""><span class="uk-form-checkbox__text">Упаковка в гофроящик</span></label>
+					.uk-form-row
+						| <label class="uk-form-checkbox"><input type="checkbox" checked value=""><span class="uk-form-checkbox__text">Стрейчування</span></label>
+				div.col
+					.uk-form-row
+						| <label class="uk-form-checkbox"><input type="checkbox" checked value=""><span class="uk-form-checkbox__text">Палетування</span></label>
+					.uk-form-row
+						| <label class="uk-form-checkbox"><input type="checkbox" disabled value=""><span class="uk-form-checkbox__text">Упаковка документів</span></label>
+				div.col
+					.uk-form-row
+						| <label class="uk-form-checkbox"><input type="checkbox" value=""><span class="uk-form-checkbox__text">Стягування стяжкою</span></label>
+
+	h3.uk-accordion-title Зворотня доставка
+	.uk-accordion-content
+		.uk-form
+			.uk-grid.uk-grid-width-small-1-1.uk-grid-width-medium-1-1.uk-grid-width-large-1-3.uk-grid-width-xlarge-1-3
+				div.col
+					.uk-form-row
+						.uk-form-controls
+							| <label class="uk-form-checkbox"><input type="checkbox" checked value=""><span class="uk-form-checkbox__text">Піддон</span></label>
+							input.uk-form-width-mini.text-xs-center(type="text", value="3")
+							span.uk-form-suffix шт.
+				div.col
+					.uk-form-row
+						| <label class="uk-form-checkbox"><input type="checkbox" value=""><span class="uk-form-checkbox__text">Документи</span></label>
+				div.col
+					.uk-form-row
+						| <label class="uk-form-checkbox"><input type="checkbox" checked value=""><span class="uk-form-checkbox__text">Наложенний платіж</span></label>
+
+	.declaration__container
+		include ../declaration/declaration-blank
+		//- img.declaration__img(src="assets/uploads/declaration.png", alt="", width="1326", height="486")
+		.declaration__footer
+			span.declaration__footer-title
+				<span class="text-accent">Ваша заявка</span> італійський різний фурнітур
+			span.declaration__footer-actions
+				a.download.icon.icon--download-blue(href="")
+				a.email.icon.icon--email-blue(href="")
+				a.print.icon.icon--print-blue(href="")
