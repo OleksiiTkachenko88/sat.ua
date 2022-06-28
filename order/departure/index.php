@@ -1,7 +1,7 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetPageProperty("description", "Виїзд за вантажем до відправника - Транспортна компанія “САТ” | ВИГІДНО! НАДІЙНО! ВЧАСНО! ☎ 066 830 99 09; 098 830 99 09; 073 830 99 09 (вартість дзвінків згідно тарифів вашого оператора)");
-$APPLICATION->SetPageProperty("title", "Виїзд за вантажем до відправника | Транспортна компанія “САТ”");
+$APPLICATION->SetPageProperty("title", "-388Виїзд за вантажем до відправника | Транспортна компанія “САТ”");
 $APPLICATION->SetTitle("Замовити виїзд за вантажем до відправника");
 
 $offices = '[]';
@@ -19,7 +19,6 @@ if ($tmp) {
 		$offices = json_encode($tmp2->data);
 	}
 }
-
 
 ?>
     <script>
@@ -417,7 +416,7 @@ if ($tmp) {
                                             <label><?=GetMessage("TARIFF");?></label>
                                             <div class="field-wrap type-block">
                                                 <!-- Added  class for block and select id for ajax results -->
-                                                <select name="type" id="type">
+                                                <select name="type" id="type" data-role="none">
                                                     <option data-type="corr" ><?=GetMessage("GRUZ_TYPE_1");?></option>
                                                     <option data-type="load" ><?=GetMessage("GRUZ_TYPE_2");?></option>
                                                     <option data-type="send" ><?=GetMessage("GRUZ_TYPE_3");?></option>
@@ -430,7 +429,7 @@ if ($tmp) {
                                             <label><?=GetMessage("GRUZ_SUBTYPE");?></label>
                                             <div class="field-wrap  subtype-block">
                                                 <!-- Added class for block and select id for  ajax results -->
-                                                <select  name="subType" id="subtype">
+                                                <select  name="subType" id="subtype" data-role="none">
                                                     <option><?=GetMessage("GRUZ_TYPE_1");?></option>
                                                 </select>
                                             </div>
@@ -1197,7 +1196,8 @@ if ($tmp) {
 
 <script src="<?=SITE_TEMPLATE_PATH?>/js/date-lib.js?20200712"></script>
 <script src="<?=SITE_TEMPLATE_PATH?>/js/calc_old.js?20210112"></script>
-<script src="<?=SITE_TEMPLATE_PATH?>/js/script_old.js?20201230"></script>
+<script src="<?=SITE_TEMPLATE_PATH?>/js/script_old.js?20220628-7"></script>
+
 
 
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
