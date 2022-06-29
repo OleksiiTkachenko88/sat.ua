@@ -1172,7 +1172,7 @@ if ($tmp) {
                                 </div>
                         <div class="submit-wrapper text-center">
                             <div class="loader"></div>
-                            <input type="submit" class="submit-button sender-submit" value="<?=GetMessage("COUNT");?>">
+                            <input type="submit" class="submit-button sender-submit"  value="<?=GetMessage("COUNT");?>">                          
 							<input type="submit" class="submit-button departure-order" style="display:none"  value="<?=GetMessage("DEPARTURE_ORDER");?>">
                         </div>
 
