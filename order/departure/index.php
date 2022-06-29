@@ -441,6 +441,18 @@ if ($tmp) {
                                                 <input type="hidden" class="department-id" id="cargoDescriptionList-ref" name="cargoDescriptionListRef">  
                                                 </div>
                                         </div>
+                                        <div class="main-info-row gruzType" style="display:none"> 
+                                            <label><?=GetMessage("GRUZ_TYPE_AUTO");?></label>
+                                            <div class="field-wrap type-block">
+                                                <!-- Added  class for block and select id for ajax results -->
+                                                <select name="type_auto" id="type_auto">
+                                                    <option data-type="standard" ><?=GetMessage("GRUZ_TYPE_AUTO_1");?></option>
+                                                    <option data-type="top" ><?=GetMessage("GRUZ_TYPE_AUTO_2");?></option>
+                                                    <option data-type="side" ><?=GetMessage("GRUZ_TYPE_AUTO_3");?></option>
+                                                    <option data-type="hydro" ><?=GetMessage("GRUZ_TYPE_AUTO_4");?></option>
+                                                </select>
+                                            </div>
+                                        </div>
                                         <!-- changed type input to number for auto validate-->
                                         <div class="main-info-row">
                                             <label><?=GetMessage("CALC_COUNT");?></label>
