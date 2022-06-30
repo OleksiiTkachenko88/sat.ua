@@ -1,7 +1,7 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetPageProperty("description", "Виїзд за вантажем до відправника - Транспортна компанія “САТ” | ВИГІДНО! НАДІЙНО! ВЧАСНО! ☎ 066 830 99 09; 098 830 99 09; 073 830 99 09 (вартість дзвінків згідно тарифів вашого оператора)");
-$APPLICATION->SetPageProperty("title", "-+5599Виїзд за вантажем до відправника | Транспортна компанія “САТ”");
+$APPLICATION->SetPageProperty("title", "00-+5599Виїзд за вантажем до відправника | Транспортна компанія “САТ”");
 $APPLICATION->SetTitle("Замовити виїзд за вантажем до відправника");
 
 $offices = '[]';
@@ -1208,7 +1208,7 @@ if ($tmp) {
 
 <script src="<?=SITE_TEMPLATE_PATH?>/js/date-lib.js?20200712"></script>
 <script src="<?=SITE_TEMPLATE_PATH?>/js/calc_old.js?20210112"></script>
-<script src="<?=SITE_TEMPLATE_PATH?>/js/script_old.js?20201230"></script>
+<script src="<?=SITE_TEMPLATE_PATH?>/js/script_old.js?20201230-229"></script>
 
 
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
