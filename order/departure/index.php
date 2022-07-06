@@ -63,6 +63,12 @@ if ($tmp) {
     </script>
 
     <style>
+        .error-depature {
+              padding-top: 15px;
+              color: red;
+              font-size: 14px;
+              display: none;
+        }
         .calculate-wrapper .delivery-row .phone .jq-selectbox__select{border:1px solid #fff;width:85px;padding:0 16px 0 6px}
         .calculate-wrapper .delivery-row .phone .jq-selectbox__trigger{right:6px}
         .calculate-wrapper .delivery-row .phone .jq-selectbox__trigger:after{font-size:13px;color:#757575}
@@ -76,7 +82,7 @@ if ($tmp) {
         .calculate-wrapper .delivery-row .phone .jq-selectbox__trigger:after{content:"\f107";font-family:FontAwesome;font-size:20px;line-height:34px;display:inline-block;color:#404041}
         .calculate-wrapper .delivery-row .phone .jq-selectbox__dropdown{min-width:100%!important;border:1px solid #acacac;border-top:none;background:#fff;overflow:hidden;margin-top:-1px}
         .calculate-wrapper .delivery-row .phone .jq-selectbox__dropdown ul{max-height:125px}
-        .calculate-wrapper .delivery-row .phone .jq-selectbox__dropdown li{line-height:25px;font-size:14px;color:#404041;min-width:48px;padding:0 13px;font-family:"SFUIDisplay", sans-serif;display:block;cursor:pointer;-webkit-transition:all 0.3s;-moz-transition:all 0.3s;-o-transition:all 0.3s;transition:all 0.3s}
+        .calculate-wrapper .delivery-row .phone .jq-selectbox__dropdown li{line-height:25px;font-size:16px;color:#404041;min-width:48px;padding:0 13px;font-family:"SFUIDisplay", sans-serif;display:block;cursor:pointer;-webkit-transition:all 0.3s;-moz-transition:all 0.3s;-o-transition:all 0.3s;transition:all 0.3s}
         .calculate-wrapper .delivery-row .phone .jq-selectbox__dropdown li:hover{background:#ffd64a}
         .calculate-wrapper .delivery-row .phone .jq-selectbox__dropdown li.selected{background:#ffd64a}
 
@@ -1111,25 +1117,25 @@ if ($tmp) {
                         <div class="section-from">
                         <div class="sender-info">
                         <div class="delivery-row">    
-											<div class="address" style=""><img src="<?=SITE_TEMPLATE_PATH?>/img/icons/sender-adr.png" alt="">
+											<div class="address" style="display: none;"><img src="<?=SITE_TEMPLATE_PATH?>/img/icons/sender-adr.png" alt="">
                                             <input type="text" id="sender-address" class="direction-field active" name="sender-address"
                                                placeholder="<?=GetMessage("DEPARTURE_ADDRESS");?>" >
                                                                                    
                                             </div>
-                                            <div class="phone" style=""><img src="<?=SITE_TEMPLATE_PATH?>/img/icons/icon-gray15.png" alt="">
+                                            <div class="phone" style="display: none;"><img src="<?=SITE_TEMPLATE_PATH?>/img/icons/icon-gray15.png" alt="">
                                                 <input id="sender-org" class="sender-phone" autocomplete="on" type="text"  name="senderOrg" onkeyup="this.value=this.value.replace(/[^0-9.]/ig,'')"
 													placeholder="<?=GetMessage("DEPARTURE_ORG");?>">
                                                     <input type="hidden" class="department-id" id="sender-org-ref" name="senderOrgRef">
                                              </div>  
-                                            <div class="person" style=""><img src="<?=SITE_TEMPLATE_PATH?>/img/icons/sender-man.png" alt="">
+                                            <div class="person" style="display: none;"><img src="<?=SITE_TEMPLATE_PATH?>/img/icons/sender-man.png" alt="">
                                                 <input id="sender-person" class="sender-person" autocomplete="off" type="text"  name="senderPerson"
 													placeholder="<?=GetMessage("DEPARTURE_PERSON");?>">
                                             </div>
-											<div class="phone" style=""><img src="<?=SITE_TEMPLATE_PATH?>/img/icons/sender-phone.png" alt="">
+											<div class="phone" style="display: none;"><img src="<?=SITE_TEMPLATE_PATH?>/img/icons/sender-phone.png" alt="">
                                                 <input id="sender-phone" class="sender-phone" autocomplete="off" type="text"  name="senderPhone"
 													placeholder="<?=GetMessage("DEPARTURE_PHONE");?>">
                                             </div>                                                                                                                        
-											   <div class="phone" style=""><img src="<?=SITE_TEMPLATE_PATH?>/img/icons/icon-gray17.png" alt="кпкфупукпфпфпфук">
+											   <div class="phone" style="display: none;"><img src="<?=SITE_TEMPLATE_PATH?>/img/icons/icon-gray17.png" alt="кпкфупукпфпфпфук">
                                                 <select name="paymentMethod" id="paymentMethod">                                               
 													<option>💶Відправник за Готівку</option>
                                                     <option>🧾Відправник Безготівка</option>
@@ -1165,19 +1171,16 @@ if ($tmp) {
                               </ul>
                             </span>
                           </button>
-                        </div>                                                       					
-                                             </div>
+                        </div>                                                                            					
+                        </div>
                         </div>
                     </div> 
                     </div>  
                             <div class="submit-wrapper text-center">
-                            <div class="loader"></div>
+                            <div class="error-depature">ergsegerger</div> 
+                            
                             <input type="submit" class="submit-button sender-submit"  value="<?=GetMessage("COUNT");?>">                          
 							<input type="submit" class="submit-button departure-order" style="display:none"  value="<?=GetMessage("DEPARTURE_ORDER");?>">
-                        
-                                         
-
-
                     </div>
                 </div>
             </div>
