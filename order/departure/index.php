@@ -1,7 +1,7 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetPageProperty("description", "Виїзд за вантажем до відправника - Транспортна компанія “САТ” | ВИГІДНО! НАДІЙНО! ВЧАСНО! ☎ 066 830 99 09; 098 830 99 09; 073 830 99 09 (вартість дзвінків згідно тарифів вашого оператора)");
-$APPLICATION->SetPageProperty("title", "20220701-9Виїзд за вантажем до відправника | Транспортна компанія “САТ”");
+$APPLICATION->SetPageProperty("title", "Виїзд за вантажем до відправника | Транспортна компанія “САТ”");
 $APPLICATION->SetTitle("Замовити виїзд за вантажем до відправника");
 
 $offices = '[]';
@@ -565,7 +565,7 @@ if ($tmp) {
     margin-left: 1%; /* Отступы слева от элемента */
    }
   </style>
-								<div class="pidyom"><strong><a href="https://www.sat.ua/upload/sat_doc/Price_new.pdf">Деталі умов виїзду за посиланням.</a></strong></div>
+								<div class="pidyom"><strong><a href="https://www.sat.ua/upload/sat_doc/Price_new.pdf" target="_blank">Деталі умов виїзду за посиланням.</a></strong></div>
                                 <div class="parcel-options-info" style="display:none">
                                     <div class="parcel-block-title">
                                         <?=GetMessage("SERVICES");?>
@@ -1198,9 +1198,9 @@ if ($tmp) {
 
 <? require("../calculation/modalDepartureSuccess.php"); ?>
 
-<script src="<?=SITE_TEMPLATE_PATH?>/js/date-lib.js?20200712"></script>
-<script src="<?=SITE_TEMPLATE_PATH?>/js/calc_old.js?20220701-9"></script>
-<script src="<?=SITE_TEMPLATE_PATH?>/js/script_old.js?20220701-9"></script>
+<script src="<?=SITE_TEMPLATE_PATH?>/js/date-lib.js?20220706"></script>
+<script src="<?=SITE_TEMPLATE_PATH?>/js/calc_old.js?20220706"></script>
+<script src="<?=SITE_TEMPLATE_PATH?>/js/script_old.js?20220706"></script>
 
 
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
