@@ -1,7 +1,7 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetPageProperty("description", "Виїзд за вантажем до відправника - Транспортна компанія “САТ” | ВИГІДНО! НАДІЙНО! ВЧАСНО! ☎ 066 830 99 09; 098 830 99 09; 073 830 99 09 (вартість дзвінків згідно тарифів вашого оператора)");
-$APPLICATION->SetPageProperty("title", "00-+5599Виїзд за вантажем до відправника | Транспортна компанія “САТ”");
+$APPLICATION->SetPageProperty("title", "20220701-9Виїзд за вантажем до відправника | Транспортна компанія “САТ”");
 $APPLICATION->SetTitle("Замовити виїзд за вантажем до відправника");
 
 $offices = '[]';
@@ -63,30 +63,31 @@ if ($tmp) {
     </script>
 
     <style>
-        .calculate-wrapper .delivery-row .phone .jq-selectbox__select{border:1px solid #fff;width:85px;padding:0 14px 0 6px}
+        .calculate-wrapper .delivery-row .phone .jq-selectbox__select{border:1px solid #fff;width:85px;padding:0 16px 0 6px}
         .calculate-wrapper .delivery-row .phone .jq-selectbox__trigger{right:6px}
         .calculate-wrapper .delivery-row .phone .jq-selectbox__trigger:after{font-size:13px;color:#757575}
         .calculate-wrapper .delivery-row .phone .jq-selectbox__dropdown li{padding:0 6px}
         .calculate-wrapper .delivery-row .phone select{width:100%;text-indent:0.01px;padding-right:20px !important;background-image:url("../img/icons/arrow_select.png");background-position:right 8px center;background-repeat:no-repeat}
         .calculate-wrapper .delivery-row .phone .jq-selectbox{vertical-align:top}
-        .calculate-wrapper .delivery-row .phone .jq-selectbox__select{width:calc(100% + 52px); display:block;line-height:34px;height:36px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;font-size:14px;color:#404041;background:#fff;outline:none;border:1px solid #acacac;padding:0px 25px 0 13px;font-family:"SFUIDisplay", sans-serif;cursor:pointer;overflow:hidden}
+        .calculate-wrapper .delivery-row .phone .jq-selectbox__select{width:100%; display:block;line-height:34px;height:36px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;font-size:16px;color:#404041;background:#fff;outline:none;border:1px solid #acacac;padding:0px 25px 0 13px;font-family:"SFUIDisplay", sans-serif;cursor:pointer;overflow:hidden}
         .calculate-wrapper .delivery-row .phone .jq-selectbox__select .jq-selectbox__select-text{width:100% !important}
         .calculate-wrapper .delivery-row .phone .jqselect.opened .jq-selectbox__select{border:1px solid #acacac}
         .calculate-wrapper .delivery-row .phone .jq-selectbox__trigger{position:absolute;top:0px;height:34px;right:10px;line-height:34px}
         .calculate-wrapper .delivery-row .phone .jq-selectbox__trigger:after{content:"\f107";font-family:FontAwesome;font-size:20px;line-height:34px;display:inline-block;color:#404041}
-        .calculate-wrapper .delivery-row .phone .jq-selectbox__dropdown{min-width:calc(100% + 52px)!important;border:1px solid #acacac;border-top:none;background:#fff;overflow:hidden;margin-top:-1px}
+        .calculate-wrapper .delivery-row .phone .jq-selectbox__dropdown{min-width:100%!important;border:1px solid #acacac;border-top:none;background:#fff;overflow:hidden;margin-top:-1px}
         .calculate-wrapper .delivery-row .phone .jq-selectbox__dropdown ul{max-height:125px}
         .calculate-wrapper .delivery-row .phone .jq-selectbox__dropdown li{line-height:25px;font-size:14px;color:#404041;min-width:48px;padding:0 13px;font-family:"SFUIDisplay", sans-serif;display:block;cursor:pointer;-webkit-transition:all 0.3s;-moz-transition:all 0.3s;-o-transition:all 0.3s;transition:all 0.3s}
         .calculate-wrapper .delivery-row .phone .jq-selectbox__dropdown li:hover{background:#ffd64a}
         .calculate-wrapper .delivery-row .phone .jq-selectbox__dropdown li.selected{background:#ffd64a}
 
-		.calculate-wrapper .section-from{float: left; width: 100%;  position: relative; z-index: 999;}
+		.calculate-wrapper .section-from{float: left; width: 100%;  position: relative; z-index: 1;}
 		.calculate-wrapper .direction-from, .calculate-wrapper .direction-to{float: left; width: 50%; position: relative; background: #ffd64a; border-bottom:1px solid #ACACAC}
 		.calculate-wrapper .directions-row .direction-item .icon-dir img{max-width:26px; vertical-align: middle;}
 		.calculate-wrapper .section-from .sender-info{background:#fff;}
 		.calculate-wrapper .section-from .sender-info img{
 		display: inline-block;
 		max-height: 24px;
+        max-width: 24px;
 		vertical-align: top;
 		margin-top: 6px;
 		margin-right: 3px;
@@ -97,7 +98,7 @@ if ($tmp) {
         
 
 		.calculate-wrapper .section-from .sender-info{float: left;   width: 100%;    text-align: left;}
-        .calculate-wrapper .section-from .sender-info .address, .calculate-wrapper .section-from .sender-info .person, .calculate-wrapper .section-from .sender-info .phone{display: inline-block; width:33%; padding: 7px 0 7px 10px; min-width:244px;}
+        .calculate-wrapper .section-from .sender-info .address, .calculate-wrapper .section-from .sender-info .person, .calculate-wrapper .section-from .sender-info .phone{display: inline-flex; width:33%; padding: 7px 0 7px 10px; min-width:244px;}
 		.calculate-wrapper .section-from .sender-info .address input[type="text"], .calculate-wrapper .section-from .sender-info  .person input[type="text"], .calculate-wrapper .section-from .sender-info .phone input[type="text"]{
 		display: inline-block;
 		vertical-align: top;
@@ -132,17 +133,18 @@ if ($tmp) {
                 width:calc(100% - 45px);
                 font-size: 16px;
             }
-            .calculate-wrapper .delivery-row .jq-selectbox__select{min-width:calc(100% - 45px);font-size: 16px;}
+            .calculate-wrapper .delivery-row .jq-selectbox__select{min-width:calc(100% - 50px);font-size: 16px;}
             .calculate-wrapper .directions-row .direction-item .direction-field{width:90%;font-size:16px}  
             .calculate-wrapper .wrapper-parcel-info input[type="text"],.calculate-wrapper .wrapper-parcel-info input[type="number"],.calculate-wrapper .wrapper-parcel-info input[type="date"],.calculate-wrapper .wrapper-parcel-info input[type="time"],.calculate-wrapper .wrapper-parcel-info select{font-size:16px}
           
 		}
 		@media (max-width: 990px){
 			.calculate-wrapper .section-from .sender-info .address,.calculate-wrapper .section-from .sender-info .person, .calculate-wrapper .section-from .sender-info .phone{ width:50%; float:left;}
-		}
+
+        }
 		@media (max-width: 600px){
-			.calculate-wrapper .section-from .sender-info .address, .calculate-wrapper .section-from .sender-info .person, .calculate-wrapper .section-from .sender-info .phone  {float:left; width:100%; padding: 7px 0 7px 5px; min-width:244px;}
-		    .calculate-wrapper .delivery-row select, .calculate-wrapper .directions-row .direction-item .direction-field {width:100%;font-size:16px} 
+			.calculate-wrapper .section-from .sender-info .address, .calculate-wrapper .section-from .sender-info .person, .calculate-wrapper .section-from .sender-info .phone, .calculate-wrapper .delivery-row  select  {float:left; width:100%; padding: 7px 0 7px 5px; min-width:244px;}
+		    .calculate-wrapper .directions-row .direction-item .direction-field {width:100%;font-size:16px} 
            
         }	
         @media (max-width: 733px){			
@@ -164,9 +166,9 @@ if ($tmp) {
    			 line-height: 38px;
 			 font-size: 16px;
             }
-            .calculate-wrapper .delivery-row .phone .jq-selectbox__select{min-width:calc(100% + 125px); height: 40px;};
-            .calculate-wrapper .delivery-row .phone .jq-selectbox__dropdown{min-width:calc(100% + 90px)!important;border:1px solid #acacac;border-top:none;background:#fff;overflow:hidden;margin-top:-1px}
-            .calculate-wrapper .delivery-row .phone .jq-selectbox__dropdown li{min-width:calc(100% + 73px);}
+            .calculate-wrapper .delivery-row .phone .jq-selectbox__select{min-width:calc(100% + 100px); height: 40px;};
+            .calculate-wrapper .delivery-row .phone .jq-selectbox__dropdown{min-width:calc(100% + 100px)!important;border:1px solid #acacac;border-top:none;background:#fff;overflow:hidden;margin-top:-1px}
+            .calculate-wrapper .delivery-row .phone .jq-selectbox__dropdown li{min-width:calc(100% + 100px);}
             
 
             
@@ -179,11 +181,11 @@ if ($tmp) {
 			.calculate-wrapper .delivery-row .phone .jq-selectbox__select, .calculate-wrapper .section-from .sender-info .address input[type="text"], .calculate-wrapper .section-from .sender-info  .person input[type="text"], .calculate-wrapper .section-from .sender-info .phone input[type="text"]{
 			height: 45px;
    			line-height: 43px;
-			font-size: 14px;
+			font-size: 16px;
 			}
-            .calculate-wrapper .delivery-row .phone .jq-selectbox__select{min-width:calc(100% + 210px)};
-            .calculate-wrapper .delivery-row .phone .jq-selectbox__dropdown{min-width:calc(100% + 185px)!important;border:1px solid #acacac;border-top:none;background:#fff;overflow:hidden;margin-top:-1px}
-            .calculate-wrapper .delivery-row .phone .jq-selectbox__dropdown li{min-width:calc(100% + 158px);}
+            .calculate-wrapper .delivery-row .phone .jq-selectbox__select{min-width:calc(100% + 100px)};
+            .calculate-wrapper .delivery-row .phone .jq-selectbox__dropdown{min-width:calc(100% + 100px)!important;border:1px solid #acacac;border-top:none;background:#fff;overflow:hidden;margin-top:-1px}
+            .calculate-wrapper .delivery-row .phone .jq-selectbox__dropdown li{min-width:calc(100% + 75px);}
 		}
 	</style>
 
@@ -265,8 +267,7 @@ if ($tmp) {
                                 </div>                                
                                 <div class="delivery-row wrapper-parcel-info">
                                     <div class="delivery-item clearfix">
-
-                                       <div class="time-date-table">
+                                        <div class="time-date-table">
 											<div class="tariff" ><img src="<?=SITE_TEMPLATE_PATH?>/img/icons/icon-gray17.png" alt="">
                                                 <select name="fromDir-delivery-type" id="fromDir-delivery-type">
 													<?=$departureConditionsOptions?>
@@ -278,7 +279,7 @@ if ($tmp) {
                                             </div>
                                             <div class="date"><img src="<?=SITE_TEMPLATE_PATH?>/img/icons/icon-gray16.png" alt="">
                                                 <input id="datepicker1" class="pick-field" readonly="true" autocomplete="off" type="text"  name="fromDate">
-                                                <input id="datefield1" class="pick-field" type="date" name="date2">
+                                                <input id="datefield1" class="pick-field" type="date" name="date2">                                               
                                             </div>
 											<div class="time fromTime" style="display:none;"><img src="<?=SITE_TEMPLATE_PATH?>/img/icons/icon-gray18.png" alt="">
                                                 <?=GetMessage("FROM_TIME");?>
@@ -373,14 +374,7 @@ if ($tmp) {
                                                 </select>
                                                 <input type="time" step="300" name="fromTimeE">
                                             </div>
-
-
-
-
-
-
-
-										   <div class="date" style="display:none"><img src="<?=SITE_TEMPLATE_PATH?>/img/icons/icon-gray16.png" alt="">
+										    <div class="date" style="display:none"><img src="<?=SITE_TEMPLATE_PATH?>/img/icons/icon-gray16.png" alt="">
                                                 <input id="datepicker2" type="text" readonly="readonly" class="pick-field"  name="toDate">
                                                 <input id="datefield2" class="pick-field" type="date"   name="toDate2">
                                             </div>
@@ -395,26 +389,19 @@ if ($tmp) {
                                                     <option>09:00</option>
 												</select>
 												</div>
-
-
-
-
-
-
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-
-                            <div class="wrapper-parcel-info clearfix">
-                                <div class="parcel-main-info clearfix">
-                                    <div class="parcel-block-title">
+                                <div class="wrapper-parcel-info clearfix">
+                                    <div class="parcel-main-info clearfix">
+                                        <div class="parcel-block-title">
                                         <?=GetMessage("ENTER_GRUZ_TYPE");?>
-                                    </div>
-                                    <div class="main-info-item">
-                                        <div class="main-info-row">
-                                            <label><?=GetMessage("TARIFF");?></label>
-                                            <div class="field-wrap type-block">
+                                        </div>
+                                        <div class="main-info-item">
+                                            <div class="main-info-row">
+                                                <label><?=GetMessage("TARIFF");?></label>
+                                                <div class="field-wrap type-block">
                                                 <!-- Added  class for block and select id for ajax results -->
                                                 <select name="type" id="type">
                                                     <option data-type="corr" ><?=GetMessage("GRUZ_TYPE_1");?></option>
@@ -423,9 +410,9 @@ if ($tmp) {
                                                     <option data-type="tire" ><?=GetMessage("GRUZ_TYPE_4");?></option>
                                                     <option data-type="cargo" ><?=GetMessage("GRUZ_TYPE_5");?></option>
                                                 </select>
-                                            </div>
+                                                </div>
                                         </div>
-                                        <div class="main-info-row ">
+                                        <div class="main-info-row " style="display:none">
                                             <label><?=GetMessage("GRUZ_SUBTYPE");?></label>
                                             <div class="field-wrap  subtype-block">
                                                 <!-- Added class for block and select id for  ajax results -->
@@ -433,13 +420,6 @@ if ($tmp) {
                                                     <option><?=GetMessage("GRUZ_TYPE_1");?></option>
                                                 </select>
                                             </div>
-                                        </div>
-                                        <div class="main-info-row gruzType" style="display:none"> 
-                                            <label><?= GetMessage("GRUZ_TYPE"); ?></label>
-                                                <div class="field-wrap type-block">
-                                                <input id="cargoDescriptionList" type="text"/>
-                                                <input type="hidden" class="department-id" id="cargoDescriptionList-ref" name="cargoDescriptionListRef">  
-                                                </div>
                                         </div>
                                         <div class="main-info-row gruzType" style="display:none"> 
                                             <label><?=GetMessage("GRUZ_TYPE_AUTO");?></label>
@@ -453,6 +433,13 @@ if ($tmp) {
                                                 </select>
                                             </div>
                                         </div>
+                                        <div class="main-info-row gruzType" style="display:none"> 
+                                            <label><?= GetMessage("GRUZ_TYPE"); ?></label>
+                                                <div class="field-wrap type-block">
+                                                <input id="cargoDescriptionList" type="text"/>
+                                                <input type="hidden" class="department-id" id="cargoDescriptionList-ref" name="cargoDescriptionListRef">  
+                                                </div>
+                                        </div>                                       
                                         <!-- changed type input to number for auto validate-->
                                         <div class="main-info-row">
                                             <label><?=GetMessage("CALC_COUNT");?></label>
@@ -1119,39 +1106,39 @@ if ($tmp) {
                                 <li><a href="javascript:window.print()"><img src="<?=SITE_TEMPLATE_PATH?>/img/icons/icon-blue3.png" alt=""></a></li>
                             </ul>
                         </div> 
+                        </div>                        
                         <div class="calculate-wrapper">
                         <div class="section-from">
                         <div class="sender-info">
                         <div class="delivery-row">    
-											<div class="address" style="display:none"><img src="<?=SITE_TEMPLATE_PATH?>/img/icons/sender-adr.png" alt="">
+											<div class="address" style=""><img src="<?=SITE_TEMPLATE_PATH?>/img/icons/sender-adr.png" alt="">
                                             <input type="text" id="sender-address" class="direction-field active" name="sender-address"
                                                placeholder="<?=GetMessage("DEPARTURE_ADDRESS");?>" >
                                                                                    
                                             </div>
-                                            <div class="phone" style="display:none"><img src="<?=SITE_TEMPLATE_PATH?>/img/icons/icon-gray15.png" alt="">
+                                            <div class="phone" style=""><img src="<?=SITE_TEMPLATE_PATH?>/img/icons/icon-gray15.png" alt="">
                                                 <input id="sender-org" class="sender-phone" autocomplete="on" type="text"  name="senderOrg" onkeyup="this.value=this.value.replace(/[^0-9.]/ig,'')"
 													placeholder="<?=GetMessage("DEPARTURE_ORG");?>">
                                                     <input type="hidden" class="department-id" id="sender-org-ref" name="senderOrgRef">
                                              </div>  
-                                            <div class="person" style="display:none"><img src="<?=SITE_TEMPLATE_PATH?>/img/icons/sender-man.png" alt="">
+                                            <div class="person" style=""><img src="<?=SITE_TEMPLATE_PATH?>/img/icons/sender-man.png" alt="">
                                                 <input id="sender-person" class="sender-person" autocomplete="off" type="text"  name="senderPerson"
 													placeholder="<?=GetMessage("DEPARTURE_PERSON");?>">
                                             </div>
-											<div class="phone" style="display:none"><img src="<?=SITE_TEMPLATE_PATH?>/img/icons/sender-phone.png" alt="">
+											<div class="phone" style=""><img src="<?=SITE_TEMPLATE_PATH?>/img/icons/sender-phone.png" alt="">
                                                 <input id="sender-phone" class="sender-phone" autocomplete="off" type="text"  name="senderPhone"
 													placeholder="<?=GetMessage("DEPARTURE_PHONE");?>">
                                             </div>                                                                                                                        
-											   <div class="phone" style="display:none"><img src="<?=SITE_TEMPLATE_PATH?>/img/icons/icon-gray17.png" alt="кпкфупукпфпфпфук">
+											   <div class="phone" style=""><img src="<?=SITE_TEMPLATE_PATH?>/img/icons/icon-gray17.png" alt="кпкфупукпфпфпфук">
                                                 <select name="paymentMethod" id="paymentMethod">                                               
 													<option>💶Відправник за Готівку</option>
                                                     <option>🧾Відправник Безготівка</option>
                                                     <option>💶Отримувач Готівка</option>
                                                     <option>🧾Отримувач Безготівка</option>
                                                 </select>
-                                             </div>
-                                            </div>
-                                            					
-                        <div class="order-not-callback order-not-callback--hidden" id="orderNotCallback">
+                                             </div> 
+                                             <div class="address">
+                          <div class="order-not-callback order-not-callback--hidden" id="orderNotCallback">
                           <label class="order-not-callback-checkbox">
                             <input type="checkbox" class="order-not-callback-checkbox__input" />
                             <span class="order-not-callback-checkbox__check">
@@ -1178,15 +1165,17 @@ if ($tmp) {
                               </ul>
                             </span>
                           </button>
+                        </div>                                                       					
+                                             </div>
                         </div>
-                        </div>
-                                </div>
-                                </div>
-                        <div class="submit-wrapper text-center">
+                    </div> 
+                    </div>  
+                            <div class="submit-wrapper text-center">
                             <div class="loader"></div>
                             <input type="submit" class="submit-button sender-submit"  value="<?=GetMessage("COUNT");?>">                          
 							<input type="submit" class="submit-button departure-order" style="display:none"  value="<?=GetMessage("DEPARTURE_ORDER");?>">
-                        </div>
+                        
+                                         
 
 
                     </div>
@@ -1207,8 +1196,8 @@ if ($tmp) {
 <? require("../calculation/modalDepartureSuccess.php"); ?>
 
 <script src="<?=SITE_TEMPLATE_PATH?>/js/date-lib.js?20200712"></script>
-<script src="<?=SITE_TEMPLATE_PATH?>/js/calc_old.js?20210112"></script>
-<script src="<?=SITE_TEMPLATE_PATH?>/js/script_old.js?20201230-229"></script>
+<script src="<?=SITE_TEMPLATE_PATH?>/js/calc_old.js?20220701-9"></script>
+<script src="<?=SITE_TEMPLATE_PATH?>/js/script_old.js?20220701-9"></script>
 
 
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

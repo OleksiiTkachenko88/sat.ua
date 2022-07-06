@@ -1,7 +1,7 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetPageProperty("description", "Виїзд за вантажем до відправника - Транспортна компанія “САТ” | ВИГІДНО! НАДІЙНО! ВЧАСНО! ☎ 066 830 99 09; 098 830 99 09; 073 830 99 09 (вартість дзвінків згідно тарифів вашого оператора)");
-$APPLICATION->SetPageProperty("title", "11Виїзд за вантажем до відправника | Транспортна компанія “САТ”");
+$APPLICATION->SetPageProperty("title", "20220701-9Виїзд за вантажем до відправника | Транспортна компанія “САТ”");
 $APPLICATION->SetTitle("Замовити виїзд за вантажем до відправника");
 
 $offices = '[]';
@@ -19,6 +19,7 @@ if ($tmp) {
 		$offices = json_encode($tmp2->data);
 	}
 }
+
 ?>
     <script>
         var offices = <?=$offices;?>
@@ -62,6 +63,22 @@ if ($tmp) {
     </script>
 
     <style>
+        .calculate-wrapper .delivery-row .phone .jq-selectbox__select{border:1px solid #fff;width:85px;padding:0 16px 0 6px}
+        .calculate-wrapper .delivery-row .phone .jq-selectbox__trigger{right:6px}
+        .calculate-wrapper .delivery-row .phone .jq-selectbox__trigger:after{font-size:13px;color:#757575}
+        .calculate-wrapper .delivery-row .phone .jq-selectbox__dropdown li{padding:0 6px}
+        .calculate-wrapper .delivery-row .phone select{width:100%;text-indent:0.01px;padding-right:20px !important;background-image:url("../img/icons/arrow_select.png");background-position:right 8px center;background-repeat:no-repeat}
+        .calculate-wrapper .delivery-row .phone .jq-selectbox{vertical-align:top}
+        .calculate-wrapper .delivery-row .phone .jq-selectbox__select{width:100%; display:block;line-height:34px;height:36px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;font-size:16px;color:#404041;background:#fff;outline:none;border:1px solid #acacac;padding:0px 25px 0 13px;font-family:"SFUIDisplay", sans-serif;cursor:pointer;overflow:hidden}
+        .calculate-wrapper .delivery-row .phone .jq-selectbox__select .jq-selectbox__select-text{width:100% !important}
+        .calculate-wrapper .delivery-row .phone .jqselect.opened .jq-selectbox__select{border:1px solid #acacac}
+        .calculate-wrapper .delivery-row .phone .jq-selectbox__trigger{position:absolute;top:0px;height:34px;right:10px;line-height:34px}
+        .calculate-wrapper .delivery-row .phone .jq-selectbox__trigger:after{content:"\f107";font-family:FontAwesome;font-size:20px;line-height:34px;display:inline-block;color:#404041}
+        .calculate-wrapper .delivery-row .phone .jq-selectbox__dropdown{min-width:100%!important;border:1px solid #acacac;border-top:none;background:#fff;overflow:hidden;margin-top:-1px}
+        .calculate-wrapper .delivery-row .phone .jq-selectbox__dropdown ul{max-height:125px}
+        .calculate-wrapper .delivery-row .phone .jq-selectbox__dropdown li{line-height:25px;font-size:14px;color:#404041;min-width:48px;padding:0 13px;font-family:"SFUIDisplay", sans-serif;display:block;cursor:pointer;-webkit-transition:all 0.3s;-moz-transition:all 0.3s;-o-transition:all 0.3s;transition:all 0.3s}
+        .calculate-wrapper .delivery-row .phone .jq-selectbox__dropdown li:hover{background:#ffd64a}
+        .calculate-wrapper .delivery-row .phone .jq-selectbox__dropdown li.selected{background:#ffd64a}
 
 		.calculate-wrapper .section-from{float: left; width: 100%;  position: relative; z-index: 999;}
 		.calculate-wrapper .direction-from, .calculate-wrapper .direction-to{float: left; width: 50%; position: relative; background: #ffd64a; border-bottom:1px solid #ACACAC}
@@ -179,6 +196,7 @@ if ($tmp) {
                                         <input type="hidden" class="department-id" id="fromDir-id" name="fromDir-id">
                                         <input type="hidden" class="department-id" id="fromDir-ref" name="fromDir-ref">
                                         <input type="hidden" class="department-id" id="fromDir-cityref" name="fromDir-cityref">
+                                        <input type="hidden" class="department-id" id="fromDir-cityref2" name="fromDir-cityref2">
                                         <input type="hidden" class="department-id" id="fromDir-cityrspref" name="fromDir-cityrspref">
 
 
@@ -225,30 +243,11 @@ if ($tmp) {
                                             </li>
                                         </ul>
 									</div>
-								</div>
-
-
-
-                                    </div>
-                                </div>
-								<div class="sender-info">
-											<div class="address"><img src="<?=SITE_TEMPLATE_PATH?>/img/icons/sender-adr.png" alt="">
-                                                <input id="sender-address" class="sender-address" autocomplete="off" type="text"  name="senderAddress"
-													placeholder="<?=GetMessage("DEPARTURE_ADDRESS");?>">
-                                            </div>
-											<div class="person"><img src="<?=SITE_TEMPLATE_PATH?>/img/icons/sender-man.png" alt="">
-                                                <input id="sender-person" class="sender-person" autocomplete="off" type="text"  name="senderPerson"
-													placeholder="<?=GetMessage("DEPARTURE_PERSON");?>">
-                                            </div>
-											<div class="phone"><img src="<?=SITE_TEMPLATE_PATH?>/img/icons/sender-phone.png" alt="">
-                                                <input id="sender-phone" class="sender-phone" autocomplete="off" type="text"  name="senderPhone"
-													placeholder="<?=GetMessage("DEPARTURE_PHONE");?>">
-                                            </div>
-								</div>
+								</div>                                    </div>
+                                </div>                                
                                 <div class="delivery-row wrapper-parcel-info">
                                     <div class="delivery-item clearfix">
-
-                                       <div class="time-date-table">
+                                        <div class="time-date-table">
 											<div class="tariff" ><img src="<?=SITE_TEMPLATE_PATH?>/img/icons/icon-gray17.png" alt="">
                                                 <select name="fromDir-delivery-type" id="fromDir-delivery-type">
 													<?=$departureConditionsOptions?>
@@ -260,7 +259,7 @@ if ($tmp) {
                                             </div>
                                             <div class="date"><img src="<?=SITE_TEMPLATE_PATH?>/img/icons/icon-gray16.png" alt="">
                                                 <input id="datepicker1" class="pick-field" readonly="true" autocomplete="off" type="text"  name="fromDate">
-                                                <input id="datefield1" class="pick-field" type="date" name="date2">
+                                                <input id="datefield1" class="pick-field" type="date" name="date2">                                               
                                             </div>
 											<div class="time fromTime" style="display:none;"><img src="<?=SITE_TEMPLATE_PATH?>/img/icons/icon-gray18.png" alt="">
                                                 <?=GetMessage("FROM_TIME");?>
@@ -355,14 +354,7 @@ if ($tmp) {
                                                 </select>
                                                 <input type="time" step="300" name="fromTimeE">
                                             </div>
-
-
-
-
-
-
-
-										   <div class="date" style="display:none"><img src="<?=SITE_TEMPLATE_PATH?>/img/icons/icon-gray16.png" alt="">
+										    <div class="date" style="display:none"><img src="<?=SITE_TEMPLATE_PATH?>/img/icons/icon-gray16.png" alt="">
                                                 <input id="datepicker2" type="text" readonly="readonly" class="pick-field"  name="toDate">
                                                 <input id="datefield2" class="pick-field" type="date"   name="toDate2">
                                             </div>
@@ -377,26 +369,19 @@ if ($tmp) {
                                                     <option>09:00</option>
 												</select>
 												</div>
-
-
-
-
-
-
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-
-                            <div class="wrapper-parcel-info clearfix">
-                                <div class="parcel-main-info clearfix">
-                                    <div class="parcel-block-title">
+                                <div class="wrapper-parcel-info clearfix">
+                                    <div class="parcel-main-info clearfix">
+                                        <div class="parcel-block-title">
                                         <?=GetMessage("ENTER_GRUZ_TYPE");?>
-                                    </div>
-                                    <div class="main-info-item">
-                                        <div class="main-info-row">
-                                            <label><?=GetMessage("GRUZ_TYPE");?></label>
-                                            <div class="field-wrap type-block">
+                                        </div>
+                                        <div class="main-info-item">
+                                            <div class="main-info-row">
+                                                <label><?=GetMessage("TARIFF");?></label>
+                                                <div class="field-wrap type-block">
                                                 <!-- Added  class for block and select id for ajax results -->
                                                 <select name="type" id="type">
                                                     <option data-type="corr" ><?=GetMessage("GRUZ_TYPE_1");?></option>
@@ -405,9 +390,9 @@ if ($tmp) {
                                                     <option data-type="tire" ><?=GetMessage("GRUZ_TYPE_4");?></option>
                                                     <option data-type="cargo" ><?=GetMessage("GRUZ_TYPE_5");?></option>
                                                 </select>
-                                            </div>
+                                                </div>
                                         </div>
-                                        <div class="main-info-row ">
+                                        <div class="main-info-row " style="display:none">
                                             <label><?=GetMessage("GRUZ_SUBTYPE");?></label>
                                             <div class="field-wrap  subtype-block">
                                                 <!-- Added class for block and select id for  ajax results -->
@@ -416,6 +401,25 @@ if ($tmp) {
                                                 </select>
                                             </div>
                                         </div>
+                                        <div class="main-info-row gruzType" style="display:none"> 
+                                            <label><?=GetMessage("GRUZ_TYPE_AUTO");?></label>
+                                            <div class="field-wrap type-block">
+                                                <!-- Added  class for block and select id for ajax results -->
+                                                <select name="type_auto" id="type_auto">
+                                                    <option data-type="standard" ><?=GetMessage("GRUZ_TYPE_AUTO_1");?></option>
+                                                    <option data-type="top" ><?=GetMessage("GRUZ_TYPE_AUTO_2");?></option>
+                                                    <option data-type="side" ><?=GetMessage("GRUZ_TYPE_AUTO_3");?></option>
+                                                    <option data-type="hydro" ><?=GetMessage("GRUZ_TYPE_AUTO_4");?></option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="main-info-row gruzType" style="display:none"> 
+                                            <label><?= GetMessage("GRUZ_TYPE"); ?></label>
+                                                <div class="field-wrap type-block">
+                                                <input id="cargoDescriptionList" type="text"/>
+                                                <input type="hidden" class="department-id" id="cargoDescriptionList-ref" name="cargoDescriptionListRef">  
+                                                </div>
+                                        </div>                                       
                                         <!-- changed type input to number for auto validate-->
                                         <div class="main-info-row">
                                             <label><?=GetMessage("CALC_COUNT");?></label>
@@ -536,12 +540,12 @@ if ($tmp) {
    }
   </style>
 								<div class="pidyom"><strong><a href="https://www.sat.ua/upload/sat_doc/Price_new.pdf">Деталі умов виїзду за посиланням.</a></strong></div>
-                                <div class="parcel-options-info">
+                                <div class="parcel-options-info" style="display:none">
                                     <div class="parcel-block-title">
                                         <?=GetMessage("SERVICES");?>
                                     </div>
                                     <!-- Added services div for responce from api -->
-                                    <div class="services-block" style="display:none;">
+                                    <div class="services-block" style="display:none;"><!-- Скрыл услуги -->
                                         <div class="options-info-item">
                                             <a class="parcel-block-subtitle">
                                                 <?=GetMessage("OTHER_SERVICES");?>
@@ -944,7 +948,7 @@ if ($tmp) {
                                             <td class="city fromCity">КИЇВ</td>
                                         </tr>
                                         <tr>
-											<td><span id="fromAddress"> вул. Терещенківська, 12Б, кв. 18</span><br><span id="fromSender">Андрій Іванович Семеренко</span><br><span id="fromPhone">+38(___)__-__-__</span></td>
+											<td><span id="fromAddress"> вул. Терещенківська, 12Б, кв. 18</span><br><span id="fromSenderCompany"></span><br><span id="fromSender">Андрій Іванович Семеренко</span><br><span id="fromPhone">+38(___)__-__-__</span></td>
                                         </tr>
                                         <tr>
                                             <td rowspan="3" class="arrow-align center-align"><img class="arrow"
@@ -1081,9 +1085,40 @@ if ($tmp) {
                                 <li><a><img src="<?=SITE_TEMPLATE_PATH?>/img/icons/icon-blue2.png" alt=""></a></li>
                                 <li><a href="javascript:window.print()"><img src="<?=SITE_TEMPLATE_PATH?>/img/icons/icon-blue3.png" alt=""></a></li>
                             </ul>
-                        </div>
-
-                        <div class="order-not-callback order-not-callback--hidden" id="orderNotCallback">
+                        </div> 
+                        </div>                        
+                        <div class="calculate-wrapper">
+                        <div class="section-from">
+                        <div class="sender-info">
+                        <div class="delivery-row">    
+											<div class="address" style="position:relative"><img src="<?=SITE_TEMPLATE_PATH?>/img/icons/sender-adr.png" alt="">
+                                            <input type="text" id="sender-address" class="direction-field active" name="sender-address"
+                                               placeholder="<?=GetMessage("DEPARTURE_ADDRESS");?>" >
+                                                                                   
+                                            </div>
+                                            <div class="person" style=""><img src="<?=SITE_TEMPLATE_PATH?>/img/icons/icon-gray15.png" alt="">
+                                                <input id="sender-org" class="sender-phone" autocomplete="on" type="text"  name="senderOrg" onkeyup="this.value=this.value.replace(/[^0-9.]/ig,'')"
+													placeholder="<?=GetMessage("DEPARTURE_ORG");?>">
+                                                    <input type="hidden" class="department-id" id="sender-org-ref" name="senderOrgRef">
+                                             </div>  
+                                            <div class="person" style=""><img src="<?=SITE_TEMPLATE_PATH?>/img/icons/sender-man.png" alt="">
+                                                <input id="sender-person" class="sender-person" autocomplete="off" type="text"  name="senderPerson"
+													placeholder="<?=GetMessage("DEPARTURE_PERSON");?>">
+                                            </div>
+											<div class="phone" style=""><img src="<?=SITE_TEMPLATE_PATH?>/img/icons/sender-phone.png" alt="">
+                                                <input id="sender-phone" class="sender-phone" autocomplete="off" type="text"  name="senderPhone"
+													placeholder="<?=GetMessage("DEPARTURE_PHONE");?>">
+                                            </div>                                                                                                                        
+											   <div class="phone" style=""><img src="<?=SITE_TEMPLATE_PATH?>/img/icons/icon-gray17.png" alt="кпкфупукпфпфпфук">
+                                                <select name="paymentMethod" id="paymentMethod">                                               
+													<option>💶Відправник за Готівку</option>
+                                                    <option>🧾Відправник Безготівка</option>
+                                                    <option>💶Отримувач Готівка</option>
+                                                    <option>🧾Отримувач Безготівка</option>
+                                                </select>
+                                             </div> 
+                                             <div class="phone">
+                          <div class="order-not-callback order-not-callback--hidden" id="orderNotCallback">
                           <label class="order-not-callback-checkbox">
                             <input type="checkbox" class="order-not-callback-checkbox__input" />
                             <span class="order-not-callback-checkbox__check">
@@ -1110,13 +1145,17 @@ if ($tmp) {
                               </ul>
                             </span>
                           </button>
+                        </div>                                                       					
+                                             </div>
                         </div>
-
-                        <div class="submit-wrapper text-center">
+                    </div> 
+                    </div>  
+                            <div class="submit-wrapper text-center">
                             <div class="loader"></div>
-                            <input type="submit" class="submit-button sender-submit" value="<?=GetMessage("COUNT");?>">
+                            <input type="submit" class="submit-button sender-submit"  value="<?=GetMessage("COUNT");?>">                          
 							<input type="submit" class="submit-button departure-order" style="display:none"  value="<?=GetMessage("DEPARTURE_ORDER");?>">
-                        </div>
+                        
+                                         
 
 
                     </div>
@@ -1137,7 +1176,8 @@ if ($tmp) {
 <? require("../calculation/modalDepartureSuccess.php"); ?>
 
 <script src="<?=SITE_TEMPLATE_PATH?>/js/date-lib.js?20200712"></script>
-<script src="<?=SITE_TEMPLATE_PATH?>/js/calc_old.js?20210112"></script>
-<script src="<?=SITE_TEMPLATE_PATH?>/js/script_old.js?20201230"></script>
+<script src="<?=SITE_TEMPLATE_PATH?>/js/calc_old.js?20220701-14"></script>
+<script src="<?=SITE_TEMPLATE_PATH?>/js/script_old.js?20220701-14"></script>
+
 
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
