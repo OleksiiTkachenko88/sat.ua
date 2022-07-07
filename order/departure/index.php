@@ -429,7 +429,7 @@ if ($tmp) {
                                         </div>
                                         <div class="main-info-row gruzType" style="display:none"> 
                                             <label><?=GetMessage("GRUZ_TYPE_AUTO");?></label>
-                                            <div class="field-wrap type-block">
+                                            <div class="field-wrap type_auto">
                                                 <!-- Added  class for block and select id for ajax results -->
                                                 <select name="type_auto" id="type_auto">
                                                     <option data-type="standard" ><?=GetMessage("GRUZ_TYPE_AUTO_1");?></option>
@@ -1177,9 +1177,10 @@ if ($tmp) {
                     </div> 
                     </div>  
                             <div class="submit-wrapper text-center">
-                            <div class="error-depature">ergsegerger</div> 
+                            <div class="error-depature">Вывод ошибок из 1С при расчете</div>                            
                             
-                            <input type="submit" class="submit-button sender-submit"  value="<?=GetMessage("COUNT");?>">                          
+                            <input type="submit" class="submit-button sender-submit"  value="<?=GetMessage("COUNT");?>">
+                            <div class="loader" style="display:none"></div>                           
 							<input type="submit" class="submit-button departure-order" style="display:none"  value="<?=GetMessage("DEPARTURE_ORDER");?>">
                     </div>
                 </div>
@@ -1199,7 +1200,7 @@ if ($tmp) {
 <? require("../calculation/modalDepartureSuccess.php"); ?>
 
 <script src="<?=SITE_TEMPLATE_PATH?>/js/date-lib.js?20220706"></script>
-<script src="<?=SITE_TEMPLATE_PATH?>/js/calc_old.js?20220706"></script>
+<script src="<?=SITE_TEMPLATE_PATH?>/js/calc_old.js?20220707-2"></script>
 <script src="<?=SITE_TEMPLATE_PATH?>/js/script_old.js?20220706"></script>
 
 
