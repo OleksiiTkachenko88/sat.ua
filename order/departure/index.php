@@ -1,6 +1,6 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetPageProperty("description", "Виїзд за вантажем до відправника - Транспортна компанія “САТ” | ВИГІДНО! НАДІЙНО! ВЧАСНО! ☎ 066 830 99 09; 098 830 99 09; 073 830 99 09 (вартість дзвінків згідно тарифів вашого оператора)");
+$APPLICATION->SetPageProperty("description", "Виїзд за вантажем до відправника - Транспортна компанія “САТ” | ВИГІДНО! НАДІЙНО! ВЧАСНО!");
 $APPLICATION->SetPageProperty("title", "Виїзд за вантажем до відправника | Транспортна компанія “САТ”");
 $APPLICATION->SetTitle("Замовити виїзд за вантажем до відправника");
 
@@ -73,14 +73,14 @@ if ($tmp) {
         .calculate-wrapper .delivery-row .phone .jq-selectbox__trigger{right:6px}
         .calculate-wrapper .delivery-row .phone .jq-selectbox__trigger:after{font-size:13px;color:#757575}
         .calculate-wrapper .delivery-row .phone .jq-selectbox__dropdown li{padding:0 6px}
-        .calculate-wrapper .delivery-row .phone select{width:100%;text-indent:0.01px;padding-right:20px !important;background-image:url("../img/icons/arrow_select.png");background-position:right 8px center;background-repeat:no-repeat}
+        .calculate-wrapper .delivery-row .phone select{width:calc(100% + 100px);text-indent:0.01px;padding-right:20px !important;background-image:url("../img/icons/arrow_select.png");background-position:right 8px center;background-repeat:no-repeat}
         .calculate-wrapper .delivery-row .phone .jq-selectbox{vertical-align:top}
-        .calculate-wrapper .delivery-row .phone .jq-selectbox__select{width:100%; display:block;line-height:34px;height:36px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;font-size:16px;color:#404041;background:#fff;outline:none;border:1px solid #acacac;padding:0px 25px 0 13px;font-family:"SFUIDisplay", sans-serif;cursor:pointer;overflow:hidden}
-        .calculate-wrapper .delivery-row .phone .jq-selectbox__select .jq-selectbox__select-text{width:100% !important}
+        .calculate-wrapper .delivery-row .phone .jq-selectbox__select{width:calc(100% + 100px); display:block;line-height:34px;height:36px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;font-size:16px;color:#404041;background:#fff;outline:none;border:1px solid #acacac;padding:0px 25px 0 13px;font-family:"SFUIDisplay", sans-serif;cursor:pointer;overflow:hidden}
+        .calculate-wrapper .delivery-row .phone .jq-selectbox__select .jq-selectbox__select-text{width:calc(100% + 100px) !important}
         .calculate-wrapper .delivery-row .phone .jqselect.opened .jq-selectbox__select{border:1px solid #acacac}
         .calculate-wrapper .delivery-row .phone .jq-selectbox__trigger{position:absolute;top:0px;height:34px;right:10px;line-height:34px}
         .calculate-wrapper .delivery-row .phone .jq-selectbox__trigger:after{content:"\f107";font-family:FontAwesome;font-size:20px;line-height:34px;display:inline-block;color:#404041}
-        .calculate-wrapper .delivery-row .phone .jq-selectbox__dropdown{min-width:100%!important;border:1px solid #acacac;border-top:none;background:#fff;overflow:hidden;margin-top:-1px}
+        .calculate-wrapper .delivery-row .phone .jq-selectbox__dropdown{width:calc(100% + 100px)!important;border:1px solid #acacac;border-top:none;background:#fff;overflow:hidden;margin-top:-1px}
         .calculate-wrapper .delivery-row .phone .jq-selectbox__dropdown ul{max-height:125px}
         .calculate-wrapper .delivery-row .phone .jq-selectbox__dropdown li{line-height:25px;font-size:16px;color:#404041;min-width:48px;padding:0 13px;font-family:"SFUIDisplay", sans-serif;display:block;cursor:pointer;-webkit-transition:all 0.3s;-moz-transition:all 0.3s;-o-transition:all 0.3s;transition:all 0.3s}
         .calculate-wrapper .delivery-row .phone .jq-selectbox__dropdown li:hover{background:#ffd64a}
@@ -126,7 +126,7 @@ if ($tmp) {
 
 		.calculate-wrapper .parcel-options-info .rate-wrap{padding: 25px 25px 0 25px; border-top: 1px solid #acacac;}
 		.calculate-wrapper .section-from .sender-info .error {
-			border: 1px solid #FF6111 !important;
+			border: 1.5px solid #FF6111 !important;
 		}
         #cargoDescriptionList {
             min-width: 100%;
@@ -138,11 +138,14 @@ if ($tmp) {
             .calculate-wrapper .section-from .sender-info .address input[type="text"], .calculate-wrapper .section-from .sender-info  .person input[type="text"], .calculate-wrapper .section-from .sender-info .phone input[type="text"] {
                 width:calc(100% - 45px);
                 font-size: 16px;
+                
             }
-            .calculate-wrapper .delivery-row .jq-selectbox__select{min-width:calc(100% - 50px);font-size: 16px;}
+            
             .calculate-wrapper .directions-row .direction-item .direction-field{width:90%;font-size:16px}  
             .calculate-wrapper .wrapper-parcel-info input[type="text"],.calculate-wrapper .wrapper-parcel-info input[type="number"],.calculate-wrapper .wrapper-parcel-info input[type="date"],.calculate-wrapper .wrapper-parcel-info input[type="time"],.calculate-wrapper .wrapper-parcel-info select{font-size:16px}
-          
+            .calculate-wrapper .delivery-row .phone .jq-selectbox__select{width:100%; height: 40px}
+            .calculate-wrapper .delivery-row .phone .jq-selectbox__dropdown{width:100%!important;border:1px solid #acacac;border-top:none;background:#fff;overflow:hidden;margin-top:-1px}
+            .calculate-wrapper .delivery-row .phone .jq-selectbox__dropdown li{width:100%}
 		}
 		@media (max-width: 990px){
 			.calculate-wrapper .section-from .sender-info .address,.calculate-wrapper .section-from .sender-info .person, .calculate-wrapper .section-from .sender-info .phone{ width:50%; float:left;}
@@ -163,6 +166,9 @@ if ($tmp) {
        	@media (min-width: 991px){
 			.calculate-wrapper .section-from .sender-info img{margin-right: 6px;}
 			.calculate-wrapper .delivery-row .date, .calculate-wrapper .delivery-row .time, .calculate-wrapper .delivery-row .tariff {width:33%}
+            .calculate-wrapper .delivery-row .phone .jq-selectbox__select{width:110%; height: 40px}
+            .calculate-wrapper .delivery-row .phone .jq-selectbox__dropdown{width:110%!important;border:1px solid #acacac;border-top:none;background:#fff;overflow:hidden;margin-top:-1px}
+            .calculate-wrapper .delivery-row .phone .jq-selectbox__dropdown li{width:110%}
         }
 		@media (min-width: 1341px){
 			.calculate-wrapper .section-from .sender-info img{margin-right: 6px; margin-top: 8px;}
@@ -172,7 +178,7 @@ if ($tmp) {
    			 line-height: 38px;
 			 font-size: 16px;
             }
-            .calculate-wrapper .delivery-row .phone .jq-selectbox__select{min-width:calc(100% + 100px); height: 40px;};
+            .calculate-wrapper .delivery-row .phone .jq-selectbox__select{min-width:calc(100% + 100px); height: 40px;}
             .calculate-wrapper .delivery-row .phone .jq-selectbox__dropdown{min-width:calc(100% + 100px)!important;border:1px solid #acacac;border-top:none;background:#fff;overflow:hidden;margin-top:-1px}
             .calculate-wrapper .delivery-row .phone .jq-selectbox__dropdown li{min-width:calc(100% + 100px);}
             
@@ -474,7 +480,7 @@ if ($tmp) {
                                         <div class="main-info-row">
                                             <label><?=GetMessage("DECLARED_COST");?></label>
                                             <div class="field-wrap">
-                                                <input type="number" placeholder="0" name="declaredCost"><span>грн</span>
+                                                <input type="number" placeholder="500" min="500" name="declaredCost" value="500"><span>грн</span>
                                             </div>
                                         </div>
                                     </div>
@@ -1005,10 +1011,6 @@ if ($tmp) {
                                         </tr>
                                     </table>
                                     <div class="hot-line">
-                                        <div class="number">066 830 99 09</div>
-                                        <div class="number">098 830 99 09</div>
-                                        <div class="number">073 830 99 09</div>
-                                        <div class="text"><?=GetMessage("FREE_HOT_LINE");?></div>
                                     </div>
                                 </div>
                                 <div class="right-info">
@@ -1116,26 +1118,26 @@ if ($tmp) {
                         <div class="calculate-wrapper">
                         <div class="section-from">
                         <div class="sender-info">
-                        <div class="delivery-row">    
-											<div class="address" style="display: none;"><img src="<?=SITE_TEMPLATE_PATH?>/img/icons/sender-adr.png" alt="">
+                        <div class="delivery-row" style="">    
+											<div class="address" style=""><img src="<?=SITE_TEMPLATE_PATH?>/img/icons/sender-adr.png" alt="">
                                             <input type="text" id="sender-address" class="direction-field active" name="sender-address"
                                                placeholder="<?=GetMessage("DEPARTURE_ADDRESS");?>" >
                                                                                    
                                             </div>
-                                            <div class="phone" style="display: none;"><img src="<?=SITE_TEMPLATE_PATH?>/img/icons/icon-gray15.png" alt="">
+                                            <div class="phone" style=""><img src="<?=SITE_TEMPLATE_PATH?>/img/icons/icon-gray15.png" alt="">
                                                 <input id="sender-org" class="sender-phone" autocomplete="on" type="text"  name="senderOrg" onkeyup="this.value=this.value.replace(/[^0-9.]/ig,'')"
 													placeholder="<?=GetMessage("DEPARTURE_ORG");?>">
                                                     <input type="hidden" class="department-id" id="sender-org-ref" name="senderOrgRef">
                                              </div>  
-                                            <div class="person" style="display: none;"><img src="<?=SITE_TEMPLATE_PATH?>/img/icons/sender-man.png" alt="">
+                                            <div class="person" style=""><img src="<?=SITE_TEMPLATE_PATH?>/img/icons/sender-man.png" alt="">
                                                 <input id="sender-person" class="sender-person" autocomplete="off" type="text"  name="senderPerson"
 													placeholder="<?=GetMessage("DEPARTURE_PERSON");?>">
                                             </div>
-											<div class="phone" style="display: none;"><img src="<?=SITE_TEMPLATE_PATH?>/img/icons/sender-phone.png" alt="">
+											<div class="phone" style=""><img src="<?=SITE_TEMPLATE_PATH?>/img/icons/sender-phone.png" alt="">
                                                 <input id="sender-phone" class="sender-phone" autocomplete="off" type="text"  name="senderPhone"
 													placeholder="<?=GetMessage("DEPARTURE_PHONE");?>">
                                             </div>                                                                                                                        
-											   <div class="phone" style="display: none;"><img src="<?=SITE_TEMPLATE_PATH?>/img/icons/icon-gray17.png" alt="кпкфупукпфпфпфук">
+											   <div class="phone" style=""><img src="<?=SITE_TEMPLATE_PATH?>/img/icons/icon-gray17.png" alt="кпкфупукпфпфпфук">
                                                 <select name="paymentMethod" id="paymentMethod">                                               
 													<option>💶Відправник за Готівку</option>
                                                     <option>🧾Відправник Безготівка</option>
@@ -1146,7 +1148,7 @@ if ($tmp) {
                                              <div class="address">
                           <div class="order-not-callback order-not-callback--hidden" id="orderNotCallback">
                           <label class="order-not-callback-checkbox">
-                            <input type="checkbox" class="order-not-callback-checkbox__input" />
+                            <input type="checkbox" class="order-not-callback-checkbox__input" id="NotCallbackId" />
                             <span class="order-not-callback-checkbox__check">
 
                               <svg class="order-not-callback-checkbox__img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -1179,9 +1181,9 @@ if ($tmp) {
                             <div class="submit-wrapper text-center">
                             <div class="error-depature">Вывод ошибок из 1С при расчете</div>                            
                             
-                            <input type="submit" class="submit-button sender-submit"  value="<?=GetMessage("COUNT");?>">
-                            <div class="loader" style="display:none"></div>                           
+                            <input type="submit" class="submit-button sender-submit"  value="<?=GetMessage("COUNT");?>">                                                    
 							<input type="submit" class="submit-button departure-order" style="display:none"  value="<?=GetMessage("DEPARTURE_ORDER");?>">
+                            <div class="loader" style="display:none"></div>  
                     </div>
                 </div>
             </div>
@@ -1199,9 +1201,9 @@ if ($tmp) {
 
 <? require("../calculation/modalDepartureSuccess.php"); ?>
 
-<script src="<?=SITE_TEMPLATE_PATH?>/js/date-lib.js?20220706"></script>
-<script src="<?=SITE_TEMPLATE_PATH?>/js/calc_old.js?20220707-2"></script>
-<script src="<?=SITE_TEMPLATE_PATH?>/js/script_old.js?20220706"></script>
+<script src="<?=SITE_TEMPLATE_PATH?>/js/date-lib.js?20220711-"></script>
+<script src="<?=SITE_TEMPLATE_PATH?>/js/calc_old.js?20220711-"></script>
+<script src="<?=SITE_TEMPLATE_PATH?>/js/script_old.js?20220706-"></script>
 
 
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
