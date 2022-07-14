@@ -167,7 +167,7 @@ if ($tmp) {
 			.calculate-wrapper .section-from .sender-info img{margin-right: 6px;}
 			.calculate-wrapper .delivery-row .date, .calculate-wrapper .delivery-row .time, .calculate-wrapper .delivery-row .tariff {width:33%}
             .calculate-wrapper .delivery-row .phone .jq-selectbox__select{width:110%; height: 40px}
-            .calculate-wrapper .delivery-row .phone .jq-selectbox__dropdown{width:110%!important;border:1px solid #acacac;border-top:none;background:#fff;overflow:hidden;margin-top:-1px}
+            .calculate-wrapper .delivery-row .phone .jq-selectbox__dropdown{width:100%!important;border:1px solid #acacac;border-top:none;background:#fff;overflow:hidden;margin-top:-1px}
             .calculate-wrapper .delivery-row .phone .jq-selectbox__dropdown li{width:110%}
         }
 		@media (min-width: 1341px){
@@ -178,8 +178,8 @@ if ($tmp) {
    			 line-height: 38px;
 			 font-size: 16px;
             }
-            .calculate-wrapper .delivery-row .phone .jq-selectbox__select{min-width:calc(100% + 100px); height: 40px;}
-            .calculate-wrapper .delivery-row .phone .jq-selectbox__dropdown{min-width:calc(100% + 100px)!important;border:1px solid #acacac;border-top:none;background:#fff;overflow:hidden;margin-top:-1px}
+            .calculate-wrapper .delivery-row .phone .jq-selectbox__select{min-width:calc(100% + 70px); height: 40px;}
+            .calculate-wrapper .delivery-row .phone .jq-selectbox__dropdown{min-width:calc(100% + 70px)!important;border:1px solid #acacac;border-top:none;background:#fff;overflow:hidden;margin-top:-1px}
             .calculate-wrapper .delivery-row .phone .jq-selectbox__dropdown li{min-width:calc(100% + 100px);}
             
 
@@ -529,9 +529,9 @@ if ($tmp) {
                                                 </div>
                                                 <div class="slider-range-row">
                                                     <span>0 см</span>
-                                                    <div data-max="500" class="slider-range" id="length-range">
+                                                    <div data-max="760" class="slider-range" id="length-range">
                                                     </div>
-                                                    <span>500 см</span>
+                                                    <span>760 см</span>
                                                 </div>
                                             </div>
                                             <div class="range_wrap">
@@ -1054,6 +1054,13 @@ if ($tmp) {
                                             <td></td>
                                             <td><?=GetMessage("WEIGHT");?></td>
                                             <td class="dark right"><span class="decWei"></span> кг</td>
+                                        </tr>                                        
+                                        <tr>
+                                            <td><?=GetMessage("DECLARED_COST");?></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td class="middle-text dark right"><span id="decCost"></span> грн</td>
                                         </tr>
                                     </table>
                                     <table class="border">
@@ -1077,10 +1084,6 @@ if ($tmp) {
                                         </tr>
                                     </table>
                                     <table>
-                                        <tr>
-                                            <td><?=GetMessage("DECLARED_COST");?></td>
-                                            <td class="middle-text dark right"><span id="decCost"></span> грн</td>
-                                        </tr>
                                         <tr>
                                             <td class="big-text"><?=GetMessage("COST");?></td>
                                             <td class="big-text dark right"><span id="totalCost"></span> грн</td>
@@ -1118,12 +1121,11 @@ if ($tmp) {
                         <div class="calculate-wrapper">
                         <div class="section-from">
                         <div class="sender-info">
-                        <div class="delivery-row" style="">    
-											<div class="address" style=""><img src="<?=SITE_TEMPLATE_PATH?>/img/icons/sender-adr.png" alt="">
-                                            <input type="text" id="sender-address" class="direction-field active" name="sender-address"
-                                               placeholder="<?=GetMessage("DEPARTURE_ADDRESS");?>" >
-                                                                                   
-                                            </div>
+                        <div class="delivery-row" style="display:none"> 
+                                            <div class="phone" style=""><img src="<?=SITE_TEMPLATE_PATH?>/img/icons/sender-phone.png" alt="">
+                                                <input id="sender-phone" class="sender-phone" autocomplete="off" type="text"  name="senderPhone"
+													placeholder="<?=GetMessage("DEPARTURE_PHONE");?>">
+                                            </div>  
                                             <div class="phone" style=""><img src="<?=SITE_TEMPLATE_PATH?>/img/icons/icon-gray15.png" alt="">
                                                 <input id="sender-org" class="sender-phone" autocomplete="on" type="text"  name="senderOrg" onkeyup="this.value=this.value.replace(/[^0-9.]/ig,'')"
 													placeholder="<?=GetMessage("DEPARTURE_ORG");?>">
@@ -1133,10 +1135,10 @@ if ($tmp) {
                                                 <input id="sender-person" class="sender-person" autocomplete="off" type="text"  name="senderPerson"
 													placeholder="<?=GetMessage("DEPARTURE_PERSON");?>">
                                             </div>
-											<div class="phone" style=""><img src="<?=SITE_TEMPLATE_PATH?>/img/icons/sender-phone.png" alt="">
-                                                <input id="sender-phone" class="sender-phone" autocomplete="off" type="text"  name="senderPhone"
-													placeholder="<?=GetMessage("DEPARTURE_PHONE");?>">
-                                            </div>                                                                                                                        
+                                            <div class="address" style=""><img src="<?=SITE_TEMPLATE_PATH?>/img/icons/sender-adr.png" alt="">
+                                            <input type="text" id="sender-address" class="direction-field active" name="sender-address"
+                                               placeholder="<?=GetMessage("DEPARTURE_ADDRESS");?>" >                                                                                   
+                                            </div>											                                                                                                                      
 											   <div class="phone" style=""><img src="<?=SITE_TEMPLATE_PATH?>/img/icons/icon-gray17.png" alt="кпкфупукпфпфпфук">
                                                 <select name="paymentMethod" id="paymentMethod">                                               
 													<option>💶Відправник за Готівку</option>
@@ -1201,9 +1203,9 @@ if ($tmp) {
 
 <? require("../calculation/modalDepartureSuccess.php"); ?>
 
-<script src="<?=SITE_TEMPLATE_PATH?>/js/date-lib.js?20220711-"></script>
-<script src="<?=SITE_TEMPLATE_PATH?>/js/calc_old.js?20220711-"></script>
-<script src="<?=SITE_TEMPLATE_PATH?>/js/script_old.js?20220706-"></script>
+<script src="<?=SITE_TEMPLATE_PATH?>/js/date-lib.js?20220714"></script>
+<script src="<?=SITE_TEMPLATE_PATH?>/js/calc_old.js?20220714"></script>
+<script src="<?=SITE_TEMPLATE_PATH?>/js/script_old.js?20220714"></script>
 
 
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
