@@ -10,6 +10,7 @@ function remove_utf8_bom($text) {
 	return $text;
 }
 
+
 $action = isset($_GET['action']) ? $_GET['action'] : '';
 
 if ($action != '') {

@@ -1,5 +1,8 @@
 /local/
+# Содержит данные к БД
 /bitrix/templates/sat_main/api.php
+# Содержит данные к БД
+/bitrix/templates/sat_main/header.php
 .htaccess
 .htpasswd
 /upload/
