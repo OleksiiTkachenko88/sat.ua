@@ -30,7 +30,7 @@ function promoCheck (number) {
     }
   });
 }
-
+//
 function promoSave (refNNG) {
   var data = {
     "action": "promocode_save",
