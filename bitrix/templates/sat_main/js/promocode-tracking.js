@@ -38,7 +38,7 @@ function promoSave (refNNG) {
     "ref": refNNG,
     "promocode": $("input[name='inputPromo']").val()
   }
-//dfb
+
   $.ajax({
     url: "/bitrix/templates/sat_main/api.php",
     data: data,
