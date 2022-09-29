@@ -2,7 +2,7 @@
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetPageProperty("ROBOTS", "index, follow");
 $APPLICATION->SetPageProperty("description", "Відстеження вантажу - Транспортна компанія “САТ” | ВИГІДНО! НАДІЙНО! ВЧАСНО!");
-$APPLICATION->SetPageProperty("title", "Відстеження вантажу | Транспортна компанія “САТ”");
+$APPLICATION->SetPageProperty("title", "85Відстеження вантажу | Транспортна компанія “САТ”");
 $APPLICATION->SetTitle("Відстеження вантажу");
 CJSCore::Init(array("popup"));
 ?>
