@@ -1,0 +1,6 @@
+<?
+$sSectionName = "ЗАКАЗАТЬ";
+$arDirProperties = array(
+
+);
+?>

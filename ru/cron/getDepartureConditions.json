@@ -1,0 +1,50 @@
+﻿{
+"success": "true",
+"data": [
+{
+"ref": "5211f93e-4ba2-4406-bd2d-0f021f1987e3",
+"description": "Стандарт",
+"timeTable": [
+{
+"sendingTime": "16:00",
+"condition": "День в день",
+"acceptableFromTime": "09:00",
+"acceptableToTime": "19:00"
+},
+{
+"condition": "На следующий день",
+"acceptableFromTime": "09:00",
+"acceptableToTime": "19:00"
+}
+]
+},
+{
+"ref": "44c01960-8164-4316-b31f-378d6a4a0513",
+"description": "Точное время",
+"timeTable": [
+{
+"sendingTime": "16:00",
+"condition": "День в день",
+"acceptableFromTime": "09:00",
+"acceptableToTime": "19:00"
+},
+{
+"condition": "На следующий день",
+"acceptableFromTime": "09:00",
+"acceptableToTime": "19:00"
+}
+]
+},
+{
+"ref": "64590fa9-19ac-4caf-aad5-0df11478fa6f",
+"description": "Ночное время",
+"timeTable": [
+{
+"condition": "День в день",
+"acceptableFromTime": "19:00",
+"acceptableToTime": "09:00"
+}
+]
+}
+]
+}

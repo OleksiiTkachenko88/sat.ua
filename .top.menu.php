@@ -1,0 +1,32 @@
+<?
+$aMenuLinks = Array(
+	Array(
+		"Калькулятор", 
+		"/order/calculation/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"ТРЕКІНГ", 
+		"/treking/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Особистий кабінет", 
+		"https://cabinet.sat.ua/?utm_source=sat.ua-shapka&utm_medium=link&utm_campaign=LK-SATUA", 
+		Array(), 
+		Array("class"=>"custom"), 
+		"" 
+	),
+	Array(
+		"Контакти", 
+		"/contacts/company/", 
+		Array(), 
+		Array(), 
+		"" 
+	)
+);
+?>

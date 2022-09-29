@@ -1,0 +1,6 @@
+<?
+$sSectionName = "Методы";
+$arDirProperties = array(
+
+);
+?>

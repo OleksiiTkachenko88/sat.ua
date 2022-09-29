@@ -1,0 +1,25 @@
+{
+"success": "true",
+"data": [
+{
+"description": "Киев № 1",
+"address": "ул. Гродненская, 32",
+"phone": "0 800 30 99 09, (044) 490 99 09",
+"email": "info@sat.ua",
+"ref": "bbf8e497-33a7-11dd-a17a-001a4d3b885e",
+"number": "009",
+"cityRef": "8d7f5ea4-9436-11dd-98c6-001cc0108cd1",
+"latitude": 50.443578,
+"longitude": 30.647352,
+"schedule": {
+"monday": "09:00-20:00",
+"tuesday": "09:00-20:00",
+"wednesday": "09:00-20:00",
+"thursday": "09:00-20:00",
+"friday": "09:00-20:00",
+"saturday": "09:00-15:00",
+"sunday": "-"
+}
+}
+]
+}
