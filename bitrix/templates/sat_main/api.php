@@ -3,7 +3,7 @@ $out = 'ok';
 $arr = array();
 $url = '';
 
-//$api_host_2 = 'http://urm.sat.ua/openws/hs/api/v1.0/'; //Продf
+//$api_host_2 = 'http://urm.sat.ua/openws/hs/api/v1.0/'; //Прод
 
 //$apiHostV2 = 'https://api.sat.ua/openws/hs/api/v2.0/'; //Прод
 
