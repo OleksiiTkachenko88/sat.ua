@@ -7,7 +7,7 @@ $url = '';
 
 //$apiHostV2 = 'https://api.sat.ua/openws/hs/api/v2.0/'; //Прод
 
-//$api_host = 'http://urm.sat.ua/api_proxy/api/proxy/'; //Прод
+//$api_host = 'http://urm.sat.ua/api_proxy/api/proxy/'; //Прода
 
 $apiHost = 'https://catalog.sat.ua/';
 
