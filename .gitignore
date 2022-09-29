@@ -5,3 +5,5 @@
 web.config
 /bitrix/*
 !/bitrix/templates/sat_main/
+/bitrix/templates/sat_main/api.php
+.gitignore
