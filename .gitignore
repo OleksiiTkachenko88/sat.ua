@@ -1,0 +1,7 @@
+/local/
+/bitrix/*
+!/bitrix/templates/
+.htaccess
+.htpasswd
+/upload/
+web.config

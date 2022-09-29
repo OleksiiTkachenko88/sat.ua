@@ -1,0 +1,145 @@
+ul.input-autocomplate {
+	border: 1px solid #cccccc !important;
+
+}
+
+.ui-autocomplete 
+{
+	max-height:140px;
+	overflow-y:auto;
+	overflow-x: hidden;
+}
+
+li.ui-menu-item:hover div
+{
+background: #ccc !important;
+}
+
+.questions-list 
+{
+    border-top: 1px solid #404041;
+	padding-top:30px;
+}
+
+.questions-list div
+{
+	margin-bottom:15px;
+}
+
+.questions-list div.input-group, .questions-list .country-block, .questions-list .additional-information, .questions-list .form-error
+{
+	max-width:50%;
+	text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.questions-list .additional-information textarea
+{
+	max-height: 100px;
+	resize: vertical;
+}
+
+.questions-list .img-control {
+	padding:0;
+	width:180px !important;
+	height:42px !important;
+    border: none;
+}
+.questions-list .captcha-control
+{
+	width: calc(100% - 180px) !important;
+}
+
+.questions-list .country-block .change-block
+{
+	display:inline-block;
+	max-width: 40px;
+    margin-bottom: 7px;
+    margin-top: 8px;
+}
+
+.questions-list .country-block .input-group
+{
+	max-width:calc(50% - 25px);
+    margin-left: 0;
+    margin-right: 0;
+}
+
+
+.questions-list .country-block .input-group:first-child 
+{
+float:left;
+}
+
+.questions-list .country-block .input-group:last-child 
+{
+float:right;
+}
+
+
+.input-group-addon:first-child i
+{
+	min-width: 30px;
+}
+
+.input-group .form-control:last-child
+{
+height:42px;
+text-align:center;
+}
+
+.btn-block
+{
+	margin-top:15px !important;
+	margin-bottom:15px !important;
+}
+
+.btn-block .rate-wrap
+{
+	padding: 0px !important;
+}
+
+.btn-block .rate-wrap input 
+{
+	margin:0 !important;
+}
+
+
+.form-required 
+{
+	color: red;
+}
+
+.error-fld {
+	display: block;
+	float: left;
+	height: 13px;
+	width: 15px;
+	background-repeat: no-repeat;
+	background-image: url(images/icon_warn.gif);
+}
+
+@media(max-width: 991px) {
+	.questions-list div.input-group, .questions-list .country-block, .questions-list .additional-information, .questions-list .form-error
+	{
+		max-width:80%;
+	}
+}
+
+@media(max-width: 767px) {
+	.questions-list div.input-group, .questions-list .country-block, .questions-list .additional-information, .questions-list .form-error
+	{
+		max-width:100%;
+	}
+}
+
+@media(max-width: 540px) {
+	.questions-list div.country {
+		min-width: 100%;
+	}
+
+	.questions-list div.input-group .captcha-icon{
+		display:none;
+	}
+}

@@ -1,0 +1,35 @@
+
+header, footer, nav, aside, .map-hide-wrap, .calculate-wrapper, .text-center, .calculate-section .submit-wrapper, .declaration-wrapper .declaration-buttons{
+    display:none !important;
+}
+body, .row, .container{
+    width:100% !important;
+    padding:0 !important;
+    margin:0 !important;
+}
+header, footer,  .map-hide-wrap, .calculate-wrapper, .subscribe-wrapper, .submit-wrapper {display: none;}
+.declaration-wrapper{
+    padding:0 !important;
+    background-color: #ffffff !important;
+}
+.print-time{
+    display:block !important;
+    color: #000000 !important;
+    font-size: 15px;
+    margin-top: 20px;
+}
+.declaration{
+    box-shadow: none !important;
+    color: #000000 !important;
+    width: 100% !important;
+}
+.declaration-wrapper{
+    width: 100% !important;
+}
+.calculate-section{
+    margin-top: 0 !important;
+}
+
+.declaration .barcode, .declaration .hot-line,.declaration .left-info .icon-dir,.declaration .right-info table.border{
+    border-color: #000000 !important;
+}

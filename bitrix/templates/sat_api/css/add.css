@@ -1,0 +1,89 @@
+footer{display:none2;}
+footer .bottom-footer>div{display:none2;}
+.ui-autocomplete-loading{background:#ffffff url(../img/35.gif) 95% 50% no-repeat !important;}
+.loader{width:24px;height:24px;background:url(../img/35.gif) 0 0 no-repeat;display:none;}
+.simple_calc_row{position:relative;}
+.simple_calc_row .loader{position:absolute;top:50%;left:50%;margin-top:-12px;margin-left:-12px;z-index:10;}
+.simple_track_row{position:relative;}
+.simple_track_row .loader{position:absolute;top:50%;left:50%;margin-top:-12px;margin-left:-12px;z-index:10;}
+#simple_track_result{float:left;}
+.calculate-wrapper .delivery-row .delivery-tabs li a.delivery-tab-deny{background:#d5d5d5;opacity:0.7;cursor:default;}
+
+.td-location .title{cursor:pointer;}
+header .header-inputs-form .inputs-row .input-wrap input{background:#fff3c8;}
+header .header-inputs-form .inputs-row .input-wrap input:focus{background:#ffffff;}
+
+.form_info{}
+.form_info .form_error{color:#dd0000;}
+
+font.tablebodytext font{display:none;}
+.search-input-wrap input[type="submit"]{
+    width: 0;
+    height: 0;
+    visibility: hidden;
+    margin-top: 0;
+    margin-bottom: 0;
+    position: absolute;
+    left: -10000px;
+}
+
+.page__error-container {
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("../images/error-bg.jpg");
+  text-align: center;
+  padding-top: 130px;
+  padding-bottom: 60px;
+  line-height:1.3em;
+}
+.page__error-container,
+.page__error-container > .container-fluid {
+  min-height: 360px;
+  /*height: 60vh;*/
+}
+.page__error-img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+.page__error-img--404 {
+  /*left: 40px;*/
+}
+.page__error-img--400 {
+  /*left: 75px;*/
+}
+.page__error-text {
+  text-align: center;
+  font-family: 'SFUIDisplay Bold', arial, sans-serif;
+  font-weight: normal;
+  font-size: 36px;
+  color: #1d3b67;
+  dispay: block;
+  margin: -50px auto;
+  max-width: 600px;
+  transform: scale(0.8);
+  line-height:1.3em;
+}
+.page__error-hint {
+  text-align: center;
+  font-family: $base-font-family-regulat;
+  font-weight: normal;
+  font-size: 20px;
+  color: #1d3b67;
+  dispay: block;
+  margin: 100px auto 0px;
+  line-height:1.3em;
+}
+@media (max-width: 480px) {
+	.mobile-nav .mobile-nav-inner {padding:20px 10px;}
+}
+@media (max-width: 370px) {
+	.mobile-nav .nav-title {padding-left:5px;padding-right:5px;}
+}
+@media (max-width: 320px) {
+	.mobile-nav .mobile-nav-inner {padding:20px 2px;}
+}

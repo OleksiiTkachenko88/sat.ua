@@ -1,0 +1,8 @@
+.partners-list{padding-bottom:2rem;}
+.partners-list .parents-list-row{border-top: 1px solid #404041;padding-bottom:1.5rem;padding-top:1.5rem;}
+.partners-list .border-block .header i{padding-right:15px;}
+.partners-list .border-block .header{display: flex;align-items:center;}
+.partners-list .partners-item{margin:.5rem;}
+.partners-list .partners-item a{transform-style: preserve-3d;perspective: 500px;display:block;width:100%;}
+.partners-list .partners-item img{transition:all .4s; box-shadow: 0 0 .5rem rgba(0,0,0,0.15);width:inherit}
+.partners-list .partners-item a:hover img{transform: rotateX(20deg);filter: saturate(150%);box-shadow: 0 .5rem 1rem rgba(0,0,0,0.4)}

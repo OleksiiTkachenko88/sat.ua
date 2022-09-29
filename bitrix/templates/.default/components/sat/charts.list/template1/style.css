@@ -1,0 +1,34 @@
+.content-inner {
+    /*min-height: 500px;*/
+}
+
+.charts-list {
+    display: flex;
+    flex-direction: column;
+    padding: 0 15px;
+    overflow: hidden;
+}
+
+.charts-list .chart-item {
+    position: relative;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.charts-list .chart-item .title {
+    position: absolute;
+    top: 15px;
+    width: 100%;
+    font: 12px/15px "SFUIDisplay", sans-serif;
+    color: #404041;
+    text-align: center;
+}
+
+.charts-list .chart-item {
+    border-top: 1px solid #DBDBDB;
+}
+
+.charts-list .chart-item:first-child {
+    border-top: 1px solid #404041;
+}

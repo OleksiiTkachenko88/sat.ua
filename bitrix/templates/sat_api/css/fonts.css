@@ -1,0 +1,68 @@
+/******************DinDisplay font*************/
+
+
+@font-face {
+    font-family:'SFUIDisplay';
+    src: url('../fonts/SFUIDisplay-Regular/SFUIDisplay-Regular.eot');
+    src: url('../fonts/SFUIDisplay-Regular/SFUIDisplay-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/SFUIDisplay-Regular/SFUIDisplay-Regular.woff2') format('woff2'),
+    url('../fonts/SFUIDisplay-Regular/SFUIDisplay-Regular.woff') format('woff'),
+    url('../fonts/SFUIDisplay-Regular/SFUIDisplay-Regular.svg#SFUIDisplay-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+}
+
+
+@font-face {
+    font-family: 'SFUIDisplayLight';
+    src: url('../fonts/SFUIDisplay-Light/SFUIDisplay-Light.eot');
+    src: url('../fonts/SFUIDisplay-Light/SFUIDisplay-Light.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/SFUIDisplay-Light/SFUIDisplay-Light.woff2') format('woff2'),
+    url('../fonts/SFUIDisplay-Light/SFUIDisplay-Light.woff') format('woff'),
+    url('../fonts/SFUIDisplay-Light/SFUIDisplay-Light.svg#SFUIDisplay-Light') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+}
+
+
+@font-face {
+    font-family:'SFUIDisplayBold';
+    src: url('../fonts/SFUIDisplay-Bold/SFUIDisplay-Bold.eot');
+    src: url('../fonts/SFUIDisplay-Bold/SFUIDisplay-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/SFUIDisplay-Bold/SFUIDisplay-Bold.woff2') format('woff2'),
+    url('../fonts/SFUIDisplay-Bold/SFUIDisplay-Bold.woff') format('woff'),
+    url('../fonts/SFUIDisplay-Bold/SFUIDisplay-Bold.svg#SFUIDisplay-Bold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+}
+
+
+
+@font-face {
+    font-family: 'SFUIDisplayMedium';
+    src: url('../fonts/SFUIDisplay-Medium/SFUIDisplay-Medium.eot');
+    src: url('../fonts/SFUIDisplay-Medium/SFUIDisplay-Medium.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/SFUIDisplay-Medium/SFUIDisplay-Medium.woff2') format('woff2'),
+    url('../fonts/SFUIDisplay-Medium/SFUIDisplay-Medium.woff') format('woff'),
+    url('../fonts/SFUIDisplay-Medium/SFUIDisplay-Medium.svg#SFUIDisplay-Medium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family: 'SFUIDisplayHeavy';
+    src: url('../fonts/SFUIDisplay-Heavy/SFUIDisplay-Heavy.eot');
+    src: url('../fonts/SFUIDisplay-Heavy/SFUIDisplay-Heavy.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/SFUIDisplay-Heavy/SFUIDisplay-Heavy.woff2') format('woff2'),
+    url('../fonts/SFUIDisplay-Heavy/SFUIDisplay-Heavy.woff') format('woff'),
+    url('../fonts/SFUIDisplay-Heavy/SFUIDisplay-Heavy.svg#SFUIDisplay-Heavy') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+}
+
+

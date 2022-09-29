@@ -1,0 +1,78 @@
+.intime-sat-tracking {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 20;
+    pointer-events: none;
+}
+
+.intime-sat-tracking .row {
+    display: flex;
+    justify-content: center;
+}
+
+.intime-sat-tracking .wrapper-block {
+    font-size: 16px;
+    color: #404041;
+    padding: 10px 5px;
+    background-color: rgba(235, 235, 233, 0.7);
+    backdrop-filter: blur(5px);
+    pointer-events: all;
+}
+
+
+.intime-sat-tracking form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.intime-sat-tracking span, .intime-sat-tracking input, .intime-sat-tracking button {
+    margin: 4px;
+}
+
+.intime-sat-tracking span {
+    line-height: 18px;
+	text-align:center;
+}
+
+.intime-sat-tracking input {
+    font-size: 14px;
+    min-width: 220px;
+    outline: none !important;
+    border: 1px solid #acacac;
+    text-align: center;
+    padding: 0 15px;
+    height: 32px;
+}
+
+.intime-sat-tracking input.error {
+    border-color: #e33509;
+}
+
+.intime-sat-tracking button {
+    background: #ffd64a;
+    color: #1e3e6c;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 1px;
+    font-family: "SFUIDisplay", sans-serif;
+    outline: none !important;
+    padding: 0px 16px;
+    height: 32px;
+    border: none;
+    transition: all .3s ease-in-out;
+}
+
+.intime-sat-tracking button:hover {
+    background: #2766a0;
+    color: #ffd64a;
+}
+
+@media (max-width: 767px) {
+    .intime-sat-tracking .wrapper-block {
+        margin-right: -15px;
+        margin-left: -15px;
+    }
+}

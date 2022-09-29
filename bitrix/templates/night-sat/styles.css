@@ -1,0 +1,149 @@
+body{
+    font-family: "Roboto", "Open Sans",Helvetica,Arial,sans-serif;
+}
+
+h1, h2{
+margin-top:0;
+margin-bottom:0;
+line-height:1.2;
+}
+
+
+h1{
+font-size:3rem;
+}
+
+h2{
+font-size:2.4rem;
+}
+.font-weight-bold{
+font-weight:bold;
+}
+header .night-sat-logo {
+	position: fixed;
+	z-index:100;
+	padding-top:1rem;
+	padding-bottom:1rem;
+}
+header .night-sat-logo a{
+	text-decoration: none;
+}
+.night-sat-logo img{
+	width: 4rem;
+}
+body {
+	position: relative;
+	background-color:#100857;
+}
+
+.main-baner{
+	padding-bottom: 7rem;
+}
+.main-baner, .second-baner{
+    position: relative;
+	margin-left: -15px;
+	margin-right: -15px;
+}
+
+.main-baner img{
+	width:100%;
+}
+.main-baner::before{
+	content: "";
+	position:absolute;
+	display:block;
+	bottom:0;
+	height:10px;
+	width:100%;
+}
+/*background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgb(222, 222, 222) 23px, rgb(209, 209, 209) 100px);*/
+
+.main-baner .baner-text{
+	position:absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, -50%);
+    text-align: center;
+	color:#fff;
+}
+
+.second-baner img{
+width:100%;
+}
+.flex-item-center{
+	display:flex;
+	flex-direction: column;
+	align-items: center;
+}
+.second-baner-text, .second-baner-text-s{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+	color:#fff;
+}
+
+.second-baner-text-s{
+	padding-top:5rem;
+	padding-bottom:5rem;
+}
+.second-baner-text-s span{
+	padding:0 10px;
+}
+
+.second-baner-text .first-part{
+	font-size:1.8rem;
+}
+
+.second-baner-text-s .first-part{
+	font-size: 2.4rem;
+    line-height: 2.6rem;
+}
+
+.second-baner-text-s .second-part{
+	font-size: 10rem;
+}
+
+@media (min-width: 768px) {
+	header .night-sat-logo {
+		padding:2rem 0;
+	}
+	.night-sat-logo img{
+		width: 6rem;
+	}
+	.main-baner {
+		padding-bottom:0;
+	}
+	.main-baner .baner-text{
+		transform: translate(-50%, 150%);
+		bottom:100%;
+	}
+
+	.second-wrap{
+		display:inline-flex;
+		padding-top:7rem;
+	}
+	.flex-item-center{
+		flex:1;
+	}
+}
+
+@media (min-width: 992px) {
+	header .night-sat-logo {
+		padding:3rem 1.5rem;
+	}
+	.night-sat-logo img{
+		width: 8rem;
+	}
+	.main-baner{
+		max-height:80vh;
+	}
+	.main-baner .baner-text{
+		transform: translate(-50%, 200%);
+	}
+	.flex-item-center:first-child{
+		flex:0.5;
+	}
+	.flex-item-center:last-child{  
+		justify-content: center;
+	}
+}
