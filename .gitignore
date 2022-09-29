@@ -1,8 +1,8 @@
 /local/
-/bitrix/*
-!/bitrix/templates/
+/bitrix/templates/sat_main/api.php
 .htaccess
 .htpasswd
 /upload/
 web.config
-api.php
+/bitrix/*
+!/bitrix/templates/sat_main/
