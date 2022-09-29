@@ -1,0 +1,39 @@
+<?
+$aMenuLinks = Array(
+	Array(
+		"Легенда", 
+		"/about/strategy/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+Array(
+		"Міжнародний сертифікат ISO", 
+		"/cases/mizhnarodna-sertyfikatsiya-iso/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+Array(
+		"Кейси", 
+		"/cases/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+Array(
+		"Новини", 
+		"/about/news/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+Array(
+		"Наші партнери", 
+		"/about/our-partners/", 
+		Array(), 
+		Array(), 
+		"" 
+	)
+);
+?>

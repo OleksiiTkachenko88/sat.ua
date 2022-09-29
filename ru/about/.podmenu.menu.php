@@ -1,0 +1,39 @@
+<?
+$aMenuLinks = Array(
+	Array(
+		"Легенда", 
+		"/ru/about/strategy/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+Array(
+		"Международний сертификат ISO", 
+		"/ru/cases/mizhnarodna-sertyfikatsiya-iso/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+Array(
+		"Кейсы", 
+		"/ru/cases/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+Array(
+		"Новости", 
+		"/ru/about/news/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+Array(
+		"Наши партнеры", 
+		"/ru/about/our-partners/", 
+		Array(), 
+		Array(), 
+		"" 
+	)
+);
+?>

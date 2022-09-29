@@ -1,0 +1,25 @@
+<?
+$aMenuLinks = Array(
+	Array(
+		"Документы", 
+		"/ru/about/documents/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Тарифы", 
+		"", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Правила", 
+		"", 
+		Array(), 
+		Array(), 
+		"" 
+	)
+);
+?>
