@@ -5,3 +5,4 @@
 .htpasswd
 /upload/
 web.config
+api.php
