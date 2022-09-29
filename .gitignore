@@ -4,4 +4,4 @@
 /upload/
 web.config
 /bitrix/*
-!/bitrix/templates/sat_main/
+!/bitrix/templates/
