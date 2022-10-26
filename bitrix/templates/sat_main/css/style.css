@@ -45,6 +45,7 @@ letter-spacing: 0.1em;
 	margin-top: 0%;
 	padding-top: 10px;
 	line-height:1.5;
+  width: 101%;
 }
 
 #header2 :hover {
@@ -2402,6 +2403,25 @@ header .search-form .search-input-wrap input{height:30px;line-height:20px}
 .error-depature {
   max-width: 60%;
   background: #f9ebee;
+  border: 1px solid;
+  border-color: #d5c1b4 #e6d2cd #f2dedf;
+  border-radius: 6px;
+  font-weight: bold;
+  color: #bb404c;
+  font-size: 14px;
+  min-height: 16px;
+  margin: auto;
+  text-shadow: 0 1px rgb(255 255 255 / 89%);
+  padding: 10px 10px 10px 10px;
+  position: relative;
+  display: none;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.depature-declared {
+  max-width: 60%;
+  background: #ffd64a;
   border: 1px solid;
   border-color: #d5c1b4 #e6d2cd #f2dedf;
   border-radius: 6px;

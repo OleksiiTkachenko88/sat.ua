@@ -501,6 +501,14 @@ if ($tmp) {
                                                 <input type="number" placeholder="500" min="500" name="declaredCost" id="declaredCost"  value="500"><span>грн</span>
                                             </div>
                                         </div>
+                                        <div class="main-info-row">
+                                        <div class="depature-declared"><span>Зверніть увагу! Якщо декларована вартість перевищує 100 000 грн,
+                                            необхідно надати Представнику SAT документи, що підтверджують
+                                            заявлену вартість вантажу.
+                                            Упакування даного вантажу повинне відповідати правилам компанії,
+                                            вказаним у документі <a href="http://test.sat.ua/about/recommend/pravila/">Стандарти/Правила/Сервіси</a></span>
+                                        </div> 
+                                        </div>
                                     </div>
                                     <!-- Added gruz-info class for condition type of send -->
                                     <div class="main-info-item gruz-info">

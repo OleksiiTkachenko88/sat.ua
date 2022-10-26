@@ -224,7 +224,8 @@ function showGruz(){
    // $('.gruzType').css('display','');
     $('.type_auto').css('display','');
     $('.amountInfo').show();
-    reCalc();  //убираем кнопку заказа, если было изменение  
+    reCalc();  //убираем кнопку заказа, если было изменение 
+    $(".depature-declared").css("display", "none"); 
 
 }
 
@@ -237,6 +238,7 @@ function hideGruz(){
     $('.type_auto').css('display','none');
     $('.amountInfo').hide();
     reCalc();  //убираем кнопку заказа, если было изменение  
+    $(".depature-declared").css("display", "none");
 }
 
 $('[name="weight"]').val(0).closest('.main-info-row').hide();
@@ -534,7 +536,7 @@ $(document).ready(function () {
             $('[name="totalweight"]').val(20).closest('.main-info-row').show();
         }
 
-        $('[name="declaredCost"]').val(500).attr({'min': '500', 'max': '1500000'});
+        $('[name="declaredCost"]').val(500).attr({'min': '500', 'max': '100000000'});
         $('.subtype-block li.hidden-fields').hide().removeClass('sel selected');
         $('.subtype-block li.'+type+':last').addClass('sel selected');
         $('.subtype-block .jq-selectbox__select-text').text( $('.subtype-block li.'+type+':last').text() );
@@ -701,6 +703,16 @@ $(document).ready(function () {
         console.log(decCost);       
         $('[name="declaredCost"]').val(decCost);
     });*/
+
+    $('[name="declaredCost"]').change(function(){
+        var decCost =  $('[name="declaredCost"]').val();
+        if (decCost >= 100000) {
+            $(".depature-declared").css("display", "flex");
+        } else {
+            $(".depature-declared").css("display", "none");
+        }
+    });
+
 
     $('#volume').change(function(){
         $('#length-range-value').val(0);
